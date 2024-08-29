@@ -20,6 +20,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-`Hi`, I'm Salih  Data Management Assistant Specialist at Sade Yazılım, Interested Data-driven solutions.
+`Hi` I'm Salih,  Data Management Assistant Specialist at Sade Yazılım, Interested Data-driven solutions.
 
 
