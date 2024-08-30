@@ -62,7 +62,6 @@ cv:
   volunteer: Volunteer
   work: Work
 footer_text: > # the ">" symbol means to ignore newlines until "titles:"
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 latest_posts: latest posts
 months:
   long:
