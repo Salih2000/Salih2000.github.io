@@ -3,7 +3,7 @@
     "name": "Salih Abdullah",
     "label": "Data Analyst",
     "image": "",
-    "email": "Salihabdullahkilic@hotmail.com",
+    "email": "salihabdullahkilic@hotmail.com",
     "phone": "(912) 123-4567",
     "url": "https://salihkilic.net",
     "summary": "Your Friendly Neighborhood Data Guy",
@@ -49,24 +49,9 @@
       "name": "Google Data Analytics Specialization Certificate",
       "date": "2024-02-18",
       "issuer": "Google",
-      "url": "https://www.coursera.org/account/accomplishments/specialization/HL9W4MQ5QE9S",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/HL9W4MQ5QE9S"
     }
     
-  ],
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
   ],
   "skills": [
     {
@@ -94,5 +79,5 @@
       "fluency": "Fluent",
       "icon": ""
     }
-  ],
+  ]
 }
