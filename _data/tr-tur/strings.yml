@@ -1,141 +1,141 @@
-archive_category: an archive of posts in this category
-archive_tag: an archive of posts with this tag
-archive_year: an archive of posts from this year
+archive_category: bu kategorideki yazıların arşivi
+archive_tag: bu etikete ait bir arşiv
+archive_year: bu yılın arşivi
 blog:
   navigation_title: blog
 categories:
-  fun: fun
-  work: work
+  fun: eğlence
+  work: iş
 citation:
-  bibtex: "or as a BibTeX entry:"
-  introduction: "If you found this useful, please cite this as:"
-contact_note: You can even add a little note about which of these is the best way to reach you.
+  bibtex: "veya bir BibTeX girişi olarak:"
+  introduction: "Eğer bunu faydalı bulduysanız, lütfen şu şekilde alıntı yapın:"
+contact_note: Sizi en iyi şekilde nasıl ulaşabilecekleri hakkında küçük bir not bile ekleyebilirsiniz.
 cv:
-  address: Address
-  area: Area
-  awarder: Awarder
-  awards: Awards
-  basics: General information
-  certificates: Certificates
-  city: City
-  countryCode: Country code
-  courses: Courses
-  date: Date
-  education: Education
-  email: Email
-  endDate: End date
-  fluency: Fluency
-  highlights: Highlights
-  image: Image
-  institution: Institution
-  interests: Interests
-  issuer: Issuer
-  keywords: Keywords
-  label: Label
-  language: Language
-  languages: Languages
-  level: Level
-  location: Location
-  name: Name
-  network: Network
-  organization: Organization
-  phone: Phone
-  position: Position
-  postalCode: Postal Code
-  profiles: Profiles
-  projects: Projects
-  publications: Publications
-  publisher: Publisher
-  reference: Reference
-  references: References
-  region: Region
-  releaseDate: Release date
-  score: Score
-  skills: Skills
-  startDate: Start date
-  studyType: Study type
-  summary: Summary
-  table_of_contents: Table of Contents
-  title: Title
-  url: Url
-  username: Username
-  volunteer: Volunteer
-  work: Work
+  address: Adres
+  area: Alan
+  awarder: Ödül Veren
+  awards: Ödüller
+  basics: Genel bilgi
+  certificates: Sertifikalar
+  city: Şehir
+  countryCode: Ülke kodu
+  courses: Kurslar
+  date: Tarih
+  education: Eğitim
+  email: E-posta
+  endDate: Bitiş tarihi
+  fluency: Dil yetkinliği
+  highlights: Vurgular
+  image: Resim
+  institution: Kurum
+  interests: İlgi alanları
+  issuer: Veren
+  keywords: Anahtar kelimeler
+  label: Etiket
+  language: Dil
+  languages: Diller
+  level: Seviye
+  location: Konum
+  name: İsim
+  network: Ağ
+  organization: Organizasyon
+  phone: Telefon
+  position: Pozisyon
+  postalCode: Posta kodu
+  profiles: Profil
+  projects: Projeler
+  publications: Yayınlar
+  publisher: Yayıncı
+  reference: Referans
+  references: Referanslar
+  region: Bölge
+  releaseDate: Yayın tarihi
+  score: Puan
+  skills: Beceriler
+  startDate: Başlangıç tarihi
+  studyType: Öğrenim türü
+  summary: Özet
+  table_of_contents: İçindekiler
+  title: Başlık
+  url: URL
+  username: Kullanıcı adı
+  volunteer: Gönüllü
+  work: İş
 footer_text: > # the ">" symbol means to ignore newlines until "titles:"
-latest_posts: latest posts
+latest_posts: en son yazılar
 months:
   long:
-    january: January
-    february: February
-    march: March
-    april: April
-    may: May
-    june: June
-    july: July
-    august: August
-    september: September
-    october: October
-    november: November
-    december: December
+    january: Ocak
+    february: Şubat
+    march: Mart
+    april: Nisan
+    may: Mayıs
+    june: Haziran
+    july: Temmuz
+    august: Ağustos
+    september: Eylül
+    october: Ekim
+    november: Kasım
+    december: Aralık
   short:
-    january: Jan
-    february: Feb
+    january: Oca
+    february: Şub
     march: Mar
-    april: Apr
+    april: Nis
     may: May
-    june: Jun
-    july: Jul
-    august: Aug
-    september: Sep
-    october: Oct
-    november: Nov
-    december: Dec
-news: news
+    june: Haz
+    july: Tem
+    august: Ağu
+    september: Eyl
+    october: Eki
+    november: Kas
+    december: Ara
+news: haberler
 newsletter:
-  back: Back
-  error: "Oops! Something went wrong, please try again."
-  subscribe: subscribe
-  subscribed: "You have successfully subscribed to the newsletter."
-  subscribe_to_receive: "Subscribe to be notified of future articles:"
-  too_many_signups: "Too many signups, please try again in a little while"
-  wait: "Please wait..."
-no_news: No news so far...
+  back: Geri
+  error: "Oops! Bir şeyler yanlış gitti, lütfen tekrar deneyin."
+  subscribe: abone ol
+  subscribed: "Başarıyla bültenimize abone oldunuz."
+  subscribe_to_receive: "Gelecekteki makalelerden haberdar olmak için abone olun:"
+  too_many_signups: "Çok fazla kayıt, lütfen biraz sonra tekrar deneyin"
+  wait: "Lütfen bekleyin..."
+no_news: Şimdiye kadar haber yok...
 pagination:
-  newer: Newer
-  older: Older
-  page: page
+  newer: Daha yeni
+  older: Daha eski
+  page: sayfa
 post:
-  created_in: Created in
-  created_by: by
-  last_updated: last updated in
-references: References
+  created_in: Oluşturulma tarihi
+  created_by: tarafından
+  last_updated: son güncellenme tarihi
+references: Referanslar
 related_posts:
-  description: "Here are some more articles you might like to read next:"
-  title: Enjoy Reading This Article?
+  description: "İşte bir sonraki okumak isteyebileceğiniz bazı makaleler:"
+  title: Bu Makaleyi Keyifle Okuyun
 search:
   dark_theme:
-    description: Change the theme of the site to Dark
-    title: Change theme to dark
-  dropdown: Dropdown
-  email: Send an email
+    description: Site temasını Koyu olarak değiştirin
+    title: Temayı koyu olarak değiştirin
+  dropdown: Açılır menü
+  email: E-posta gönder
   footer:
-    close: to close
-    navigate: to navigate
-    parent: move to parent
-    select: to select
-  languages: Languages
+    close: kapatmak için
+    navigate: gezinmek için
+    parent: üst düzeye gitmek için
+    select: seçmek için
+  languages: Diller
   light_theme:
-    description: Change the theme of the site to Light
-    title: Change theme to light
-  navigation: Navigation menu
-  news: News
-  placeholder: Type to start searching
-  posts: Posts
-  projects: Projects
-  socials: Socials
+    description: Site temasını Açık olarak değiştirin
+    title: Temayı açık olarak değiştirin
+  navigation: Navigasyon menüsü
+  news: Haberler
+  placeholder: Aramaya başlamak için yazın
+  posts: Yazılar
+  projects: Projeler
+  socials: Sosyal medya
   system_theme:
-    description: Change the theme of the site to System Default
-    title: Use system default theme
-  theme: Theme
-selected_publications: selected publications
-site_description: A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+    description: Site temasını Sistem Varsayılanı olarak değiştirin
+    title: Sistem varsayılan temasını kullanın
+  theme: Tema
+selected_publications: seçilmiş yayınlar
+site_description: Akademisyenler için basit, boşluklu bir tema. [*folio](https://github.com/bogoli/-folio) tasarımına dayanmaktadır.
