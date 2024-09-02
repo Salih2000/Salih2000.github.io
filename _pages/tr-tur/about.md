@@ -20,5 +20,5 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-"Hello There" I’m Salih, I consider myself as a person who believes and attaches importance to the game-changing power of data, data analytics, and data-driven solutions Data Management Assistant Specialist at Sade Yazılım.
+"Merhaba" Ben Salih, kendimi verinin, veri analitiğinin ve veri odaklı çözümlerin oyun değiştirici gücüne inanan ve önemseyen biri olarak görüyorum. Sade Yazılım'da Data Management Assistant Specialist olarak çalışıyorum.
 
