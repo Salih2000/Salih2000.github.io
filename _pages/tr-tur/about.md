@@ -1,7 +1,7 @@
 ---
 page_id: about
-layout: abouts
-title: aboutz
+layout: about
+title: Hakkımda
 permalink: /
 subtitle: <a href='#'></a>
 
