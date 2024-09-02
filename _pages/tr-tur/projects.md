@@ -1,9 +1,9 @@
 ---
 page_id: projects
 layout: page
-title: projects
+title: projeler
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Harika projelerin büyüyemesi umut edilen koleksiyonu.
 nav: true
 nav_order: 3
 display_categories: [work, fun]
