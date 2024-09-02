@@ -3,7 +3,7 @@ page_id: projects
 layout: page
 title: projeler
 permalink: /projects/
-description: Harika projelerin büyüyemesi umut edilen koleksiyonu.
+description: Harika projelerin büyümesi umut edilen koleksiyon.
 nav: true
 nav_order: 3
 display_categories: [work, fun]
