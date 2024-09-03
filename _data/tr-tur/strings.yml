@@ -116,7 +116,6 @@ search:
   dark_theme:
     description: Site temasını Koyu olarak değiştirin
     title: Temayı koyu olarak değiştirin
-  dropdown: Açılır menü
   email: E-posta gönder
   footer:
     close: kapatmak için
