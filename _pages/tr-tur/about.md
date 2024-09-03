@@ -2,7 +2,7 @@
 page_id: about
 layout: about
 title: Hakkımda
-permalink: /
+permalink: /tr-tur/about
 subtitle: <a href='#'></a>
 
 profile:
