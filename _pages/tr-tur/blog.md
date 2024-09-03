@@ -1,7 +1,7 @@
 ---
 page_id: blog
 layout: default
-permalink: /blog/
+permalink: /tr-tur/blog
 title: Blog
 blog_name: blog
 description: Yerelleştirilmiş Türkçe
