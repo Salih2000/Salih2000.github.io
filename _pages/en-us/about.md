@@ -2,7 +2,7 @@
 page_id: about
 layout: about
 title: About
-permalink: /en-us/about/
+permalink: /about/
 subtitle: <a href='#'></a>
 
 profile:
