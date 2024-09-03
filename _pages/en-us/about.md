@@ -1,7 +1,7 @@
 ---
 page_id: about
 layout: about
-title: about
+title: "about"
 permalink: /en-us/about/
 subtitle: <a href='#'></a>
 
