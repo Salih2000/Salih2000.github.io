@@ -2,7 +2,7 @@
 page_id: about
 layout: about
 title: About
-permalink: /tr-tur/about
+permalink:
 subtitle: <a href='#'></a>
 
 profile:
