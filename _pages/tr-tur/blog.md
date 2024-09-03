@@ -2,9 +2,9 @@
 page_id: blog
 layout: default
 permalink: /blog/
-title: blog
-blog_name: 
-description: 
+title: Blog
+blog_name: blog
+description: Yerelleştirilmiş Türkçe
 nav: true
 nav_order: 1
 pagination:
