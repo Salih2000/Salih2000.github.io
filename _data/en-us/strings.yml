@@ -116,7 +116,6 @@ search:
   dark_theme:
     description: Change the theme of the site to Dark
     title: Change theme to dark
-  dropdown: Dropdown
   email: Send an email
   footer:
     close: to close
