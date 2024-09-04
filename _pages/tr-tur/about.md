@@ -2,7 +2,7 @@
 page_id: about
 layout: about
 title: Hakkımda
-permalink: 
+permalink: /
 subtitle: <a href='#'></a>
 
 profile:
