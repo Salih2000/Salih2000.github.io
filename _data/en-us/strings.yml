@@ -2,10 +2,10 @@ archive_category: an archive of posts in this category
 archive_tag: an archive of posts with this tag
 archive_year: an archive of posts from this year
 blog:
-  navigation_title: blog
+  navigation_title: Blog
 categories:
-  fun: fun
-  work: work
+  fun: Fun
+  work: Work
 citation:
   bibtex: "or as a BibTeX entry:"
   introduction: "If you found this useful, please cite this as:"
@@ -90,11 +90,11 @@ months:
     october: Oct
     november: Nov
     december: Dec
-news: news
+news: News
 newsletter:
   back: Back
   error: "Oops! Something went wrong, please try again."
-  subscribe: subscribe
+  subscribe: Subscribe
   subscribed: "You have successfully subscribed to the newsletter."
   subscribe_to_receive: "Subscribe to be notified of future articles:"
   too_many_signups: "Too many signups, please try again in a little while"
@@ -103,11 +103,11 @@ no_news: No news so far...
 pagination:
   newer: Newer
   older: Older
-  page: page
+  page: Page
 post:
   created_in: Created in
   created_by: by
-  last_updated: last updated in
+  last_updated: Last updated in
 references: References
 related_posts:
   description: "Here are some more articles you might like to read next:"
@@ -118,10 +118,10 @@ search:
     title: Change theme to dark
   email: Send an email
   footer:
-    close: to close
-    navigate: to navigate
-    parent: move to parent
-    select: to select
+    close: To close
+    navigate: To navigate
+    parent: Move to parent
+    select: To select
   languages: Languages
   light_theme:
     description: Change the theme of the site to Light
@@ -136,5 +136,5 @@ search:
     description: Change the theme of the site to System Default
     title: Use system default theme
   theme: Theme
-selected_publications: selected publications
+selected_publications: 
 site_description: A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
