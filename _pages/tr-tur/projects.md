@@ -1,7 +1,7 @@
 ---
 page_id: projects
 layout: page
-title: projeler
+title: Projeler
 permalink: /projects/
 description: Harika projelerin büyümesi umut edilen koleksiyon.
 nav: true
