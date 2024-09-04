@@ -4,8 +4,8 @@ archive_year: bu yılın arşivi
 blog:
   navigation_title: blog
 categories:
-  fun: eğlence
-  work: iş
+  fun: Eğlence
+  work: İş
 citation:
   bibtex: "veya bir BibTeX girişi olarak:"
   introduction: "Eğer bunu faydalı bulduysanız, lütfen şu şekilde alıntı yapın:"
@@ -62,7 +62,7 @@ cv:
   volunteer: Gönüllü
   work: İş
 footer_text: > # the ">" symbol means to ignore newlines until "titles:"
-latest_posts: en son yazılar
+latest_posts: En son yazılar
 months:
   long:
     january: Ocak
@@ -90,11 +90,11 @@ months:
     october: Eki
     november: Kas
     december: Ara
-news: haberler
+news: Haberler
 newsletter:
   back: Geri
   error: "Oops! Bir şeyler yanlış gitti, lütfen tekrar deneyin."
-  subscribe: abone ol
+  subscribe: Abone ol
   subscribed: "Başarıyla bültenimize abone oldunuz."
   subscribe_to_receive: "Gelecekteki makalelerden haberdar olmak için abone olun:"
   too_many_signups: "Çok fazla kayıt, lütfen biraz sonra tekrar deneyin"
@@ -103,11 +103,11 @@ no_news: Şimdiye kadar haber yok...
 pagination:
   newer: Daha yeni
   older: Daha eski
-  page: sayfa
+  page: Sayfa
 post:
   created_in: Oluşturulma tarihi
-  created_by: tarafından
-  last_updated: son güncellenme tarihi
+  created_by: Tarafından
+  last_updated: Son güncellenme tarihi
 references: Referanslar
 related_posts:
   description: "İşte bir sonraki okumak isteyebileceğiniz bazı makaleler:"
@@ -118,10 +118,10 @@ search:
     title: Temayı koyu olarak değiştirin
   email: E-posta gönder
   footer:
-    close: kapatmak için
-    navigate: gezinmek için
-    parent: üst düzeye gitmek için
-    select: seçmek için
+    close: Kapatmak için
+    navigate: Gezinmek için
+    parent: Üst düzeye gitmek için
+    select: Seçmek için
   languages: Diller
   light_theme:
     description: Site temasını Açık olarak değiştirin
