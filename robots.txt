@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://Salih2000.github.io/sitemap.xml
+Sitemap: https://Salih2000.github.io//sitemap.xml
