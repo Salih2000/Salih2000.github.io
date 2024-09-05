@@ -20,5 +20,5 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-'Merhaba' Ben Salih, kendimi verinin, veri analitiğinin ve veri odaklı çözümlerin oyun değiştirici gücüne inanan ve önemseyen biri olarak görüyorum. Sade Yazılım'da Data Management Assistant Specialist olarak çalışıyorum.
+`Merhaba` Ben Salih, kendimi verinin, veri analitiğinin ve veri odaklı çözümlerin oyun değiştirici gücüne inanan ve önemseyen biri olarak görüyorum. Sade Yazılım'da Data Management Assistant Specialist olarak çalışıyorum.
 
