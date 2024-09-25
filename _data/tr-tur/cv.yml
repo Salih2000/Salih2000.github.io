@@ -1,14 +1,14 @@
-- title: General Information
-  type: map
+- title: Genel Bilgi
+  type: harita
   contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+    - name: İsim
+      value: Salih Abdullah Kılıç
+    - name: Doğum Tarihi
+      value: 2 Haziran 2000
+    - name: Diller
+      value: İngilizce
 
-- title: Education
+- title: Eğtim
   type: time_table
   contents:
     - title: PhD
