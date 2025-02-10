@@ -7,7 +7,7 @@ first_name: Salih
 middle_name: A.
 last_name: Kilic
 keywords: Salih Abdullah Kılıç, Salih Kilic, salihkilic.net, Salih Abdullah Kilic, Salih A. Kilic, Data, Data Managment, Data Engineering # add your own keywords or leave empty
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: ⚙️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://Salih2000.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
