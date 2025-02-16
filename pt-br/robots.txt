@@ -1,1 +1,1 @@
-User-agent: * Disallow: Sitemap: https://george-gca.github.io/multi-language-al-folio/sitemap.xml
+User-agent: * Disallow: Sitemap: https://Salih2000.github.io/sitemap.xml
