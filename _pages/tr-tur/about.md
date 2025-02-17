@@ -8,7 +8,7 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 profile:
   align: right
   image: prof_pics.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
     
 
@@ -26,8 +26,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Biyografinizi buraya yazın. Dünyaya kendinizden bahsedin. Favori [subreddit](http://reddit.com) bağlantınızı ekleyin. Bir resim de koyabilirsiniz. Kod zaten eklenmiş, sadece resminizi `prof_pic.jpg` olarak adlandırın ve `img/` klasörüne koyun.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/multi-language-al-folio/publications/) automatically.
+Resminizin hemen altına adresinizi / P.O. kutunuzu / diğer bilgilerinizi koyun. Bu öğelerin herhangi birini devre dışı bırakmak için `_pages/about.md` dosyasının YAML başlığındaki `profile` özelliğini düzenleyebilirsiniz. `_bibliography/papers.bib` dosyasını düzenleyin ve Jekyll [yayınlar sayfanızı](/multi-language-al-folio/publications/) otomatik olarak oluşturacaktır.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Sosyal medya bağlantılarınızı da ekleyin. Bu tema [Font Awesome ikonları](https://fontawesome.com/) ve [Academicons](https://jpswalsh.github.io/academicons/) kullanacak şekilde ayarlanmıştır, aşağıdaki gibi. Facebook, Twitter, LinkedIn, Google Scholar bağlantılarınızı ekleyin veya hepsini devre dışı bırakın.

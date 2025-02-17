@@ -1,0 +1,101 @@
+- title: Genel Bilgiler
+  type: map
+  contents:
+    - name: Tam Adı
+      value: Albert Einstein
+    - name: Doğum Tarihi
+      value: 14 Mart 1879
+    - name: Diller
+      value: İngilizce, Almanca
+
+- title: Eğitim
+  type: time_table
+  contents:
+    - title: Doktora
+      institution: Zürih Üniversitesi, Zürih, İsviçre
+      year: 1905
+      description:
+        - Açıklama 1.
+        - Açıklama 2.
+        - title: Açıklama 3.
+          contents:
+            - Alt-açıklama 1.
+            - Alt-açıklama 2.
+    - title: Federal öğretim diploması
+      institution: Eidgenössische Technische Hochschule, Zürih, İsviçre
+      year: 1900
+      description:
+        - Açıklama 1.
+        - Açıklama 2.
+
+- title: Deneyim
+  type: time_table
+  contents:
+    - title: Teorik Fizik Profesörü
+      institution: İleri Araştırma Enstitüsü, Princeton Üniversitesi
+      year: 1933 - 1955
+      description:
+        - Açıklama 1.
+        - Açıklama 2.
+        - title: Açıklama 3.
+          contents:
+            - Alt-açıklama 1.
+            - Alt-açıklama 2.
+    - title: Misafir Profesör
+      institution: Kaliforniya Teknoloji Enstitüsü, Pasadena, Kaliforniya, ABD
+      year: 1933
+      description:
+        - Açıklama 1.
+        - Açıklama 2.
+
+    - title: Direktör
+      institution: Kaiser Wilhelm Fizik Enstitüsü, Berlin, Almanya
+      year: 1917-1933
+
+    - title: Teorik Fizik Profesörü
+      institution: Karl-Ferdinand Üniversitesi, Prag, Çekoslovakya
+      year: 1911 - 1917
+      description:
+
+    - title: Teorik Fizik Doçenti
+      institution: Zürih Üniversitesi, Zürih, İsviçre
+      year: 1909 - 1911
+
+- title: Açık Kaynak Projeleri
+  type: time_table
+  contents:
+    - title: <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>
+      year: 2023-şimdi
+      description: Birden fazla dili destekleyen al-folio temasının bir çatalı.
+
+    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+      year: 2015-şimdi
+      description: Akademisyenler için güzel, basit, temiz ve duyarlı bir Jekyll teması.
+
+- title: Onur ve Ödüller
+  type: time_table
+  contents:
+    - year: 1921
+      items:
+        - Nobel Fizik Ödülü
+        - Matteucci Madalyası
+    - year: 1929
+      items:
+        - Max Planck Madalyası
+
+- title: Akademik İlgi Alanları
+  type: nested_list
+  contents:
+    - title: Konu 1.
+      items:
+        - Açıklama 1.
+        - Açıklama 2.
+    - title: Konu 2.
+      items:
+        - Açıklama 1.
+        - Açıklama 2.
+
+- title: Diğer İlgi Alanları
+  type: list
+  contents:
+    - <u>Hobiler:</u> Hobi 1, Hobi 2, vb.
