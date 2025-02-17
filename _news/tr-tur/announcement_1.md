@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Coming Soon...
+Basit bir satır içi duyuru.
