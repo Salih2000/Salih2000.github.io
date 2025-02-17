@@ -69,28 +69,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/pt-br/people/";
           },
-        },{id: "dropdown-publications",
-              title: "publications",
-              description: "",
-              section: "Outras opções",
-              handler: () => {
-                window.location.href = "/pt-br";
-              },
-            },{id: "dropdown-projects",
-              title: "projects",
-              description: "",
-              section: "Outras opções",
-              handler: () => {
-                window.location.href = "/pt-br";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Outras opções",
-              handler: () => {
-                window.location.href = "/pt-br/blog/";
-              },
-            },{id: "dropdown-publicações",
+        },{id: "dropdown-publicações",
               title: "publicações",
               description: "",
               section: "Outras opções",
@@ -567,6 +546,13 @@ ninja.data = [{
           section: 'Idiomas',
           handler: () => {
             window.location.href = "/fr-ca" + updatedUrl;
+          },
+        },{
+          id: 'lang-tr-tur',
+          title: 'tr-tur',
+          section: 'Idiomas',
+          handler: () => {
+            window.location.href = "/tr-tur" + updatedUrl;
           },
         },{
       id: 'light-theme',

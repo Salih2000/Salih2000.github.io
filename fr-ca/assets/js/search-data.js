@@ -90,27 +90,6 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/fr-ca/blog/";
               },
-            },{id: "dropdown-publications",
-              title: "publications",
-              description: "",
-              section: "déroulant",
-              handler: () => {
-                window.location.href = "/fr-ca";
-              },
-            },{id: "dropdown-projects",
-              title: "projects",
-              description: "",
-              section: "déroulant",
-              handler: () => {
-                window.location.href = "/fr-ca";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "déroulant",
-              handler: () => {
-                window.location.href = "/fr-ca/blog/";
-              },
             },{id: "post-a-post-with-image-galleries",
       
         title: "a post with image galleries",
@@ -567,6 +546,13 @@ ninja.data = [{
           section: 'langues',
           handler: () => {
             window.location.href = "/pt-br" + updatedUrl;
+          },
+        },{
+          id: 'lang-tr-tur',
+          title: 'tr-tur',
+          section: 'langues',
+          handler: () => {
+            window.location.href = "/tr-tur" + updatedUrl;
           },
         },{
       id: 'light-theme',
