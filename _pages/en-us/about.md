@@ -8,7 +8,7 @@ subtitle: <a href='#'>Hello There</a>,
 profile:
   align: right
   image: prof_pics.jpg
-  image_circular: True # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
 
 
