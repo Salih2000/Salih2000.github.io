@@ -442,16 +442,16 @@ ninja.data = [{
           window.location.href = "/fr-ca/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+    },{id: "news-coming-soon",
+          title: 'Coming Soon…',
           description: "",
-          section: "actualités",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "actualités",},{id: "news-coming-soon",
+          title: 'Coming Soon...',
           description: "",
           section: "actualités",handler: () => {
               window.location.href = "/fr-ca/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-coming-soon",
+          title: 'Coming Soon…',
           description: "",
           section: "actualités",},{id: "projects-project-7",
           title: 'project 7',
