@@ -2,8 +2,8 @@
 page_id: blog
 layout: default
 permalink: /blog/
-title: blog
-blog_name: al-folio in english
+title: Blog
+blog_name: Türkçe Blog
 description: a simple whitespace theme for academics
 nav: true
 nav_order: 1
