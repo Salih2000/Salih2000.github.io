@@ -21,7 +21,7 @@ ninja.data = [{
       window.location.href = "/tr-tur/";
     },
   },{id: "nav-blog",
-          title: "blog",
+          title: "Blog",
           description: "a simple whitespace theme for academics",
           section: "Navigasyon menüsü",
           handler: () => {
@@ -49,7 +49,7 @@ ninja.data = [{
             window.location.href = "/tr-tur/repositories/";
           },
         },{id: "nav-cv",
-          title: "cv",
+          title: "CV",
           description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
           section: "Navigasyon menüsü",
           handler: () => {
@@ -78,6 +78,27 @@ ninja.data = [{
               },
             },{id: "dropdown-projects",
               title: "projects",
+              description: "",
+              section: "Açılır menü",
+              handler: () => {
+                window.location.href = "/tr-tur";
+              },
+            },{id: "dropdown-blog",
+              title: "blog",
+              description: "",
+              section: "Açılır menü",
+              handler: () => {
+                window.location.href = "/tr-tur/blog/";
+              },
+            },{id: "dropdown-publicações",
+              title: "publicações",
+              description: "",
+              section: "Açılır menü",
+              handler: () => {
+                window.location.href = "/tr-tur";
+              },
+            },{id: "dropdown-projetos",
+              title: "projetos",
               description: "",
               section: "Açılır menü",
               handler: () => {
@@ -539,20 +560,6 @@ ninja.data = [{
           section: 'Diller',
           handler: () => {
             window.location.href = "" + updatedUrl;
-          },
-        },{
-          id: 'lang-pt-br',
-          title: 'pt-br',
-          section: 'Diller',
-          handler: () => {
-            window.location.href = "/pt-br" + updatedUrl;
-          },
-        },{
-          id: 'lang-fr-ca',
-          title: 'fr-ca',
-          section: 'Diller',
-          handler: () => {
-            window.location.href = "/fr-ca" + updatedUrl;
           },
         },{
       id: 'light-theme',
