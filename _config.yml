@@ -178,6 +178,7 @@ exclude:
   - package-lock.json
   - _pages/en-us/about_einstein.md
   - _pages/pt-br/about_einstein.md
+  - _pages/tr-tur/about_einstein.md
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -339,12 +340,12 @@ external_links:
 # Jekyll Polyglot
 # -----------------------------------------------------------------------------
 
-languages: ["en-us", "pt-br", "fr-ca"]
+languages: ["en-us", "pt-br", "fr-ca","tr-tur"]
 default_lang: "en-us"
 exclude_from_localization: ["assets"]
 lang_from_path: true
 country_flag: false # set true for allowing flag symbol in language toggle
-parallel_localization: false
+parallel_localization: false 
 
 # -----------------------------------------------------------------------------
 # Responsive WebP Images
@@ -629,7 +630,8 @@ jekyll_get_json:
     json: assets/json/resume_en-us.json # it can also be an url
   - data: resume_pt-br
     json: assets/json/resume_pt-br.json # it can also be an url
-
+  - data: resume_tr-tur
+    json: assets/json/resume_tr-tur.json # it can also be an url
 jsonresume:
   - basics
   - work
