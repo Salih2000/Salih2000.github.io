@@ -26,4 +26,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm Salih, and I’m passionate about the game-changing power of data, data analytics, and data-driven solutions. Data Management Assistant Specialist at <a href='https://sadeyazilim.com/'>Sade Yazılım</a>.
+I'm Salih, and I’m passionate about the game-changing power of data, data analytics, and data-driven solutions. Data Management Assistant Specialist at <a href='https://sadeyazilim.com/'>Sade Yazılım</a>
