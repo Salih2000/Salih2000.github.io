@@ -1,15 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - Salih2000
 
 repo_description_lines_max: 2
 
 github_repos:
   - george-gca/multi-language-al-folio
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Salih2000/Salih2000.github.io
+  - Salih2000/My-Stock-Investment-Advisor-A-Decision-Support-System-for-Investing-in-the-Stock-Market
