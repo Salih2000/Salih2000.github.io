@@ -27,13 +27,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/pt-br/blog/";
           },
-        },{id: "nav-publicações",
-          title: "publicações",
-          description: "publicações por categoria em ordem cronológica reversa. gerado pelo jekyll-scholar.",
-          section: "Menu de navegação",
-          handler: () => {
-            window.location.href = "/pt-br/publications/";
-          },
         },{id: "nav-projetos",
           title: "projetos",
           description: "Uma crescente coleção de seus projetos interessantes.",
@@ -54,20 +47,6 @@ ninja.data = [{
           section: "Menu de navegação",
           handler: () => {
             window.location.href = "/pt-br/cv/";
-          },
-        },{id: "nav-ensino",
-          title: "ensino",
-          description: "Materiais de cursos que você ministrou. Substitua esse texto com sua descrição.",
-          section: "Menu de navegação",
-          handler: () => {
-            window.location.href = "/pt-br/teaching/";
-          },
-        },{id: "nav-membros",
-          title: "membros",
-          description: "membros do grupo de pesquisa ou laboratório",
-          section: "Menu de navegação",
-          handler: () => {
-            window.location.href = "/pt-br/people/";
           },
         },{id: "dropdown-publicações",
               title: "publicações",
@@ -519,7 +498,7 @@ ninja.data = [{
         title: 'Enviar um email',
         section: 'Redes sociais',
         handler: () => {
-          window.open("mailto:%73%61%6C%69%68%61%62%64%75%6C%6C%61%68%6B%69%6C%69%63@%68%6F%74%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%73%61%6C%69%68%61%62%64%75%6C%6C%61%68%6B%69%6C%69%63@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
