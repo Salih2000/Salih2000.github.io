@@ -83,9 +83,9 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/fr-ca/blog/";
               },
-            },{id: "post-a-post-with-plotly-js",
+            },{id: "post-coming-soon",
         
-          title: "a post with plotly.js",
+          title: "Coming Soon",
         
         description: "this is what included plotly.js code could look like",
         section: "articles",
@@ -94,9 +94,9 @@ ninja.data = [{
             window.location.href = "/fr-ca/blog/2025/plotly/";
           
         },
-      },{id: "post-a-post-with-image-galleries",
+      },{id: "post-coming-soon",
         
-          title: "a post with image galleries",
+          title: "Coming Soon",
         
         description: "this is what included image galleries could look like",
         section: "articles",
@@ -451,16 +451,16 @@ ninja.data = [{
           description: "",
           section: "",handler: () => {
               window.location.href = "/fr-ca/books/en-us/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-coming-soon",
+          title: 'Coming Soon!',
           description: "",
-          section: "actualités",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "actualités",},{id: "news-coming-soon",
+          title: 'Coming Soon',
           description: "",
           section: "actualités",handler: () => {
               window.location.href = "/fr-ca/news/en-us/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-coming-soon-sparkles",
+          title: 'Coming Soon :sparkles:',
           description: "",
           section: "actualités",},{id: "projects-project-7",
           title: 'project 7',
