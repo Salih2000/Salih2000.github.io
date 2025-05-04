@@ -459,24 +459,13 @@ ninja.data = [{
             },},{id: "news-yakında",
           title: 'Yakında!',
           description: "",
-          section: "Haberler",},{id: "news-um-anúncio-simples-em-uma-linha",
-          title: 'Um anúncio simples em uma linha.',
-          description: "",
           section: "Haberler",},{id: "news-yakında",
           title: 'Yakında!',
           description: "",
           section: "Haberler",handler: () => {
               window.location.href = "/tr-tur/news/tr-tur/announcement_2/";
-            },},{id: "news-um-anúncio-longo-com-detalhes",
-          title: 'Um anúncio longo com detalhes',
-          description: "",
-          section: "Haberler",handler: () => {
-              window.location.href = "/tr-tur/news/pt-br/announcement_2/";
             },},{id: "news-yakında-sparkles",
           title: 'Yakında :sparkles:',
-          description: "",
-          section: "Haberler",},{id: "news-um-anúncio-simples-em-uma-linha-com-markdown-emoji-sparkles-smile",
-          title: 'Um anúncio simples em uma linha com Markdown emoji! :sparkles: :smile:',
           description: "",
           section: "Haberler",},{id: "projects-project-7",
           title: 'project 7',

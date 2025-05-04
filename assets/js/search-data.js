@@ -459,24 +459,13 @@ ninja.data = [{
             },},{id: "news-coming-soon",
           title: 'Coming Soon!',
           description: "",
-          section: "News",},{id: "news-um-anúncio-simples-em-uma-linha",
-          title: 'Um anúncio simples em uma linha.',
-          description: "",
           section: "News",},{id: "news-coming-soon",
           title: 'Coming Soon',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/en-us/announcement_2/";
-            },},{id: "news-um-anúncio-longo-com-detalhes",
-          title: 'Um anúncio longo com detalhes',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/pt-br/announcement_2/";
             },},{id: "news-coming-soon-sparkles",
           title: 'Coming Soon :sparkles:',
-          description: "",
-          section: "News",},{id: "news-um-anúncio-simples-em-uma-linha-com-markdown-emoji-sparkles-smile",
-          title: 'Um anúncio simples em uma linha com Markdown emoji! :sparkles: :smile:',
           description: "",
           section: "News",},{id: "projects-project-7",
           title: 'project 7',
