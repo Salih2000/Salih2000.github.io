@@ -15,34 +15,34 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation menu",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-blog",
-          title: "blog",
+          title: "Blog",
           description: "My personal blog where I share my thoughts and ideas in English.",
           section: "Navigation menu",
           handler: () => {
             window.location.href = "/blog/";
           },
         },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "A growing collection of your cool projects.",
           section: "Navigation menu",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
-          title: "repositories",
+          title: "Repositories",
           description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
           section: "Navigation menu",
           handler: () => {
             window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
-          title: "cv",
+          title: "CV",
           description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
           section: "Navigation menu",
           handler: () => {
@@ -54,6 +54,27 @@ ninja.data = [{
               section: "Dropdown",
               handler: () => {
                 window.location.href = "/books/";
+              },
+            },{id: "dropdown-blog",
+              title: "blog",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/blog/";
+              },
+            },{id: "dropdown-publicações",
+              title: "publicações",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/publications/";
+              },
+            },{id: "dropdown-projetos",
+              title: "projetos",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/projects/";
               },
             },{id: "dropdown-blog",
               title: "blog",
@@ -430,16 +451,32 @@ ninja.data = [{
           description: "",
           section: "",handler: () => {
               window.location.href = "/books/en-us/the_godfather/";
+            },},{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "",handler: () => {
+              window.location.href = "/books/pt-br/the_godfather/";
             },},{id: "news-coming-soon",
           title: 'Coming Soon!',
+          description: "",
+          section: "News",},{id: "news-um-anúncio-simples-em-uma-linha",
+          title: 'Um anúncio simples em uma linha.',
           description: "",
           section: "News",},{id: "news-coming-soon",
           title: 'Coming Soon',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/en-us/announcement_2/";
+            },},{id: "news-um-anúncio-longo-com-detalhes",
+          title: 'Um anúncio longo com detalhes',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/pt-br/announcement_2/";
             },},{id: "news-coming-soon-sparkles",
           title: 'Coming Soon :sparkles:',
+          description: "",
+          section: "News",},{id: "news-um-anúncio-simples-em-uma-linha-com-markdown-emoji-sparkles-smile",
+          title: 'Um anúncio simples em uma linha com Markdown emoji! :sparkles: :smile:',
           description: "",
           section: "News",},{id: "projects-project-7",
           title: 'project 7',
@@ -515,18 +552,11 @@ ninja.data = [{
           window.open("/feed.xml", "_blank");
         },
       },{
-          id: 'lang-pt-br',
-          title: 'pt-br',
+          id: 'lang-tr-tur',
+          title: 'tr-tur',
           section: 'Languages',
           handler: () => {
-            window.location.href = "/pt-br" + updatedUrl;
-          },
-        },{
-          id: 'lang-fr-ca',
-          title: 'fr-ca',
-          section: 'Languages',
-          handler: () => {
-            window.location.href = "/fr-ca" + updatedUrl;
+            window.location.href = "/tr-tur" + updatedUrl;
           },
         },{
       id: 'light-theme',
