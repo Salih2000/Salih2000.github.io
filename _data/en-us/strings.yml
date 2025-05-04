@@ -158,5 +158,4 @@ search:
     description: Change the theme of the site to System Default
     title: Use system default theme
   theme: Theme
-selected_publications: selected publications
 site_description: A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
