@@ -11,7 +11,7 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: >
     
-      <p> Own My Opinions </p>
+      <p> I Own My Opinions </p>
     
 
 selected_papers: true # includes a list of papers marked as "selected={true}"

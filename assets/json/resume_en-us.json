@@ -1,7 +1,7 @@
 {
   "basics": {
-    "name": "Salih Abdullah",
-    "label": "Data Analyst",
+    "name": "Salih Abdullah Kilic",
+    "label": "Data Management Specialist, Data Analyst",
     "image": "",
     "email": "salihabdullahkilic@hotmail.com",
     "url": "https://salihkilic.net",
@@ -27,8 +27,8 @@
       "url": "https://sadeyazilim.com",
       "startDate": "2024-02-19",
       "endDate": "-",
-      "summary": "ETL, data quality and SAS consulting and training in the data management team",
-      "highlights": ["ETL, SAS Programming"]
+      "summary": " I provided consultancy, technical support and project execution in energy, finance, e-commerce, and public sectors, specializing in SAS, SQL, Python, And JavaScript. My focus included Data Quality & Analytics, ETL processes, and data migration, delivering tailored solutions, optimizing systems, and ensuring seamless data transitions.",
+      "highlights": ["ETL, SAS Programming, Data Quality, Data Migration, Data Analytics, Data Warehousing, Data Governance, Python, SQL, JavaScript"]
     }
   ],
   "education": [
@@ -58,11 +58,13 @@
       "level": "Medium",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
+        "Data Management",
+        "Data Analytics",
+        "Digital Transformation",
         "ETL",
-        "Data Quality",
-        "Data Governance",
-        "Data Warehousing",
-        "Data Modeling"
+        "Python",
+        "SAS",
+        "SQL"
       ]
     }
   ],
