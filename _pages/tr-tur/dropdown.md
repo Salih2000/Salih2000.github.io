@@ -1,7 +1,7 @@
 ---
 id: dropdown
 layout: page
-title: Submenus
+title: Açılır Menüler
 nav: true
 nav_order: 8
 dropdown: true

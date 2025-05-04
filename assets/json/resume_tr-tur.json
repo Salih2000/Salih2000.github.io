@@ -1,0 +1,86 @@
+{
+  "basics": {
+    "name": "Salih Abdullah Kılıç",
+    "label": "Veri Yönetimi Uzmanı, Veri Analisti",
+    "image": "",
+    "email": "salihabdullahkilic@hotmail.com",
+    "url": "https://salihkilic.net",
+    "summary": " ",
+    "location": {
+      "address": "Gebze",
+      "postalCode": "CA 94115",
+      "city": "Kocaeli",
+      "countryCode": "TR"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "salihabkilic",
+        "url": "https://twitter.com/salihabkilic"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Sade Yazılım ve Danışmanlık",
+      "position": "Veri Yönetimi Uzman Yardımcısı",
+      "url": "https://sadeyazilim.com",
+      "startDate": "2024-02-19",
+      "endDate": "-",
+      "summary": "Enerji, finans, e-ticaret ve kamu sektörlerinde danışmanlık, teknik destek ve proje yürütme hizmetleri sundum. SAS, SQL, Python ve JavaScript alanlarında uzmanlaştım. Odağım; Veri Kalitesi ve Analitiği, ETL süreçleri ve veri taşıma işlemleriydi. Özelleştirilmiş çözümler sunarak sistemleri optimize ettim ve sorunsuz veri geçişleri sağladım.",
+      "highlights": [
+        "ETL, SAS Programlama, Veri Kalitesi, Veri Taşıma, Veri Analitiği, Veri Ambarı, Veri Yönetişimi, Python, SQL, JavaScript"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "İzmir Bakırçay Üniversitesi",
+      "location": "İzmir, Türkiye",
+      "url": "https://www.bakircay.edu.tr/",
+      "area": "Yönetim Bilişim Sistemleri",
+      "studyType": "Lisans",
+      "startDate": "2019-08-01",
+      "endDate": "2024-06-01",
+      "courses": [
+        "Veri Yapıları ve Algoritmalar, Bilgisayar Ağları ve Siber Güvenlik, Veritabanı Yönetim Sistemleri"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Google Veri Analitiği Uzmanlık Sertifikası",
+      "date": "2024-02-18",
+      "issuer": "Google",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/HL9W4MQ5QE9S"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Veri Yönetimi",
+      "level": "Orta",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Veri Yönetimi",
+        "Veri Analitiği",
+        "Dijital Dönüşüm",
+        "ETL",
+        "Python",
+        "SAS",
+        "SQL"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Türkçe",
+      "fluency": "Ana dil",
+      "icon": ""
+    },
+    {
+      "language": "İngilizce",
+      "fluency": "Akıcı",
+      "icon": ""
+    }
+  ]
+}

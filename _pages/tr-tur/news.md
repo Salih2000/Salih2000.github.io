@@ -1,7 +1,7 @@
 ---
 page_id: news
 layout: page
-title: News
+title: Haberler
 permalink: /news/
 ---
 

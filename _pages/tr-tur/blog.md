@@ -3,8 +3,8 @@ page_id: blog
 layout: default
 permalink: /blog/
 title: Blog
-blog_name: My Blog
-description: My personal blog where I share my thoughts and ideas in English.
+blog_name: Kişisel Blogum
+description: Düşünce ve fikirlerimi İngilizce olarak paylaştığım blogum.
 nav: true
 nav_order: 1
 pagination:

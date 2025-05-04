@@ -1,13 +1,14 @@
 ---
 layout: book-shelf
-title: bookshelf
+title: Kitaplık
 permalink: /books/
 nav: false
 collection: books
 ---
 
-> What an astonishing thing a book is. It's a flat object made from a tree with flexible parts on which are imprinted lots of funny dark squiggles. But one glance at it and you're inside the mind of another person, maybe somebody dead for thousands of years. Across the millennia, an author is speaking clearly and silently inside your head, directly to you. Writing is perhaps the greatest of human inventions, binding together people who never knew each other, citizens of distant epochs. Books break the shackles of time. A book is proof that humans are capable of working magic.
+> Bir kitabın ne kadar şaşırtıcı bir şey olduğunu düşünün. Ağaçtan yapılmış, üzerinde esnek kısımlar bulunan düz bir nesne; bu kısımlara garip, koyu renkli şekiller basılmış. Ama bir kez baktığınızda, başka birinin zihninin içine girersiniz — belki de binlerce yıldır ölü olan birinin. Bin yıllar boyunca, bir yazar sessizce ve net bir şekilde sizin kafanızın içinde konuşur, doğrudan size hitap eder. Yazı, belki de insanlığın en büyük icadıdır; birbirini hiç tanımayan insanları, uzak çağların vatandaşlarını birbirine bağlar. Kitaplar, zamanın zincirlerini kırar. Bir kitap, insanların sihir yapabildiğinin kanıtıdır.
 >
-> -- Carl Sagan, Cosmos, Part 11: The Persistence of Memory (1980)
+> — Carl Sagan, Cosmos, Bölüm 11: Belleğin Kalıcılığı (1980)
 
-## Books that I am reading, have read, or will read
+## Okuduğum, okumakta olduğum veya okuyacağım kitaplar
+

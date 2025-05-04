@@ -1,9 +1,9 @@
 ---
 page_id: about
 layout: about
-title: About
+title: Hakkımda
 permalink: /
-subtitle: <a href='#'>Hello There,</a>
+subtitle: <a href='#'>Merhaba,</a>
 
 profile:
   align: right
@@ -11,7 +11,7 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: >
     
-      <p> I Own My Opinions </p>
+      <p> Fikirlerim bana ait, şahsidir. </p>
     
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm Salih and I consider myself as a person who believes and attaches importance to the game-changing power of data, data analytics, and data-driven solutions and I want to develop my future in this direction. I have knowledge of software development lifecycle methodologies.
+Ben Salih, verinin, veri analitiğinin ve veri odaklı çözümlerin gücüne inanan ve bu alana önem veren biriyim. Geleceğimi bu doğrultuda şekillendirmek istiyor, bu alandaki yetkinliklerimi sürekli olarak geliştirmeye çalışıyorum. 
 
-Data Management Assistant Specialist at Sade Yazılım
+Sade Yazılım’da Veri Yönetimi Uzman Yardımcısı olarak çalışmaktayım.
 
