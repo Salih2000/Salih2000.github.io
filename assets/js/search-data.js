@@ -22,7 +22,7 @@ ninja.data = [{
     },
   },{id: "nav-blog",
           title: "Blog",
-          description: "My personal blog where I share my thoughts and ideas in English.",
+          description: "My personal blog where I share my thoughts and ideas.",
           section: "Navigation menu",
           handler: () => {
             window.location.href = "/blog/";
@@ -43,7 +43,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "If you would like to see my complete résumé and detailed information about all of my projects, please feel free to contact me via email or through my social media accounts listed in About the footer below.",
+          description: "If you would like to see my complete résumé and detailed information about all of my projects, please feel free to contact me via email or through my social media accounts listed in About page&#39;s footer.",
           section: "Navigation menu",
           handler: () => {
             window.location.href = "/cv/";
@@ -55,7 +55,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-coming-soon",
+            },{id: "post-a-practical-guide-to-sql-views-what-they-are-and-why-they-matter",
+        
+          title: "A Practical Guide to SQL Views What They Are and Why They Matter...",
+        
+        description: "SQL views are virtual tables that provide a simplified way to access and manipulate data in a database. This post explains what SQL views are, how they work, and why they are important for database management.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/sql-view/";
+          
+        },
+      },{id: "post-coming-soon",
         
           title: "Coming Soon",
         
@@ -423,16 +434,8 @@ ninja.data = [{
           description: "",
           section: "",handler: () => {
               window.location.href = "/books/en-us/the_godfather/";
-            },},{id: "news-coming-soon",
-          title: 'Coming Soon!',
-          description: "",
-          section: "News",},{id: "news-coming-soon",
-          title: 'Coming Soon',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/en-us/announcement_2/";
-            },},{id: "news-coming-soon-sparkles",
-          title: 'Coming Soon :sparkles:',
+            },},{id: "news-my-personel-blog-is-live-sparkles",
+          title: 'My Personel Blog is live! :sparkles:',
           description: "",
           section: "News",},{id: "projects-project-7",
           title: 'project 7',
@@ -501,11 +504,25 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/salih-abdullah-kilic", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
+        id: 'social-medium',
+        title: 'Medium',
         section: 'Socials',
         handler: () => {
-          window.open("/feed.xml", "_blank");
+          window.open("https://medium.com/@salihabdullahkilic", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/salihabkilic", "_blank");
+        },
+      },{
+        id: 'social-youtube',
+        title: 'YouTube',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://youtube.com/@salihabdullahkilic", "_blank");
         },
       },{
           id: 'lang-tr-tur',

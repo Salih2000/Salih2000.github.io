@@ -55,7 +55,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/tr-tur/blog/";
               },
-            },{id: "post-yakında",
+            },{id: "post-sql-views-için-pratik-bir-rehber-nedirler-ve-neden-önemlidirler",
+        
+          title: "SQL Views için Pratik Bir Rehber Nedirler ve Neden Önemlidirler?",
+        
+        description: "SQL Views, bir veritabanındaki verilere erişim ve manipülasyonu basitleştiren sanal tablolardır. Bu yazı, SQL view&#39;ların ne olduğunu, nasıl çalıştığını ve veritabanı yönetimi için neden önemli olduklarını açıklar.",
+        section: "Yazılar",
+        handler: () => {
+          
+            window.location.href = "/tr-tur/blog/2025/sql-view/";
+          
+        },
+      },{id: "post-yakında",
         
           title: "Yakında",
         
@@ -423,16 +434,8 @@ ninja.data = [{
           description: "",
           section: "",handler: () => {
               window.location.href = "/tr-tur/books/tr-tur/the_godfather/";
-            },},{id: "news-yakında",
-          title: 'Yakında!',
-          description: "",
-          section: "Haberler",},{id: "news-yakında",
-          title: 'Yakında!',
-          description: "",
-          section: "Haberler",handler: () => {
-              window.location.href = "/tr-tur/news/tr-tur/announcement_2/";
-            },},{id: "news-yakında-sparkles",
-          title: 'Yakında :sparkles:',
+            },},{id: "news-kişisel-blogum-artık-yayında-sparkles",
+          title: 'Kişisel Blogum  artık yayında! :sparkles:',
           description: "",
           section: "Haberler",},{id: "projects-project-7",
           title: 'project 7',
@@ -501,11 +504,25 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/salih-abdullah-kilic", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
+        id: 'social-medium',
+        title: 'Medium',
         section: 'Sosyal medya',
         handler: () => {
-          window.open("/feed.xml", "_blank");
+          window.open("https://medium.com/@salihabdullahkilic", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Sosyal medya',
+        handler: () => {
+          window.open("https://twitter.com/salihabkilic", "_blank");
+        },
+      },{
+        id: 'social-youtube',
+        title: 'YouTube',
+        section: 'Sosyal medya',
+        handler: () => {
+          window.open("https://youtube.com/@salihabdullahkilic", "_blank");
         },
       },{
           id: 'lang-en-us',
