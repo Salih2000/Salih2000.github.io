@@ -22,7 +22,7 @@ ninja.data = [{
     },
   },{id: "nav-blog",
           title: "Blog",
-          description: "Düşünce ve fikirlerimi İngilizce olarak paylaştığım blogum.",
+          description: "Düşünce ve fikirlerimi paylaştığım blogum.",
           section: "Navigasyon menüsü",
           handler: () => {
             window.location.href = "/tr-tur/blog/";
@@ -34,8 +34,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/tr-tur/projects/";
           },
-        },{id: "nav-repositorylerim",
-          title: "Repositorylerim",
+        },{id: "nav-repository",
+          title: "Repository",
           description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
           section: "Navigasyon menüsü",
           handler: () => {
@@ -62,30 +62,9 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/tr-tur/blog/";
               },
-            },{id: "dropdown-publicações",
-              title: "publicações",
-              description: "",
-              section: "Açılır Menü",
-              handler: () => {
-                window.location.href = "/tr-tur/publications/";
-              },
-            },{id: "dropdown-projetos",
-              title: "projetos",
-              description: "",
-              section: "Açılır Menü",
-              handler: () => {
-                window.location.href = "/tr-tur/projects/";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Açılır Menü",
-              handler: () => {
-                window.location.href = "/tr-tur/blog/";
-              },
-            },{id: "post-coming-soon",
+            },{id: "post-yakında",
         
-          title: "Coming Soon",
+          title: "Yakında",
         
         description: "this is what included plotly.js code could look like",
         section: "Yazılar",
@@ -94,9 +73,9 @@ ninja.data = [{
             window.location.href = "/tr-tur/blog/2025/plotly/";
           
         },
-      },{id: "post-coming-soon",
+      },{id: "post-yakında",
         
-          title: "Coming Soon",
+          title: "Yakında!",
         
         description: "this is what included image galleries could look like",
         section: "Yazılar",
@@ -451,11 +430,6 @@ ninja.data = [{
           description: "",
           section: "",handler: () => {
               window.location.href = "/tr-tur/books/tr-tur/the_godfather/";
-            },},{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "",handler: () => {
-              window.location.href = "/tr-tur/books/pt-br/the_godfather/";
             },},{id: "news-yakında",
           title: 'Yakında!',
           description: "",
