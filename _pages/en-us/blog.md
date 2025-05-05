@@ -4,7 +4,7 @@ layout: default
 permalink: /blog/
 title: Blog
 blog_name: My Blog
-description: My personal blog where I share my thoughts and ideas in English.
+description: My personal blog where I share my thoughts and ideas.
 nav: true
 nav_order: 1
 pagination:

@@ -28,7 +28,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm Salih and I consider myself as a person who believes and attaches importance to the game-changing power of data, data analytics, and data-driven solutions and I want to develop my future in this direction. I have knowledge of software development lifecycle methodologies.
+I'm Salih, actively working on projects involving data, data analytics, and primarily data management, where I take part in building and maintaining reliable data systems and meet real business needs. My work focuses on ensuring data quality, accessibility, and structure to improve operations and support data-driven decision-making.
 
-Data Management Assistant Specialist at Sade Yazılım
-
+Data Management Assistant Specialist at <a href='https://www.sade.ai'>Sade.AI</a>
