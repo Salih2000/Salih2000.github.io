@@ -80,12 +80,11 @@ cv:
   volunteer: Gönüllülük
   work: İş
 footer:
-  copyright: Telif Hakkı
+  copyright: Tüm Hakları Saklıdır
   last_updated: "Son güncelleme:"
-footer_text: >
-  # ">" sembolü, yeni satırları yok sayar
+footer_text: > # the ">" symbol means to ignore newlines until "titles:"
 
-latest_posts: son yazılar
+latest_posts: Son Yazılar
 months:
   long:
     january: Ocak
@@ -113,7 +112,7 @@ months:
     october: Eki
     november: Kas
     december: Ara
-news: haberler
+news: Haberler
 newsletter:
   back: Geri
   error: "Hata oluştu, lütfen tekrar deneyin."

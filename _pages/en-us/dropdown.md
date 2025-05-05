@@ -9,6 +9,6 @@ children:
   - title: bookshelf
     permalink: /books/
   - title: divider
-  - title: blog
+  - title: Blog
     permalink: /blog/
 ---

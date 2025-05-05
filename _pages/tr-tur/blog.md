@@ -4,7 +4,7 @@ layout: default
 permalink: /blog/
 title: Blog
 blog_name: Kişisel Blogum
-description: Düşünce ve fikirlerimi İngilizce olarak paylaştığım blogum.
+description: Düşünce ve fikirlerimi paylaştığım blogum.
 nav: true
 nav_order: 1
 pagination:

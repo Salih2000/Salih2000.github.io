@@ -84,7 +84,7 @@ footer:
   last_updated: "Last updated:"
 footer_text: > # the ">" symbol means to ignore newlines until "titles:"
 
-latest_posts: latest posts
+latest_posts: Latest Posts
 months:
   long:
     january: January
@@ -112,7 +112,7 @@ months:
     october: Oct
     november: Nov
     december: Dec
-news: news
+news: News
 newsletter:
   back: Back
   error: "Oops! Something went wrong, please try again."

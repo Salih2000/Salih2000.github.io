@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Coming Soon
+title: Yakında!
 date: 2024-12-04 01:59:00
 description: this is what included image galleries could look like
 tags: formatting images
