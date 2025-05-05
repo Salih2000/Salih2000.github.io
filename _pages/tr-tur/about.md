@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Ben Salih, verinin, veri analitiğinin ve veri odaklı çözümlerin gücüne inanan ve bu alana önem veren biriyim. Geleceğimi bu doğrultuda şekillendirmek istiyor, bu alandaki yetkinliklerimi sürekli olarak geliştirmeye çalışıyorum. 
+Ben Salih, verinin, veri analitiğinin ve veri odaklı çözümlerin gücüne inanan ve bu alana önem veren biriyim. Geleceğimi bu doğrultuda şekillendirmek istiyor, bu alandaki yetkinliklerimi sürekli olarak geliştiriyorum. 
 
 Sade Yazılım’da Veri Yönetimi Uzman Yardımcısı olarak çalışmaktayım.
 
