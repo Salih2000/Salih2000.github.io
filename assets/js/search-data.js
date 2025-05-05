@@ -36,26 +36,19 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "Repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          description: "You can explore my personal projects and learn more about my other work on github.com/Salih2000",
           section: "Navigation menu",
           handler: () => {
             window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "If you would like to see my complete résumé and detailed information about all of my projects, please feel free to contact me via email or through my social media accounts listed in About the footer below.",
           section: "Navigation menu",
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "Bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/books/";
-              },
-            },{id: "dropdown-blog",
+        },{id: "dropdown-blog",
               title: "Blog",
               description: "",
               section: "Dropdown",

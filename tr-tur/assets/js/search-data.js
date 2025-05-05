@@ -36,27 +36,20 @@ ninja.data = [{
           },
         },{id: "nav-repository",
           title: "Repository",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          description: "You can explore my personal projects and learn more about my other work by visiting github.com/Salih2000",
           section: "Navigasyon menüsü",
           handler: () => {
             window.location.href = "/tr-tur/repositories/";
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "Özgeçmişimin tamamını ve tüm projelerimin detaylı bilgilerini görmek isterseniz, Hakkımda sayfamda yer alan e-posta adresim veya sosyal medya hesaplarım üzerinden benimle iletişime geçmekten çekinmeyin.",
           section: "Navigasyon menüsü",
           handler: () => {
             window.location.href = "/tr-tur/cv/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Açılır Menü",
-              handler: () => {
-                window.location.href = "/tr-tur/books/";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
+        },{id: "dropdown-blog",
+              title: "Blog",
               description: "",
               section: "Açılır Menü",
               handler: () => {
