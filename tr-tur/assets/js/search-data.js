@@ -36,7 +36,7 @@ ninja.data = [{
           },
         },{id: "nav-repository",
           title: "Repository",
-          description: "You can explore my personal projects and learn more about my other work by visiting github.com/Salih2000",
+          description: "Github.com/Salih2000 hesabımı ziyaret ederek kişisel projelerimi inceleyebilir ve diğer çalışmalarım hakkında daha fazla bilgi edinebilirsiniz.",
           section: "Navigasyon menüsü",
           handler: () => {
             window.location.href = "/tr-tur/repositories/";
