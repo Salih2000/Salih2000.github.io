@@ -3,7 +3,7 @@ page_id: repositories
 layout: page
 permalink: /repositories/
 title: Repository
-description: 'You can explore my personal projects and learn more about my other work by visiting github.com/Salih2000'
+description: 'Github.com/Salih2000 hesabımı ziyaret ederek kişisel projelerimi inceleyebilir ve diğer çalışmalarım hakkında daha fazla bilgi edinebilirsiniz.'
 nav: true
 nav_order: 4
 ---
