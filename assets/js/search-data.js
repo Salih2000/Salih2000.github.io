@@ -511,13 +511,6 @@ ninja.data = [{
           window.open("https://medium.com/@salihabdullahkilic", "_blank");
         },
       },{
-        id: 'social-x',
-        title: 'X',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://twitter.com/salihabkilic", "_blank");
-        },
-      },{
         id: 'social-youtube',
         title: 'YouTube',
         section: 'Socials',
