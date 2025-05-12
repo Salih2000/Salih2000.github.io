@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Salih
 middle_name: A.
 last_name: Kilic
-keywords: salihkilic.net, salih-abdullah-kilic, Data-Management, Data-Engineering, SAS, Python
+keywords: salihkilic.net, salih-abdullah-kilic, Salih, Salih-Kilic, Kilic, Kılıç, Salih-A-Kılıç Data-Management, Data-Engineering, SAS, Python, SQL, Data-Analysis, Consulting, Veri-Analizi, Veri-Yönetimi, Veri-Mühendisliği, Danışmanlık
 icon: ⚙️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://salih2000.github.io # the base hostname & protocol for your site
