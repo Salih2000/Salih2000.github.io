@@ -1,16 +1,16 @@
 ---
 page_id: about
 layout: about
-title: about
+title: Hakkımda
 permalink: /
-subtitle: '<span style="color: var(--global-theme-color); font-size: 1.3em;">Hello There,</span>'
+subtitle: '<span style="color: var(--global-theme-color); font-size: 1.3em;">Merhaba,</span>'
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>I Own My Opinions</p>
+    <p>Fikirlerim bana ait, şahsidir.</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,6 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm Salih, actively working on projects involving data, data analytics, and primarily data management, where I take part in building and maintaining reliable data systems and meet real business needs. My work focuses on ensuring data quality, accessibility, and structure to improve operations and support data-driven decision-making.
+Ben Salih, veri, veri analitiği ve özellikle veri yönetimi alanlarını kapsayan projelerde aktif olarak görev alıyor ve güvenilir veri sistemleri ile veri süreçlerini kurma ve sürdürme çalışmalarında yer alarak kendimi bu alanda geliştiriyorum.
 
-Data Management Assistant Specialist at [Sade.AI](https://www.sade.ai/).
+[Sade.AI](https://www.sade.ai/)'da Veri Yönetimi Uzman Yardımcısı olarak çalışmaktayım.
+

@@ -1,0 +1,65 @@
+- title: Genel Bilgiler
+  type: map
+  contents:
+    - name: Ad Soyad
+      value: Albert Einstein
+    - name: Doğum Tarihi
+      value: 14 Mart 1879
+    - name: Diller
+      value: İngilizce, Almanca
+
+- title: Eğitim
+  type: time_table
+  contents:
+    - title: Doktora
+      institution: Zürih Üniversitesi, Zürih, İsviçre
+      year: 1905
+      description:
+        - Açıklama 1.
+        - Açıklama 2.
+        - title: Açıklama 3.
+          contents:
+            - Alt açıklama 1.
+            - Alt açıklama 2.
+    - title: Federal öğretmenlik diploması
+      institution: Eidgenössische Technische Hochschule, Zürih, İsviçre
+      year: 1900
+      description:
+        - Açıklama 1.
+        - Açıklama 2.
+
+- title: İş Deneyimi
+  type: time_table
+  contents:
+    - title: Teorik Fizik Profesörü
+      institution: Institute for Advanced Study, Princeton Üniversitesi
+      year: 1933 - 1955
+      description:
+        - Açıklama 1.
+        - Açıklama 2.
+        - title: Açıklama 3.
+          contents:
+            - Alt açıklama 1.
+            - Alt açıklama 2.
+    - title: Misafir Profesör
+      institution: California Institute of Technology, Pasadena, Kaliforniya, ABD
+      year: 1933
+
+- title: Sertifikalar
+  type: time_table
+  contents:
+    - title: Sertifika adı
+      institution: Kurum adı
+      year: 2024
+
+- title: Beceriler
+  type: nested_list
+  contents:
+    - title: Konu 1.
+      items:
+        - Açıklama 1.
+        - Açıklama 2.
+    - title: Konu 2.
+      items:
+        - Açıklama 1.
+        - Açıklama 2.
