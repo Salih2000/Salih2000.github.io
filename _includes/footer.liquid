@@ -2,15 +2,15 @@
   &copy;
   {{- site.data[site.active_lang].strings.footer.copyright }}
   {{ site.time | date: '%Y' }}
-  {{ site.first_name }}
-  {{ site.middle_name }}
-  {{ site.last_name }}. {{ site.data[site.active_lang].strings.footer_text }}
+  {{ site.data[site.active_lang].strings.name.first }}
+  {{ site.data[site.active_lang].strings.name.middle }}
+  {{ site.data[site.active_lang].strings.name.last }}. {{ site.data[site.active_lang].strings.footer_text }}
   {% if site.impressum_path %}
     <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
   {% endif %}
   {% if site.last_updated %}
     {{- site.data[site.active_lang].strings.footer.last_updated }}
-    {{ 'now' | date: '%B %d, %Y' }}.
+    {% include date_format.liquid format='long' date='now' %}.
   {% endif %}
 {% endcapture %}
 

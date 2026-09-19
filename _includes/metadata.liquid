@@ -14,7 +14,7 @@
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 {% endif %}
 
-{% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% capture author_name %}{{ site.data[site.active_lang].strings.name.first }}{% if site.data[site.active_lang].strings.name.middle %} {{ site.data[site.active_lang].strings.name.middle }}{% endif %} {{ site.data[site.active_lang].strings.name.last }}{% endcapture %}
 
 <!-- Standard metadata -->
 <meta charset="utf-8">

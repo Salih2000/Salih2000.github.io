@@ -5,16 +5,16 @@
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
-            {% if site.first_name %}
+            {% if site.data[site.active_lang].strings.name.first %}
               <span class="font-weight-bold">
-                {{- site.first_name -}}
+                {{- site.data[site.active_lang].strings.name.first -}}
               </span>
             {% endif %}
-            {% if site.middle_name %}
-              {{- site.middle_name -}}
+            {% if site.data[site.active_lang].strings.name.middle %}
+              {{- site.data[site.active_lang].strings.name.middle -}}
             {% endif %}
-            {% if site.last_name %}
-              {{- site.last_name -}}
+            {% if site.data[site.active_lang].strings.name.last %}
+              {{- site.data[site.active_lang].strings.name.last -}}
             {% endif %}
           {% else %}
             {{- site.title -}}
