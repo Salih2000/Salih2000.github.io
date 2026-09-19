@@ -19,7 +19,7 @@
         {% elsif content[0] == 'email' %}
           <a href="mailto:{{ content[1] }}" target="_blank">{{ content[1] }}</a>
         {% elsif content[0] == 'phone' %}
-          <a href="tel:{{ content[1] }}" title="{{ site.data[site.active_lang].strings.phone_note }}"><span style="filter: blur(4px); user-select: none;">{{ content[1] }}</span></a>
+          <a href="tel:{{ content[1] }}" title="{{ site.data[site.active_lang].strings.phone_note }}"><span style="filter: blur(9px); user-select: none;">{{ content[1] }}</span></a>
         {% else %}
           {{ content[1] }}
         {% endif %}
