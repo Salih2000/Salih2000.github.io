@@ -22,11 +22,11 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <!-- Particle JS (disabled on reading pages like blog posts, where a moving background is distracting) -->
-    {% if site.particle_js and page.layout != 'post' %}
+    <!-- Particle JS (movement paused on reading pages like blog posts, where motion is distracting) -->
+    {% if site.particle_js %}
       <script src="{{ '/assets/js/particles.js' | relative_url }}"></script>
       <script src="{{ '/assets/js/particle-call-function.js' | relative_url }}"></script>
-      <div id="particles-js"></div>
+      <div id="particles-js" data-static="{% if page.layout == 'post' %}true{% else %}false{% endif %}"></div>
     {% endif %}
 
     <!-- Header -->
