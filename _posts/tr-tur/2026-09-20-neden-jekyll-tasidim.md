@@ -12,9 +12,9 @@ Okuldan mezuniyetime yakın, kişisel bir web sitemin olmasının hem teknik hem
 
 ## Neden sıfırdan değil, bir klon proje ile başladım
 
-Bu alandaki tecrübem henüz kısıtlı olduğu için, hazır bir klon projeyi kendi isteklerime göre uyarlama fikri cazip geldi. Sıfırdan yapmak şüphesiz öğretici bir yöntem; fakat siteyi inşa ettiğim 2024 yılında henüz iş hayatına atılmamıştım. Frontend ve web geliştirme alanının giderek doygunlaştığını, çok fazla rekabet olduğunu görüyordum. Doğrudan kariyerime odaklanmam gereken o dönemde, bu alanda fazla zaman harcamak istemedim ve bir klon projeyle yola çıktım.
+Bu alandaki tecrübem henüz kısıtlı olduğu için, hazır bir klon projeyi kendi isteklerime göre uyarlama fikri cazip geldi. Sıfırdan yapmak şüphesiz öğretici bir yöntem; fakat siteyi inşa ettiğim 2024 yılında henüz iş hayatına atılmamıştım. Frontend ve web geliştirme alanının giderek doygunlaştığını, çok fazla rekabet olduğunu görüyordum. Doğrudan kariyerime odaklanmam gereken o dönemde, bu alanda fazla zaman harcamak istemedim ve bir klon projeyle yola çıktım. 2026'ya gelindiğinde bile web teknolojilerinin hâlâ baskın olmaya ve gün geçtikçe daha da daralan bir rekabet ortamına sahne olmaya devam ettiğini görüyorum; dolayısıyla o zamanki öngörümün ve iddiamın hâlâ geçerli olduğunu düşünüyorum.
 
-YouTube'da uzun zamandır takip ettiğim [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) kanalı bu süreçte oldukça işime yaradı. AI dönemi henüz başlamamışken bile uçtan uca çalışan, tutarlı teknolojileri anlatan harika tutoriallar paylaşıyorlar (hâlâ da üretmeye devam ediyorlar). Özellikle öğrenciyseniz kesinlikle göz atmalısınız. Zaten bir konuda hiçbir şey bilmeyip uzmanlaşmak istiyorsanız, uçtan uca çalışan bir proje yapmak yazılımcıların ne yaptığını anlamak ve neyi istemediğinizi fark etmek için en iyi yollardan biri.
+YouTube'da uzun zamandır takip ettiğim [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) kanalı bu süreçte oldukça işime yaradı. AI dönemi henüz başlamamışken bile uçtan uca çalışan, tutarlı teknolojileri anlatan harika tutoriallar paylaşıyorlar (hâlâ da üretmeye devam ediyorlar). Özellikle öğrenciyseniz kesinlikle göz atmalısınız. Zaten bir konuda hiçbir şey bilmeyip uzmanlaşmak istiyorsanız, uçtan uca çalışan bir klon proje yapmak yazılımcıların ne yaptığını anlamak ve neyi istemediğinizi fark etmek için en iyi yollardan biri.
 
 Bu araştırmalar sırasında bulduğum "Build and Deploy an Amazing 3D Web Developer Portfolio in React JS \| Beginner Three.js Tutorial" adlı [videodan](https://www.youtube.com/watch?v=0fYi8SGA20k) faydalanarak ilk projemi ayağa kaldırdım. Başlangıç için statik ve havalı bir sitenin fena olmayacağını düşünmüştüm.
 
@@ -31,7 +31,7 @@ Dilerseniz kaynak koduna [buradaki repo](https://github.com/Salih2000/mypersonel
 
 ## Sorun: 3D sahnelerin ve yüksek render maliyetinin bedeli
 
-Sitemi ayağa kaldırdıktan sonra fark ettim ki, yoğun 3D sahne kullanımı görsel olarak ne kadar şık dursa dursun; performans, indeksleme (indexing) ve SEO açısından ciddi sıkıntılar yaratıyordu.
+Sitemi ayağa kaldırdıktan sonra fark ettim ki, yoğun 3D sahne kullanımı görsel olarak ne kadar şık dursa dursun; performans, indeksleme ve SEO açısından ciddi sıkıntılar yaratıyordu.
 
 ## Yeni arayış: içerik odaklı bir teknoloji
 
@@ -62,4 +62,4 @@ Aslında bu yazının ilk taslağı "bunu siz de nasıl adım adım kurarsınız
 
 Şimdilik kaliteli ve ağırlıklı sayılabilecek geniş bir içeriğim henüz yok (henüz! :D), bunlara nasıl zaman ayıracağımı planlıyorum. Lakin yakın zamanda hem mesleki birikimlerimi hem de günlük hayattaki hobilerimi ve deneyimlerimi buraya taşımayı düşünüyorum.
 
-Eğer siz de bu tarz bir altyapıyı kurmak isterseniz, kullandığım çok dilli [al-folio](https://github.com/george-gca/multi-language-al-folio) reposunun README dokümantasyonunu bir AI aracıyla birlikte incelemenizi şiddetle tavsiye ederim. Az çok teknik altyapınız varsa hiç de zor değil. Dost ve müttefik çevremdeyseniz zaten doğrudan bana da ulaşabilirsiniz, seve seve yönlendiririm.
+Eğer siz de bu tarz bir altyapıyı kurmak isterseniz, kullandığım çok dilli [al-folio](https://github.com/george-gca/multi-language-al-folio) reposunun README dokümantasyonunu bir AI aracıyla birlikte incelemenizi tavsiye ederim. Az çok teknik altyapınız varsa hiç de zor değil. Dost ve müttefik çevremdeyseniz zaten doğrudan bana da ulaşabilirsiniz, seve seve yönlendiririm.
