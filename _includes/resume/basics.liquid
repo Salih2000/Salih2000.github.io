@@ -23,11 +23,17 @@
         {% elsif content[0] == 'phone' %}
           <a
             href="javascript:void(0);"
-            onclick="alert(this.dataset.phoneNote)"
+            onclick="document.getElementById('phone-note-modal-text').innerText = this.dataset.phoneNote; document.getElementById('phone-note-modal').style.display = 'flex';"
             data-phone-note="{{ site.data[site.active_lang].strings.phone_note }}"
             title="{{ site.data[site.active_lang].strings.phone_note }}"
             ><span style="filter: blur(9px); user-select: none;">{{ content[1] }}</span></a
           >
+          <div id="phone-note-modal" class="phone-note-modal" onclick="if (event.target === this) this.style.display = 'none';">
+            <div class="phone-note-modal-content">
+              <span class="phone-note-modal-close" onclick="document.getElementById('phone-note-modal').style.display = 'none';">&times;</span>
+              <p id="phone-note-modal-text"></p>
+            </div>
+          </div>
         {% else %}
           {{ content[1] }}
         {% endif %}
