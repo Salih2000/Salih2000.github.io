@@ -41,7 +41,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
+        },{id: "post-why-i-moved-my-site-from-react-js-to-jekyll",
+        
+          title: "Why I moved my site from React.js to Jekyll",
+        
+        description: "The story of why I moved my personal site, which started as a React.js project, to Jekyll/GitHub Pages.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/neden-jekyll-tasidim/";
+          
+        },
+      },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "",handler: () => {
