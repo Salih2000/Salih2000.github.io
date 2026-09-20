@@ -52,45 +52,10 @@ ninja.data = [{
             window.location.href = "/tr-tur/blog/2026/neden-jekyll-tasidim/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "",handler: () => {
-              window.location.href = "/tr-tur/books/the_godfather/";
-            },},{id: "news-yeni-blogum-artık-yayında-sparkles",
+      },{id: "news-yeni-blogum-artık-yayında-sparkles",
           title: 'Yeni blogum artık yayında! :sparkles:',
           description: "",
-          section: "Haberler",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
-          section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/6_project/";
-            },},{
+          section: "Haberler",},{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Sosyal medya',
