@@ -1342,6 +1342,17 @@ ninja-keys::part(ninja-input-wrapper) {
 // newsletter
 .newsletter-form-container {
   margin-bottom: 20px;
+  padding: 1.25rem;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.newsletter-form-prompt {
+  color: var(--global-text-color);
+  margin-bottom: 12px;
+  font-size: 0.95rem;
 }
 
 .newsletter-form {
