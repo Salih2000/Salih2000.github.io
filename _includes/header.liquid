@@ -137,7 +137,7 @@
                 {% if site.active_lang == site.default_lang %}
                   <a class="nav-link" {% static_href -%} href="{{ site.baseurl }}/{{ other_language }}{{ page.url }}" {%- endstatic_href %}>
                     {% if site.country_flag %}
-                      <span class="fi fi-{{ other_language | split: "-" | last }}"></span>
+                      <span class="fi fi-{% include flag_code.liquid lang=other_language %}"></span>
                     {% else %}
                       {{ other_language | upcase }}
                     {%- endif -%}
@@ -145,7 +145,7 @@
                 {% else %}
                   <a class="nav-link" {% static_href -%} href="{{ site.baseurl }}{{ page.url }}" {%- endstatic_href %}>
                     {% if site.country_flag %}
-                      <span class="fi fi-{{ site.default_lang | split: "-" | last }}"></span>
+                      <span class="fi fi-{% include flag_code.liquid lang=site.default_lang %}"></span>
                     {% else %}
                       {{ site.default_lang | upcase }}
                     {%- endif -%}
@@ -164,7 +164,7 @@
                   aria-expanded="false"
                 >
                   {% if site.country_flag %}
-                    <span class="fi fi-{{ site.active_lang | split: "-" | last }}"></span>
+                    <span class="fi fi-{% include flag_code.liquid lang=site.active_lang %}"></span>
                   {% else %}
                     {{- site.active_lang | upcase }}
                   {%- endif -%}
@@ -182,7 +182,7 @@
                       {% if l == site.default_lang %}
                         <a class="dropdown-item" {% static_href -%} href="{{ site.baseurl }}{{ page.url }}" {%- endstatic_href %}>
                           {% if site.country_flag %}
-                            <span class="fi fi-{{ l | split: "-" | last }}"></span>
+                            <span class="fi fi-{% include flag_code.liquid lang=l %}"></span>
                           {% else %}
                             {{ l | upcase }}
                           {%- endif -%}
@@ -190,7 +190,7 @@
                       {% else %}
                         <a class="dropdown-item" {% static_href -%} href="{{ site.baseurl }}/{{ l }}{{ page.url }}" {%- endstatic_href %}>
                           {% if site.country_flag %}
-                            <span class="fi fi-{{ l | split: "-" | last }}"></span>
+                            <span class="fi fi-{% include flag_code.liquid lang=l %}"></span>
                           {% else %}
                             {{ l | upcase }}
                           {%- endif -%}

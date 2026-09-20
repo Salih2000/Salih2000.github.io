@@ -1,0 +1,7 @@
+{%- if include.lang == 'en-us' -%}
+  gb
+{%- elsif include.lang == 'tr-tur' -%}
+  tr
+{%- else -%}
+  {{- include.lang | split: '-' | last -}}
+{%- endif -%}
