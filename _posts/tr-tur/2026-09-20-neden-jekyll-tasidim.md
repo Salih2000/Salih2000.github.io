@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 title: Sitemi neden React.js'ten Jekyll'e taşıdım
 date: 2026-09-20 12:00:00+0300
@@ -9,28 +8,21 @@ categories: veri-mühendisliği
 related_posts: false
 ---
 
-<!--
-TASLAK — gözden geçir, kendi sesine göre son rötuşları sen yap.
-Yazı bitince en üstteki "published: false" satırını sil (ya da true yap), sonra canlıya alırız.
--->
-
-Okuldan mezuniyetime yakın bir zamanda, kişisel bir web sitemin olmasının faydalı olacağını düşünmeye başlamıştım. Hem teknik hem hobi amaçlı içeriklerimin bir arada bulunacağı, kişisel marka inşası için gerekli bir alan arayışındaydım. Kısacası, bir blog arayışım vardı.
+Okuldan mezuniyetime yakın, kişisel bir web sitemin olmasının hem teknik hem de hobi amaçlı içeriklerimi toplamak ve kişisel markamı inşa etmek için iyi bir adım olacağını düşünmeye başladım. Kısacası, bir blog arayışındaydım.
 
 ## Neden sıfırdan değil, bir klon proje ile başladım
 
-Bu alandaki uzmanlığımın henüz kısıtlı olması sebebiyle, bir klon projeyi kendi tercih ve isteklerime göre uyarlama fikri doğdu. Sıfırdan yapmak her ne kadar öğretici ve tecrübe kazanmak için iyi bir yöntem olsa da, siteyi inşa ettiğim 2024 yılında henüz iş hayatına atılmamıştım ve frontend/web geliştirmenin doygunlaşmaya başladığını, bu alanda çok fazla rekabet olduğunu görüyordum. Dolayısıyla kariyerime doğrudan fayda sağlamayacak bir alanda fazla zaman harcamak istemedim ve bir klon proje ile başlamaya karar verdim.
+Bu alandaki tecrübem henüz kısıtlı olduğu için, hazır bir klon projeyi kendi isteklerime göre uyarlama fikri cazip geldi. Sıfırdan yapmak şüphesiz öğretici bir yöntem; fakat siteyi inşa ettiğim 2024 yılında henüz iş hayatına atılmamıştım. Frontend ve web geliştirme alanının giderek doygunlaştığını, çok fazla rekabet olduğunu görüyordum. Doğrudan kariyerime odaklanmam gereken o dönemde, bu alanda fazla zaman harcamak istemedim ve bir klon projeyle yola çıktım.
 
-## İlham kaynağım: JavaScript Mastery
+YouTube'da uzun zamandır takip ettiğim [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) kanalı bu süreçte oldukça işime yaradı. AI dönemi henüz başlamamışken bile uçtan uca çalışan, tutarlı teknolojileri anlatan harika tutoriallar paylaşıyorlar (hâlâ da üretmeye devam ediyorlar). Özellikle öğrenciyseniz kesinlikle göz atmalısınız. Zaten bir konuda hiçbir şey bilmeyip uzmanlaşmak istiyorsanız, uçtan uca çalışan bir proje yapmak yazılımcıların ne yaptığını anlamak ve neyi istemediğinizi fark etmek için en iyi yollardan biri.
 
-YouTube'da uzun zamandır takip ettiğim [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) adında bir kanal var. AI hype'ı henüz doğmamışken, how-to tarzında tutoriallara sahip, yazılım geliştirmenin bir çok alanına dokunan bir kanal; özellikle okul ve kişisel projelerimiz için gerçekten ihtiyaç duyduğumuz, tutarlı teknolojileri anlatan içerikler paylaşıyorlar. Hâlâ çok başarılı içerikler üretiyorlar; özellikle hâlâ öğrenciyseniz videolarına göz atmanızı şiddetle tavsiye ederim. Bir konuda hiçbir şey bilmeyen ama o konuda uzmanlaşmak isteyen birine, her zaman uçtan uca çalışan bir klon proje yapmasını tavsiye etmişimdir — bu, developer'ların ne yaptığını anlamak isteyen biri için çok tecrübe dolu oluyor ve ne yapmak istediğini ya da istemediğini çok daha iyi kavrıyorsun.
-
-Bu araştırma sürecinde "Build and Deploy an Amazing 3D Web Developer Portfolio in React JS | Beginner Three.js Tutorial" adlı [videoyu](https://www.youtube.com/watch?v=0fYi8SGA20k) buldum. Başlangıç için statik bir sitenin fena olmayacağını, ileride kendime göre uyarlamak istersem bunun görece basit olacağı kanaatine vardım ve bu videodan faydalanarak projemi ayağa kaldırdım.
+Bu araştırmalar sırasında bulduğum "Build and Deploy an Amazing 3D Web Developer Portfolio in React JS \| Beginner Three.js Tutorial" adlı [videodan](https://www.youtube.com/watch?v=0fYi8SGA20k) faydalanarak ilk projemi ayağa kaldırdım. Başlangıç için statik ve havalı bir sitenin fena olmayacağını düşünmüştüm.
 
 ## İlk sürüm: domain arayışı ve React.js portföyü
 
-O zamanlar Google Domains üzerinden ad-soyad temalı domainlere bakıyordum; arzu ettiğim tüm domainlerin alınmış olması hayal kırıklığı yaratsa da sonunda `salihkilic.net`'i satın aldım. YouTube videosunu izleyerek projemi ayağa kaldırdım.
+O dönem Google Domains üzerinden ad-soyad temalı domain arıyordum. İstediğim adreslerin çoğu alınmış olsa da sonunda [salihkilic.net](https://salihkilic.net)'i satın aldım. Videoyu takip ederek projeyi kurdum.
 
-Kaynak kodunu dilerseniz [buradaki repo](https://github.com/Salih2000/mypersonelwebsiteportfolio-main) üzerinden inceleyebilirsiniz. Site hâlâ Firebase üzerinde durduğu için canlı halini de paylaşayım: [personel-website-53a82.web.app](https://personel-website-53a82.web.app/)
+Dilerseniz kaynak koduna [buradaki repo](https://github.com/Salih2000/mypersonelwebsiteportfolio-main) üzerinden göz atabilirsiniz. Site hâlâ Firebase üzerinde durduğu için canlı haline de [şuradan](https://personel-website-53a82.web.app/) ulaşabilirsiniz.
 
 {% include figure.liquid loading="eager" path="assets/img/2026-09-20-old-react-portfolio.png" class="img-fluid rounded z-depth-1" %}
 <div class="caption">
@@ -39,15 +31,15 @@ Kaynak kodunu dilerseniz [buradaki repo](https://github.com/Salih2000/mypersonel
 
 ## Sorun: 3D sahnelerin ve yüksek render maliyetinin bedeli
 
-Kişisel sitemi ayağa kaldırdıktan sonra, yoğun 3D sahne kullanımının görsel olarak iyi görünse de performans, indeksleme (indexing) ve SEO açısından ciddi problemler yarattığını fark ettim.
+Sitemi ayağa kaldırdıktan sonra fark ettim ki, yoğun 3D sahne kullanımı görsel olarak ne kadar şık dursa dursun; performans, indeksleme (indexing) ve SEO açısından ciddi sıkıntılar yaratıyordu.
 
-## Yeni arayış: içerik/blog odaklı bir teknolojiye geçiş
+## Yeni arayış: içerik odaklı bir teknoloji
 
-Sektörde adını duyurmuş birçok geliştiricinin blog ve içerik üretimi temalı web siteleri olduğunu görünce, blogumu üretebileceğim bir teknolojiye geçme fikri oluştu. Klasik WordPress ya da benzeri araçları da araştırdım ama arzu ettiğim açık kaynak kodlama esnekliğini tam olarak yakalayamadım. Bir arkadaşımın tavsiyesiyle Jekyll'in bu tarz işler için çok ideal olduğunu öğrendim ve GitHub üzerinde hazır blog temalarını araştırmaya başladım.
+Sektörde beğendiğim birçok geliştiricinin içerik üretimi odaklı sade web siteleri olduğunu görünce, benim de bu yöne evrilmem gerektiğine karar verdim. Klasik WordPress veya benzeri araçları inceledim ancak aradığım açık kaynak kod esnekliğini bulamadım. Bir arkadaşımın tavsiyesiyle Jekyll'in bu iş için biçilmiş kaftan olduğunu öğrendim ve GitHub üzerindeki hazır temaları incelemeye başladım.
 
-İşte o sırada, tam da istediğim gibi sade, içerik odaklı, düzenli olarak topluluk tarafından desteklenen, Jekyll ile inşa edilen ve GitHub Pages'te ücretsiz olarak host edip kendi domainime bağlayabileceğim [al-folio](https://github.com/alshedivat/al-folio) temasına denk geldim. Kurulumu biraz zaman alsa da dokümantasyonuna bakarak canlıya aldım.
+Tam da aradığım gibi sade, içerik odaklı, topluluk tarafından aktif desteklenen ve GitHub Pages üzerinde ücretsiz barındırıp kendi domainime bağlayabileceğim [al-folio](https://github.com/alshedivat/al-folio) temasına denk geldim. Kurulumu biraz vakit alsa da dokümantasyonu takip ederek sistemi canlıya aldım.
 
-Domainimi eski React formatıyla ayağa kaldırdıktan sonra aradan biraz zaman geçmişti; o sırada Google Domains'in Google tarafından kapatıldığına dair mail gelmiş olsa da tam takip edememiştim ([killedbygoogle.com](https://killedbygoogle.com/)). Akabinde Squarespace üzerinden ilgili DNS yönlendirmelerini yaparak web sitemi tekrar ayağa kaldırdım.
+Bu süreçte Google Domains'in Google tarafından kapatıldığını öğrendim ([killedbygoogle.com](https://killedbygoogle.com/)). Hemen Squarespace üzerinden gerekli DNS yönlendirmelerini yaparak sitemi sorunsuz şekilde tekrar aktif hale getirdim.
 
 {% include figure.liquid loading="eager" path="assets/img/2026-09-20-killed-by-google.png" class="img-fluid rounded z-depth-1" %}
 <div class="caption">
@@ -56,16 +48,18 @@ Domainimi eski React formatıyla ayağa kaldırdıktan sonra aradan biraz zaman 
 
 ## Şu an neden bu yapıda karar kıldım
 
-Mevcut haliyle, blog anlamında bir veri alanına ihtiyaç duyan, çalışan bir geliştirici olarak şimdilik tüm ihtiyaçlarımı karşılayacağını fark ettim. Şu özellikleri özellikle işime yarıyor:
+Mevcut yapım, çalışan bir geliştirici olarak tüm temel ihtiyaçlarımı fazlasıyla karşılıyor:
 
-- **Çoklu dil desteği** — Türkçe ve İngilizce içeriği aynı sitede, hem yerel hem uluslararası kitleye hitap edebiliyorum.
-- **Markdown ile içerik üretimi** — kod yazmadan, sade bir metin dosyasıyla yeni bir yazı yayınlayabiliyorum.
-- **GitHub Pages üzerinde tamamen ücretsiz barındırma**, kendi domainimi bağlayabilme imkanıyla birlikte.
-- **Tek bir veri dosyasından CV üretimi** — özgeçmiş bilgim hem web sayfası hem indirilebilir PDF olarak tek kaynaktan güncelleniyor.
-- **Hazır analitik entegrasyonları** — Google Analytics, Search Console ve Microsoft Clarity gibi araçları birkaç satır ayarla bağlayabiliyorum.
-- **Statik site olduğu için hızlı yüklenme ve SEO dostu yapı** — eski sitemdeki 3D sahne yükünün aksine.
-- **GitHub Actions ile otomatik deploy** — bir değişikliği push'ladığımda site kendiliğinden güncelleniyor.
+- **Çoklu dil desteği:** Türkçe ve İngilizce içeriği aynı sitede tutabiliyorum; hem yerel hem uluslararası kitleye hitap edebiliyorum.
+- **Kolay içerik üretimi:** Yeni bir yazı yazmak için kod yazmama gerek kalmıyor; sade bir Markdown dosyası açmak yeterli oluyor.
+- **Sıfır maliyet ve kolay barındırma:** GitHub Pages üzerinde tamamen ücretsiz host ediliyor ve kendi domainimle çalışıyor.
+- **Tek kaynaktan CV:** Özgeçmişim tek bir veri dosyasından besleniyor; bilgileri bir kez güncellediğimde hem web sayfası hem de indirilebilir PDF otomatik güncelleniyor.
+- **Kolay entegrasyonlar:** Google Analytics, Search Console ve Microsoft Clarity gibi araçları birkaç satırlık ayarla bağladım, ekstra bir entegrasyon derdi yok.
+- **Hız ve SEO:** Statik bir yapıda olduğu için hem uçuyor hem de SEO dostu; eski sitemdeki ağır 3D sahnelerin tam zıttı bir performans sunuyor.
+- **Otomatik dağıtım:** GitHub Actions sayesinde repoya ufak bir push yaptığımda site anında güncelleniyor.
 
-Aslında bu yazının içeriği başta "bunu siz de nasıl yaparsınız" tarzı bir rehber olacaktı; ama sonunda bunun yerine "neden bunu tercih ettim" yazısı olmasının daha uygun olduğuna karar verdim. Çünkü günümüzde yapay zeka sayesinde böyle bir siteyi ayağa kaldırmak, açıkçası benim burada yazacağım bir rehberden çok daha fazla yardımcı olacaktır size — muhtemelen blogumda oluşturmak istediğim içerikler de artık "nasıl yapılır" demekten ziyade "neden tercih ettim" ve o konudaki geri dönütlerime yönelik olacak, zira Agentic AI artık bu tarz kurulum/manuel süreçleri çok daha anlaşılır ve uygulanabilir şekilde sunuyor.
+Aslında bu yazının ilk taslağı "bunu siz de nasıl adım adım kurarsınız" tarzı bir rehber olacaktı. Fakat bunun yerine "neden bu tercihi yaptım" yazısı olmasının daha doğru olduğuna karar verdim. Çünkü günümüzde yapay zeka araçları sayesinde bu tarz teknik kurulumları yapmak, benim burada anlatacağımdan çok daha kolay ve anlaşılır hale geldi. Muhtemelen bundan sonra blogumda üreteceğim içerikler de "nasıl yapılır" rehberlerinden ziyade, "neden tercih ettim" odaklı ve teknik tecrübelerimi aktardığım yazılar olacak.
 
-Gün sonunda mevcut yapıda ağırlıklı ve kaliteli sayılabilecek bir içeriğim henüz yok; bunlara nasıl zaman ayıracağımı planlamam gereken bir durum. Lakin yakın zamanda blogumu doldurmayı düşünüyorum — gerek mesleki deneyim ve uzmanlığıma, gerekse hobilerime ve günlük hayatta yaşadığım durumlara yönelik içerikler olabilir bunlar.
+Şimdilik kaliteli ve ağırlıklı sayılabilecek geniş bir içeriğim henüz yok (henüz! :D), bunlara nasıl zaman ayıracağımı planlıyorum. Lakin yakın zamanda hem mesleki birikimlerimi hem de günlük hayattaki hobilerimi ve deneyimlerimi buraya taşımayı düşünüyorum.
+
+Eğer siz de bu tarz bir altyapıyı kurmak isterseniz, kullandığım çok dilli [al-folio](https://github.com/george-gca/multi-language-al-folio) reposunun README dokümantasyonunu bir AI aracıyla birlikte incelemenizi şiddetle tavsiye ederim. Az çok teknik altyapınız varsa hiç de zor değil. Dost ve müttefik çevremdeyseniz zaten doğrudan bana da ulaşabilirsiniz, seve seve yönlendiririm.
