@@ -24,7 +24,7 @@ O dönem Google Domains üzerinden ad-soyad temalı domain arıyordum. İstediğ
 
 Dilerseniz kaynak koduna [buradaki repo](https://github.com/Salih2000/mypersonelwebsiteportfolio-main) üzerinden göz atabilirsiniz. Site hâlâ Firebase üzerinde durduğu için canlı haline de [şuradan](https://personel-website-53a82.web.app/) ulaşabilirsiniz.
 
-{% include figure.liquid loading="eager" path="assets/img/2026-09-20-old-react-portfolio.png" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/2026-09-20-old-react-portfolio.png" class="img-fluid rounded z-depth-1" alt="Eski React.js/Three.js portföyümün ana sayfasının ekran görüntüsü" %}
 <div class="caption">
     Eski React.js/Three.js portföyümün ana sayfası
 </div>
@@ -41,7 +41,7 @@ Tam da aradığım gibi sade, içerik odaklı, topluluk tarafından aktif destek
 
 Bu süreçte Google Domains'in Google tarafından kapatıldığını öğrendim ([killedbygoogle.com](https://killedbygoogle.com/)). Hemen Squarespace üzerinden gerekli DNS yönlendirmelerini yaparak sitemi sorunsuz şekilde tekrar aktif hale getirdim.
 
-{% include figure.liquid loading="eager" path="assets/img/2026-09-20-killed-by-google.png" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/2026-09-20-killed-by-google.png" class="img-fluid rounded z-depth-1" alt="killedbygoogle.com sitesindeki Google Domains kaydının ekran görüntüsü" %}
 <div class="caption">
     killedbygoogle.com'da Google Domains'in kaydı
 </div>

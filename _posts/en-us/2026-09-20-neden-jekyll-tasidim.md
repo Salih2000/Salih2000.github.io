@@ -24,7 +24,7 @@ Back then I was searching Google Domains for domains matching my name. Most of t
 
 If you'd like, you can check out the source code in [this repo](https://github.com/Salih2000/mypersonelwebsiteportfolio-main). The site is still hosted on Firebase, so you can also reach the live version [here](https://personel-website-53a82.web.app/).
 
-{% include figure.liquid loading="eager" path="assets/img/2026-09-20-old-react-portfolio.png" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/2026-09-20-old-react-portfolio.png" class="img-fluid rounded z-depth-1" alt="Screenshot of my old React.js/Three.js portfolio homepage" %}
 <div class="caption">
     The homepage of my old React.js/Three.js portfolio
 </div>
@@ -41,7 +41,7 @@ That's when I came across [al-folio](https://github.com/alshedivat/al-folio) —
 
 Around this time I learned Google Domains had been shut down by Google ([killedbygoogle.com](https://killedbygoogle.com/)). I quickly set up the necessary DNS redirects through Squarespace and got my site back up and running without issue.
 
-{% include figure.liquid loading="eager" path="assets/img/2026-09-20-killed-by-google.png" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/2026-09-20-killed-by-google.png" class="img-fluid rounded z-depth-1" alt="Screenshot of Google Domains' entry on killedbygoogle.com" %}
 <div class="caption">
     Google Domains' entry on killedbygoogle.com
 </div>
