@@ -118,9 +118,10 @@
   "projects": [
     {
       "name": "Yves Rocher France",
-      "summary": "Contributing to the SAS Viya 4 migration project for Yves Rocher, a large cosmetic retailer, transitioning legacy analytical assets to a modernized architecture. Involved in converting 5 Enterprise Guide projects and SAS codes into SAS Studio formats while migrating specific Enterprise Miner models to Viya Model Studio, with a technical focus on optimizing data pipelines feeding Machine Learning and AI models. Also supporting the transformation of 72 Visual Data Builder flows into SAS Studio Flows and the migration of 116 Visual Analytics reports to the Viya 4 platform, while helping lead 10 days of on-the-job training sessions.",
+      "summary": "Contributed to the SAS Viya 4 migration project for Yves Rocher, a large cosmetic retailer, transitioning legacy analytical assets to a modernized architecture. Was involved in converting 5 Enterprise Guide projects and SAS codes into SAS Studio formats while migrating specific Enterprise Miner models to Viya Model Studio, with a technical focus on optimizing data pipelines feeding Machine Learning and AI models. Also supported the transformation of 72 Visual Data Builder flows into SAS Studio Flows and the migration of 116 Visual Analytics reports to the Viya 4 platform, and contributed to part of the 10 days of on-the-job training sessions.",
       "highlights": ["SAS Viya 4", "SAS Studio", "Visual Analytics", "Enterprise Guide", "Enterprise Miner"],
-      "startDate": "2026-02-01"
+      "startDate": "2026-02-01",
+      "endDate": "2026-04-01"
     },
     {
       "name": "Türk Telekom Group Technology Department",
@@ -131,7 +132,7 @@
     },
     {
       "name": "HepsiPay Vertica Upgrade",
-      "summary": "Involved in the migration of database connections for open-source managed analytics processes to Vertica and the upgrade of the existing open-source Apache Spark Jupyter Notebook and Airflow environments to a more stable and up-to-date version. Managed the revision, development, and testing processes of DAGs and their Python codes to ensure compatibility with the upgraded environment.",
+      "summary": "Involved in the migration of database connections for open-source managed analytics processes to Vertica and the upgrade of the existing open-source Apache Spark Jupyter Notebook and Airflow environments to a more stable and up-to-date version. Contributed to the revision, development, and testing of DAGs and their Python codes to help ensure compatibility with the upgraded environment.",
       "highlights": ["Python", "SQL", "Apache Airflow", "Spark"],
       "startDate": "2024-11-01",
       "endDate": "2024-12-01"

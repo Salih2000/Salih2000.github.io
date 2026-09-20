@@ -113,9 +113,10 @@
   "projects": [
     {
       "name": "Yves Rocher France",
-      "summary": "Büyük bir kozmetik perakendecisi olan Yves Rocher için SAS Viya 4 geçiş projesine katkı sağlıyorum, eski analitik varlıkları modern bir mimariye taşıyorum. 5 Enterprise Guide projesini ve SAS kodlarını SAS Studio formatına dönüştürme ile birlikte belirli Enterprise Miner modellerini Viya Model Studio'ya taşıma sürecinde yer alıyorum; teknik odağım Makine Öğrenmesi ve Yapay Zeka modellerini besleyen veri boru hatlarını optimize etmek. Ayrıca 72 Visual Data Builder akışının SAS Studio Flows'a dönüştürülmesini ve 116 Visual Analytics raporunun Viya 4 platformuna taşınmasını destekliyor, 10 günlük iş başı eğitim oturumlarına liderlik ediyorum.",
+      "summary": "Büyük bir kozmetik perakendecisi olan Yves Rocher için SAS Viya 4 geçiş projesine katkı sağladım, eski analitik varlıkların modern bir mimariye taşınmasında yer aldım. 5 Enterprise Guide projesini ve SAS kodlarını SAS Studio formatına dönüştürme ile birlikte belirli Enterprise Miner modellerini Viya Model Studio'ya taşıma sürecinde yer aldım; teknik odağım Makine Öğrenmesi ve Yapay Zeka modellerini besleyen veri boru hatlarını optimize etmekti. Ayrıca 72 Visual Data Builder akışının SAS Studio Flows'a dönüştürülmesine ve 116 Visual Analytics raporunun Viya 4 platformuna taşınmasına destek oldum, 10 günlük iş başı eğitim oturumlarının bir kısmına katkı sağladım.",
       "highlights": ["SAS Viya 4", "SAS Studio", "Visual Analytics", "Enterprise Guide", "Enterprise Miner"],
-      "startDate": "2026-02-01"
+      "startDate": "2026-02-01",
+      "endDate": "2026-04-01"
     },
     {
       "name": "Türk Telekom Grubu Teknoloji Başkanlığı",
@@ -126,7 +127,7 @@
     },
     {
       "name": "HepsiPay Vertica Yapılandırma ve Yükseltme",
-      "summary": "Açık kaynak yönetimli analitik süreçleri için veritabanı bağlantılarının Vertica'ya taşınmasında ve mevcut açık kaynak Apache Spark Jupyter Notebook ve Airflow ortamlarının daha stabil ve güncel bir sürüme yükseltilmesinde görev aldım. Yükseltilen ortamla uyumluluğu sağlamak için DAG'lerin ve Python kodlarının revizyon, geliştirme ve test süreçlerini yönettim.",
+      "summary": "Açık kaynak yönetimli analitik süreçleri için veritabanı bağlantılarının Vertica'ya taşınmasında ve mevcut açık kaynak Apache Spark Jupyter Notebook ve Airflow ortamlarının daha stabil ve güncel bir sürüme yükseltilmesinde görev aldım. Yükseltilen ortamla uyumluluğu sağlamaya yardımcı olmak için DAG'lerin ve Python kodlarının revizyon, geliştirme ve test süreçlerine katkı sağladım.",
       "highlights": ["Python", "SQL", "Apache Airflow", "Spark"],
       "startDate": "2024-11-01",
       "endDate": "2024-12-01"

@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: resim galerisi içeren bir yazı
 date: 2024-12-04 01:59:00
