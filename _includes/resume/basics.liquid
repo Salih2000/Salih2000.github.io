@@ -21,7 +21,11 @@
         {% elsif content[0] == 'email' %}
           <a href="mailto:{{ content[1] }}" target="_blank">{{ content[1] }}</a>
         {% elsif content[0] == 'phone' %}
-          <a href="tel:{{ content[1] }}" title="{{ site.data[site.active_lang].strings.phone_note }}"
+          <a
+            href="javascript:void(0);"
+            onclick="alert(this.dataset.phoneNote)"
+            data-phone-note="{{ site.data[site.active_lang].strings.phone_note }}"
+            title="{{ site.data[site.active_lang].strings.phone_note }}"
             ><span style="filter: blur(9px); user-select: none;">{{ content[1] }}</span></a
           >
         {% else %}
