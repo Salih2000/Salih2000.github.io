@@ -3,7 +3,6 @@ page_id: repositories
 layout: page
 permalink: /repositories/
 title: Repository
-description: "`_data/repositories.yml` dosyasını düzenleyip `github_users` ve `github_repos` listelerini kendi GitHub profilini ve repository'lerini içerecek şekilde değiştir."
 nav: true
 nav_order: 4
 ---
