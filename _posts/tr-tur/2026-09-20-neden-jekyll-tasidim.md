@@ -6,6 +6,7 @@ description: React.js ile başlayan kişisel sitemi neden Jekyll/GitHub Pages'e 
 tags: jekyll react personal-site
 categories: kişisel
 related_posts: false
+giscus_comments: true
 ---
 
 Okuldan mezuniyetime yakın, kişisel bir web sitemin olmasının hem teknik hem de hobi amaçlı içeriklerimi toplamak ve kişisel markamı inşa etmek için iyi bir adım olacağını düşünmeye başladım. Kısacası, bir blog arayışındaydım.

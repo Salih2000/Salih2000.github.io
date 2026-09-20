@@ -6,6 +6,7 @@ description: The story of why I moved my personal site, which started as a React
 tags: jekyll react personal-site
 categories: personal
 related_posts: false
+giscus_comments: true
 ---
 
 Around the time I was about to graduate from university, having a personal website started to seem like a good step for bringing together both my technical and hobby content and for building my personal brand. In short, I was looking for a blog.
