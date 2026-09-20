@@ -55,6 +55,11 @@ let applyTheme = () => {
     setVegaLiteTheme(theme);
   }
 
+  // if particles.js is not loaded, do nothing
+  if (typeof pJSDom !== "undefined" && pJSDom.length > 0) {
+    setParticlesTheme(theme);
+  }
+
   document.documentElement.setAttribute("data-theme", theme);
 
   // Add class to tables.
@@ -231,6 +236,16 @@ let setVegaLiteTheme = (theme) => {
       vegaEmbed(elem, JSON.parse(jsonData));
     }
   });
+};
+
+let setParticlesTheme = (theme) => {
+  let color = getComputedStyle(document.documentElement).getPropertyValue("--global-theme-color").trim();
+  let particles = pJSDom[0].pJS.particles;
+
+  particles.color.value = color;
+  particles.line_linked.color = color;
+
+  pJSDom[0].pJS.fn.particlesRefresh();
 };
 
 let setSearchTheme = (theme) => {
