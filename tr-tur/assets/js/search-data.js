@@ -29,14 +29,14 @@ ninja.data = [{
           },
         },{id: "nav-repository",
           title: "Repository",
-          description: "`_data/repositories.yml` dosyasını düzenleyip `github_users` ve `github_repos` listelerini kendi GitHub profilini ve repository&#39;lerini içerecek şekilde değiştir.",
+          description: "",
           section: "Navigasyon menüsü",
           handler: () => {
             window.location.href = "/tr-tur/repositories/";
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Özgeçmişimin tamamını ve tüm projelerimin detaylı bilgilerini görmek isterseniz, Hakkımda sayfamda yer alan e-posta adresim veya sosyal medya hesaplarım üzerinden benimle iletişime geçmekten çekinmeyin.",
+          description: "",
           section: "Navigasyon menüsü",
           handler: () => {
             window.location.href = "/tr-tur/cv/";
