@@ -148,6 +148,8 @@
           {% capture link %}mailto:{{ social[1] | encode_email }}{% endcapture %}
           {% assign sameaslinks = sameaslinks | push: link %}
         {% endcomment %}
+      {% when 'cv_pdf' %}
+        {% comment %} a CV/resume file isn't a social profile, skip it {% endcomment %}
       {% when 'facebook_id' %}
         {% capture link %}https://facebook.com/{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
@@ -274,12 +276,16 @@
         "author":
         {
             "@type": "Person",
-            "name": "{{ author_name }}"
+            "name": "{{ author_name }}",
+            "url": "{{ site.url }}{{ site.baseurl }}"
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
         "description": "{{ description }}",
         "headline": "{% if page.title %}{{ page_title }}{% else %}{{ site.title }}{% endif %}",
+        {% if page.og_image or site.og_image %}
+        "image": "{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}",
+        {% endif %}
         {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks | jsonify }},
         {% endif %}
