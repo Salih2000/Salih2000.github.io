@@ -79,6 +79,10 @@ layout: default
     </div>
   </article>
 
+  {% if site.newsletter.enabled %}
+    {% include newsletter.liquid center=true %}
+  {% endif %}
+
   {% if page.citation %}
     {% include citation.liquid %}
   {% endif %}
