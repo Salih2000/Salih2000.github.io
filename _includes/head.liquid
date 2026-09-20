@@ -1,3 +1,10 @@
+<!-- Redirect the raw github.io host to the custom domain, so search engines and visitors consolidate on one canonical URL -->
+<script>
+  if (window.location.hostname === 'salih2000.github.io') {
+    window.location.replace('https://salihkilic.net' + window.location.pathname + window.location.search + window.location.hash);
+  }
+</script>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
