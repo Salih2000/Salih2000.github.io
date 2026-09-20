@@ -46,7 +46,10 @@ ninja.data = [{
           description: "",
           section: "",handler: () => {
               window.location.href = "/tr-tur/books/the_godfather/";
-            },},{id: "projects-project-1",
+            },},{id: "news-yeni-blogum-artık-yayında-sparkles",
+          title: 'Yeni blogum artık yayında! :sparkles:',
+          description: "",
+          section: "Haberler",},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projeler",handler: () => {
