@@ -2,7 +2,7 @@
 page_id: blog
 layout: default
 permalink: /blog/
-title: blog
+title: Blog
 blog_name: al-folio in english
 description: a simple whitespace theme for academics
 nav: true
