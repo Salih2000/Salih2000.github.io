@@ -76,6 +76,24 @@
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
+{% if site.languages.size >= 2 %}
+  {% assign clean_url = page.url | replace: 'index.html', '' %}
+  {% for l in site.languages %}
+    {% if l == site.default_lang %}
+      <link rel="alternate" hreflang="{{ l }}" {% static_href -%} href="{{ site.url }}{{ site.baseurl }}{{ clean_url }}" {%- endstatic_href %}>
+    {% else %}
+      <link
+        rel="alternate"
+        hreflang="{{ l }}"
+        {% static_href -%}
+        href="{{ site.url }}{{ site.baseurl }}/{{ l }}{{ clean_url }}"
+        {%- endstatic_href %}
+      >
+    {% endif %}
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" {% static_href -%} href="{{ site.url }}{{ site.baseurl }}{{ clean_url }}" {%- endstatic_href %}>
+{% endif %}
+
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->
   <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
