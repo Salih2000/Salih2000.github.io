@@ -74,10 +74,14 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+{% assign clean_url = page.url | replace: 'index.html', '' %}
+{% if site.active_lang == site.default_lang %}
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ clean_url }}">
+{% else %}
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/{{ site.active_lang }}{{ clean_url }}">
+{% endif %}
 
 {% if site.languages.size >= 2 %}
-  {% assign clean_url = page.url | replace: 'index.html', '' %}
   {% for l in site.languages %}
     {% if l == site.default_lang %}
       <link rel="alternate" hreflang="{{ l }}" {% static_href -%} href="{{ site.url }}{{ site.baseurl }}{{ clean_url }}" {%- endstatic_href %}>
