@@ -1,7 +1,7 @@
 
 const currentUrl = window.location.href;
-const siteUrl = "https://salih2000.github.io"; 
-let updatedUrl = currentUrl.replace("https://salih2000.github.io", "");
+const siteUrl = "https://salihkilic.net";
+let updatedUrl = currentUrl.replace("https://salihkilic.net", "");
 if (currentUrl.length == updatedUrl.length && currentUrl.startsWith("http://127.0.0.1")) {
   const otherSiteUrl = siteUrl.replace("localhost", "127.0.0.1");
   updatedUrl = currentUrl.replace(otherSiteUrl + "", "");
@@ -27,16 +27,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/tr-tur/blog/";
           },
-        },{id: "nav-projelerim",
-          title: "Projelerim",
-          description: "Havalı projelerinizden oluşan büyüyen bir koleksiyon.",
-          section: "Navigasyon menüsü",
-          handler: () => {
-            window.location.href = "/tr-tur/projects/";
-          },
         },{id: "nav-repository",
           title: "Repository",
-          description: "Github.com/Salih2000 hesabımı ziyaret ederek kişisel projelerimi inceleyebilir ve diğer çalışmalarım hakkında daha fazla bilgi edinebilirsiniz.",
+          description: "`_data/repositories.yml` dosyasını düzenleyip `github_users` ve `github_repos` listelerini kendi GitHub profilini ve repository&#39;lerini içerecek şekilde değiştir.",
           section: "Navigasyon menüsü",
           handler: () => {
             window.location.href = "/tr-tur/repositories/";
@@ -48,27 +41,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/tr-tur/cv/";
           },
-        },{id: "dropdown-blog",
-              title: "Blog",
-              description: "",
-              section: "Açılır Menü",
-              handler: () => {
-                window.location.href = "/tr-tur/blog/";
-              },
-            },{id: "post-sql-views-için-pratik-bir-rehber-nedirler-ve-neden-önemlidirler",
+        },{id: "post-plotly-js-içeren-bir-yazı",
         
-          title: "SQL Views için Pratik Bir Rehber Nedirler ve Neden Önemlidirler?",
-        
-        description: "SQL Views, bir veritabanındaki verilere erişim ve manipülasyonu basitleştiren sanal tablolardır. Bu yazı, SQL view&#39;ların ne olduğunu, nasıl çalıştığını ve veritabanı yönetimi için neden önemli olduklarını açıklar.",
-        section: "Yazılar",
-        handler: () => {
-          
-            window.location.href = "/tr-tur/blog/2025/sql-view/";
-          
-        },
-      },{id: "post-yakında",
-        
-          title: "Yakında",
+          title: "plotly.js içeren bir yazı",
         
         description: "this is what included plotly.js code could look like",
         section: "Yazılar",
@@ -77,9 +52,9 @@ ninja.data = [{
             window.location.href = "/tr-tur/blog/2025/plotly/";
           
         },
-      },{id: "post-yakında",
+      },{id: "post-resim-galerisi-içeren-bir-yazı",
         
-          title: "Yakında!",
+          title: "resim galerisi içeren bir yazı",
         
         description: "this is what included image galleries could look like",
         section: "Yazılar",
@@ -433,61 +408,54 @@ ninja.data = [{
           title: 'The Godfather',
           description: "",
           section: "",handler: () => {
-              window.location.href = "/tr-tur/books/tr-tur/the_godfather/";
-            },},{id: "news-kişisel-blogum-artık-yayında-sparkles",
-          title: 'Kişisel Blogum  artık yayında! :sparkles:',
+              window.location.href = "/tr-tur/books/the_godfather/";
+            },},{id: "news-basit-satır-içi-bir-duyuru",
+          title: 'Basit, satır içi bir duyuru.',
           description: "",
-          section: "Haberler",},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/9_project/";
-            },},{id: "projects-project-1",
+          section: "Haberler",},{id: "news-detaylı-uzun-bir-duyuru",
+          title: 'Detaylı, uzun bir duyuru',
+          description: "",
+          section: "Haberler",handler: () => {
+              window.location.href = "/tr-tur/news/announcement_2/";
+            },},{id: "news-markdown-emojili-basit-satır-içi-bir-duyuru-sparkles-smile",
+          title: 'Markdown emojili basit, satır içi bir duyuru! :sparkles: :smile:',
+          description: "",
+          section: "Haberler",},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/tr-tur/1_project/";
+              window.location.href = "/tr-tur/projects/1_project/";
             },},{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
           section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/tr-tur/2_project/";
+              window.location.href = "/tr-tur/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
           title: 'project 3 with very long name',
           description: "a project that redirects to another website",
           section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/tr-tur/3_project/";
+              window.location.href = "/tr-tur/projects/3_project/";
             },},{id: "projects-project-4",
           title: 'project 4',
           description: "another without an image",
           section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/tr-tur/4_project/";
+              window.location.href = "/tr-tur/projects/4_project/";
             },},{id: "projects-project-5",
           title: 'project 5',
           description: "a project with a background image",
           section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/tr-tur/5_project/";
+              window.location.href = "/tr-tur/projects/5_project/";
             },},{id: "projects-project-6",
           title: 'project 6',
           description: "a project with no image",
           section: "Projeler",handler: () => {
-              window.location.href = "/tr-tur/projects/tr-tur/6_project/";
+              window.location.href = "/tr-tur/projects/6_project/";
             },},{
-        id: 'social-email',
-        title: 'E-posta gönder',
+        id: 'social-linkedin',
+        title: 'LinkedIn',
         section: 'Sosyal medya',
         handler: () => {
-          window.open("mailto:%73%61%6C%69%68%61%62%64%75%6C%6C%61%68%6B%69%6C%69%63@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("https://www.linkedin.com/in/salih-abdullah-kilic", "_blank");
         },
       },{
         id: 'social-github',
@@ -497,11 +465,11 @@ ninja.data = [{
           window.open("https://github.com/Salih2000", "_blank");
         },
       },{
-        id: 'social-linkedin',
-        title: 'LinkedIn',
+        id: 'social-email',
+        title: 'E-posta gönder',
         section: 'Sosyal medya',
         handler: () => {
-          window.open("https://www.linkedin.com/in/salih-abdullah-kilic", "_blank");
+          window.open("mailto:%73%61%6C%69%68%61%62%64%75%6C%6C%61%68%6B%69%6C%69%63@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-medium',
@@ -509,6 +477,13 @@ ninja.data = [{
         section: 'Sosyal medya',
         handler: () => {
           window.open("https://medium.com/@salihabdullahkilic", "_blank");
+        },
+      },{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Sosyal medya',
+        handler: () => {
+          window.open("/assets/pdf/tr-tur//assets/pdf/[LANG]/resume.pdf", "_blank");
         },
       },{
         id: 'social-youtube',
