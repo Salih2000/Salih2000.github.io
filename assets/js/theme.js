@@ -25,6 +25,11 @@ let setThemeSetting = (themeSetting) => {
 let applyTheme = () => {
   let theme = determineComputedTheme();
 
+  // Set this before anything else below reads theme-dependent CSS custom
+  // properties (e.g. setParticlesTheme reading --global-theme-color),
+  // otherwise they'd pick up the previous theme's value.
+  document.documentElement.setAttribute("data-theme", theme);
+
   transTheme();
   setHighlight(theme);
   setGiscusTheme(theme);
@@ -59,8 +64,6 @@ let applyTheme = () => {
   if (typeof pJSDom !== "undefined" && pJSDom.length > 0) {
     setParticlesTheme(theme);
   }
-
-  document.documentElement.setAttribute("data-theme", theme);
 
   // Add class to tables.
   let tables = document.getElementsByTagName("table");
