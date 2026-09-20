@@ -29,4 +29,3 @@ latest_posts:
 Ben Salih, veri, veri analitiği ve özellikle veri yönetimi alanlarını kapsayan projelerde aktif olarak görev alıyor ve güvenilir veri sistemleri ile veri süreçlerini kurma ve sürdürme çalışmalarında yer alarak kendimi bu alanda geliştiriyorum.
 
 [Sade.AI](https://www.sade.ai/)'da Veri Yönetimi Uzman Yardımcısı olarak çalışmaktayım.
-
