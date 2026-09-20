@@ -1,4 +1,5 @@
 ---
+published: false
 page_id: project_6
 layout: page
 title: project 6

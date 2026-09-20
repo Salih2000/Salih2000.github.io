@@ -1,4 +1,5 @@
 ---
+published: false
 page_id: profiles
 layout: profiles
 permalink: /people/

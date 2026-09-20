@@ -1,4 +1,5 @@
 ---
+published: false
 page_id: teaching
 layout: page
 permalink: /teaching/
