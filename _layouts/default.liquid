@@ -22,8 +22,8 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <!-- Particle JS -->
-    {% if site.particle_js %}
+    <!-- Particle JS (disabled on reading pages like blog posts, where a moving background is distracting) -->
+    {% if site.particle_js and page.layout != 'post' %}
       <script src="{{ '/assets/js/particles.js' | relative_url }}"></script>
       <script src="{{ '/assets/js/particle-call-function.js' | relative_url }}"></script>
       <div id="particles-js"></div>
