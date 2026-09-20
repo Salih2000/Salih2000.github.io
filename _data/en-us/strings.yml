@@ -164,3 +164,4 @@ search:
   theme: Theme
 selected_publications: selected publications
 site_description: Personal site and blog of Salih A. Kilic, a data management and engineering specialist working with Python, SQL, and SAS. Find his CV, projects, and writing on data and technology here.
+newsletter_prompt: Want to know when I publish something new? Leave your email below.

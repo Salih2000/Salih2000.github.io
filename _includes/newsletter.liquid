@@ -4,6 +4,7 @@
     style="margin: 20px"
   {% endif %}
 >
+  <p class="newsletter-form-prompt">{{ site.data[site.active_lang].strings.newsletter_prompt }}</p>
   <form
     class="newsletter-form"
     action="https://app.loops.so/api/newsletter-form/{{ site.newsletter.endpoint }}"
