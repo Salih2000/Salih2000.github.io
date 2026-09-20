@@ -4,7 +4,7 @@ title: Sitemi neden React.js'ten Jekyll'e taşıdım
 date: 2026-09-20 12:00:00+0300
 description: React.js ile başlayan kişisel sitemi neden Jekyll/GitHub Pages'e taşıdığımın hikayesi.
 tags: jekyll react personal-site
-categories: veri-mühendisliği
+categories: kişisel
 related_posts: false
 ---
 
@@ -12,7 +12,7 @@ Okuldan mezuniyetime yakın, kişisel bir web sitemin olmasının hem teknik hem
 
 ## Neden sıfırdan değil, bir klon proje ile başladım
 
-Bu alandaki tecrübem henüz kısıtlı olduğu için, hazır bir klon projeyi kendi isteklerime göre uyarlama fikri cazip geldi. Sıfırdan yapmak şüphesiz öğretici bir yöntem; fakat siteyi inşa ettiğim 2024 yılında henüz iş hayatına atılmamıştım. Frontend ve web geliştirme alanının giderek doygunlaştığını, çok fazla rekabet olduğunu görüyordum. Doğrudan kariyerime odaklanmam gereken o dönemde, bu alanda fazla zaman harcamak istemedim ve bir klon projeyle yola çıktım. 2026'ya gelindiğinde bile web teknolojilerinin hâlâ baskın olmaya ve gün geçtikçe daha da daralan bir rekabet ortamına sahne olmaya devam ettiğini görüyorum; dolayısıyla o zamanki öngörümün ve iddiamın hâlâ geçerli olduğunu düşünüyorum.
+Web teknolojilerindeki tecrübem henüz kısıtlı olduğu için, hazır bir klon projeyi kendi isteklerime göre uyarlama fikri cazip geldi. Sıfırdan yapmak şüphesiz öğretici bir yöntem; fakat siteyi inşa ettiğim 2024 yılında henüz iş hayatına atılmamıştım. Frontend ve web geliştirme alanının giderek doygunlaştığını, çok fazla rekabet olduğunu görüyordum. O dönemde daha çok veri odaklı ilerlemek istediğimden, bu alanda fazla zaman harcamak istemedim ve bir klon projeyle yola çıktım. 2026'ya gelindiğinde bile web teknolojilerinin gün geçtikçe daha da daralan ve aşırı rekabetçi bir alan olmaya devam ettiğini görüyorum; dolayısıyla o zamanki öngörümün ve iddiamın hâlâ geçerli olduğunu düşünüyorum.
 
 YouTube'da uzun zamandır takip ettiğim [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) kanalı bu süreçte oldukça işime yaradı. AI dönemi henüz başlamamışken bile uçtan uca çalışan, tutarlı teknolojileri anlatan harika tutoriallar paylaşıyorlar (hâlâ da üretmeye devam ediyorlar). Özellikle öğrenciyseniz kesinlikle göz atmalısınız. Zaten bir konuda hiçbir şey bilmeyip uzmanlaşmak istiyorsanız, uçtan uca çalışan bir klon proje yapmak yazılımcıların ne yaptığını anlamak ve neyi istemediğinizi fark etmek için en iyi yollardan biri.
 

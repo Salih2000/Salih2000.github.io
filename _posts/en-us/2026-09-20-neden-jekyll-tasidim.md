@@ -4,7 +4,7 @@ title: Why I moved my site from React.js to Jekyll
 date: 2026-09-20 12:00:00+0300
 description: The story of why I moved my personal site, which started as a React.js project, to Jekyll/GitHub Pages.
 tags: jekyll react personal-site
-categories: data-engineering
+categories: personal
 related_posts: false
 ---
 
@@ -12,7 +12,7 @@ Around the time I was about to graduate from university, having a personal websi
 
 ## Why I started with a clone project instead of building from scratch
 
-Since my experience in this area was still limited, the idea of adapting a ready-made clone project to my own needs seemed appealing. Building from scratch is undoubtedly a great way to learn; but back in 2024, when I built the site, I hadn't yet entered the workforce. I could see that frontend and web development was becoming increasingly saturated, with a lot of competition. Needing to focus directly on my career at the time, I didn't want to spend too much time in this area, and went with a clone project instead. Looking at where things stand now in 2026, web technologies are still dominant and the competition just keeps getting tighter by the day, so I think that prediction of mine has held up.
+Since my experience with web technologies was still limited, the idea of adapting a ready-made clone project to my own needs seemed appealing. Building from scratch is undoubtedly a great way to learn; but back in 2024, when I built the site, I hadn't yet entered the workforce. I could see that frontend and web development was becoming increasingly saturated, with a lot of competition. Since I wanted to move forward in a more data-focused direction at the time, I didn't want to spend too much time in this area, and went with a clone project instead. Looking at where things stand even now in 2026, web technologies keep being a field that gets narrower and more brutally competitive by the day, so I think that prediction of mine has held up.
 
 The [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) channel, which I've followed on YouTube for a long time, was a big help during this process. Even before the AI era began, they were sharing great tutorials on consistent, end-to-end working technologies (and they still are). If you're a student, you should definitely check them out. If you know nothing about a topic and want to specialize in it, building an end-to-end working clone project is one of the best ways to understand what developers actually do and to figure out what you don't want to do.
 
