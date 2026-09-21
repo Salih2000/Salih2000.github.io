@@ -286,6 +286,10 @@
         {% if page.og_image or site.og_image %}
         "image": "{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}",
         {% endif %}
+        {% if is_blog_post and page.date %}
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.last_updated | default: page.date | date_to_xmlschema }}",
+        {% endif %}
         {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks | jsonify }},
         {% endif %}
