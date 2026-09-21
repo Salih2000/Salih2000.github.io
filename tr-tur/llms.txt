@@ -1,0 +1,20 @@
+# Salih Kılıç
+
+> Salih A. Kılıç'ın kişisel sitesi ve blogu. Python, SQL ve SAS ile çalışan bir veri yönetimi ve veri mühendisliği uzmanı. CV'sine, projelerine ve veri ile teknoloji üzerine yazılarına buradan ulaşabilirsiniz.
+
+This is the personal site of Salih Kılıç (https://salihkilic.net), covering data management/engineering work, projects, and writing. The site is available in English and Turkish; language variants live under `/{lang}/` path prefixes (see hreflang alternates on each page).
+
+## Key pages
+
+- [About](https://salihkilic.net/): background, current focus, and contact/social links
+- [CV](https://salihkilic.net/cv/): full curriculum vitae
+- [Projects](https://salihkilic.net/projects/): selected work
+- [Publications](https://salihkilic.net/publications/): papers and citations
+- [Blog](https://salihkilic.net/blog/): posts on data engineering, analysis, and tooling
+- [Repositories](https://salihkilic.net/repositories/): open-source and code repositories
+
+## Notes for automated readers
+
+- Canonical URLs, hreflang alternates, and Schema.org JSON-LD (Person / WebSite / BlogPosting) are present on every page.
+- A sitemap is available at https://salihkilic.net/sitemap.xml.
+- robots.txt at https://salihkilic.net/robots.txt allows all crawlers, including AI/answer-engine bots.
