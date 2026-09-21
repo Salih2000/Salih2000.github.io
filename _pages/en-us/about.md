@@ -3,7 +3,7 @@ page_id: about
 layout: about
 title: About
 permalink: /
-subtitle: '<span style="color: var(--global-theme-color); font-size: 1.3em;">Hello There,</span>'
+subtitle: "Hello There,"
 
 profile:
   align: right

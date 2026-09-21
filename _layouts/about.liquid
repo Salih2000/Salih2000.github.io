@@ -12,7 +12,12 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    {% if page.subtitle %}
+      {% assign subtitle_chars = page.subtitle | split: '' %}
+      <p class="desc hello-animated">{% for char in subtitle_chars -%}
+        <span class="letter" style="--i: {{ forloop.index0 }};">{% if char == ' ' %}&nbsp;{% else %}{{ char }}{% endif %}</span>
+      {%- endfor %}</p>
+    {% endif %}
   </header>
 
   <article>
