@@ -16,7 +16,12 @@ layout: default
       {% assign subtitle_chars = page.subtitle | split: '' %}
       <p class="desc hello-animated">
         {% for char in subtitle_chars -%}
-          <span class="letter" style="--i: {{ forloop.index0 }};">
+          {%- assign drop_delay = forloop.index0 | times: 0.05 -%}
+          {%- assign glow_delay = forloop.index0 | times: 0.08 -%}
+          <span
+            class="letter"
+            style="animation-delay: {{ drop_delay }}s, {{ glow_delay }}s;"
+          >
             {%- if char == ' ' %}&nbsp;{% else %}{{ char }}{% endif -%}
           </span>
         {%- endfor %}
