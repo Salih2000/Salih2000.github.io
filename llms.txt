@@ -1,0 +1,23 @@
+---
+permalink: /llms.txt
+---
+# {{ site.data[site.active_lang].strings.name.first }} {{ site.data[site.active_lang].strings.name.last }}
+
+> {{ site.data[site.active_lang].strings.site_description }}
+
+This is the personal site of {{ site.data[site.active_lang].strings.name.first }} {{ site.data[site.active_lang].strings.name.last }} ({{ site.url }}{{ site.baseurl }}), covering data management/engineering work, projects, and writing. The site is available in English and Turkish; language variants live under `/{lang}/` path prefixes (see hreflang alternates on each page).
+
+## Key pages
+
+- [About]({{ site.url }}{{ site.baseurl }}/): background, current focus, and contact/social links
+- [CV]({{ site.url }}{{ site.baseurl }}/cv/): full curriculum vitae
+- [Projects]({{ site.url }}{{ site.baseurl }}/projects/): selected work
+- [Publications]({{ site.url }}{{ site.baseurl }}/publications/): papers and citations
+- [Blog]({{ site.url }}{{ site.baseurl }}/blog/): posts on data engineering, analysis, and tooling
+- [Repositories]({{ site.url }}{{ site.baseurl }}/repositories/): open-source and code repositories
+
+## Notes for automated readers
+
+- Canonical URLs, hreflang alternates, and Schema.org JSON-LD (Person / WebSite / BlogPosting) are present on every page.
+- A sitemap is available at {{ site.url }}{{ site.baseurl }}/sitemap.xml.
+- robots.txt at {{ site.url }}{{ site.baseurl }}/robots.txt allows all crawlers, including AI/answer-engine bots.
