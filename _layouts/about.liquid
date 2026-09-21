@@ -14,9 +14,13 @@ layout: default
     </h1>
     {% if page.subtitle %}
       {% assign subtitle_chars = page.subtitle | split: '' %}
-      <p class="desc hello-animated">{% for char in subtitle_chars -%}
-        <span class="letter" style="--i: {{ forloop.index0 }};">{% if char == ' ' %}&nbsp;{% else %}{{ char }}{% endif %}</span>
-      {%- endfor %}</p>
+      <p class="desc hello-animated">
+        {% for char in subtitle_chars -%}
+          <span class="letter" style="--i: {{ forloop.index0 }};">
+            {%- if char == ' ' %}&nbsp;{% else %}{{ char }}{% endif -%}
+          </span>
+        {%- endfor %}
+      </p>
     {% endif %}
   </header>
 
