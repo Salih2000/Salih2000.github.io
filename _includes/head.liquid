@@ -216,3 +216,8 @@
 {% if page.tikzjax %}
   <link defer rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
 {% endif %}
+
+{% if page.marimo %}
+  <!-- marimo interactive notebooks -->
+  {% al_marimo_styles %}
+{% endif %}

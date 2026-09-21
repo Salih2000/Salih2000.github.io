@@ -142,6 +142,11 @@
   ></script>
 {% endif %}
 
+{% if page.marimo %}
+  <!-- marimo interactive notebooks -->
+  {% al_marimo_scripts %}
+{% endif %}
+
 {% if page.typograms %}
   <!-- Typograms -->
   <script src="{{ '/assets/js/typograms.js' | relative_url | bust_file_cache }}"></script>
