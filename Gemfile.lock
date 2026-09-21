@@ -24,6 +24,9 @@ GEM
       uri (>= 0.13.1)
     addressable (2.8.8)
       public_suffix (>= 2.0.2, < 8.0)
+    al_marimo (1.0.0)
+      jekyll (>= 3.9, < 5.0)
+      liquid (>= 4.0, < 6.0)
     base64 (0.3.0)
     bibtex-ruby (6.2.0)
       latex-decode (~> 0.0)
@@ -299,6 +302,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  al_marimo (~> 1.0)
   classifier-reborn
   css_parser
   feedjira

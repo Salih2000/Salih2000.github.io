@@ -203,6 +203,7 @@ keep_files:
 
 # Plug-ins
 plugins:
+  - al_marimo
   - jekyll-3rd-party-libraries
   - jekyll-archives-v2
   - jekyll-cache-bust
