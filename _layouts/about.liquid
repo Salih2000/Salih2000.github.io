@@ -14,13 +14,27 @@ layout: default
     </h1>
     {% if page.subtitle %}
       {% assign subtitle_chars = page.subtitle | split: '' %}
+      {%- comment -%}
+        Timeline: drop-in -> one-shot per-letter glow sweep -> a single synchronized heartbeat
+        pulse (all letters at once) -> a 6s pause -> the glow sweep resumes, now looping every 6s
+        forever. sweep_end is when the *last* letter's one-shot sweep flash finishes (its own
+        glow delay plus the ~1.2s the flash takes to rise and fade, i.e. the 0%-20% span of
+        letter-glow's 6s duration), so the heartbeat only starts once every letter has finished
+        sweeping. loop_start likewise waits out the heartbeat's own 1.8s duration before adding
+        the 6s pause.
+      {%- endcomment -%}
+      {% assign last_index = subtitle_chars.size | minus: 1 %}
+      {% assign sweep_end = last_index | times: 0.08 | plus: 1.2 %}
+      {% assign heartbeat_delay = sweep_end | plus: 0.2 %}
+      {% assign loop_start = heartbeat_delay | plus: 7.8 %}
       <p class="desc hello-animated">
         {% for char in subtitle_chars -%}
           {%- assign drop_delay = forloop.index0 | times: 0.05 -%}
           {%- assign glow_delay = forloop.index0 | times: 0.08 -%}
+          {%- assign loop_delay = loop_start | plus: glow_delay -%}
           <span
             class="letter"
-            style="animation-delay: {{ drop_delay }}s, {{ glow_delay }}s;"
+            style="animation-delay: {{ drop_delay }}s, {{ glow_delay }}s, {{ heartbeat_delay }}s, {{ loop_delay }}s;"
           >
             {%- if char == ' ' %}&nbsp;{% else %}{{ char }}{% endif -%}
           </span>
