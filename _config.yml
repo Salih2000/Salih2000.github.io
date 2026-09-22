@@ -195,6 +195,7 @@ exclude:
   - README.md
   - README.pt-br.md
   - readme_preview/
+  - TODO.md
   - UPGRADING.md
   - vendor
 keep_files:
