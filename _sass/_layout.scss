@@ -51,16 +51,21 @@ body.sticky-bottom-footer {
   .letter {
     display: inline-block;
     color: inherit; // beats the sitewide `span { color: var(--global-text-color) }` reset, which otherwise wins over inheriting the theme color from .hello-animated
-    // per-letter stagger comes from an inline `animation-delay` (set in _layouts/about.liquid) rather than
+    // per-letter stagger comes from inline `animation-delay` values (set in _layouts/about.liquid) rather than
     // a `calc(var(--i) * ...)` here: the production CSS minifier mangles `--i` inside calc(), silently
-    // breaking the stagger (it doesn't in dev, where minification is skipped, so this only shows up live)
+    // breaking the stagger (it doesn't in dev, where minification is skipped, so this only shows up live).
+    // Four animations play in sequence, timed via those delays: drop-in, a one-shot letter-by-letter glow
+    // sweep, a single synchronized heartbeat pulse (all letters together), then the glow sweep resumes,
+    // now looping forever every 6s.
     animation:
       letter-drop-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+      letter-glow 6s ease-in-out 1,
+      letter-heartbeat 1.8s ease-in-out 1,
       letter-glow 6s ease-in-out infinite;
   }
 
   &:hover .letter {
-    animation-duration: 0.6s, 1.4s;
+    animation-duration: 0.6s, 6s, 1.8s, 1.4s;
   }
 }
 
@@ -87,6 +92,22 @@ body.sticky-bottom-footer {
   }
   20% {
     text-shadow: none;
+  }
+}
+
+// A single slow pulse to full brightness, synchronized across all letters (same animation-delay
+// for every .letter, unlike the staggered letter-glow sweep), played once between the initial
+// glow sweep and the resumed infinite one.
+@keyframes letter-heartbeat {
+  0%,
+  100% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow:
+      0 0 0.25em var(--global-theme-color),
+      0 0 0.6em var(--global-theme-color),
+      0 0 1em var(--global-theme-color);
   }
 }
 
