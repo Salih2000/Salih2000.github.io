@@ -191,8 +191,19 @@ layout: default
           });
 
           // Only letters count, so case, spaces and punctuation do not matter ("Hello, there!" works too). Keys typed
-          // into a field (the search box, a form) are left alone.
-          var phrase = (egg.typePhrase || '').toLowerCase().replace(/[^\p{L}]/gu, '');
+          // into a field (the search box, a form) are left alone. A space typed where the phrase has one does not
+          // scroll the page.
+          var words = (egg.typePhrase || '')
+            .toLowerCase()
+            .split(/\s+/)
+            .map(function (word) {
+              return word.replace(/[^\p{L}]/gu, '');
+            })
+            .filter(Boolean);
+          var phrase = words.join('');
+          var spaceAfter = words.slice(0, -1).map(function (word, i) {
+            return words.slice(0, i + 1).join('');
+          });
           var typed = '';
           function inTextField(event) {
             var path = event.composedPath ? event.composedPath() : [event.target];
@@ -205,6 +216,14 @@ layout: default
               if (event.ctrlKey || event.metaKey || event.altKey || event.isComposing || inTextField(event)) return;
               if (event.key === 'Backspace') {
                 typed = typed.slice(0, -1);
+                return;
+              }
+              if (event.key === ' ') {
+                var onPage = !document.activeElement || document.activeElement === document.body;
+                var inPhrase = spaceAfter.some(function (part) {
+                  return typed.slice(-part.length) === part;
+                });
+                if (onPage && inPhrase) event.preventDefault();
                 return;
               }
               if (!event.key || event.key.length !== 1 || !/\p{L}/u.test(event.key)) return;
