@@ -11,7 +11,7 @@
 {% endif %}
 {% assign share_url = share_url | strip %}
 {% assign u = share_url | url_encode %}
-{% assign t = page.title | strip | url_encode %}
+{% assign t = page.title | strip | url_encode | replace: '+', '%20' %}
 
 <style>
   .share-buttons {
