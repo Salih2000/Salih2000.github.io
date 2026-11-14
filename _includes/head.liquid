@@ -10,6 +10,8 @@
   <meta name="x-not-found" content="true">
 {% endif %}
 <script src="{{ '/assets/js/language-choice.js' | relative_url | bust_file_cache }}"></script>
+<!-- Saved video covers become playable YouTube players while the video is still on YouTube -->
+<script defer src="{{ '/assets/js/youtube-embed.js' | relative_url | bust_file_cache }}"></script>
 
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
