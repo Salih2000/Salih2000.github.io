@@ -168,4 +168,10 @@ search:
   theme: Tema
 selected_publications: seçilmiş yayınlar
 site_description: Akademisyenler için sade, boşluklu bir tema. [*folio](https://github.com/bogoli/-folio) tasarımına dayalıdır.
+share:
+  title: "Bu yazıyı paylaş"
+  email: "E-postayla gönder"
+  copy: "Bağlantıyı kopyala"
+  copied: "Bağlantı kopyalandı"
+  more: "Diğer paylaşım seçenekleri"
 newsletter_prompt: Yeni bir şey yayınladığımda haberdar olmak ister misiniz? E-postanızı aşağıya bırakın.

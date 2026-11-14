@@ -1,0 +1,157 @@
+{% comment %}
+  Share links at the end of a post. Every link shares the post's own-language address; the preview card that
+  LinkedIn, X, WhatsApp and the others show comes from the page's Open Graph tags (og_image in the front matter).
+{% endcomment %}
+{% assign share_strings = site.data[site.active_lang].strings.share %}
+{% assign share_path = page.url | replace: 'index.html', '' %}
+{% if site.active_lang == site.default_lang %}
+  {% capture share_url %}{{ site.url }}{{ site.baseurl }}{{ share_path }}{% endcapture %}
+{% else %}
+  {% capture share_url %}{{ site.url }}{{ site.baseurl }}/{{ site.active_lang }}{{ share_path }}{% endcapture %}
+{% endif %}
+{% assign share_url = share_url | strip %}
+{% assign u = share_url | url_encode %}
+{% assign t = page.title | strip | url_encode %}
+
+<style>
+  .share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2.5rem 0 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+  .share-buttons .share-title {
+    margin-right: 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+  }
+  .share-buttons a,
+  .share-buttons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--global-text-color);
+    font-size: 1.05rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .share-buttons a:hover,
+  .share-buttons button:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+  .share-buttons .share-native {
+    display: none;
+  }
+  .share-buttons .share-status {
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+  }
+</style>
+
+<div class="share-buttons" role="group" aria-label="{{ share_strings.title }}">
+  <span class="share-title">{{ share_strings.title }}</span>
+  <a
+    href="https://www.linkedin.com/sharing/share-offsite/?url={{ u }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ share_strings.title }}: LinkedIn"
+    title="LinkedIn"
+    ><i class="fa-brands fa-linkedin"></i
+  ></a>
+  <a
+    href="https://x.com/intent/post?url={{ u }}&amp;text={{ t }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ share_strings.title }}: X"
+    title="X"
+    ><i class="fa-brands fa-x-twitter"></i
+  ></a>
+  <a
+    href="https://www.facebook.com/sharer/sharer.php?u={{ u }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ share_strings.title }}: Facebook"
+    title="Facebook"
+    ><i class="fa-brands fa-facebook"></i
+  ></a>
+  <a
+    href="https://api.whatsapp.com/send?text={{ t }}%20{{ u }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ share_strings.title }}: WhatsApp"
+    title="WhatsApp"
+    ><i class="fa-brands fa-whatsapp"></i
+  ></a>
+  <a
+    href="https://t.me/share/url?url={{ u }}&amp;text={{ t }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ share_strings.title }}: Telegram"
+    title="Telegram"
+    ><i class="fa-brands fa-telegram"></i
+  ></a>
+  <a
+    href="https://www.reddit.com/submit?url={{ u }}&amp;title={{ t }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ share_strings.title }}: Reddit"
+    title="Reddit"
+    ><i class="fa-brands fa-reddit"></i
+  ></a>
+  <a href="mailto:?subject={{ t }}&amp;body={{ u }}" aria-label="{{ share_strings.email }}" title="{{ share_strings.email }}"
+    ><i class="fa-solid fa-envelope"></i
+  ></a>
+  <button type="button" class="share-copy" data-url="{{ share_url }}" aria-label="{{ share_strings.copy }}" title="{{ share_strings.copy }}">
+    <i class="fa-solid fa-link"></i>
+  </button>
+  <button
+    type="button"
+    class="share-native"
+    data-url="{{ share_url }}"
+    data-title="{{ page.title | strip | escape }}"
+    aria-label="{{ share_strings.more }}"
+    title="{{ share_strings.more }}"
+  >
+    <i class="fa-solid fa-share-nodes"></i>
+  </button>
+  <span class="share-status" role="status" aria-live="polite" data-copied="{{ share_strings.copied }}"></span>
+</div>
+
+<script>
+  (function () {
+    var box = document.currentScript && document.currentScript.previousElementSibling;
+    if (!box || !box.classList.contains('share-buttons')) return;
+    var status = box.querySelector('.share-status');
+    var copy = box.querySelector('.share-copy');
+    var native = box.querySelector('.share-native');
+    copy.addEventListener('click', function () {
+      var url = copy.getAttribute('data-url');
+      var done = function () {
+        status.textContent = status.getAttribute('data-copied');
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () {
+          window.prompt('', url);
+        });
+      } else {
+        window.prompt('', url);
+      }
+    });
+    if (navigator.share) {
+      native.style.display = 'inline-flex';
+      native.addEventListener('click', function () {
+        navigator.share({ title: native.getAttribute('data-title'), url: native.getAttribute('data-url') }).catch(function () {});
+      });
+    }
+  })();
+</script>
