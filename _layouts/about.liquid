@@ -28,12 +28,13 @@ layout: default
       {% assign heartbeat_delay = sweep_end | plus: 0.2 %}
       {% assign loop_start = heartbeat_delay | plus: 7.8 %}
       {%- comment -%}
-        The greeting's easter egg (script below) plays a different YouTube clip per language.
+        The greeting's easter egg (script below) plays a different YouTube clip per language and listens for a
+        different typed word: "merhaba" on the Turkish home page, "hello there" on the English one.
       {%- endcomment -%}
       {% if site.active_lang == 'tr-tur' %}
-        {% assign egg = 'hJTc2_-3-Yg|181|190|Merhaba ey cân-ı cânân|Merhaba|tr-TR|/assets/audio/merhaba.mp3' | split: '|' %}
+        {% assign egg = 'hJTc2_-3-Yg|181|190|Merhaba ey cân-ı cânân|Merhaba|tr-TR|/assets/audio/merhaba.mp3|merhaba' | split: '|' %}
       {% else %}
-        {% assign egg = 'rEq1Z0bjdwc|8|10|Obi-Wan: Hello there|Hello there|en-GB|/assets/audio/hello-there.mp3' | split: '|' %}
+        {% assign egg = 'rEq1Z0bjdwc|8|10|Obi-Wan: Hello there|Hello there|en-GB|/assets/audio/hello-there.mp3|hello there' | split: '|' %}
       {% endif %}
       <p
         class="desc hello-animated"
@@ -44,6 +45,7 @@ layout: default
         data-voice-text="{{ egg[4] }}"
         data-voice-lang="{{ egg[5] }}"
         data-audio-file="{{ egg[6] }}"
+        data-type-phrase="{{ egg[7] }}"
       >
         {% for char in subtitle_chars -%}
           {%- assign drop_delay = forloop.index0 | times: 0.05 -%}
@@ -58,10 +60,11 @@ layout: default
         {%- endfor %}
       </p>
       <script>
-        // Easter egg: seven quick clicks on the greeting answer it. While the clip named in the greeting's data-clip-*
-        // attributes is still on YouTube, a small YouTube player plays that part of it (English: Obi-Wan's "Hello there";
-        // Turkish: "Merhaba ey cân-ı cânân"); the site keeps no copy of either. Otherwise data-audio-file plays if it is
-        // set and exists, and failing that, a browser voice says data-voice-text.
+        // Easter egg: seven quick clicks on the greeting answer it, and so does typing data-type-phrase anywhere on the
+        // page outside a text field. While the clip named in the greeting's data-clip-* attributes is still on YouTube, a
+        // small YouTube player plays that part of it (English: Obi-Wan's "Hello there"; Turkish: "Merhaba ey cân-ı
+        // cânân"); the site keeps no copy of either. Otherwise data-audio-file plays if it is set and exists, and failing
+        // that, a browser voice says data-voice-text.
         (function () {
           var greeting = document.currentScript && document.currentScript.previousElementSibling;
           if (!greeting || !greeting.classList.contains('hello-animated')) return;
@@ -164,6 +167,18 @@ layout: default
             );
           }
 
+          function answer() {
+            var wait = new Promise(function (resolve) {
+              setTimeout(function () {
+                resolve(false);
+              }, 1000);
+            });
+            Promise.race([checkVideo(), wait]).then(function (available) {
+              if (available) showClip();
+              else playFile();
+            });
+          }
+
           greeting.addEventListener('click', function () {
             var now = Date.now();
             count = now - last < 1500 ? count + 1 : 1;
@@ -171,17 +186,36 @@ layout: default
             if (count === 2) checkVideo();
             if (count === 7) {
               count = 0;
-              var wait = new Promise(function (resolve) {
-                setTimeout(function () {
-                  resolve(false);
-                }, 1000);
-              });
-              Promise.race([checkVideo(), wait]).then(function (available) {
-                if (available) showClip();
-                else playFile();
-              });
+              answer();
             }
           });
+
+          // Only letters count, so case, spaces and punctuation do not matter ("Hello, there!" works too). Keys typed
+          // into a field (the search box, a form) are left alone.
+          var phrase = (egg.typePhrase || '').toLowerCase().replace(/[^\p{L}]/gu, '');
+          var typed = '';
+          function inTextField(event) {
+            var path = event.composedPath ? event.composedPath() : [event.target];
+            return path.some(function (node) {
+              return node && node.tagName && (node.isContentEditable || /^(INPUT|TEXTAREA|SELECT|NINJA-KEYS)$/.test(node.tagName));
+            });
+          }
+          if (phrase) {
+            document.addEventListener('keydown', function (event) {
+              if (event.ctrlKey || event.metaKey || event.altKey || event.isComposing || inTextField(event)) return;
+              if (event.key === 'Backspace') {
+                typed = typed.slice(0, -1);
+                return;
+              }
+              if (!event.key || event.key.length !== 1 || !/\p{L}/u.test(event.key)) return;
+              typed = (typed + event.key.toLowerCase()).slice(-phrase.length);
+              if (typed.slice(-2) === phrase.slice(0, 2)) checkVideo();
+              if (typed === phrase) {
+                typed = '';
+                answer();
+              }
+            });
+          }
         })();
       </script>
     {% endif %}
