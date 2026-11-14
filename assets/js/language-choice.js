@@ -1,10 +1,10 @@
-// Picks the language version of a page from the visitor's browser language and remembers the visitor's own choice.
+// Picks the language version of a page from the visitor's browser language.
 //
-// - A visitor whose preferred language is Turkish is sent from an English page to its Turkish twin.
-// - A visitor whose preferred language is anything else gets a short note in English on a Turkish page,
-//   with a link to the English twin. They are not redirected.
-// - The preferred language is the visitor's own choice, made with the language toggle in the navigation bar
-//   or with the note, and otherwise the primary language of the browser.
+// - A visitor whose browser's primary language is Turkish is sent from an English page to its Turkish twin,
+//   unless they chose English with the language toggle in the navigation bar.
+// - Whenever the page is in another language than the browser, a short note in the browser's language offers the twin:
+//   an English note on Turkish pages, and a Turkish note on English pages for a Turkish browser that stayed in English.
+//   "No, thanks" hides the note for the rest of the tab.
 //
 // Turkish pages live under /tr-tur/ and every page has a twin at the mapped path. The version of the current page
 // is read from the path: GitHub Pages serves the English 404 page for every missing address, Turkish ones included.
@@ -12,7 +12,7 @@
   "use strict";
 
   var TR_PREFIX = "/tr-tur";
-  var CHOICE_KEY = "site-language-choice"; // "en-us" or "tr-tur"
+  var CHOICE_KEY = "site-language-choice"; // "en-us" or "tr-tur", set by the toggle or by a note
   var NOTE_DISMISSED_KEY = "site-language-note-dismissed"; // per tab
   var LAST_REDIRECT_KEY = "site-language-last-redirect"; // per tab, a backstop against redirect loops
 
@@ -33,7 +33,7 @@
   var local = storage("localStorage");
   var session = storage("sessionStorage");
 
-  // Remember the language the visitor picks with the toggle in the navigation bar or with the note.
+  // Remember the language the visitor picks with the toggle in the navigation bar or with a note.
   document.addEventListener(
     "click",
     function (event) {
@@ -44,84 +44,98 @@
   );
 
   var path = window.location.pathname;
+  var rest = window.location.search + window.location.hash;
   var onTurkishPage = path === TR_PREFIX || path.indexOf(TR_PREFIX + "/") === 0;
   var browserLanguage = String((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase();
   var browserTurkish = browserLanguage === "tr" || browserLanguage.indexOf("tr-") === 0;
-  var choice = local ? local.getItem(CHOICE_KEY) : null;
-  var preferred = choice === "en-us" || choice === "tr-tur" ? choice : browserTurkish ? "tr-tur" : "en-us";
+  var choseEnglish = local ? local.getItem(CHOICE_KEY) === "en-us" : false;
 
-  if (!onTurkishPage && preferred === "tr-tur") {
+  if (!onTurkishPage && browserTurkish && !choseEnglish && local && session) {
     // Without storage a later choice of English could not be remembered, so the visitor would be sent back every time.
-    if (!local || !session) return;
-    var target = TR_PREFIX + path + window.location.search + window.location.hash;
-    var last = session.getItem(LAST_REDIRECT_KEY);
+    var last = (session.getItem(LAST_REDIRECT_KEY) || "").split(" ");
     var now = Date.now();
-    if (last) {
-      var parts = last.split(" ");
-      if (parts[1] === path && now - Number(parts[0]) < 5000) return;
+    if (!(last[1] === path && now - Number(last[0]) < 5000)) {
+      session.setItem(LAST_REDIRECT_KEY, now + " " + path);
+      window.location.replace(TR_PREFIX + path + rest);
+      return;
     }
-    session.setItem(LAST_REDIRECT_KEY, now + " " + path);
-    window.location.replace(target);
-    return;
   }
 
-  if (onTurkishPage && preferred === "en-us" && !(session && session.getItem(NOTE_DISMISSED_KEY))) {
-    var englishPath = path.slice(TR_PREFIX.length) || "/";
-    var englishUrl = englishPath + window.location.search + window.location.hash;
+  if (onTurkishPage === browserTurkish) return;
+  if (session && session.getItem(NOTE_DISMISSED_KEY)) return;
 
-    var showNote = function () {
-      if (document.querySelector(".lang-note")) return;
-      var style = document.createElement("style");
-      style.textContent =
-        ".lang-note{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1rem;margin:0 0 1.5rem;" +
-        "padding:.75rem 1rem;border:1px solid var(--global-divider-color);border-left:4px solid var(--global-theme-color);border-radius:6px;" +
-        "background:var(--global-card-bg-color);color:var(--global-text-color);font-size:.95rem;line-height:1.4}" +
-        ".lang-note p{margin:0;flex:1 1 16rem}" +
-        ".lang-note-actions{display:flex;flex-wrap:wrap;gap:.5rem}" +
-        ".lang-note-actions a,.lang-note-actions button{padding:.35rem .85rem;border-radius:4px;font-size:.9rem;line-height:1.4;cursor:pointer}" +
-        ".lang-note-actions a{background:var(--global-theme-color);color:var(--global-bg-color)!important;font-weight:600;text-decoration:none}" +
-        ".lang-note-actions button{border:1px solid var(--global-divider-color);background:transparent;color:var(--global-text-color)}";
-      document.head.appendChild(style);
+  var note = onTurkishPage
+    ? {
+        lang: "en",
+        label: "Language",
+        text: "This page is also available in English. Would you like to read it in English?",
+        go: "Read in English",
+        no: "No, thanks",
+        href: (path.slice(TR_PREFIX.length) || "/") + rest,
+        choice: "en-us",
+      }
+    : {
+        lang: "tr",
+        label: "Dil",
+        text: "Bu sayfanın Türkçesi de var. Türkçe okumak ister misiniz?",
+        go: "Türkçe oku",
+        no: "Hayır, teşekkürler",
+        href: TR_PREFIX + path + rest,
+        choice: "tr-tur",
+      };
 
-      var note = document.createElement("div");
-      note.className = "lang-note";
-      note.setAttribute("role", "region");
-      note.setAttribute("aria-label", "Language");
-      note.setAttribute("lang", "en");
+  function showNote() {
+    if (document.querySelector(".lang-note")) return;
+    var style = document.createElement("style");
+    style.textContent =
+      ".lang-note{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1rem;margin:0 0 1.5rem;" +
+      "padding:.75rem 1rem;border:1px solid var(--global-divider-color);border-left:4px solid var(--global-theme-color);border-radius:6px;" +
+      "background:var(--global-card-bg-color);color:var(--global-text-color);font-size:.95rem;line-height:1.4}" +
+      ".lang-note p{margin:0;flex:1 1 16rem}" +
+      ".lang-note-actions{display:flex;flex-wrap:wrap;gap:.5rem}" +
+      ".lang-note-actions a,.lang-note-actions button{padding:.35rem .85rem;border-radius:4px;font-size:.9rem;line-height:1.4;cursor:pointer}" +
+      ".lang-note-actions a{background:var(--global-theme-color);color:var(--global-bg-color)!important;font-weight:600;text-decoration:none}" +
+      ".lang-note-actions button{border:1px solid var(--global-divider-color);background:transparent;color:var(--global-text-color)}";
+    document.head.appendChild(style);
 
-      var text = document.createElement("p");
-      text.textContent = "This page is also available in English. Would you like to read it in English?";
+    var box = document.createElement("div");
+    box.className = "lang-note";
+    box.setAttribute("role", "region");
+    box.setAttribute("aria-label", note.label);
+    box.setAttribute("lang", note.lang);
 
-      var actions = document.createElement("div");
-      actions.className = "lang-note-actions";
+    var text = document.createElement("p");
+    text.textContent = note.text;
 
-      var accept = document.createElement("a");
-      accept.href = englishUrl;
-      accept.setAttribute("data-lang-choice", "en-us");
-      accept.setAttribute("hreflang", "en");
-      accept.textContent = "Read in English";
+    var actions = document.createElement("div");
+    actions.className = "lang-note-actions";
 
-      var dismiss = document.createElement("button");
-      dismiss.type = "button";
-      dismiss.textContent = "No, thanks";
-      dismiss.addEventListener("click", function () {
-        if (session) session.setItem(NOTE_DISMISSED_KEY, "1");
-        note.parentNode.removeChild(note);
-      });
+    var go = document.createElement("a");
+    go.href = note.href;
+    go.setAttribute("data-lang-choice", note.choice);
+    go.setAttribute("hreflang", note.choice === "en-us" ? "en" : "tr");
+    go.textContent = note.go;
 
-      actions.appendChild(accept);
-      actions.appendChild(dismiss);
-      note.appendChild(text);
-      note.appendChild(actions);
+    var no = document.createElement("button");
+    no.type = "button";
+    no.textContent = note.no;
+    no.addEventListener("click", function () {
+      if (session) session.setItem(NOTE_DISMISSED_KEY, "1");
+      box.parentNode.removeChild(box);
+    });
 
-      var host = document.querySelector('[role="main"]') || document.body;
-      host.insertBefore(note, host.firstChild);
-    };
+    actions.appendChild(go);
+    actions.appendChild(no);
+    box.appendChild(text);
+    box.appendChild(actions);
 
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", showNote);
-    } else {
-      showNote();
-    }
+    var host = document.querySelector('[role="main"]') || document.body;
+    host.insertBefore(box, host.firstChild);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", showNote);
+  } else {
+    showNote();
   }
 })();
