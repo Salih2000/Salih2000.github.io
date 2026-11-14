@@ -42,12 +42,34 @@ layout: default
       </p>
       <script>
         // Easter egg: seven quick clicks on the greeting say "Hello there".
-        // A clip saved as /assets/audio/hello-there.mp3 plays if it exists; otherwise a British browser voice says it.
+        // While the YouTube clip below is still available, a small YouTube player plays its "Hello there" (0:08-0:10);
+        // the site keeps no copy of it. Otherwise /assets/audio/hello-there.mp3 plays if it exists, and failing that,
+        // a British browser voice says the line.
         (function () {
           var greeting = document.currentScript && document.currentScript.previousElementSibling;
           if (!greeting || !greeting.classList.contains('hello-animated')) return;
+          var VIDEO_ID = 'rEq1Z0bjdwc';
           var count = 0;
           var last = 0;
+          var check = null;
+
+          function checkVideo() {
+            if (!check) {
+              check = window.fetch
+                ? fetch('https://www.youtube.com/oembed?format=json&url=' + encodeURIComponent('https://www.youtube.com/watch?v=' + VIDEO_ID), {
+                    credentials: 'omit',
+                  })
+                    .then(function (response) {
+                      return response.ok;
+                    })
+                    .catch(function () {
+                      return false;
+                    })
+                : Promise.resolve(false);
+            }
+            return check;
+          }
+
           function speak() {
             if (!('speechSynthesis' in window)) return;
             var line = new SpeechSynthesisUtterance('Hello there');
@@ -61,7 +83,8 @@ layout: default
             window.speechSynthesis.cancel();
             window.speechSynthesis.speak(line);
           }
-          function play() {
+
+          function playFile() {
             var fellBack = false;
             var fallback = function () {
               if (fellBack) return;
@@ -73,13 +96,61 @@ layout: default
             var started = clip.play();
             if (started && started.catch) started.catch(fallback);
           }
+
+          function showClip() {
+            var old = document.querySelector('.hello-there-clip');
+            if (old) old.remove();
+            if (!document.getElementById('hello-there-clip-style')) {
+              var style = document.createElement('style');
+              style.id = 'hello-there-clip-style';
+              style.textContent =
+                '.hello-there-clip{position:fixed;right:16px;bottom:72px;z-index:1050;width:356px;max-width:calc(100vw - 32px);padding:6px;' +
+                'border:1px solid var(--global-divider-color);border-radius:8px;background:var(--global-card-bg-color);box-shadow:0 4px 18px rgba(0,0,0,.25)}' +
+                '.hello-there-clip iframe{display:block;width:100%;height:200px;border:0;border-radius:4px}' +
+                '.hello-there-clip button{position:absolute;top:-12px;right:-12px;width:28px;height:28px;padding:0;border-radius:50%;' +
+                'border:1px solid var(--global-divider-color);background:var(--global-card-bg-color);color:var(--global-text-color);line-height:1;cursor:pointer}';
+              document.head.appendChild(style);
+            }
+            var box = document.createElement('div');
+            box.className = 'hello-there-clip';
+            box.setAttribute('role', 'dialog');
+            box.setAttribute('aria-label', 'Hello there');
+            var frame = document.createElement('iframe');
+            frame.src = 'https://www.youtube-nocookie.com/embed/' + VIDEO_ID + '?start=8&end=10&autoplay=1&rel=0&playsinline=1';
+            frame.title = 'Obi-Wan: Hello there';
+            frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+            frame.referrerPolicy = 'strict-origin-when-cross-origin';
+            var close = document.createElement('button');
+            close.type = 'button';
+            close.setAttribute('aria-label', 'Close');
+            close.textContent = '×';
+            close.addEventListener('click', function () {
+              box.remove();
+            });
+            box.appendChild(frame);
+            box.appendChild(close);
+            document.body.appendChild(box);
+            setTimeout(function () {
+              box.remove();
+            }, 12000);
+          }
+
           greeting.addEventListener('click', function () {
             var now = Date.now();
             count = now - last < 1500 ? count + 1 : 1;
             last = now;
+            if (count === 2) checkVideo();
             if (count === 7) {
               count = 0;
-              play();
+              var wait = new Promise(function (resolve) {
+                setTimeout(function () {
+                  resolve(false);
+                }, 1000);
+              });
+              Promise.race([checkVideo(), wait]).then(function (available) {
+                if (available) showClip();
+                else playFile();
+              });
             }
           });
         })();
