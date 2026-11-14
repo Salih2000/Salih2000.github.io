@@ -1,6 +1,8 @@
 {% comment %}
   The author's other posts, listed at the very end of a post, under the comments. site.related_posts holds the most
-  recent posts in the page's language, without the current one. The heading stays out of the sidebar table of contents.
+  recent posts in the page's language, without the current one. The heading stays out of the sidebar table of contents,
+  and the bottom margin keeps the last link clear of the fixed footer. The newsletter form is not repeated here: the post
+  layout already shows it under the share buttons.
 {% endcomment %}
 {% assign related_title = site.data[site.active_lang].strings.related_posts.title %}
 {% assign related_count = site.related_posts | size %}
@@ -8,6 +10,7 @@
   <style>
     .related-posts {
       margin-top: 2.5rem;
+      margin-bottom: 4rem;
       padding-top: 1rem;
       border-top: 1px solid var(--global-divider-color);
     }
@@ -38,8 +41,4 @@
       {% endfor %}
     </ul>
   </nav>
-{% endif %}
-{% if site.newsletter.enabled and site.footer_fixed %}
-  <p class="mb-2" style="margin-top: 1.5rem !important">{{ site.data[site.active_lang].strings.newsletter.subscribe_to_receive }}</p>
-  {% include newsletter.liquid left=true %}
 {% endif %}
