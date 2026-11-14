@@ -9,7 +9,10 @@
   {% endif %}
 
   {% if site.giscus.repo %}
-    <script defer src="{{ '/assets/js/giscus-setup.js' | relative_url }}"></script>
+    <script
+      defer
+      src="{% if site.active_lang != site.default_lang %}{{ '/assets/js/giscus-setup.js' | prepend: site.active_lang | relative_url }}{% else %}{{ '/assets/js/giscus-setup.js' | relative_url }}{% endif %}"
+    ></script>
     <noscript>
       Please enable JavaScript to view the
       <a href="http://giscus.app/?ref_noscript">comments powered by giscus.</a>

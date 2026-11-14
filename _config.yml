@@ -190,11 +190,13 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/en-us/about_einstein.md
+  - _pages/tr-tur/about_einstein.md
   - _pages/pt-br/about_einstein.md
   - purgecss.config.js
   - README.md
   - README.pt-br.md
   - readme_preview/
+  - requirements.txt
   - TODO.md
   - UPGRADING.md
   - vendor
@@ -363,10 +365,20 @@ external_links:
 
 languages: ["en-us", "tr-tur"]
 default_lang: "en-us"
-exclude_from_localization: ["assets"]
+exclude_from_localization: ["assets", "sitemap.xml"]
 lang_from_path: true
 country_flag: false # set true for allowing flag symbol in language toggle
 parallel_localization: false
+
+# Valid BCP 47 tags and Open Graph locales for the polyglot language codes above.
+# The polyglot codes stay in the URLs (/tr-tur/); these values go into <html lang>, hreflang and og:locale.
+lang_tags:
+  en-us:
+    hreflang: en
+    og_locale: en_US
+  tr-tur:
+    hreflang: tr
+    og_locale: tr_TR
 
 # -----------------------------------------------------------------------------
 # Responsive WebP Images

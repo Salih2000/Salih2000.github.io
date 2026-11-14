@@ -54,10 +54,10 @@ layout: default
         {% for category in page.categories %}
           {% if url_beginning == '/blog/' %}
             <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category -}}
+              <i class="fa-solid fa-tag fa-sm"></i> {{ site.data[site.active_lang].strings.categories[category] | default: category -}}
             </a>
           {% else %}
-            <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
+            <i class="fa-solid fa-tag fa-sm"></i> {{ site.data[site.active_lang].strings.categories[category] | default: category }}
           {% endif %}
           {% unless forloop.last %}
             &nbsp;

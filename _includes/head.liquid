@@ -81,14 +81,22 @@
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/{{ site.active_lang }}{{ clean_url }}">
 {% endif %}
 
-{% if site.languages.size >= 2 %}
+<link rel="alternate" type="application/atom+xml" title="{{ author_name }}" href="{{ '/feed.xml' | relative_url }}">
+
+{% if site.languages.size >= 2 and seo_noindex != true %}
   {% for l in site.languages %}
     {% if l == site.default_lang %}
-      <link rel="alternate" hreflang="{{ l }}" {% static_href -%} href="{{ site.url }}{{ site.baseurl }}{{ clean_url }}" {%- endstatic_href %}>
+      <link
+        rel="alternate"
+        hreflang="{{ site.lang_tags[l].hreflang | default: l }}"
+        {% static_href -%}
+        href="{{ site.url }}{{ site.baseurl }}{{ clean_url }}"
+        {%- endstatic_href %}
+      >
     {% else %}
       <link
         rel="alternate"
-        hreflang="{{ l }}"
+        hreflang="{{ site.lang_tags[l].hreflang | default: l }}"
         {% static_href -%}
         href="{{ site.url }}{{ site.baseurl }}/{{ l }}{{ clean_url }}"
         {%- endstatic_href %}

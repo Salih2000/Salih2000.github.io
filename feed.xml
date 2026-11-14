@@ -1,0 +1,54 @@
+---
+permalink: /feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+{%- comment -%}
+  Replaces the feed of jekyll-feed (the plugin skips its own when feed.xml exists in the source), because that
+  template prints site.title, which this theme keeps as the placeholder "blank".
+  Polyglot renders this file once per language: /feed.xml and /tr-tur/feed.xml.
+  URLs carry the language prefix themselves; polyglot leaves an href alone when it already has the prefix.
+  Entry ids of the default language are the ones jekyll-feed produced, so readers do not see old posts as new.
+{%- endcomment -%}
+{%- assign strings = site.data[site.active_lang].strings -%}
+{%- capture feed_author %}{{ strings.name.first }}{% if strings.name.middle %} {{ strings.name.middle }}{% endif %} {{ strings.name.last }}{% endcapture -%}
+{%- capture feed_root %}{{ site.url }}{{ site.baseurl }}{% unless site.active_lang == site.default_lang %}/{{ site.active_lang }}{% endunless %}{% endcapture -%}
+{%- assign feed_lang = site.lang_tags[site.active_lang].hreflang | default: site.active_lang -%}
+{%- assign feed_limit = site.feed.posts_limit | default: 10 %}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ feed_lang }}">
+  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
+  <link href="{{ feed_root }}/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ feed_root }}/" rel="alternate" type="text/html" hreflang="{{ feed_lang }}"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ feed_root | xml_escape }}/feed.xml</id>
+  <title type="html">{{ feed_author | xml_escape }}</title>
+  <subtitle>{{ strings.site_description | xml_escape }}</subtitle>
+  <author>
+    <name>{{ feed_author | xml_escape }}</name>
+    <uri>{{ feed_root | xml_escape }}/</uri>
+  </author>
+  {%- for post in site.posts limit: feed_limit -%}
+    {%- assign post_title = post.title | strip_html | normalize_whitespace | xml_escape -%}
+    {%- assign post_summary = post.description | default: post.excerpt %}
+  <entry>
+    <title type="html">{{ post_title }}</title>
+    <link href="{{ feed_root }}{{ post.url | xml_escape }}" rel="alternate" type="text/html" title="{{ post_title }}"/>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.last_updated | default: post.date | date_to_xmlschema }}</updated>
+    <id>{{ feed_root | xml_escape }}{{ post.id | xml_escape }}</id>
+    <content type="html" xml:base="{{ feed_root }}{{ post.url | xml_escape }}"><![CDATA[{{ post.content | strip }}]]></content>
+    <author>
+      <name>{{ feed_author | xml_escape }}</name>
+    </author>
+    {%- for category in post.categories %}
+    <category term="{{ category | xml_escape }}"/>
+    {%- endfor -%}
+    {%- for tag in post.tags %}
+    <category term="{{ tag | xml_escape }}"/>
+    {%- endfor -%}
+    {%- if post_summary %}
+    <summary type="html"><![CDATA[{{ post_summary | strip_html | normalize_whitespace }}]]></summary>
+    {%- endif %}
+  </entry>
+  {%- endfor %}
+</feed>

@@ -22,7 +22,9 @@ bibliography:
 blog:
   navigation_title: blog
 categories:
+  engineering: engineering
   fun: fun
+  personal: personal
   work: work
 citation:
   bibtex: "or as a BibTeX entry:"

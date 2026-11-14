@@ -22,7 +22,9 @@ bibliography:
 blog:
   navigation_title: blog
 categories:
+  engineering: mühendislik
   fun: eğlence
+  personal: kişisel
   work: iş
 citation:
   bibtex: "veya BibTeX girdisi olarak:"

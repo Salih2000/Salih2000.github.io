@@ -1,0 +1,49 @@
+---
+layout: none
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{%- comment -%}
+  One sitemap for every language. jekyll-sitemap leaves an existing sitemap.xml alone, and
+  "sitemap.xml" is in exclude_from_localization, so this file is built once, at the site root.
+  Each address is listed once per language with its hreflang alternates. Thin pages (tag, category
+  and year archives, single news items, pagination, the 404 page) are left out.
+{%- endcomment -%}
+{%- assign paths = '' | split: '' -%}
+{%- for p in site.pages -%}
+  {%- if p.sitemap == false or p.layout == 'archive' or p.layout == 'none' or p.redirect -%}{%- continue -%}{%- endif -%}
+  {%- unless p.title -%}{%- continue -%}{%- endunless -%}
+  {%- assign page_path = p.url | replace: 'index.html', '' -%}
+  {%- assign last_char = page_path | slice: -1, 1 -%}
+  {%- unless last_char == '/' -%}{%- continue -%}{%- endunless -%}
+  {%- if page_path contains '/page/' or page_path contains '/404' or page_path contains '/assets/' or page_path contains '/blog/tag/' or page_path contains '/blog/category/' -%}{%- continue -%}{%- endif -%}
+  {%- unless paths contains page_path -%}{%- assign paths = paths | push: page_path -%}{%- endunless -%}
+{%- endfor -%}
+{%- assign paths = paths | sort -%}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for path in paths %}
+  {%- for lang in site.languages %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{% unless lang == site.default_lang %}/{{ lang }}{% endunless %}{{ path }}</loc>
+    {%- for alt in site.languages %}
+    <xhtml:link rel="alternate" hreflang="{{ site.lang_tags[alt].hreflang | default: alt }}" href="{{ site.url }}{{ site.baseurl }}{% unless alt == site.default_lang %}/{{ alt }}{% endunless %}{{ path }}"/>
+    {%- endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}{{ path }}"/>
+  </url>
+  {%- endfor %}
+{%- endfor %}
+{%- for post in site.posts %}
+  {%- if post.sitemap == false or post.redirect -%}{%- continue -%}{%- endif -%}
+  {%- for lang in site.languages %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{% unless lang == site.default_lang %}/{{ lang }}{% endunless %}{{ post.url }}</loc>
+    <lastmod>{{ post.last_updated | default: post.date | date_to_xmlschema }}</lastmod>
+    {%- for alt in site.languages %}
+    <xhtml:link rel="alternate" hreflang="{{ site.lang_tags[alt].hreflang | default: alt }}" href="{{ site.url }}{{ site.baseurl }}{% unless alt == site.default_lang %}/{{ alt }}{% endunless %}{{ post.url }}"/>
+    {%- endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
+  </url>
+  {%- endfor %}
+{%- endfor %}
+</urlset>

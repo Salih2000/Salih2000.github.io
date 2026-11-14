@@ -16,6 +16,17 @@
 
 {% capture author_name %}{{ site.data[site.active_lang].strings.name.first }}{% if site.data[site.active_lang].strings.name.middle %} {{ site.data[site.active_lang].strings.name.middle }}{% endif %} {{ site.data[site.active_lang].strings.name.last }}{% endcapture %}
 
+{% comment %} The page's own address in the active language; the non-default language lives under /<code>/. {% endcomment %}
+{% assign meta_clean_url = page.url | replace: 'index.html', '' %}
+{% if site.active_lang == site.default_lang %}
+  {% capture canonical_url %}{{ site.url }}{{ site.baseurl }}{{ meta_clean_url }}{% endcapture %}
+{% else %}
+  {% capture canonical_url %}{{ site.url }}{{ site.baseurl }}/{{ site.active_lang }}{{ meta_clean_url }}{% endcapture %}
+{% endif %}
+{% assign site_tagline = site.data[site.active_lang].strings.site_tagline %}
+{% assign page_lang_tag = site.lang_tags[site.active_lang].hreflang | default: site.active_lang %}
+{% assign page_og_locale = site.lang_tags[site.active_lang].og_locale | default: site.active_lang %}
+
 <!-- Standard metadata -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -62,7 +73,9 @@
   {% assign description = site.data[site.active_lang].strings.site_description %}
 {% endif %}
 <title>
-  {% if page.url == '/blog/index.html' %}
+  {% if page.seo_title %}
+    {{ page.seo_title }} | {{ title }}
+  {% elsif page.url == '/blog/index.html' %}
     {{ page.title }} | {{ title }}
   {% elsif page.url contains '/blog/' %}
     {% capture blog_year %}{{ page.url | slice: 0, 11 }}{% endcapture %}
@@ -79,36 +92,58 @@
     {% endif %}
   {% else %}
     {{ title }}
+    {% if site_tagline %}| {{ site_tagline }}{% endif %}
   {% endif %}
 </title>
 <meta name="author" content="{{ author_name }}">
 <meta name="description" content="{{ description }}">
+{% comment %}
+  Thin and utility pages stay out of the index, but their links are still followed: tag, category and year
+  archives (jekyll-archives-v2 gives them the layout "archive"), single news items, the 404 page, redirect
+  stubs, and any page with "noindex: true" in its front matter.
+{% endcomment %}
+{% assign seo_noindex = false %}
+{% if page.layout == 'archive' or page.collection == 'news' or page.url == '/404.html' or page.redirect or page.noindex %}
+  {% assign seo_noindex = true %}
+{% endif %}
+{% if seo_noindex %}
+  <meta name="robots" content="noindex, follow">
+{% endif %}
 {% if page.keywords or site.keywords %}
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
 {% endif %}
 
 {% assign is_blog_post = false %}
-{% if page.url != '/blog/index.html' and page.url contains '/blog/' %}
-  {% unless page.url contains '/tag/' or page.url contains '/category/' %}
-    {% assign is_blog_post = true %}
-  {% endunless %}
+{% if page.layout == 'post' or page.layout == 'distill' %}
+  {% assign is_blog_post = true %}
 {% endif %}
 
 {% if site.serve_og_meta %}
   <!-- OpenGraph -->
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page_title }}{% else %}{{ title }}{% endif %}">
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
+  <meta
+    property="og:title"
+    content="{% if page.seo_title %}{{ page.seo_title }} | {{ title }}{% elsif page.url == '/' and site_tagline %}{{ title }} | {{ site_tagline }}{% elsif page.title %}{{ page_title }} | {{ title }}{% else %}{{ title }}{% endif %}"
+  >
+  <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:description" content="{{ description }}">
   {% if page.og_image or site.og_image %}
     <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
   {% endif %}
-  <meta property="og:locale" content="{{ site.active_lang }}">
+  <meta property="og:locale" content="{{ page_og_locale }}">
+  {% for l in site.languages %}
+    {% unless l == site.active_lang %}
+      <meta property="og:locale:alternate" content="{{ site.lang_tags[l].og_locale | default: l }}">
+    {% endunless %}
+  {% endfor %}
 
   <!-- Twitter card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page_title }}{% else %}{{ title }}{% endif %}">
+  <meta name="twitter:card" content="{% if page.og_image %}summary_large_image{% else %}summary{% endif %}">
+  <meta
+    name="twitter:title"
+    content="{% if page.seo_title %}{{ page.seo_title }}{% elsif page.url == '/' and site_tagline %}{{ title }} | {{ site_tagline }}{% elsif page.title %}{{ page_title }}{% else %}{{ title }}{% endif %}"
+  >
   <meta name="twitter:description" content="{{ description }}">
   {% if page.og_image or site.og_image %}
     <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
@@ -271,30 +306,113 @@
     {% endcase %}
   {% endfor %}
 
+  {% assign person_strings = site.data[site.active_lang].strings.person %}
+  {% capture site_root %}{{ site.url }}{{ site.baseurl }}/{% endcapture %}
+  {% capture person_id %}{{ site_root }}#person{% endcapture %}
+  {% capture website_id %}{{ site_root }}#website{% endcapture %}
+  {% if page.og_image %}
+    {% assign schema_image = page.og_image %}
+  {% else %}
+    {% assign schema_image = site.og_image %}
+  {% endif %}
+  {% if page.seo_title %}
+    {% assign schema_name = page.seo_title %}
+  {% elsif page.url == '/' and site_tagline %}
+    {% capture schema_name %}{{ title }} | {{ site_tagline }}{% endcapture %}
+  {% elsif page.title %}
+    {% assign schema_name = page_title %}
+  {% else %}
+    {% assign schema_name = title %}
+  {% endif %}
   <script type="application/ld+json">
     {
-        "author":
+      "@context": "https://schema.org",
+      "@graph": [
         {
-            "@type": "Person",
-            "name": "{{ author_name }}",
-            "url": "{{ site.url }}{{ site.baseurl }}"
+          "@type": "Person",
+          "@id": {{ person_id | jsonify }},
+          "name": {{ author_name | jsonify }},
+          {% if person_strings.alternate_names %}
+            "alternateName": {{ person_strings.alternate_names | jsonify }},
+          {% endif %}
+          {% if person_strings.job_title %}
+            "jobTitle": {{ person_strings.job_title | jsonify }},
+          {% endif %}
+          {% if person_strings.description %}
+            "description": {{ person_strings.description | jsonify }},
+          {% endif %}
+          {% if person_strings.works_for %}
+            "worksFor": {
+              "@type": "Organization",
+              "name": {{ person_strings.works_for | jsonify }}
+              {% if person_strings.works_for_url %}, "url": {{ person_strings.works_for_url | jsonify }}{% endif %}
+            },
+          {% endif %}
+          {% if person_strings.knows_about %}
+            "knowsAbout": {{ person_strings.knows_about | jsonify }},
+          {% endif %}
+          {% if person_strings.knows_language %}
+            "knowsLanguage": {{ person_strings.knows_language | jsonify }},
+          {% endif %}
+          {% if person_strings.city %}
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": {{ person_strings.city | jsonify }},
+              "addressCountry": {{ person_strings.country | jsonify }}
+            },
+          {% endif %}
+          {% if site.og_image %}
+            "image": {{ site.og_image | jsonify }},
+          {% endif %}
+          {% if sameaslinks != blank %}
+            "sameAs": {{ sameaslinks | jsonify }},
+          {% endif %}
+          "url": {{ site_root | jsonify }}
         },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{{ description }}",
-        "headline": "{% if page.title %}{{ page_title }}{% else %}{{ site.title }}{% endif %}",
-        {% if page.og_image or site.og_image %}
-        "image": "{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}",
-        {% endif %}
-        {% if is_blog_post and page.date %}
-        "datePublished": "{{ page.date | date_to_xmlschema }}",
-        "dateModified": "{{ page.last_updated | default: page.date | date_to_xmlschema }}",
-        {% endif %}
-        {% if sameaslinks != blank %}
-        "sameAs": {{ sameaslinks | jsonify }},
-        {% endif %}
-        "name": "{{ author_name }}",
-        "@context": "https://schema.org"
+        {
+          "@type": "WebSite",
+          "@id": {{ website_id | jsonify }},
+          "url": {{ site_root | jsonify }},
+          "name": {{ title | jsonify }},
+          "description": {{ site.data[site.active_lang].strings.site_description | jsonify }},
+          "publisher": { "@id": {{ person_id | jsonify }} }
+        },
+        {
+          {% if is_blog_post %}
+            "@type": "BlogPosting",
+            "@id": {{ canonical_url | append: '#article' | jsonify }},
+            "headline": {{ schema_name | jsonify }},
+            {% if page.date %}
+              "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+              "dateModified": {{ page.last_updated | default: page.date | date_to_xmlschema | jsonify }},
+            {% endif %}
+            "author": { "@id": {{ person_id | jsonify }} },
+            "publisher": { "@id": {{ person_id | jsonify }} },
+            "mainEntityOfPage": {{ canonical_url | jsonify }},
+            {% if page.tags and page.tags.size > 0 %}
+              "keywords": {{ page.tags | join: ', ' | jsonify }},
+            {% endif %}
+          {% elsif page.url == '/' %}
+            "@type": "ProfilePage",
+            "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+            "mainEntity": { "@id": {{ person_id | jsonify }} },
+          {% elsif page.layout == 'archive' or page.url == '/blog/index.html' %}
+            "@type": "CollectionPage",
+            "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+          {% else %}
+            "@type": "WebPage",
+            "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+          {% endif %}
+          "url": {{ canonical_url | jsonify }},
+          "name": {{ schema_name | jsonify }},
+          "description": {{ description | jsonify }},
+          "inLanguage": {{ page_lang_tag | jsonify }},
+          {% if schema_image %}
+            "image": {{ schema_image | jsonify }},
+          {% endif %}
+          "isPartOf": { "@id": {{ website_id | jsonify }} }
+        }
+      ]
     }
   </script>
 {% endif %}
