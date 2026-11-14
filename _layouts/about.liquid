@@ -40,6 +40,50 @@ layout: default
           </span>
         {%- endfor %}
       </p>
+      <script>
+        // Easter egg: seven quick clicks on the greeting say "Hello there".
+        // A clip saved as /assets/audio/hello-there.mp3 plays if it exists; otherwise a British browser voice says it.
+        (function () {
+          var greeting = document.currentScript && document.currentScript.previousElementSibling;
+          if (!greeting || !greeting.classList.contains('hello-animated')) return;
+          var count = 0;
+          var last = 0;
+          function speak() {
+            if (!('speechSynthesis' in window)) return;
+            var line = new SpeechSynthesisUtterance('Hello there');
+            line.lang = 'en-GB';
+            line.rate = 0.85;
+            line.pitch = 0.9;
+            var british = window.speechSynthesis.getVoices().filter(function (voice) {
+              return /^en-GB/i.test(voice.lang);
+            });
+            if (british.length) line.voice = british[0];
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(line);
+          }
+          function play() {
+            var fellBack = false;
+            var fallback = function () {
+              if (fellBack) return;
+              fellBack = true;
+              speak();
+            };
+            var clip = new Audio('/assets/audio/hello-there.mp3');
+            clip.addEventListener('error', fallback);
+            var started = clip.play();
+            if (started && started.catch) started.catch(fallback);
+          }
+          greeting.addEventListener('click', function () {
+            var now = Date.now();
+            count = now - last < 1500 ? count + 1 : 1;
+            last = now;
+            if (count === 7) {
+              count = 0;
+              play();
+            }
+          });
+        })();
+      </script>
     {% endif %}
   </header>
 
