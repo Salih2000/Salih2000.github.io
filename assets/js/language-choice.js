@@ -4,7 +4,8 @@
 //   unless they chose English with the language toggle in the navigation bar.
 // - Whenever the page is in another language than the browser, a short note in the browser's language offers the twin:
 //   an English note on Turkish pages, and a Turkish note on English pages for a Turkish browser that stayed in English.
-//   "No, thanks" shrinks the note to a small link box, which is also what later pages in the same tab show.
+//   "No, thanks" shrinks the note to a small round "EN" or "TR" button, which later pages in the same tab show too;
+//   clicking that button brings the note back.
 //
 // Turkish pages live under /tr-tur/ and every page has a twin at the mapped path. The version of the current page
 // is read from the path: GitHub Pages serves the English 404 page for every missing address, Turkish ones included.
@@ -70,6 +71,7 @@
         text: "This page is also available in English. Would you like to read it in English?",
         go: "Read in English",
         no: "No, thanks",
+        badge: "EN",
         href: (path.slice(TR_PREFIX.length) || "/") + rest,
         choice: "en-us",
       }
@@ -79,6 +81,7 @@
         text: "Bu sayfanın Türkçesi de var. Türkçe okumak ister misiniz?",
         go: "Türkçe oku",
         no: "Hayır, teşekkürler",
+        badge: "TR",
         href: TR_PREFIX + path + rest,
         choice: "tr-tur",
       };
@@ -101,9 +104,19 @@
     return go;
   }
 
+  // After "No, thanks" the note shrinks to a small round button ("EN" or "TR"); clicking it brings the note back.
   function smallBox() {
     var box = frame("lang-note-small");
-    box.appendChild(goLink());
+    var badge = document.createElement("button");
+    badge.type = "button";
+    badge.textContent = note.badge;
+    badge.setAttribute("aria-label", note.text);
+    badge.title = note.text;
+    badge.addEventListener("click", function () {
+      if (session) session.removeItem(NOTE_SMALL_KEY);
+      box.parentNode.replaceChild(fullBox(), box);
+    });
+    box.appendChild(badge);
     return box;
   }
 
@@ -140,8 +153,9 @@
       ".lang-note-actions a{background:var(--global-theme-color);color:var(--global-bg-color)!important;font-weight:600;text-decoration:none}" +
       ".lang-note-actions button{border:1px solid var(--global-divider-color);background:transparent;color:var(--global-text-color)}" +
       ".lang-note.lang-note-small{justify-content:flex-end;padding:0;border:0;background:transparent;margin:0 0 1rem}" +
-      ".lang-note-small a{padding:.2rem .75rem;border:1px solid var(--global-divider-color);border-radius:999px;font-size:.85rem;" +
-      "line-height:1.4;background:var(--global-card-bg-color);color:var(--global-theme-color)!important;text-decoration:none}";
+      ".lang-note-small button{width:2.25rem;height:2.25rem;padding:0;border:1px solid var(--global-theme-color);border-radius:50%;" +
+      "background:var(--global-card-bg-color);color:var(--global-theme-color);font-size:.8rem;font-weight:700;line-height:1;cursor:pointer}" +
+      ".lang-note-small button:hover{background:var(--global-theme-color);color:var(--global-bg-color)}";
     document.head.appendChild(style);
     var small = session && session.getItem(NOTE_SMALL_KEY) === "1";
     var host = document.querySelector('[role="main"]') || document.body;
