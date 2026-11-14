@@ -78,6 +78,25 @@ layout: default
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
+      {% if page.cv_pdf_short %}
+        <p class="post-description">
+          <a
+            href="{{ page.cv_pdf | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{- site.data[site.active_lang].strings.cv.download_long -}}
+          </a>
+          &middot;
+          <a
+            href="{{ page.cv_pdf_short | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{- site.data[site.active_lang].strings.cv.download_short -}}
+          </a>
+        </p>
+      {% endif %}
     </header>
 
     <article>

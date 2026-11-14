@@ -45,6 +45,8 @@ cv:
   countryCode: Ülke kodu
   courses: Kurslar
   date: Tarih
+  download_long: "Uzun CV'yi indir (PDF)"
+  download_short: "Tek sayfalık CV'yi indir (PDF)"
   education: Eğitim
   email: E-posta
   endDate: Bitiş tarihi

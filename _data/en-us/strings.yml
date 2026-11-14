@@ -45,6 +45,8 @@ cv:
   countryCode: Country code
   courses: Courses
   date: Date
+  download_long: "Download the full CV (PDF)"
+  download_short: "Download the one-page CV (PDF)"
   education: Education
   email: Email
   endDate: End date
