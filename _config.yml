@@ -270,8 +270,8 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: [] # tags listed at the top of the blog page; empty because al-folio's demo tags there only led to 404 pages
+display_categories: [] # categories listed in the same place
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
