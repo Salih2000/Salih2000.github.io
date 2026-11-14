@@ -1160,6 +1160,12 @@ nav[data-toggle="toc"] {
     top: 0;
   }
 
+  /* wide tables scroll inside themselves instead of making the whole page wider than the phone */
+  #markdown-content table {
+    display: block;
+    overflow-x: auto;
+  }
+
   /* Responsive code blocks for mobile */
   pre {
     font-size: 0.875rem;

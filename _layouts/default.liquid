@@ -39,15 +39,15 @@
           <div class="row">
             <!-- main content area -->
             <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
+            <!-- sidebar, hidden on phones from the first paint: the theme's load-time transition would otherwise flash it -->
+            <div class="col-sm-3 d-none d-sm-block">
               <nav id="toc-sidebar" class="sticky-top"></nav>
             </div>
           </div>
         {% else %}
           <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
+            <!-- sidebar, hidden on phones from the first paint: the theme's load-time transition would otherwise flash it -->
+            <div class="col-sm-3 d-none d-sm-block">
               <nav id="toc-sidebar" class="sticky-top"></nav>
             </div>
             <!-- main content area -->

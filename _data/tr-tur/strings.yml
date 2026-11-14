@@ -7,6 +7,16 @@ archive:
   category_suffix: bu kategoride
   tag_suffix: bu etiketle
   year_suffix: bu yıldan
+  # whole sentences, because Turkish cannot be glued together from the prefix and suffix above
+  descriptions:
+    posts:
+      category: Bu kategorideki yazılar
+      tag: Bu etiketi taşıyan yazılar
+      year: Bu yıla ait yazılar
+    books:
+      category: Bu kategorideki kitaplar
+      tag: Bu etiketi taşıyan kitaplar
+      year: Bu yıla ait kitaplar
 bibliography:
   abstract: Öz
   awarded: Ödüllü

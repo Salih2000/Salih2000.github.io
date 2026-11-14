@@ -67,6 +67,10 @@
   {% endfor %}
   {% assign page_title = title_array | join: ' ' %}
 {% endif %}
+{% comment %} category archive pages carry the category slug as their title; show its localized name instead {% endcomment %}
+{% if page.type == 'categories' %}
+  {% assign page_title = site.data[site.active_lang].strings.categories[page.title] | default: page_title %}
+{% endif %}
 {% if page.description %}
   {% assign description = page.description %}
 {% else %}
