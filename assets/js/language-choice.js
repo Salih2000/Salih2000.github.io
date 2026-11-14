@@ -4,7 +4,7 @@
 //   unless they chose English with the language toggle in the navigation bar.
 // - Whenever the page is in another language than the browser, a short note in the browser's language offers the twin:
 //   an English note on Turkish pages, and a Turkish note on English pages for a Turkish browser that stayed in English.
-//   "No, thanks" hides the note for the rest of the tab.
+//   "No, thanks" shrinks the note to a small link box, which is also what later pages in the same tab show.
 //
 // Turkish pages live under /tr-tur/ and every page has a twin at the mapped path. The version of the current page
 // is read from the path: GitHub Pages serves the English 404 page for every missing address, Turkish ones included.
@@ -13,7 +13,7 @@
 
   var TR_PREFIX = "/tr-tur";
   var CHOICE_KEY = "site-language-choice"; // "en-us" or "tr-tur", set by the toggle or by a note
-  var NOTE_DISMISSED_KEY = "site-language-note-dismissed"; // per tab
+  var NOTE_SMALL_KEY = "site-language-note-dismissed"; // per tab: show the small box instead of the full note
   var LAST_REDIRECT_KEY = "site-language-last-redirect"; // per tab, a backstop against redirect loops
 
   if (document.querySelector('meta[name="x-not-found"]')) return;
@@ -62,7 +62,6 @@
   }
 
   if (onTurkishPage === browserTurkish) return;
-  if (session && session.getItem(NOTE_DISMISSED_KEY)) return;
 
   var note = onTurkishPage
     ? {
@@ -84,6 +83,50 @@
         choice: "tr-tur",
       };
 
+  function frame(extraClass) {
+    var box = document.createElement("div");
+    box.className = "lang-note" + (extraClass ? " " + extraClass : "");
+    box.setAttribute("role", "region");
+    box.setAttribute("aria-label", note.label);
+    box.setAttribute("lang", note.lang);
+    return box;
+  }
+
+  function goLink() {
+    var go = document.createElement("a");
+    go.href = note.href;
+    go.setAttribute("data-lang-choice", note.choice);
+    go.setAttribute("hreflang", note.choice === "en-us" ? "en" : "tr");
+    go.textContent = note.go;
+    return go;
+  }
+
+  function smallBox() {
+    var box = frame("lang-note-small");
+    box.appendChild(goLink());
+    return box;
+  }
+
+  function fullBox() {
+    var box = frame("");
+    var text = document.createElement("p");
+    text.textContent = note.text;
+    var actions = document.createElement("div");
+    actions.className = "lang-note-actions";
+    var no = document.createElement("button");
+    no.type = "button";
+    no.textContent = note.no;
+    no.addEventListener("click", function () {
+      if (session) session.setItem(NOTE_SMALL_KEY, "1");
+      box.parentNode.replaceChild(smallBox(), box);
+    });
+    actions.appendChild(goLink());
+    actions.appendChild(no);
+    box.appendChild(text);
+    box.appendChild(actions);
+    return box;
+  }
+
   function showNote() {
     if (document.querySelector(".lang-note")) return;
     var style = document.createElement("style");
@@ -95,42 +138,14 @@
       ".lang-note-actions{display:flex;flex-wrap:wrap;gap:.5rem}" +
       ".lang-note-actions a,.lang-note-actions button{padding:.35rem .85rem;border-radius:4px;font-size:.9rem;line-height:1.4;cursor:pointer}" +
       ".lang-note-actions a{background:var(--global-theme-color);color:var(--global-bg-color)!important;font-weight:600;text-decoration:none}" +
-      ".lang-note-actions button{border:1px solid var(--global-divider-color);background:transparent;color:var(--global-text-color)}";
+      ".lang-note-actions button{border:1px solid var(--global-divider-color);background:transparent;color:var(--global-text-color)}" +
+      ".lang-note.lang-note-small{justify-content:flex-end;padding:0;border:0;background:transparent;margin:0 0 1rem}" +
+      ".lang-note-small a{padding:.2rem .75rem;border:1px solid var(--global-divider-color);border-radius:999px;font-size:.85rem;" +
+      "line-height:1.4;background:var(--global-card-bg-color);color:var(--global-theme-color)!important;text-decoration:none}";
     document.head.appendChild(style);
-
-    var box = document.createElement("div");
-    box.className = "lang-note";
-    box.setAttribute("role", "region");
-    box.setAttribute("aria-label", note.label);
-    box.setAttribute("lang", note.lang);
-
-    var text = document.createElement("p");
-    text.textContent = note.text;
-
-    var actions = document.createElement("div");
-    actions.className = "lang-note-actions";
-
-    var go = document.createElement("a");
-    go.href = note.href;
-    go.setAttribute("data-lang-choice", note.choice);
-    go.setAttribute("hreflang", note.choice === "en-us" ? "en" : "tr");
-    go.textContent = note.go;
-
-    var no = document.createElement("button");
-    no.type = "button";
-    no.textContent = note.no;
-    no.addEventListener("click", function () {
-      if (session) session.setItem(NOTE_DISMISSED_KEY, "1");
-      box.parentNode.removeChild(box);
-    });
-
-    actions.appendChild(go);
-    actions.appendChild(no);
-    box.appendChild(text);
-    box.appendChild(actions);
-
+    var small = session && session.getItem(NOTE_SMALL_KEY) === "1";
     var host = document.querySelector('[role="main"]') || document.body;
-    host.insertBefore(box, host.firstChild);
+    host.insertBefore(small ? smallBox() : fullBox(), host.firstChild);
   }
 
   if (document.readyState === "loading") {
