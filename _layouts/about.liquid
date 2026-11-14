@@ -27,7 +27,24 @@ layout: default
       {% assign sweep_end = last_index | times: 0.08 | plus: 1.2 %}
       {% assign heartbeat_delay = sweep_end | plus: 0.2 %}
       {% assign loop_start = heartbeat_delay | plus: 7.8 %}
-      <p class="desc hello-animated">
+      {%- comment -%}
+        The greeting's easter egg (script below) plays a different YouTube clip per language.
+      {%- endcomment -%}
+      {% if site.active_lang == 'tr-tur' %}
+        {% assign egg = 'hJTc2_-3-Yg|181|205|Merhaba ey cân-ı cânân|Merhaba|tr-TR|' | split: '|' %}
+      {% else %}
+        {% assign egg = 'rEq1Z0bjdwc|8|10|Obi-Wan: Hello there|Hello there|en-GB|/assets/audio/hello-there.mp3' | split: '|' %}
+      {% endif %}
+      <p
+        class="desc hello-animated"
+        data-clip-id="{{ egg[0] }}"
+        data-clip-start="{{ egg[1] }}"
+        data-clip-end="{{ egg[2] }}"
+        data-clip-title="{{ egg[3] }}"
+        data-voice-text="{{ egg[4] }}"
+        data-voice-lang="{{ egg[5] }}"
+        data-audio-file="{{ egg[6] }}"
+      >
         {% for char in subtitle_chars -%}
           {%- assign drop_delay = forloop.index0 | times: 0.05 -%}
           {%- assign glow_delay = forloop.index0 | times: 0.08 -%}
@@ -41,14 +58,15 @@ layout: default
         {%- endfor %}
       </p>
       <script>
-        // Easter egg: seven quick clicks on the greeting say "Hello there".
-        // While the YouTube clip below is still available, a small YouTube player plays its "Hello there" (0:08-0:10);
-        // the site keeps no copy of it. Otherwise /assets/audio/hello-there.mp3 plays if it exists, and failing that,
-        // a British browser voice says the line.
+        // Easter egg: seven quick clicks on the greeting answer it. While the clip named in the greeting's data-clip-*
+        // attributes is still on YouTube, a small YouTube player plays that part of it (English: Obi-Wan's "Hello there";
+        // Turkish: "Merhaba ey cân-ı cânân"); the site keeps no copy of either. Otherwise data-audio-file plays if it is
+        // set and exists, and failing that, a browser voice says data-voice-text.
         (function () {
           var greeting = document.currentScript && document.currentScript.previousElementSibling;
           if (!greeting || !greeting.classList.contains('hello-animated')) return;
-          var VIDEO_ID = 'rEq1Z0bjdwc';
+          var egg = greeting.dataset;
+          var VIDEO_ID = egg.clipId;
           var count = 0;
           var last = 0;
           var check = null;
@@ -72,12 +90,12 @@ layout: default
 
           function speak() {
             if (!('speechSynthesis' in window)) return;
-            var line = new SpeechSynthesisUtterance('Hello there');
-            line.lang = 'en-GB';
+            var line = new SpeechSynthesisUtterance(egg.voiceText);
+            line.lang = egg.voiceLang;
             line.rate = 0.85;
             line.pitch = 0.9;
             var british = window.speechSynthesis.getVoices().filter(function (voice) {
-              return /^en-GB/i.test(voice.lang);
+              return voice.lang.toLowerCase().indexOf(egg.voiceLang.toLowerCase()) === 0;
             });
             if (british.length) line.voice = british[0];
             window.speechSynthesis.cancel();
@@ -91,7 +109,8 @@ layout: default
               fellBack = true;
               speak();
             };
-            var clip = new Audio('/assets/audio/hello-there.mp3');
+            if (!egg.audioFile) return fallback();
+            var clip = new Audio(egg.audioFile);
             clip.addEventListener('error', fallback);
             var started = clip.play();
             if (started && started.catch) started.catch(fallback);
@@ -116,8 +135,15 @@ layout: default
             box.setAttribute('role', 'dialog');
             box.setAttribute('aria-label', 'Hello there');
             var frame = document.createElement('iframe');
-            frame.src = 'https://www.youtube-nocookie.com/embed/' + VIDEO_ID + '?start=8&end=10&autoplay=1&rel=0&playsinline=1';
-            frame.title = 'Obi-Wan: Hello there';
+            frame.src =
+              'https://www.youtube-nocookie.com/embed/' +
+              VIDEO_ID +
+              '?start=' +
+              egg.clipStart +
+              '&end=' +
+              egg.clipEnd +
+              '&autoplay=1&rel=0&playsinline=1';
+            frame.title = egg.clipTitle;
             frame.allow = 'autoplay; encrypted-media; picture-in-picture';
             frame.referrerPolicy = 'strict-origin-when-cross-origin';
             var close = document.createElement('button');
@@ -130,9 +156,12 @@ layout: default
             box.appendChild(frame);
             box.appendChild(close);
             document.body.appendChild(box);
-            setTimeout(function () {
-              box.remove();
-            }, 12000);
+            setTimeout(
+              function () {
+                box.remove();
+              },
+              (Number(egg.clipEnd) - Number(egg.clipStart) + 10) * 1000
+            );
           }
 
           greeting.addEventListener('click', function () {
