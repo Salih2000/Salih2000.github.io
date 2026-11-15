@@ -190,7 +190,7 @@
         "Converted 5 Enterprise Guide projects and their SAS code to SAS Studio, and moved selected Enterprise Miner models to Viya Model Studio.",
         "Supported the conversion of 72 Visual Data Builder flows to SAS Studio Flows and the migration of 116 Visual Analytics reports to SAS Viya 4.",
         "Optimized the data pipelines that feed the machine-learning models.",
-        "Delivered part of the 10 days of on-the-job training."
+        "Delivered part of the on-the-job training."
       ],
       "keywords": ["SAS Viya 4", "SAS Studio", "Visual Analytics", "Enterprise Guide", "Enterprise Miner"],
       "short": "Moved 5 Enterprise Guide projects, 72 data flows and 116 Visual Analytics reports to SAS Viya 4 and delivered part of the client training.",
