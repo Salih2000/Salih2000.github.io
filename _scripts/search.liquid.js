@@ -42,8 +42,8 @@ ninja.data = [
               {%- assign title = child.title | escape | strip -%}
               {%- if child.permalink contains "/blog/" -%}{%- assign url = "/blog/" -%} {%- else -%}{%- assign url = child.permalink -%}{%- endif -%}
               id: "dropdown-{{ title | slugify }}",
-              title: "{{ title | truncatewords: 13 }}",
-              description: "{{ child.description | strip_html | strip_newlines | escape | strip }}",
+              title: "{{ title | replace: "&#39;", "'" | truncatewords: 13 }}",
+              description: "{{ child.description | strip_html | strip_newlines | escape | strip | replace: "&#39;", "'" }}",
               section: "{{ site.data[site.active_lang].strings.search.dropdown }}",
               handler: () => {
                 window.location.href = "{{ url | prepend: lang | relative_url }}";
@@ -56,8 +56,8 @@ ninja.data = [
           {%- assign title = p.title | escape | strip -%}
           {%- if p.permalink contains "/blog/" -%}{%- assign url = "/blog/" -%} {%- else -%}{%- assign url = p.url -%}{%- endif -%}
           id: "nav-{{ title | slugify }}",
-          title: "{{ title | truncatewords: 13 }}",
-          description: "{{ p.description | strip_html | strip_newlines | escape | strip }}",
+          title: "{{ title | replace: "&#39;", "'" | truncatewords: 13 }}",
+          description: "{{ p.description | strip_html | strip_newlines | escape | strip | replace: "&#39;", "'" }}",
           section: "{{ site.data[site.active_lang].strings.search.navigation }}",
           handler: () => {
             window.location.href = "{{ url | prepend: lang | relative_url }}";
@@ -73,14 +73,15 @@ ninja.data = [
         {%- comment -%}
           ninja-keys finds matches in the decoded title but highlights them in the raw string, so an entity
           such as &#39; is cut apart while the reader types (MinIO&#39;nun). Apostrophes are safe as plain
-          characters in these strings; the single-quoted one below needs them escaped for JavaScript.
+          characters in double-quoted strings. The single-quoted string below gets the typographic ’ instead:
+          Liquid's replace is Ruby's gsub, which reads a backslash in the replacement as a special sequence.
         {%- endcomment -%}
         {%- assign search_title = title | replace: "&#39;", "'" -%}
         id: "post-{{ title | slugify }}",
         {% if post.redirect == blank %}
           title: "{{ search_title | truncatewords: 13 }}",
         {% elsif post.redirect contains '://' %}
-          title: '{{ title | replace: "&#39;", "\'" | truncatewords: 13 }} <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: '{{ title | replace: "&#39;", "’" | truncatewords: 13 }} <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         {% else %}
           title: "{{ search_title | truncatewords: 13 }}",
         {% endif %}
