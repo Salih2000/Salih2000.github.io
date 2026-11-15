@@ -198,15 +198,15 @@
       "endDate": "2026-04-01"
     },
     {
-      "name": "Türk Telekom: SAS Viya 4 danışmanlık, optimizasyon ve destek",
-      "summary": "SAS Viya 4 geçişinin ardından bakım, destek ve iş birimlerinin talepleri doğrultusunda mevcut modellerin optimizasyonu, çoklu platform entegrasyonları ve SAS danışmanlığı alanlarında destek verdim.",
+      "name": "Türk Telekom: SAS Viya 4 optimizasyon ve danışmanlık",
+      "summary": "SAS Viya 4 geçişinin ardından iş birimlerinin talepleri doğrultusunda mevcut modellerin iyileştirilmesi, geliştirici araçlarıyla entegrasyon ve platform danışmanlığı süreçlerini yürüttüm.",
       "highlights": [
-        "Mevcut analitik modellerde optimizasyon ve hata giderme yaptım; iş birimlerine SAS best practice danışmanlığı verdim.",
-        "Viya modüllerinin etkin kullanılabilmesi için Git/Bitbucket, VS Code, MCP ve SAS SDK entegrasyonlarını kurgulayıp destekledim.",
-        "SAS Viya'nın Python, SQL, Oracle ve Hadoop gibi veri ve kod platformlarıyla birlikte çoklu platform (multiplatform) kullanımını sağladım."
+        "Mevcut analitik modellerdeki performans darboğazlarını ve çalışma zamanı hatalarını giderdim; iş birimlerine doğru SAS geliştirme standartları ve yöntemleri konusunda rehberlik ettim.",
+        "Viya modüllerinin daha verimli kullanılabilmesi için Git/Bitbucket, VS Code, SAS SDK ve MCP entegrasyonlarını kurarak ekiplere modern geliştirme akışları kazandırdım.",
+        "SAS Viya'yı Python, SQL, Oracle ve Hadoop ortamlarıyla uyumlu çalıştırarak ekiplerin tek bir araca bağlı kalmadan farklı platformlarda süreç geliştirebilmesini sağladım."
       ],
-      "keywords": ["SAS Viya 4", "Git", "Bitbucket", "VS Code", "MCP", "SAS SDK", "Python", "SQL", "Oracle", "Hadoop"],
-      "short": "Geçiş sonrası mevcut modellerde optimizasyon ve hata giderme yaptım; Git/Bitbucket, VS Code, MCP ve SAS SDK entegrasyonlarıyla Python, SQL, Oracle ve Hadoop üzerinde çoklu platform kullanımı ve SAS danışmanlığı sağladım.",
+      "keywords": ["SAS Viya 4", "SAS SDK", "VS Code", "Git", "Bitbucket", "MCP", "Python", "SQL", "Oracle", "Hadoop"],
+      "short": "Geçiş sonrasında iş birimlerinin talepleri doğrultusunda mevcut modellerin performansını iyileştirip hataları giderdim; Git/Bitbucket, VS Code, SAS SDK ve MCP entegrasyonlarıyla SAS Viya'nın Python, SQL, Oracle ve Hadoop ile birlikte kullanılmasını sağladım.",
       "startDate": "2025-12-01",
       "endDate": "2026-12-01"
     },
@@ -226,13 +226,13 @@
     },
     {
       "name": "AYDEM Enerji: bakım, destek ve SAS danışmanlığı",
-      "summary": "Satış fiyatlandırma otomasyonu projesinin tamamlanmasının hemen ardından başlayan süreçte bakım, teknik destek ve SAS danışmanlığı çalışmalarıma günümüze kadar kesintisiz devam ediyorum.",
+      "summary": "Satış fiyatlandırma otomasyonunun canlıya alınmasının ardından sistemin sürekliliği için bakım, teknik destek ve SAS danışmanlığı çalışmalarımı sürdürüyorum.",
       "highlights": [
-        "Canlıdaki satış fiyatlandırma otomasyonu ve SAS süreçleri için sürekli bakım ve teknik destek sağlıyorum.",
-        "İş birimlerinin ve satış ekiplerinin ihtiyaçları doğrultusunda SAS danışmanlığı desteği veriyorum."
+        "Canlıdaki fiyatlandırma otomasyonu ve SAS süreçlerine kesintisiz bakım ve teknik destek veriyorum.",
+        "İş birimlerinden ve satış ekiplerinden gelen yeni ihtiyaçlarda SAS tarafında teknik danışmanlık sağlıyorum."
       ],
       "keywords": ["SAS", "SQL", "Bakım ve Destek", "SAS Danışmanlığı"],
-      "short": "Satış fiyatlandırma otomasyonunun tamamlanmasının hemen ardından başlayan süreçte bakım, teknik destek ve SAS danışmanlığı çalışmalarımı sürdürüyorum.",
+      "short": "Satış fiyatlandırma otomasyonunun canlıya alınmasının ardından sistemin sürekliliği için bakım, teknik destek ve SAS danışmanlığı vermeye devam ediyorum.",
       "startDate": "2024-11-01"
     },
     {
@@ -293,7 +293,7 @@
       "projects": [
         "Allianz: Oracle veri ambarı dönüşümü",
         "Yves Rocher France: SAS Viya 4 geçişi",
-        "Türk Telekom: SAS Viya 4 danışmanlık, optimizasyon ve destek",
+        "Türk Telekom: SAS Viya 4 optimizasyon ve danışmanlık",
         "Türk Telekom: SAS Viya 3.5'ten SAS Viya 4'e dönüşüm",
         "AYDEM Enerji: bakım, destek ve SAS danışmanlığı",
         "HepsiPay: Vertica geçişi ve platform yükseltmesi",
