@@ -143,7 +143,11 @@ ninja.data = [
         {%- when "cv_pdf" -%}
           {%- assign social_id = "social-cv" -%}
           {%- assign social_title = "CV" -%}
-          {%- capture social_url %}{% if social[1] contains '://' %}"{{ social[1] }}"{% else %}"{{ social[1] | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"{% endif %}{% endcapture -%}
+          {%- comment -%}
+            _data/socials.yml gives the full path with a [LANG] placeholder, which jekyll-socials fills in for the
+            social icons; prepending the PDF folder to that path pointed the search entry at a missing file
+          {%- endcomment -%}
+          {%- capture social_url %}{% if social[1] contains '://' %}"{{ social[1] }}"{% elsif social[1] contains '[LANG]' %}"{{ social[1] | replace: '[LANG]', site.active_lang | prepend: site.baseurl }}"{% else %}"{{ social[1] | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"{% endif %}{% endcapture -%}
         {%- when "dblp_url" -%}
           {%- assign social_id = "social-dblp" -%}
           {%- assign social_title = "DBLP" -%}
