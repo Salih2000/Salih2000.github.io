@@ -70,15 +70,21 @@ ninja.data = [
     {%- for post in site.posts -%}
       {
         {%- assign title = post.title | escape | strip -%}
+        {%- comment -%}
+          ninja-keys finds matches in the decoded title but highlights them in the raw string, so an entity
+          such as &#39; is cut apart while the reader types (MinIO&#39;nun). Apostrophes are safe as plain
+          characters in these strings; the single-quoted one below needs them escaped for JavaScript.
+        {%- endcomment -%}
+        {%- assign search_title = title | replace: "&#39;", "'" -%}
         id: "post-{{ title | slugify }}",
         {% if post.redirect == blank %}
-          title: "{{ title | truncatewords: 13 }}",
+          title: "{{ search_title | truncatewords: 13 }}",
         {% elsif post.redirect contains '://' %}
-          title: '{{ title | truncatewords: 13 }} <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: '{{ title | replace: "&#39;", "\'" | truncatewords: 13 }} <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         {% else %}
-          title: "{{ title | truncatewords: 13 }}",
+          title: "{{ search_title | truncatewords: 13 }}",
         {% endif %}
-        description: "{{ post.description | strip_html | strip_newlines | escape | strip }}",
+        description: "{{ post.description | strip_html | strip_newlines | escape | strip | replace: "&#39;", "'" }}",
         section: "{{ site.data[site.active_lang].strings.search.posts }}",
         handler: () => {
           {% if post.redirect == blank %}
