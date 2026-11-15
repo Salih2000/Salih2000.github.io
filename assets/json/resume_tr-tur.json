@@ -198,20 +198,42 @@
       "endDate": "2026-04-01"
     },
     {
-      "name": "Türk Telekom: SAS Viya 3.5'ten SAS Viya 4'e dönüşüm ve danışmanlık",
-      "summary": "Türkiye'nin en büyük telekomünikasyon sağlayıcılarından birinin Veri Yönetimi ekibinde analitik iş yüklerinin Kubernetes tabanlı SAS Viya 4'e taşınmasında çalıştım; geçiş sonrasında ise bakım, destek ve iş birimlerinin talepleri doğrultusunda model optimizasyonu, çoklu platform entegrasyonları ve SAS danışmanlığı çalışmalarını yürüttüm.",
+      "name": "Türk Telekom: SAS Viya 4 danışmanlık, optimizasyon ve destek",
+      "summary": "SAS Viya 4 geçişinin ardından bakım, destek ve iş birimlerinin talepleri doğrultusunda mevcut modellerin optimizasyonu, çoklu platform entegrasyonları ve SAS danışmanlığı alanlarında destek verdim.",
+      "highlights": [
+        "Mevcut analitik modellerde optimizasyon ve hata giderme yaptım; iş birimlerine SAS best practice danışmanlığı verdim.",
+        "Viya modüllerinin etkin kullanılabilmesi için Git/Bitbucket, VS Code, MCP ve SAS SDK entegrasyonlarını kurgulayıp destekledim.",
+        "SAS Viya'nın Python, SQL, Oracle ve Hadoop gibi veri ve kod platformlarıyla birlikte çoklu platform (multiplatform) kullanımını sağladım."
+      ],
+      "keywords": ["SAS Viya 4", "Git", "Bitbucket", "VS Code", "MCP", "SAS SDK", "Python", "SQL", "Oracle", "Hadoop"],
+      "short": "Geçiş sonrası mevcut modellerde optimizasyon ve hata giderme yaptım; Git/Bitbucket, VS Code, MCP ve SAS SDK entegrasyonlarıyla Python, SQL, Oracle ve Hadoop üzerinde çoklu platform kullanımı ve SAS danışmanlığı sağladım.",
+      "startDate": "2025-12-01",
+      "endDate": "2026-12-01"
+    },
+    {
+      "name": "Türk Telekom: SAS Viya 3.5'ten SAS Viya 4'e dönüşüm",
+      "summary": "Türkiye'nin en büyük telekomünikasyon sağlayıcılarından birinin Veri Yönetimi ekibinde, analitik iş yüklerinin Kubernetes tabanlı SAS Viya 4'e taşınmasında çalıştım.",
       "highlights": [
         "Kurumsal ve Sabit iş birimlerinin analitik modellerini ve raporlarını uçtan uca taşıdım; Mobil ve Dijital birimlerin taşınmasına katkı sağladım.",
         "Oracle ve Hadoop üzerindeki 70.000'den fazla tabloyu analiz edip hangilerinin kullanıldığını ve modellerin onlara nasıl bağlı olduğunu bulan, regex tabanlı bir Python programı yazdım.",
         "Yüksek performanslı veri işleme için Hadoop ve Oracle tablolarına bölümleme (partitioning) stratejileri tasarladım.",
-        "Analitik iş akışlarını SAS Viya 4'ün mikroservis mimarisine uyarladım.",
-        "Geçiş sonrasında bakım, destek ve iş birimlerinin talepleri doğrultusunda mevcut modellerde optimizasyon ve hata giderme çalışmaları yaptım; SAS best practice'leri konusunda danışmanlık ve destek verdim.",
-        "Viya modüllerinin etkin kullanılabilmesi için Git/Bitbucket, VS Code, MCP ve SAS SDK entegrasyonlarını kurgulayıp destekledim; SAS Viya'nın Python, SQL, Oracle ve Hadoop ile çoklu platform (multiplatform) kullanımını sağladım."
+        "Analitik iş akışlarını SAS Viya 4'ün mikroservis mimarisine uyarladım."
       ],
-      "keywords": ["SAS Viya 4", "Python", "SQL", "Hadoop", "Oracle", "Git", "Bitbucket", "MCP", "VS Code", "SAS SDK", "Regex"],
-      "short": "SAS Viya 3.5'ten Viya 4'e geçişte iki iş biriminin modellerini ve raporlarını uçtan uca taşıdım, 70.000+ Oracle/Hadoop tablosunu Python ile analiz ettim; sonrasında model optimizasyonu, Git/Bitbucket, VS Code, MCP ve SAS SDK entegrasyonlarıyla çoklu platform kullanımı ve SAS danışmanlığı sağladım.",
+      "keywords": ["SAS Viya 4", "Python", "SQL", "Hadoop", "Oracle", "Regex"],
+      "short": "SAS Viya 3.5'ten Viya 4'e geçişte iki iş biriminin modellerini ve raporlarını uçtan uca taşıdım, 70.000'den fazla Oracle ve Hadoop tablosunu kendi yazdığım Python programıyla analiz ettim ve bölümleme stratejileri tasarladım.",
       "startDate": "2024-12-01",
-      "endDate": "2026-12-01"
+      "endDate": "2025-12-01"
+    },
+    {
+      "name": "AYDEM Enerji: bakım, destek ve SAS danışmanlığı",
+      "summary": "Satış fiyatlandırma otomasyonu projesinin tamamlanmasının hemen ardından başlayan süreçte bakım, teknik destek ve SAS danışmanlığı çalışmalarıma günümüze kadar kesintisiz devam ediyorum.",
+      "highlights": [
+        "Canlıdaki satış fiyatlandırma otomasyonu ve SAS süreçleri için sürekli bakım ve teknik destek sağlıyorum.",
+        "İş birimlerinin ve satış ekiplerinin ihtiyaçları doğrultusunda SAS danışmanlığı desteği veriyorum."
+      ],
+      "keywords": ["SAS", "SQL", "Bakım ve Destek", "SAS Danışmanlığı"],
+      "short": "Satış fiyatlandırma otomasyonunun tamamlanmasının hemen ardından başlayan süreçte bakım, teknik destek ve SAS danışmanlığı çalışmalarımı sürdürüyorum.",
+      "startDate": "2024-11-01"
     },
     {
       "name": "HepsiPay: Vertica geçişi ve platform yükseltmesi",
@@ -234,16 +256,16 @@
       "startDate": "2024-10-01"
     },
     {
-      "name": "AYDEM Enerji: satış fiyatlandırma otomasyonu ve SAS danışmanlığı",
-      "summary": "Satış danışmanlarının elle yürüttüğü teklif sürecini otomatik iş akışlarına dönüştürdüm; projenin tamamlanmasının hemen ardından başlayan süreçte bakım, destek ve SAS danışmanlığı çalışmalarıma günümüze kadar devam ediyorum.",
+      "name": "AYDEM Enerji: satış fiyatlandırma otomasyonu",
+      "summary": "Satış danışmanlarının elle yürüttüğü teklif sürecini otomatik iş akışlarına dönüştürdüm.",
       "highlights": [
         "Teklif sürecini iş kurallarına ve fiyat formüllerine uygun şekilde SAS DATA step ve SQL ile kodladım.",
-        "SAS'a bağlı, mobil uyumlu veri giriş ekranları tasarladım (JavaScript, HTML, CSS); ekranları sahada 50'den fazla iş birimi ve satış danışmanı kullanıyor.",
-        "Otomasyon projesinin tamamlanmasının (Kasım 2024) hemen ardından günümüze kadar bakım, teknik destek ve SAS danışmanlığı kapsamında çalışmalarımı sürdürüyorum."
+        "SAS'a bağlı, mobil uyumlu veri giriş ekranları tasarladım (JavaScript, HTML, CSS); ekranları sahada 50'den fazla iş birimi ve satış danışmanı kullanıyor."
       ],
       "keywords": ["SAS", "SQL", "JavaScript", "HTML", "CSS", "Postman"],
-      "short": "Satış teklif sürecini SAS ve SQL ile otomatikleştirip 50+ iş birimi ve satış danışmanının kullandığı mobil uyumlu giriş ekranlarını geliştirdim; Kasım 2024 sonrasında da bakım, teknik destek ve SAS danışmanlığına devam ediyorum.",
-      "startDate": "2024-09-01"
+      "short": "Satış teklif sürecini SAS ve SQL ile otomatikleştirdim; mobil uyumlu giriş ekranlarını 50'den fazla iş birimi ve satış danışmanı kullanıyor.",
+      "startDate": "2024-09-01",
+      "endDate": "2024-11-01"
     },
     {
       "name": "Enerjisa: SAS 9.4'ten SAS Viya'ya modernizasyon",
@@ -271,10 +293,12 @@
       "projects": [
         "Allianz: Oracle veri ambarı dönüşümü",
         "Yves Rocher France: SAS Viya 4 geçişi",
-        "Türk Telekom: SAS Viya 3.5'ten SAS Viya 4'e dönüşüm ve danışmanlık",
-        "Enerjisa: SAS 9.4'ten SAS Viya'ya modernizasyon",
-        "AYDEM Enerji: satış fiyatlandırma otomasyonu ve SAS danışmanlığı",
-        "HepsiPay: Vertica geçişi ve platform yükseltmesi"
+        "Türk Telekom: SAS Viya 4 danışmanlık, optimizasyon ve destek",
+        "Türk Telekom: SAS Viya 3.5'ten SAS Viya 4'e dönüşüm",
+        "AYDEM Enerji: bakım, destek ve SAS danışmanlığı",
+        "HepsiPay: Vertica geçişi ve platform yükseltmesi",
+        "AYDEM Enerji: satış fiyatlandırma otomasyonu",
+        "Enerjisa: SAS 9.4'ten SAS Viya'ya modernizasyon"
       ]
     }
   }
