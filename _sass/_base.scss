@@ -67,6 +67,13 @@ blockquote {
     margin-bottom: 0;
   }
 
+  /* callout boxes read at the size of the text around them; plain quotes keep the larger size */
+  &.block-tip,
+  &.block-warning,
+  &.block-danger {
+    font-size: 1rem;
+  }
+
   /* Tips, warnings, and dangers blockquotes */
   &.block-tip {
     border-color: var(--global-tip-block);
