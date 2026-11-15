@@ -1,0 +1,29 @@
+---
+permalink: /llms.txt
+---
+{% assign s = site.data[site.active_lang].strings %}# {{ s.name.first }} {{ s.name.middle }} {{ s.name.last }}
+
+> {{ s.site_description }}
+
+{% if s.person.job_title %}{{ s.name.first }} {{ s.name.last }} is a {{ s.person.job_title }} at {{ s.person.works_for }}. {% endif %}This personal site ({{ site.url }}{{ site.baseurl }}) is available in English and Turkish; the Turkish pages live under `/tr-tur/`.
+{% if s.person.knows_about %}
+## Expertise
+
+{% for topic in s.person.knows_about %}- {{ topic }}
+{% endfor %}{% endif %}
+## Key pages
+
+- [About]({{ site.url }}{{ site.baseurl }}/): background, current focus and contact links
+- [CV]({{ site.url }}{{ site.baseurl }}/cv/): experience, client projects, skills and certificates
+- [Blog]({{ site.url }}{{ site.baseurl }}/blog/): posts on data engineering, open-source dependencies and tooling
+- [Repositories]({{ site.url }}{{ site.baseurl }}/repositories/): public code repositories
+
+## Posts
+
+{% for post in site.posts %}{% if post.sitemap == false or post.redirect %}{% continue %}{% endif %}- [{{ post.title }}]({{ site.url }}{{ site.baseurl }}{% unless site.active_lang == site.default_lang %}/{{ site.active_lang }}{% endunless %}{{ post.url }}) ({{ post.date | date: '%Y-%m-%d' }}): {{ post.description }}
+{% endfor %}
+## Notes for automated readers
+
+- Every page carries a canonical URL, hreflang alternates and Schema.org JSON-LD (Person, WebSite, and ProfilePage or BlogPosting).
+- The sitemap at {{ site.url }}{{ site.baseurl }}/sitemap.xml lists both languages.
+- robots.txt at {{ site.url }}{{ site.baseurl }}/robots.txt allows all crawlers, including AI and answer-engine bots.

@@ -2,9 +2,8 @@
 page_id: blog
 layout: default
 permalink: /blog/
-title: blog
-blog_name: al-folio in english
-description: a simple whitespace theme for academics
+title: Blog
+blog_name: My Personal Blog
 nav: true
 nav_order: 1
 pagination:
@@ -28,7 +27,9 @@ pagination:
 
   <div class="header-bar">
     <h1>{{ page.blog_name }}</h1>
+    {% if blog_description_size > 0 %}
     <h2>{{ page.description }}</h2>
+    {% endif %}
   </div>
   {% endif %}
 
@@ -49,7 +50,7 @@ pagination:
       {% endif %}
       {% for category in site.display_categories %}
         <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ site.data[site.active_lang].strings.categories[category] | default: category }}</a>
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
@@ -169,7 +170,7 @@ pagination:
           &nbsp; &middot; &nbsp;
             {% for category in post.categories %}
             <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
+              <i class="fa-solid fa-tag fa-sm"></i> {{ site.data[site.active_lang].strings.categories[category] | default: category }}</a>
               {% unless forloop.last %}
                 &nbsp;
               {% endunless %}

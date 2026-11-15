@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 # first_name / middle_name / last_name are set per-language in _data/<lang>/strings.yml (name.first/middle/last)
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: Salih A. Kılıç, Salih Abdullah Kılıç, Salih Kilic, SAS Consultant, SAS Danışmanı, SAS Viya, Data Management Consultant, Veri Yönetimi Danışmanı, Data Engineer, Veri Mühendisi, SQL, Oracle, Python, AI-driven development # add your own keywords or leave empty
 icon: ⚙️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://salihkilic.net # the base hostname & protocol for your site

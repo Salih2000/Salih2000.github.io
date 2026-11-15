@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 525" width="680" height="525" role="img" aria-labelledby="t d"><title id="t">What should replace MinIO? The order I decide in</title><desc id="d">A three-question decision flow. One server and write-once files: plain files behind a narrow interface; an existing S3 store: use it; otherwise by scale: versitygw, Garage or SeaweedFS, and Ceph at large scale.</desc>
+<style>
+  svg { --bg:#ffffff; --panel:#f4f6f8; --ink:#1f2933; --muted:#5b6770; --line:#c9d1d9;
+        --accent:#b509ac; --ok:#0f766e; --off:#a3acb5; }
+  @media (prefers-color-scheme: dark) {
+    svg { --bg:#1c1c1d; --panel:#27292c; --ink:#e6e8eb; --muted:#a1a9b1; --line:#474c52;
+          --accent:#4fb3d1; --ok:#3ebd93; --off:#6b737b; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; fill: var(--ink); }
+  .bg { fill: var(--bg); }
+  .t-title { font-size: 19px; font-weight: 600; }
+  .t-sub { font-size: 14px; fill: var(--muted); }
+  .t-head { font-size: 13.5px; font-weight: 600; fill: var(--muted); }
+  .t-row { font-size: 16px; font-weight: 600; }
+  .t-label { font-size: 15px; font-weight: 600; }
+  .t-small { font-size: 13px; fill: var(--muted); }
+  .t-note { font-size: 13px; fill: var(--muted); font-style: italic; }
+  .t-tag { font-size: 12px; font-weight: 700; fill: var(--accent); letter-spacing: 1.2px; }
+  .t-edge { font-size: 12.5px; font-weight: 600; fill: var(--muted); }
+  .rule { stroke: var(--line); stroke-width: 1; }
+  .box { fill: var(--panel); stroke: var(--line); stroke-width: 1.5; }
+  .box-accent { fill: var(--panel); stroke: var(--accent); stroke-width: 2; }
+  .box-ghost { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 6 5; }
+  .dot-on { fill: var(--ok); }
+  .dot-off { fill: none; stroke: var(--off); stroke-width: 2; }
+  .edge { fill: none; stroke: var(--muted); stroke-width: 1.6; }
+  .edge-dash { fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-dasharray: 6 5; }
+  .arrow-head { fill: var(--muted); }
+</style>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow-head" d="M0 0 L10 5 L0 10 z"/></marker></defs><rect class="bg" x="0" y="0" width="680" height="525" rx="14"/><text x="28" y="44" class="t-title" text-anchor="start">What should replace MinIO? The order I decide in</text><text x="28" y="68" class="t-sub" text-anchor="start">I question the need first and pick a product last</text><rect class="box-accent" x="28" y="96" width="252" height="62" rx="10"/><text x="154" y="122.5" class="t-label" text-anchor="middle">One server and</text><text x="154" y="141.5" class="t-label" text-anchor="middle">write-once files?</text><rect class="box-accent" x="28" y="212" width="252" height="62" rx="10"/><text x="154" y="238.5" class="t-label" text-anchor="middle">Does the organization</text><text x="154" y="257.5" class="t-label" text-anchor="middle">have its own S3 store?</text><rect class="box-accent" x="28" y="352" width="252" height="62" rx="10"/><text x="154" y="378.5" class="t-label" text-anchor="middle">What scale of server</text><text x="154" y="397.5" class="t-label" text-anchor="middle">do you need?</text><line class="edge" x1="154" y1="161" x2="154" y2="209" marker-end="url(#arr)"/><text x="164" y="189" class="t-edge" text-anchor="start">No</text><line class="edge" x1="154" y1="277" x2="154" y2="349" marker-end="url(#arr)"/><text x="164" y="317" class="t-edge" text-anchor="start">No</text><rect class="box" x="372" y="96" width="280" height="62" rx="10"/><text x="512" y="122.5" class="t-label" text-anchor="middle">Plain files, a narrow interface</text><text x="512" y="141.5" class="t-small" text-anchor="middle">keep S3 as an option</text><line class="edge" x1="283" y1="127" x2="369" y2="127" marker-end="url(#arr)"/><text x="326" y="119" class="t-edge" text-anchor="middle">Yes</text><rect class="box" x="372" y="212" width="280" height="62" rx="10"/><text x="512" y="238.5" class="t-label" text-anchor="middle">Use it</text><text x="512" y="257.5" class="t-small" text-anchor="middle">let the app speak plain S3</text><line class="edge" x1="283" y1="243" x2="369" y2="243" marker-end="url(#arr)"/><text x="326" y="235" class="t-edge" text-anchor="middle">Yes</text><rect class="box" x="372" y="307" width="280" height="44" rx="10"/><text x="512" y="334" class="t-label" text-anchor="middle">Single node: versitygw</text><path class="edge" d="M283 383 L326 383 L326 329 L369 329" marker-end="url(#arr)"/><rect class="box" x="372" y="361" width="280" height="44" rx="10"/><text x="512" y="388" class="t-label" text-anchor="middle">A few nodes: Garage, SeaweedFS</text><line class="edge" x1="283" y1="383" x2="369" y2="383" marker-end="url(#arr)"/><rect class="box" x="372" y="415" width="280" height="44" rx="10"/><text x="512" y="442" class="t-label" text-anchor="middle">Large scale: Ceph</text><path class="edge" d="M283 383 L326 383 L326 437 L369 437" marker-end="url(#arr)"/><line class="rule" x1="28" y1="475" x2="652" y2="475"/><text x="28" y="499" class="t-note" text-anchor="start">A bridge while you move: a maintained MinIO fork (PGSTY Silo, Chainguard).</text></svg>

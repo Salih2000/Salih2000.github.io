@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 456" width="680" height="456" role="img" aria-labelledby="t d"><title id="t">The same five functions, fewer moving parts</title><desc id="d">Before: the application writes through a five-function S3 client to a MinIO container and its volume. After: the application writes through the same five-function store interface to a disk store by default, and optionally to the organization&#x27;s own S3 store.</desc>
+<style>
+  svg { --bg:#ffffff; --panel:#f4f6f8; --ink:#1f2933; --muted:#5b6770; --line:#c9d1d9;
+        --accent:#b509ac; --ok:#0f766e; --off:#a3acb5; }
+  @media (prefers-color-scheme: dark) {
+    svg { --bg:#1c1c1d; --panel:#27292c; --ink:#e6e8eb; --muted:#a1a9b1; --line:#474c52;
+          --accent:#4fb3d1; --ok:#3ebd93; --off:#6b737b; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; fill: var(--ink); }
+  .bg { fill: var(--bg); }
+  .t-title { font-size: 19px; font-weight: 600; }
+  .t-sub { font-size: 14px; fill: var(--muted); }
+  .t-head { font-size: 13.5px; font-weight: 600; fill: var(--muted); }
+  .t-row { font-size: 16px; font-weight: 600; }
+  .t-label { font-size: 15px; font-weight: 600; }
+  .t-small { font-size: 13px; fill: var(--muted); }
+  .t-note { font-size: 13px; fill: var(--muted); font-style: italic; }
+  .t-tag { font-size: 12px; font-weight: 700; fill: var(--accent); letter-spacing: 1.2px; }
+  .t-edge { font-size: 12.5px; font-weight: 600; fill: var(--muted); }
+  .rule { stroke: var(--line); stroke-width: 1; }
+  .box { fill: var(--panel); stroke: var(--line); stroke-width: 1.5; }
+  .box-accent { fill: var(--panel); stroke: var(--accent); stroke-width: 2; }
+  .box-ghost { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 6 5; }
+  .dot-on { fill: var(--ok); }
+  .dot-off { fill: none; stroke: var(--off); stroke-width: 2; }
+  .edge { fill: none; stroke: var(--muted); stroke-width: 1.6; }
+  .edge-dash { fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-dasharray: 6 5; }
+  .arrow-head { fill: var(--muted); }
+</style>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow-head" d="M0 0 L10 5 L0 10 z"/></marker></defs><rect class="bg" x="0" y="0" width="680" height="456" rx="14"/><text x="28" y="44" class="t-title" text-anchor="start">The same five functions, fewer moving parts</text><text x="28" y="68" class="t-sub" text-anchor="start">The layer that keeps the raw files, before and after</text><text x="28" y="98" class="t-tag" text-anchor="start">BEFORE</text><rect class="box" x="28" y="112" width="138" height="62" rx="10"/><text x="97" y="148" class="t-label" text-anchor="middle">Application</text><rect class="box" x="190" y="112" width="138" height="62" rx="10"/><text x="259" y="138.5" class="t-label" text-anchor="middle">S3 client</text><text x="259" y="157.5" class="t-small" text-anchor="middle">5 functions</text><rect class="box" x="352" y="112" width="138" height="62" rx="10"/><text x="421" y="138.5" class="t-label" text-anchor="middle">MinIO</text><text x="421" y="157.5" class="t-small" text-anchor="middle">container</text><rect class="box" x="514" y="112" width="138" height="62" rx="10"/><text x="583" y="138.5" class="t-label" text-anchor="middle">MinIO</text><text x="583" y="157.5" class="t-small" text-anchor="middle">volume</text><line class="edge" x1="169" y1="143" x2="187" y2="143" marker-end="url(#arr)"/><line class="edge" x1="331" y1="143" x2="349" y2="143" marker-end="url(#arr)"/><line class="edge" x1="493" y1="143" x2="511" y2="143" marker-end="url(#arr)"/><text x="652" y="198" class="t-small" text-anchor="end">2 ports · admin credentials · init job · 512 MB memory limit</text><line class="rule" x1="28" y1="220" x2="652" y2="220"/><text x="28" y="250" class="t-tag" text-anchor="start">AFTER</text><rect class="box" x="28" y="299" width="138" height="62" rx="10"/><text x="97" y="335" class="t-label" text-anchor="middle">Application</text><rect class="box-accent" x="190" y="299" width="138" height="62" rx="10"/><text x="259" y="325.5" class="t-label" text-anchor="middle">Store interface</text><text x="259" y="344.5" class="t-small" text-anchor="middle">same 5 functions</text><line class="edge" x1="169" y1="330" x2="187" y2="330" marker-end="url(#arr)"/><rect class="box" x="352" y="264" width="300" height="58" rx="10"/><text x="502" y="288.5" class="t-label" text-anchor="middle">Disk store (default)</text><text x="502" y="307.5" class="t-small" text-anchor="middle">plain files on a Docker volume</text><rect class="box-ghost" x="352" y="338" width="300" height="58" rx="10"/><text x="502" y="362.5" class="t-label" text-anchor="middle">S3 backend (optional)</text><text x="502" y="381.5" class="t-small" text-anchor="middle">the organization&#x27;s own S3 store</text><path class="edge" d="M331 322 L349 293" marker-end="url(#arr)"/><path class="edge-dash" d="M331 338 L349 367" marker-end="url(#arr)"/><text x="28" y="430" class="t-note" text-anchor="start">One container, two ports and one credential pair fewer; the S3 door stays open.</text></svg>

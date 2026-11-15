@@ -177,7 +177,30 @@ search:
     title: Sistem varsayılan temasını kullan
   theme: Tema
 selected_publications: seçilmiş yayınlar
-site_description: Akademisyenler için sade, boşluklu bir tema. [*folio](https://github.com/bogoli/-folio) tasarımına dayalıdır.
+site_description: "Salih A. Kılıç'ın kişisel sitesi ve blogu. SAS, SQL, Python ve yapay zekâ otomasyonlarıyla çalışan bir veri yönetimi, veri mühendisliği ve SAS danışmanlığı uzmanı. CV'sine, projelerine ve veri ile teknoloji üzerine yazılarına buradan ulaşabilirsiniz."
+site_tagline: "Veri Yönetimi, Veri Mühendisliği ve SAS Danışmanlığı Uzmanı"
+person:
+  job_title: "Veri Yönetimi, Veri Mühendisliği ve SAS Danışmanlığı Uzmanı"
+  description: "Veri yönetimi, veri mühendisliği ve SAS danışmanlığı uzmanı. Bu çalışmalarını yapay zekâ teknolojileriyle birleştirerek kurumlar ve kişiler için özgün tasarımlar ve geliştirmeler yapıyor."
+  alternate_names: ["Salih Abdullah Kılıç", "Salih Abdullah Kilic", "Salih Kılıç", "Salih Kilic"]
+  works_for: "Sade Yazılım ve Danışmanlık"
+  works_for_url: "https://www.sade.ai/"
+  knows_about:
+    - SAS
+    - SAS Viya
+    - SQL
+    - Oracle Veritabanı
+    - Veri yönetimi
+    - Veri mühendisliği
+    - ETL
+    - Veri soyu (data lineage)
+    - Veri taşıma
+    - Python
+    - Yapay zekâ destekli geliştirme
+    - Büyük dil modelleri
+  knows_language: ["tr", "en", "de"]
+  city: İstanbul
+  country: TR
 share:
   title: "Bu yazıyı paylaş"
   email: "E-postayla gönder"
