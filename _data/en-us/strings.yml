@@ -177,6 +177,7 @@ person:
   works_for_url: "https://www.sade.ai/"
   knows_about:
     - SAS
+    - SAS programming
     - SAS Viya
     - SQL
     - Oracle Database

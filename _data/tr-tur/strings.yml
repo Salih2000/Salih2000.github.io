@@ -187,6 +187,7 @@ person:
   works_for_url: "https://www.sade.ai/"
   knows_about:
     - SAS
+    - SAS programlama
     - SAS Viya
     - SQL
     - Oracle Veritabanı
