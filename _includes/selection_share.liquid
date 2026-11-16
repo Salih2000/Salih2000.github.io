@@ -1,8 +1,9 @@
 {% comment %}
-  Sharing a passage of a post: selecting at least two words of the post shows this bar next to the selection
-  (assets/js/selection-share.js moves it under <body> and fills in the addresses). Every link shares the selected text
-  together with a link that opens the post at that passage. A right click keeps the browser's own menu with Copy: the
-  owner tried data-right-click="true", which opens the bar there instead, and turned it off again (2026-11-16).
+  Sharing a passage of any page (included from _layouts/default.liquid): selecting at least two words in the page's
+  main area shows this bar next to the selection (assets/js/selection-share.js moves it under <body> and fills in the
+  addresses). Every link shares the selected text together with a link that opens the page at that passage. A right
+  click keeps the browser's own menu with Copy: the owner tried data-right-click="true", which opens the bar there
+  instead, and turned it off again (2026-11-16).
 {% endcomment %}
 {% assign share_strings = site.data[site.active_lang].strings.share %}
 {% assign share_path = page.url | replace: 'index.html', '' %}

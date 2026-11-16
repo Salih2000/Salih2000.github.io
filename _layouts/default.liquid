@@ -33,7 +33,7 @@
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div class="container mt-5" role="main" id="page-content">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
@@ -61,6 +61,9 @@
 
     <!-- Footer -->
     {% include footer.liquid %}
+
+    <!-- Sharing selected text, on every page -->
+    {% include selection_share.liquid %}
 
     <!-- JavaScripts -->
     {% include scripts.liquid %}

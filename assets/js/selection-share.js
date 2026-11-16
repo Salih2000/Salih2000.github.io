@@ -1,23 +1,25 @@
-// Sharing a passage of a post (the bar in _includes/selection_share.liquid).
+// Sharing a passage of any page (the bar in _includes/selection_share.liquid, included from _layouts/default.liquid).
 //
-// Selecting at least two words of the post shows a small bar next to the selection: LinkedIn, X, WhatsApp, a link to
-// the passage and, where the browser has one, the system share sheet. While the bar's data-right-click is "true", a
+// Selecting at least two words in a page's main area (#page-content) shows a small bar next to the selection:
+// LinkedIn, X, WhatsApp, a link to the passage and, where the browser has one, the system share sheet. Navigation,
+// contents lists, code blocks, forms and the share buttons are left out. While the bar's data-right-click is "true", a
 // right click on the selected text opens the bar at the pointer in place of the browser's own menu.
 //
-// The link to the passage carries a text fragment (#id:~:text=...): Chrome, Edge, Safari and Firefox open the post at
+// The link to the passage carries a text fragment (#id:~:text=...): Chrome, Edge, Safari and Firefox open the page at
 // the passage and highlight it. A browser takes the first match on the whole page, so every term is checked against
 // the text of the whole page (navigation, title, contents sidebar, boxes) and gets words from before or after the
-// selection until it matches only once. The id before ":~:" is the heading above the passage, or the post's text when
-// no heading comes before it: a browser lands there when an edit has changed the text since, and language-choice.js
-// sees it in location.hash, which browsers keep while they hide the ":~:text=" part from scripts.
+// selection until it matches only once. The id before ":~:" is the heading above the passage, or the nearest element
+// around it that has an id: a browser lands there when an edit has changed the text since, and language-choice.js sees
+// it in location.hash, which browsers keep while they hide the ":~:text=" part from scripts.
 //
 // LinkedIn's share address takes no text, so its button copies the selected text first and then offers LinkedIn.
 (function () {
   "use strict";
 
   var bar = document.querySelector(".selection-share");
-  var content = document.getElementById("markdown-content");
+  var content = document.getElementById("page-content");
   if (!bar || !content || !window.getSelection || !window.Map || !document.createTreeWalker) return;
+  if (document.querySelector('meta[name="x-not-found"]')) return; // nothing to share on the 404 page
   document.body.appendChild(bar);
 
   var buttons = bar.querySelector(".selection-share-buttons");
@@ -35,6 +37,9 @@
   var MAX_EDGE_WORDS = 10;
   var CONTEXT_WORDS = 5; // words before or after the selection that may be added to make a term unique
   var SKIP = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, TEMPLATE: 1, TEXTAREA: 1, SELECT: 1 };
+  var EXCLUDE =
+    "pre, nav, form, button, input, textarea, select, #toc-sidebar, #table-of-contents, .share-buttons, " +
+    ".newsletter-form-container, .lang-note, .selection-share";
   var APOSTROPHES = "'’";
   // X, WhatsApp and chat apps take a final ".", "_" or "~" for the end of the sentence and leave it out of the link,
   // so the term that ends the link may not end in one.
@@ -391,7 +396,9 @@
       if (words(quote).length < MIN_WORDS) return null;
 
       var heading = headingBefore(range.startContainer);
-      var anchor = "#" + encodeURIComponent(heading ? heading.id : content.id);
+      var holder = closestElement(range.startContainer, "[id]");
+      if (!holder || !content.contains(holder)) holder = content;
+      var anchor = "#" + encodeURIComponent(heading ? heading.id : holder.id);
       var directive = null;
       var insideHeading = heading && heading.contains(range.startContainer) && heading.contains(range.endContainer);
       if (!insideHeading) directive = textDirective(pieces, before, after, pageText());
@@ -438,17 +445,34 @@
 
   // A triple click on the post's first or last paragraph selects up to the edge of the next block, outside the post.
   // Such an edge is pulled back into the post when nothing but space lies between them.
-  function clampToContent(range) {
-    var gap = document.createRange();
-    if (content.contains(range.startContainer) && !content.contains(range.endContainer)) {
-      gap.setStart(content, content.childNodes.length);
-      gap.setEnd(range.endContainer, range.endOffset);
-      if (onlySpace(gap)) range.setEnd(content, content.childNodes.length);
+  // Text outside the main area, or inside navigation, contents lists, code blocks, forms and share buttons, is not shared.
+  function excluded(node) {
+    return !content.contains(node) || !!closestElement(node, EXCLUDE);
+  }
+
+  // A triple click selects up to the start of the next block, which can lie outside the shareable text (the share
+  // buttons under a post, the footer). Such an edge is pulled back to the nearest shareable text when nothing but space
+  // lies between them; the start is treated the same way.
+  function clampEdges(range) {
+    var first = null;
+    var last = null;
+    var walk = walker(content);
+    for (var n = walk.nextNode(); n; n = walk.nextNode()) {
+      if (n.nodeType === 3 && n.data.trim() && range.intersectsNode(n) && !excluded(n)) {
+        if (!first) first = n;
+        last = n;
+      }
     }
-    if (!content.contains(range.startContainer) && content.contains(range.endContainer)) {
+    var gap = document.createRange();
+    if (last && excluded(range.endContainer)) {
+      gap.setStart(last, last.length);
+      gap.setEnd(range.endContainer, range.endOffset);
+      if (onlySpace(gap)) range.setEnd(last, last.length);
+    }
+    if (first && excluded(range.startContainer)) {
       gap.setStart(range.startContainer, range.startOffset);
-      gap.setEnd(content, 0);
-      if (onlySpace(gap)) range.setStart(content, 0);
+      gap.setEnd(first, 0);
+      if (onlySpace(gap)) range.setStart(first, 0);
     }
   }
 
@@ -457,9 +481,8 @@
     if (!selection || selection.rangeCount === 0 || selection.isCollapsed) return null;
     if (words(selection.toString().replace(/\s+/g, " ")).length < MIN_WORDS) return null;
     var range = selection.getRangeAt(0).cloneRange();
-    clampToContent(range);
-    if (!content.contains(range.startContainer) || !content.contains(range.endContainer)) return null;
-    if (closestElement(range.startContainer, "pre") || closestElement(range.endContainer, "pre")) return null;
+    clampEdges(range);
+    if (excluded(range.startContainer) || excluded(range.endContainer)) return null;
     return describe(range, point);
   }
 
