@@ -4,8 +4,8 @@
 //   unless they chose English with the language toggle in the navigation bar.
 // - Whenever the page is in another language than the browser, a short note in the browser's language offers the twin:
 //   an English note on Turkish pages, and a Turkish note on English pages for a Turkish browser that stayed in English.
-//   "No, thanks" shrinks the note to a small round "EN" or "TR" button, which later pages in the same tab show too;
-//   clicking that button brings the note back.
+//   "No, thanks" shrinks the note to a small round "EN" or "TR" button, which later pages and later visits show too,
+//   so the visitor is not asked again; clicking that button brings the note back.
 //
 // Turkish pages live under /tr-tur/ and every page has a twin at the mapped path. The version of the current page
 // is read from the path: GitHub Pages serves the English 404 page for every missing address, Turkish ones included.
@@ -14,7 +14,7 @@
 
   var TR_PREFIX = "/tr-tur";
   var CHOICE_KEY = "site-language-choice"; // "en-us" or "tr-tur", set by the toggle or by a note
-  var NOTE_SMALL_KEY = "site-language-note-dismissed"; // per tab: show the small box instead of the full note
+  var NOTE_SMALL_KEY = "site-language-note-dismissed"; // "1" after "No, thanks": show the small box instead of the full note
   var LAST_REDIRECT_KEY = "site-language-last-redirect"; // per tab, a backstop against redirect loops
 
   if (document.querySelector('meta[name="x-not-found"]')) return;
@@ -113,6 +113,7 @@
     badge.setAttribute("aria-label", note.text);
     badge.title = note.text;
     badge.addEventListener("click", function () {
+      if (local) local.removeItem(NOTE_SMALL_KEY);
       if (session) session.removeItem(NOTE_SMALL_KEY);
       box.parentNode.replaceChild(fullBox(), box);
     });
@@ -130,7 +131,9 @@
     no.type = "button";
     no.textContent = note.no;
     no.addEventListener("click", function () {
-      if (session) session.setItem(NOTE_SMALL_KEY, "1");
+      // Kept in localStorage so that later visits do not ask again; the tab's sessionStorage when localStorage is blocked.
+      var store = local || session;
+      if (store) store.setItem(NOTE_SMALL_KEY, "1");
       box.parentNode.replaceChild(smallBox(), box);
     });
     actions.appendChild(goLink());
@@ -157,7 +160,7 @@
       "background:var(--global-card-bg-color);color:var(--global-theme-color);font-size:.8rem;font-weight:700;line-height:1;cursor:pointer}" +
       ".lang-note-small button:hover{background:var(--global-theme-color);color:var(--global-bg-color)}";
     document.head.appendChild(style);
-    var small = session && session.getItem(NOTE_SMALL_KEY) === "1";
+    var small = (local && local.getItem(NOTE_SMALL_KEY) === "1") || (session && session.getItem(NOTE_SMALL_KEY) === "1");
     var host = document.querySelector('[role="main"]') || document.body;
     host.insertBefore(small ? smallBox() : fullBox(), host.firstChild);
   }
