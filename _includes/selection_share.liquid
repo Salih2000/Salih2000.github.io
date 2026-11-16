@@ -1,8 +1,8 @@
 {% comment %}
-  Sharing a passage of a post: selecting at least two words of the post shows this bar next to the selection, and with
-  data-right-click="true" a right click on the selected text opens it at the pointer in place of the browser's menu
+  Sharing a passage of a post: selecting at least two words of the post shows this bar next to the selection
   (assets/js/selection-share.js moves it under <body> and fills in the addresses). Every link shares the selected text
-  together with a link that opens the post at that passage.
+  together with a link that opens the post at that passage. A right click keeps the browser's own menu with Copy: the
+  owner tried data-right-click="true", which opens the bar there instead, and turned it off again (2026-11-16).
 {% endcomment %}
 {% assign share_strings = site.data[site.active_lang].strings.share %}
 {% assign share_path = page.url | replace: 'index.html', '' %}
@@ -123,7 +123,7 @@
   aria-label="{{ share_strings.selection }}"
   data-url="{{ passage_base | strip }}"
   data-title="{{ page.title | strip | escape }}"
-  data-right-click="true"
+  data-right-click="false"
   hidden
 >
   <div class="selection-share-buttons">
