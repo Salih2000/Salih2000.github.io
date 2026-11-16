@@ -198,4 +198,9 @@ share:
   copy: "Copy link"
   copied: "Link copied"
   more: "More sharing options"
+  selection: "Share the selected text"
+  passage_link: "Copy a link to this passage"
+  passage_copied: "The link to this passage has been copied."
+  linkedin_copied: "The text you selected has been copied. You can paste it into your LinkedIn post."
+  linkedin_open: "Open LinkedIn"
 newsletter_prompt: Want to know when I publish something new? Leave your email below.

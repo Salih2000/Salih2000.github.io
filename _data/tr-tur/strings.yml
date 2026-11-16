@@ -208,4 +208,9 @@ share:
   copy: "Bağlantıyı kopyala"
   copied: "Bağlantı kopyalandı"
   more: "Diğer paylaşım seçenekleri"
+  selection: "Seçili metni paylaş"
+  passage_link: "Bu bölümün bağlantısını kopyala"
+  passage_copied: "Bu bölümün bağlantısı kopyalandı."
+  linkedin_copied: "Seçtiğiniz metin panoya kopyalandı. LinkedIn'de gönderinize yapıştırabilirsiniz."
+  linkedin_open: "LinkedIn'i aç"
 newsletter_prompt: Yeni bir şey yayınladığımda haberdar olmak ister misiniz? E-postanızı aşağıya bırakın.
