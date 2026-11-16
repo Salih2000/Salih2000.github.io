@@ -1,11 +1,13 @@
 // Picks the language version of a page from the visitor's browser language.
 //
 // - A visitor whose browser's primary language is Turkish is sent from an English page to its Turkish twin,
-//   unless they chose English with the language toggle in the navigation bar.
+//   unless they chose English with the language toggle in the navigation bar, or the address points at a part of the
+//   page (#...), such as a passage shared from the bar in _includes/selection_share.liquid.
 // - Whenever the page is in another language than the browser, a short note in the browser's language offers the twin:
 //   an English note on Turkish pages, and a Turkish note on English pages for a Turkish browser that stayed in English.
 //   "No, thanks" shrinks the note to a small round "EN" or "TR" button, which later pages and later visits show too,
-//   so the visitor is not asked again; clicking that button brings the note back.
+//   so the visitor is not asked again; clicking that button brings the note back. On an English page "Hayır,
+//   teşekkürler" also counts as choosing English, so that the next English page does not switch to Turkish.
 //
 // Turkish pages live under /tr-tur/ and every page has a twin at the mapped path. The version of the current page
 // is read from the path: GitHub Pages serves the English 404 page for every missing address, Turkish ones included.
@@ -51,7 +53,20 @@
   var browserTurkish = browserLanguage === "tr" || browserLanguage.indexOf("tr-") === 0;
   var choseEnglish = local ? local.getItem(CHOICE_KEY) === "en-us" : false;
 
-  if (!onTurkishPage && browserTurkish && !choseEnglish && local && session) {
+  // An address that points at a part of this page keeps the visitor here: the twin's headings have other ids, and a
+  // passage link's text (#id:~:text=...) only matches this language. Browsers hide the ":~:text=" part from scripts but
+  // keep the id before it in location.hash; Chromium also shows the whole address in the navigation entry.
+  function pointsIntoPage() {
+    if (window.location.hash) return true;
+    try {
+      var entry = window.performance && performance.getEntriesByType ? performance.getEntriesByType("navigation")[0] : null;
+      return !!entry && String(entry.name).indexOf(":~:") !== -1;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  if (!onTurkishPage && browserTurkish && !choseEnglish && local && session && !pointsIntoPage()) {
     // Without storage a later choice of English could not be remembered, so the visitor would be sent back every time.
     var last = (session.getItem(LAST_REDIRECT_KEY) || "").split(" ");
     var now = Date.now();
@@ -134,6 +149,8 @@
       // Kept in localStorage so that later visits do not ask again; the tab's sessionStorage when localStorage is blocked.
       var store = local || session;
       if (store) store.setItem(NOTE_SMALL_KEY, "1");
+      // Turning down the Turkish page is a choice of English (a passage link can bring a Turkish browser here unchosen).
+      if (note.choice === "tr-tur" && local) local.setItem(CHOICE_KEY, "en-us");
       box.parentNode.replaceChild(smallBox(), box);
     });
     actions.appendChild(goLink());
