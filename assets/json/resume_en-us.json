@@ -200,11 +200,11 @@
     },
     {
       "name": "Türk Telekom: SAS Viya 4 optimization and consulting",
-      "summary": "Following the SAS Viya 4 migration, worked on model performance tuning, developer-tool integrations and platform consulting in line with business-unit requests.",
+      "summary": "Following the SAS Viya 4 migration, continued to provide maintenance and support, and worked on model performance tuning, developer-tool integrations and platform consulting in line with business-unit requests.",
       "highlights": [
         "Resolved performance bottlenecks and runtime issues in existing analytical models, and guided teams on sound SAS development standards and practices.",
-        "Set up Git/Bitbucket, VS Code, SAS SDK and MCP integrations so teams could use Viya modules within modern development workflows.",
-        "Connected SAS Viya with Python, SQL, Oracle and Hadoop so teams could build and run processes across platforms rather than being tied to a single tool."
+        "Set up Git/Bitbucket, VS Code, SAS SDK and MCP integrations so that the Viya modules could be used more effectively.",
+        "Connected SAS Viya with Python, SQL, Oracle and Hadoop so teams could build and run processes across platforms."
       ],
       "keywords": ["SAS Viya 4", "SAS SDK", "VS Code", "Git", "Bitbucket", "MCP", "Python", "SQL", "Oracle", "Hadoop"],
       "short": "Post-migration, tuned existing models and resolved issues for business units; set up Git/Bitbucket, VS Code, SAS SDK and MCP integrations and connected SAS Viya with Python, SQL, Oracle and Hadoop across platforms.",
@@ -229,7 +229,7 @@
       "name": "AYDEM Enerji: maintenance, support and SAS consulting",
       "summary": "Since the sales pricing automation went live, have continued providing maintenance, technical support and SAS consulting to keep the system running smoothly.",
       "highlights": [
-        "Provide ongoing maintenance and technical support for the live pricing automation and its underlying SAS workflows.",
+        "Provide maintenance and technical support for the live pricing automation and its underlying SAS workflows.",
         "Advise business units and sales teams on SAS technical needs and evolving requirements."
       ],
       "keywords": ["SAS", "SQL", "Maintenance & Support", "SAS Consulting"],

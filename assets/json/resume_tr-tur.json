@@ -200,11 +200,11 @@
     },
     {
       "name": "Türk Telekom: SAS Viya 4 optimizasyon ve danışmanlık",
-      "summary": "SAS Viya 4 geçişinin ardından iş birimlerinin talepleri doğrultusunda mevcut modellerin iyileştirilmesi, geliştirici araçlarıyla entegrasyon ve platform danışmanlığı süreçlerini yürüttüm.",
+      "summary": "SAS Viya 4 geçişinin ardından bakım ve destek vermeye devam ettim; iş birimlerinin talepleri doğrultusunda mevcut modellerin iyileştirilmesi, geliştirici araçlarıyla entegrasyon ve platform danışmanlığı işlerini yürüttüm.",
       "highlights": [
         "Mevcut analitik modellerdeki performans darboğazlarını ve çalışma zamanı hatalarını giderdim; iş birimlerine doğru SAS geliştirme standartları ve yöntemleri konusunda rehberlik ettim.",
-        "Viya modüllerinin daha verimli kullanılabilmesi için Git/Bitbucket, VS Code, SAS SDK ve MCP entegrasyonlarını kurarak ekiplere modern geliştirme akışları kazandırdım.",
-        "SAS Viya'yı Python, SQL, Oracle ve Hadoop ortamlarıyla uyumlu çalıştırarak ekiplerin tek bir araca bağlı kalmadan farklı platformlarda süreç geliştirebilmesini sağladım."
+        "Viya modüllerinin daha verimli kullanılabilmesi için Git/Bitbucket, VS Code, SAS SDK ve MCP entegrasyonlarını kurdum.",
+        "SAS Viya'yı Python, SQL, Oracle ve Hadoop ortamlarıyla birlikte çalıştırarak ekiplerin farklı platformlarda süreç geliştirebilmesini sağladım."
       ],
       "keywords": ["SAS Viya 4", "SAS SDK", "VS Code", "Git", "Bitbucket", "MCP", "Python", "SQL", "Oracle", "Hadoop"],
       "short": "Geçiş sonrasında iş birimlerinin talepleri doğrultusunda mevcut modellerin performansını iyileştirip hataları giderdim; Git/Bitbucket, VS Code, SAS SDK ve MCP entegrasyonlarıyla SAS Viya'nın Python, SQL, Oracle ve Hadoop ile birlikte kullanılmasını sağladım.",
@@ -229,7 +229,7 @@
       "name": "AYDEM Enerji: bakım, destek ve SAS danışmanlığı",
       "summary": "Satış fiyatlandırma otomasyonunun canlıya alınmasının ardından sistemin sürekliliği için bakım, teknik destek ve SAS danışmanlığı çalışmalarımı sürdürüyorum.",
       "highlights": [
-        "Canlıdaki fiyatlandırma otomasyonu ve SAS süreçlerine kesintisiz bakım ve teknik destek veriyorum.",
+        "Canlıdaki fiyatlandırma otomasyonu ve SAS süreçlerine bakım ve teknik destek veriyorum.",
         "İş birimlerinden ve satış ekiplerinden gelen yeni ihtiyaçlarda SAS tarafında teknik danışmanlık sağlıyorum."
       ],
       "keywords": ["SAS", "SQL", "Bakım ve Destek", "SAS Danışmanlığı"],
