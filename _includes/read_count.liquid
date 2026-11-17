@@ -1,0 +1,23 @@
+{% comment %}
+  Read count of a blog post, shown at the end of the post header line (included from _layouts/post.liquid).
+  assets/js/read-count.js fills in the number and adds this browser's first read; GoatCounter keeps the numbers
+  (read_counts in _config.yml). The count belongs to the article, not to a language: the Turkish and English copies
+  share the file name, so they share page.slug. A copy with another file name can set read_count_key in its front
+  matter to join the same count.
+{% endcomment %}
+{% if site.read_counts.goatcounter %}
+  {% assign read_strings = site.data[site.active_lang].strings.post %}
+  {% assign read_key = page.read_count_key | default: page.slug %}
+  {% assign read_host = site.url | remove: 'https://' | remove: 'http://' | split: '/' | first | split: ':' | first %}
+  <span
+    class="read-count"
+    data-read-count
+    data-goatcounter="{{ site.read_counts.goatcounter }}"
+    data-path="/read/{{ read_key }}"
+    data-host="{{ read_host }}"
+    data-label-one="{{ read_strings.reads_one }}"
+    data-label-other="{{ read_strings.reads_other }}"
+    hidden
+    >• <span data-read-count-number></span> <span data-read-count-label></span
+  ></span>
+{% endif %}

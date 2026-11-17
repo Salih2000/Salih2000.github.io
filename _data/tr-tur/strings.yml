@@ -147,6 +147,8 @@ post:
   created_in: Yayınlanma yılı
   created_by: yazan
   last_updated: son güncellendi
+  reads_one: okunma
+  reads_other: okunma
 references: Kaynaklar
 related_posts:
   description: "İlginizi çekebilecek bazı diğer yazılar:"

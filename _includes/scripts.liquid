@@ -270,6 +270,19 @@
   </script>
 {% endif %}
 
+{% if site.read_counts.goatcounter and page.layout == 'post' %}
+  <!-- Read count of a blog post (GoatCounter); count.js counts nothing by itself here, read-count.js calls it -->
+  <script
+    data-goatcounter="{{ site.read_counts.goatcounter }}/count"
+    data-goatcounter-settings='{"no_onload": true}'
+    async
+    src="https://gc.zgo.at/count.v5.js"
+    crossorigin="anonymous"
+    integrity="sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ"
+  ></script>
+  <script defer src="{{ '/assets/js/read-count.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% endif %}
+
 {% if site.enable_progressbar %}
   <!-- Scrolling Progress Bar -->
   <script defer src="{{ '/assets/js/progress-bar.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>

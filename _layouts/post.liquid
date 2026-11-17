@@ -28,6 +28,7 @@ layout: default
         {% include date_format.liquid format='long' date=page.last_updated -%}
       {%- endif %}
       {% if page.meta %}• {{ page.meta }}{% endif %}
+      {% include read_count.liquid %}
     </p>
     <p class="post-tags">
       {% if url_beginning == '/blog/' %}

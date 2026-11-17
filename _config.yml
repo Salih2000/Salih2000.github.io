@@ -97,6 +97,12 @@ related_blog_posts:
   enabled: true
   max_related: 5
 
+# Read counts on blog posts, kept by GoatCounter (free for personal sites, https://www.goatcounter.com).
+# A browser adds one read to a post the first time it stays on it for 10 seconds; see assets/js/read-count.js.
+# In the GoatCounter site settings, turn on "Allow adding visitor counts on your website". Leave empty to hide the counts.
+read_counts:
+  goatcounter: # your GoatCounter address, e.g. https://salihkilic.goatcounter.com
+
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:

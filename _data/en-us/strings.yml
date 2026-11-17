@@ -137,6 +137,8 @@ post:
   created_in: Created in
   created_by: by
   last_updated: last updated in
+  reads_one: read
+  reads_other: reads
 references: References
 related_posts:
   description: "Here are some more articles you might like to read next:"
