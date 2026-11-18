@@ -7,7 +7,7 @@ tags: minio minio-alternatives s3 object-storage open-source agpl self-hosting d
 categories: engineering
 related_posts: true
 giscus_comments: true
-og_image: https://salihkilic.net/assets/img/2026-11-14-minio-og-en.png
+og_image: https://salihkilic.net/assets/img/2026-11-14-minio-og-en-v2.png
 toc:
   sidebar: left
 ---
