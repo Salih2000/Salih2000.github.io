@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Replacing MinIO: open source is a license, not a promise"
-date: 2026-11-14 01:00:00+0300
+date: 2026-11-18 08:00:00+0300
 description: MinIO's community edition was wound down step by step and its Docker images are gone. How I replaced it in a product that shipped with it, the MinIO alternatives I looked at, and what it taught me about open source.
 tags: minio minio-alternatives s3 object-storage open-source agpl self-hosting dependencies
 categories: engineering
