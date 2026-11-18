@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MinIO'nun yerini doldurmak: açık kaynak da bir lisanstır, geleceğe dair söz vermez"
-date: 2026-11-18 08:00:00+0300
+date: 2026-11-18 01:00:00+0300
 description: MinIO'nun topluluk sürümü adım adım geri çekildi ve Docker imajları kalktı. Ona bağımlı bir uygulamada yerine ne koyduğumu, MinIO alternatiflerini ve açık kaynak hakkında çıkardığım dersleri anlatıyorum.
 tags: minio minio-alternatives s3 object-storage open-source agpl self-hosting dependencies
 categories: engineering
