@@ -104,10 +104,15 @@ layout: default
     {% include giscus.liquid %}
   {% endif %}
 
-  {% comment %} The links to the other posts sit under the comments, at the very end of the page. {% endcomment %}
+  {% comment %} The links to the other posts sit under the comments. {% endcomment %}
   {% if site.related_blog_posts and site.related_blog_posts.enabled %}
     {% if page.related_posts == null or page.related_posts %}
       {% include related_posts.liquid %}
     {% endif %}
   {% endif %}
+
+  {% comment %} Author social links sit at the very end of the post, matching the home page. {% endcomment %}
+  {% unless page.social == false %}
+    {% include social_contact.liquid post_footer=true %}
+  {% endunless %}
 </div>
