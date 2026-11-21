@@ -1,28 +1,35 @@
 {% comment %}
-  Keeps the site owner's own visits, and those of people he gives the link to, out of the statistics. Opening any page
-  of the site with the secret key after a # turns Google Analytics, Microsoft Clarity and GoatCounter off in that
-  browser and remembers it in localStorage; #analytics-on turns them back on. The key itself is not in this repository:
-  only its SHA-256 is, so reading the code does not give it away. To replace the key, pick a new random one of at least
-  24 letters, digits, "-" or "_", and put its SHA-256 (lowercase hex) in KEY_SHA256.
+  Keeps the site owner's own visits, and those of people he gives a link to, out of the statistics. Each person gets
+  their own secret key; opening any page of the site with a key after the # turns Google Analytics, Microsoft Clarity
+  and GoatCounter off in that browser and remembers which key did it. #analytics-on turns them back on.
 
-  GoatCounter's count.js already skips a browser whose localStorage "skipgc" is "t", so the switch sets that key as
-  well. Clearing the browser's site data forgets the setting, and a browser that blocks site data for this site cannot
-  keep it.
+  The keys themselves are not in this repository, only their SHA-256 (lowercase hex) in KEYS, so reading the code
+  does not give them away. To add a key, pick a random one of at least 24 letters, digits, "-" or "_" and add its
+  SHA-256 to KEYS. To cancel a key, delete its line: browsers that used it are counted again from their next visit.
+
+  GoatCounter's count.js skips a browser whose localStorage "skipgc" is "t", so the switch sets and clears that key
+  as well. Clearing the browser's site data forgets the setting, and a browser that blocks site data for this site
+  cannot keep it.
 {% endcomment %}
 <script>
   (function () {
-    var KEY_SHA256 = '20163a109898b02d9fd5f0a4f999f9c640031c570007d3f34d09a8f42dad0a72';
+    var KEYS = ['20163a109898b02d9fd5f0a4f999f9c640031c570007d3f34d09a8f42dad0a72'];
     var code = location.hash.slice(1);
     var off = false;
     try {
-      if (code === 'analytics-on') {
+      var stored = localStorage.getItem('analytics-off-key');
+      // "analytics-off" is the flag of the first version of this switch, which had no way to cancel it.
+      var oldFlag = localStorage.getItem('analytics-off') !== null;
+      if (code === 'analytics-on' || oldFlag || (stored && KEYS.indexOf(stored) === -1)) {
         localStorage.removeItem('analytics-off');
+        localStorage.removeItem('analytics-off-key');
         localStorage.removeItem('skipgc');
+        stored = null;
       }
-      off = localStorage.getItem('analytics-off') === '1';
+      off = stored !== null;
     } catch (e) {}
-    // A long code after the # may be the key. This page view stays out while it is checked; if it is the key, the
-    // browser remembers it and the key is taken out of the address bar so it is not copied along with the link.
+    // A long code after the # may be a key. This page view stays out while it is checked; if it is a key, the browser
+    // remembers it and the key is taken out of the address bar so it is not copied along with the link.
     if (!off && /^[A-Za-z0-9_-]{24,}$/.test(code) && window.crypto && crypto.subtle && window.TextEncoder) {
       off = true;
       crypto.subtle.digest('SHA-256', new TextEncoder().encode(code)).then(function (buffer) {
@@ -31,9 +38,9 @@
             return ('0' + byte.toString(16)).slice(-2);
           })
           .join('');
-        if (hex !== KEY_SHA256) return;
+        if (KEYS.indexOf(hex) === -1) return;
         try {
-          localStorage.setItem('analytics-off', '1');
+          localStorage.setItem('analytics-off-key', hex);
           localStorage.setItem('skipgc', 't');
         } catch (e) {}
         history.replaceState(null, '', location.pathname + location.search);
