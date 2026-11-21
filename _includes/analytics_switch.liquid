@@ -3,11 +3,13 @@
   their own secret key; opening any page of the site with a key after the # turns Google Analytics, Microsoft Clarity
   and GoatCounter off in that browser and remembers which key did it. #analytics-on turns them back on.
 
-  The keys themselves are not in this repository, only their SHA-256 (lowercase hex) in KEYS, so reading the code
-  does not give them away. Each key also has a last moment ("until") at which a new browser can still use it; the time
-  is read from the web server's Date header, not from the visitor's clock. Browsers that used the key before then stay
-  off. To add a key, pick a random one of at least 24 letters, digits, "-" or "_" and add its SHA-256 and "until" to
-  KEYS. To cancel a key, delete its line: browsers that used it are counted again from their next visit.
+  The keys themselves are not in this repository, only their SHA-256 (lowercase hex) in KEYS, so reading the code does
+  not give them away. Each key also has a last moment ("until") at which a new browser can still use it; the time is
+  read from the web server's Date header, not from the visitor's clock. Browsers that used the key before then stay
+  off. To add a key, pick a random one of exactly 32 letters, digits, "-" or "_" with at least one capital letter and
+  one digit, and add its SHA-256 and "until" to KEYS. (Heading anchors and passage links are lowercase, so they never
+  look like a key and their page views are counted as usual.) To cancel a key, delete its line: browsers that used it
+  are counted again from their next visit.
 
   GoatCounter's count.js skips a browser whose localStorage "skipgc" is "t", so the switch sets and clears that key
   as well. Clearing the browser's site data forgets the setting, and a browser that blocks site data for this site
@@ -38,10 +40,11 @@
       }
       off = stored !== null;
     } catch (e) {}
-    // A long code after the # may be a key. This page view stays out while it is checked. If it is a key that a new
-    // browser may still use, the browser remembers it; either way the code is taken out of the address bar so it is
-    // not copied along with the link.
-    if (!off && /^[A-Za-z0-9_-]{24,}$/.test(code) && window.crypto && crypto.subtle && window.TextEncoder && window.fetch) {
+    // A code after the # that looks like a key may be one. This page view stays out while it is checked. If it is a
+    // key that a new browser may still use, the browser remembers it; either way the code is taken out of the address
+    // bar so it is not copied along with the link.
+    var looksLikeKey = /^[A-Za-z0-9_-]{32}$/.test(code) && /[A-Z]/.test(code) && /[0-9]/.test(code);
+    if (!off && looksLikeKey && window.crypto && crypto.subtle && window.TextEncoder && window.fetch) {
       off = true;
       crypto.subtle
         .digest('SHA-256', new TextEncoder().encode(code))
