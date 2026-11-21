@@ -7,7 +7,7 @@ layout: default
   <div class="post">
     <header class="post-header">
       <h1 class="post-title">
-        {{ page.title }}
+        {{ page.heading | default: page.title }}
         {% if page.cv_pdf %}
           <a
             {% if page.cv_pdf contains '://' %}
@@ -59,7 +59,7 @@ layout: default
   <div class="post">
     <header class="post-header">
       <h1 class="post-title">
-        {{ page.title }}
+        {{ page.heading | default: page.title }}
         {% if page.cv_pdf %}
           <a
             {% if page.cv_pdf contains '://' %}

@@ -144,9 +144,9 @@ no_posts: "Henüz yazı yok..."
 pagination:
   page: sayfa
 post:
-  created_in: Yayınlanma yılı
+  created_in: "Yayın tarihi:"
   created_by: yazan
-  last_updated: son güncellendi
+  last_updated: "son güncelleme:"
   reads_one: okunma
   reads_other: okunma
 references: Kaynaklar
@@ -179,8 +179,8 @@ search:
     title: Sistem varsayılan temasını kullan
   theme: Tema
 selected_publications: seçilmiş yayınlar
-site_description: "Salih A. Kılıç'ın kişisel sitesi ve blogu. SAS, SQL, Python ve yapay zekâ otomasyonlarıyla çalışan bir veri yönetimi, veri mühendisliği ve SAS danışmanlığı uzmanı. CV'sine, projelerine ve veri ile teknoloji üzerine yazılarına buradan ulaşabilirsiniz."
-site_tagline: "Veri Yönetimi, Veri Mühendisliği ve SAS Danışmanlığı Uzmanı"
+site_description: "SAS programlama ve veri yönetimi uzmanı Salih A. Kılıç'ın sitesi: SAS Viya geçişleri, Oracle ve Hadoop'ta SQL ve ETL, yapay zekâ otomasyonları, CV ve blog."
+site_tagline: "SAS Programlama ve Veri Yönetimi Uzmanı"
 person:
   job_title: "Veri Yönetimi, Veri Mühendisliği ve SAS Danışmanlığı Uzmanı"
   description: "Veri yönetimi, veri mühendisliği ve SAS danışmanlığı uzmanı. Bu çalışmalarını yapay zekâ teknolojileriyle birleştirerek kurumlar ve kişiler için özgün tasarımlar ve geliştirmeler yapıyor."
@@ -191,13 +191,20 @@ person:
     - SAS
     - SAS programlama
     - SAS Viya
+    - SAS 9.4
+    - SAS geçişi ve modernizasyonu
     - SQL
     - Oracle Veritabanı
     - Veri yönetimi
     - Veri mühendisliği
     - ETL
+    - Veri ambarı dönüşümü
+    - Veri kalitesi
+    - Veri yönetişimi
     - Veri soyu (data lineage)
     - Veri taşıma
+    - Hadoop
+    - Vertica
     - Python
     - Yapay zekâ destekli geliştirme
     - Büyük dil modelleri

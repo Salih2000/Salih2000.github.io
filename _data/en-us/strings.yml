@@ -134,9 +134,9 @@ no_posts: "No posts so far..."
 pagination:
   page: page
 post:
-  created_in: Created in
+  created_in: Published on
   created_by: by
-  last_updated: last updated in
+  last_updated: last updated on
   reads_one: read
   reads_other: reads
 references: References
@@ -169,8 +169,8 @@ search:
     title: Use system default theme
   theme: Theme
 selected_publications: selected publications
-site_description: "Personal site and blog of Salih A. Kilic, a data management, data engineering and SAS consulting specialist working with SAS, SQL, Python and AI automations. Find his CV, projects, and writing on data and technology here."
-site_tagline: "Data Management, Data Engineering and SAS Consulting Specialist"
+site_description: "Salih A. Kilic is a SAS programming and data management specialist in Istanbul: SAS Viya migrations, SQL and ETL on Oracle and Hadoop, AI automations."
+site_tagline: "SAS Programming and Data Management Specialist"
 person:
   job_title: "Data Management, Data Engineering and SAS Consulting Specialist"
   description: "Data management, data engineering and SAS consulting specialist who combines this work with AI technologies to design and develop original solutions for organizations and individuals."
@@ -181,13 +181,20 @@ person:
     - SAS
     - SAS programming
     - SAS Viya
+    - SAS 9.4
+    - SAS migration and modernization
     - SQL
     - Oracle Database
     - Data management
     - Data engineering
     - ETL
+    - Data warehouse transformation
+    - Data quality
+    - Data governance
     - Data lineage
     - Data migration
+    - Hadoop
+    - Vertica
     - Python
     - AI-driven development
     - Large language models
