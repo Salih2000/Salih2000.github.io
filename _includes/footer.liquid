@@ -10,7 +10,7 @@
   {% endif %}
   {% if site.last_updated %}
     {{- site.data[site.active_lang].strings.footer.last_updated }}
-    {% include date_format.liquid format='long' date='now' %}.
+    <time datetime="{{ site.time | date_to_xmlschema }}">{% include date_format.liquid format='long' date='now' %}</time>.
   {% endif %}
 {% endcapture %}
 

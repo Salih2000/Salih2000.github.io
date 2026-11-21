@@ -37,7 +37,7 @@ I write and tune SAS code with DATA step, PROC SQL, SAS Macro and CASL, and I wo
 
 ## Data management and data engineering
 
-I develop and tune SQL and ETL processes on Oracle, Hadoop, Vertica and PostgreSQL, and I work on data quality, data lineage and data governance. At Allianz I convert models and reports from a legacy schema to a Kimball star schema on Oracle. For Türk Telekom I wrote a Python program that analyzed more than 70,000 Oracle and Hadoop tables to find which ones were in use and how the models depended on them.
+I develop and tune SQL and ETL processes on Oracle, Hadoop, Vertica and PostgreSQL, and I work on data quality, lineage and governance. At Allianz I convert models and reports from a legacy schema to a Kimball star schema on Oracle. For Türk Telekom I wrote a Python program that analyzed more than 70,000 Oracle and Hadoop tables to find which ones were in use and how the models depended on them.
 
 ## AI in data work
 
