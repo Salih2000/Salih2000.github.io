@@ -311,6 +311,9 @@
   {% endfor %}
 
   {% assign person_strings = site.data[site.active_lang].strings.person %}
+  {% comment %} The CV data (assets/json/resume_LANG.json): its education and certificates also describe the person. {% endcomment %}
+  {% assign resume_key = site.active_lang | prepend: 'resume_' %}
+  {% assign resume = site.data[resume_key] %}
   {% capture site_root %}{{ site.url }}{{ site.baseurl }}/{% endcapture %}
   {% capture person_id %}{{ site_root }}#person{% endcapture %}
   {% capture website_id %}{{ site_root }}#website{% endcapture %}
@@ -358,6 +361,31 @@
           {% if person_strings.knows_language %}
             "knowsLanguage": {{ person_strings.knows_language | jsonify }},
           {% endif %}
+          {% if resume.education and resume.education.size > 0 %}
+            "alumniOf": [
+              {% for school in resume.education %}
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": {{ school.institution | jsonify }}
+                  {% if school.url %}, "url": {{ school.url | jsonify }}{% endif %}
+                }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            ],
+          {% endif %}
+          {% if resume.certificates and resume.certificates.size > 0 %}
+            "hasCredential": [
+              {% for certificate in resume.certificates %}
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "name": {{ certificate.name | jsonify }},
+                  "credentialCategory": "certificate"
+                  {% if certificate.issuer %}
+                    , "recognizedBy": { "@type": "Organization", "name": {{ certificate.issuer | jsonify }} }
+                  {% endif %}
+                }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            ],
+          {% endif %}
           {% if person_strings.city %}
             "address": {
               "@type": "PostalAddress",
@@ -400,12 +428,18 @@
             "@type": "ProfilePage",
             "@id": {{ canonical_url | append: '#webpage' | jsonify }},
             "mainEntity": { "@id": {{ person_id | jsonify }} },
+            {% if page.last_updated %}
+              "dateModified": {{ page.last_updated | date_to_xmlschema | jsonify }},
+            {% endif %}
           {% elsif page.layout == 'archive' or page.url == '/blog/index.html' %}
             "@type": "CollectionPage",
             "@id": {{ canonical_url | append: '#webpage' | jsonify }},
           {% else %}
             "@type": "WebPage",
             "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+            {% if page.last_updated %}
+              "dateModified": {{ page.last_updated | date_to_xmlschema | jsonify }},
+            {% endif %}
           {% endif %}
           "url": {{ canonical_url | jsonify }},
           "name": {{ schema_name | jsonify }},

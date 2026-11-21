@@ -18,14 +18,16 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
       {{ site.data[site.active_lang].strings.post.created_in }}
-      {% include date_format.liquid format='long' date=page.date -%}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{% include date_format.liquid format='long' date=page.date %}</time>
       {%- if page.author -%}
         {{- site.data[site.active_lang].strings.post.created_by }}
         {{ page.author -}}
       {%- endif -%}
       {%- if page.last_updated -%}
         , {{ site.data[site.active_lang].strings.post.last_updated }}
-        {% include date_format.liquid format='long' date=page.last_updated -%}
+        <time datetime="{{ page.last_updated | date_to_xmlschema }}">
+          {%- include date_format.liquid format='long' date=page.last_updated -%}
+        </time>
       {%- endif %}
       {% if page.meta %}• {{ page.meta }}{% endif %}
       {% include read_count.liquid %}
