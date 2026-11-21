@@ -1,0 +1,50 @@
+# Salih A. Kılıç
+
+> SAS programlama ve veri yönetimi uzmanı Salih A. Kılıç'ın sitesi: SAS Viya geçişleri, Oracle ve Hadoop'ta SQL ve ETL, yapay zekâ otomasyonları, CV ve blog.
+
+Salih Kılıç is a Veri Yönetimi, Veri Mühendisliği ve SAS Danışmanlığı Uzmanı at Sade Yazılım ve Danışmanlık. This personal site (https://salihkilic.net) is available in English and Turkish; the Turkish pages live under `/tr-tur/`.
+
+## Expertise
+
+- SAS
+- SAS programlama
+- SAS Viya
+- SAS 9.4
+- SAS geçişi ve modernizasyonu
+- SQL
+- Oracle Veritabanı
+- Veri yönetimi
+- Veri mühendisliği
+- ETL
+- Veri ambarı dönüşümü
+- Veri kalitesi
+- Veri yönetişimi
+- Veri soyu (data lineage)
+- Veri taşıma
+- Hadoop
+- Vertica
+- Python
+- Yapay zekâ destekli geliştirme
+- Büyük dil modelleri
+
+## Key pages
+
+- [About](https://salihkilic.net/): background, current focus and contact links
+- [CV](https://salihkilic.net/cv/): experience, client projects, skills and certificates
+- [Blog](https://salihkilic.net/blog/): posts on data engineering, open-source dependencies and tooling
+- [Repositories](https://salihkilic.net/repositories/): public code repositories
+
+## Posts
+
+- [MinIO'nun yerini doldurmak: açık kaynak da bir lisanstır, geleceğe dair söz vermez](https://salihkilic.net/tr-tur/blog/2026/replacing-minio/) (2026-11-18): MinIO'nun topluluk sürümü adım adım geri çekildi ve Docker imajları kalktı. Ona bağımlı bir uygulamada yerine ne koyduğumu, MinIO alternatiflerini ve açık kaynak hakkında çıkardığım dersleri anlatıyorum.
+- [Sitemi neden React.js'ten Jekyll'e taşıdım](https://salihkilic.net/tr-tur/blog/2026/neden-jekyll-tasidim/) (2026-09-20): React.js ile başlayan kişisel sitemi neden Jekyll/GitHub Pages'e taşıdığımın hikayesi.
+
+## Optional
+
+- [Full text](https://salihkilic.net/tr-tur/llms-full.txt): the CV in full and the text of every post, in one file
+
+## Notes for automated readers
+
+- Every page carries a canonical URL, hreflang alternates and Schema.org JSON-LD (Person, WebSite, and ProfilePage or BlogPosting).
+- The sitemap at https://salihkilic.net/sitemap.xml lists both languages.
+- robots.txt at https://salihkilic.net/robots.txt allows all crawlers, including AI and answer-engine bots.

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 524" width="680" height="524" role="img" aria-labelledby="t d"><title id="t">Kod yerinde kaldı; etrafındaki her şey birer birer gitti</title><desc id="d">Beş tarih ve beş sütundan oluşan bir tablo. Kaynak kod her tarihte duruyor; yönetim arayüzü Mayıs 2025&#x27;te, yeni ikili dosyalar ve imajlar Ekim 2025&#x27;te, güvenlik yamaları Şubat 2026&#x27;da, eski imajların indirilmesi Eylül 2026&#x27;da kalkıyor.</desc>
+<style>
+  svg { --bg:#ffffff; --panel:#f4f6f8; --ink:#1f2933; --muted:#5b6770; --line:#c9d1d9;
+        --accent:#b509ac; --ok:#0f766e; --off:#a3acb5; }
+  @media (prefers-color-scheme: dark) {
+    svg { --bg:#1c1c1d; --panel:#27292c; --ink:#e6e8eb; --muted:#a1a9b1; --line:#474c52;
+          --accent:#4fb3d1; --ok:#3ebd93; --off:#6b737b; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; fill: var(--ink); }
+  .bg { fill: var(--bg); }
+  .t-title { font-size: 19px; font-weight: 600; }
+  .t-sub { font-size: 14px; fill: var(--muted); }
+  .t-head { font-size: 13.5px; font-weight: 600; fill: var(--muted); }
+  .t-row { font-size: 16px; font-weight: 600; }
+  .t-label { font-size: 15px; font-weight: 600; }
+  .t-small { font-size: 13px; fill: var(--muted); }
+  .t-note { font-size: 13px; fill: var(--muted); font-style: italic; }
+  .t-tag { font-size: 12px; font-weight: 700; fill: var(--accent); letter-spacing: 1.2px; }
+  .t-edge { font-size: 12.5px; font-weight: 600; fill: var(--muted); }
+  .rule { stroke: var(--line); stroke-width: 1; }
+  .box { fill: var(--panel); stroke: var(--line); stroke-width: 1.5; }
+  .box-accent { fill: var(--panel); stroke: var(--accent); stroke-width: 2; }
+  .box-ghost { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 6 5; }
+  .dot-on { fill: var(--ok); }
+  .dot-off { fill: none; stroke: var(--off); stroke-width: 2; }
+  .edge { fill: none; stroke: var(--muted); stroke-width: 1.6; }
+  .edge-dash { fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-dasharray: 6 5; }
+  .arrow-head { fill: var(--muted); }
+</style>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow-head" d="M0 0 L10 5 L0 10 z"/></marker></defs><rect class="bg" x="0" y="0" width="680" height="524" rx="14"/><text x="28" y="44" class="t-title" text-anchor="start">Kod yerinde kaldı; etrafındaki her şey birer birer gitti</text><text x="28" y="68" class="t-sub" text-anchor="start">MinIO topluluk sürümünde neyin ne zaman kalktığı</text><text x="233" y="114" class="t-head" text-anchor="middle">Kaynak</text><text x="233" y="131" class="t-head" text-anchor="middle">kod</text><text x="327" y="114" class="t-head" text-anchor="middle">Yönetim</text><text x="327" y="131" class="t-head" text-anchor="middle">arayüzü</text><text x="421" y="114" class="t-head" text-anchor="middle">Yeni ikili</text><text x="421" y="131" class="t-head" text-anchor="middle">ve imajlar</text><text x="515" y="114" class="t-head" text-anchor="middle">Güvenlik</text><text x="515" y="131" class="t-head" text-anchor="middle">yamaları</text><text x="609" y="114" class="t-head" text-anchor="middle">Eski imajları</text><text x="609" y="131" class="t-head" text-anchor="middle">indirme</text><line class="rule" x1="28" y1="148" x2="652" y2="148"/><text x="28" y="173" class="t-row" text-anchor="start">Kasım 2024</text><text x="28" y="192" class="t-small" text-anchor="start">AIStor duyuruldu</text><circle class="dot-on" cx="233" cy="177" r="11"/><circle class="dot-on" cx="327" cy="177" r="11"/><circle class="dot-on" cx="421" cy="177" r="11"/><circle class="dot-on" cx="515" cy="177" r="11"/><circle class="dot-on" cx="609" cy="177" r="11"/><line class="rule" x1="28" y1="206" x2="652" y2="206"/><text x="28" y="231" class="t-row" text-anchor="start">Mayıs 2025</text><text x="28" y="250" class="t-small" text-anchor="start">Arayüz budandı</text><circle class="dot-on" cx="233" cy="235" r="11"/><circle class="dot-off" cx="327" cy="235" r="11"/><circle class="dot-on" cx="421" cy="235" r="11"/><circle class="dot-on" cx="515" cy="235" r="11"/><circle class="dot-on" cx="609" cy="235" r="11"/><line class="rule" x1="28" y1="264" x2="652" y2="264"/><text x="28" y="289" class="t-row" text-anchor="start">Ekim 2025</text><text x="28" y="308" class="t-small" text-anchor="start">Yalnızca kaynak kod</text><circle class="dot-on" cx="233" cy="293" r="11"/><circle class="dot-off" cx="327" cy="293" r="11"/><circle class="dot-off" cx="421" cy="293" r="11"/><circle class="dot-on" cx="515" cy="293" r="11"/><circle class="dot-on" cx="609" cy="293" r="11"/><line class="rule" x1="28" y1="322" x2="652" y2="322"/><text x="28" y="347" class="t-row" text-anchor="start">Şubat 2026</text><text x="28" y="366" class="t-small" text-anchor="start">Depo arşivlendi</text><circle class="dot-on" cx="233" cy="351" r="11"/><circle class="dot-off" cx="327" cy="351" r="11"/><circle class="dot-off" cx="421" cy="351" r="11"/><circle class="dot-off" cx="515" cy="351" r="11"/><circle class="dot-on" cx="609" cy="351" r="11"/><line class="rule" x1="28" y1="380" x2="652" y2="380"/><text x="28" y="405" class="t-row" text-anchor="start">Eylül 2026</text><text x="28" y="424" class="t-small" text-anchor="start">İmajlar kalktı</text><circle class="dot-on" cx="233" cy="409" r="11"/><circle class="dot-off" cx="327" cy="409" r="11"/><circle class="dot-off" cx="421" cy="409" r="11"/><circle class="dot-off" cx="515" cy="409" r="11"/><circle class="dot-off" cx="609" cy="409" r="11"/><line class="rule" x1="28" y1="438" x2="652" y2="438"/><circle class="dot-on" cx="37" cy="467" r="8"/><text x="54" y="472" class="t-small" text-anchor="start">Topluluk sürümünde var</text><circle class="dot-off" cx="349" cy="467" r="8"/><text x="366" y="472" class="t-small" text-anchor="start">Artık yok</text><text x="28" y="502" class="t-note" text-anchor="start">Ekim 2025&#x27;teki son güvenlik düzeltmesi yalnızca kaynak kod olarak yayımlandı.</text></svg>

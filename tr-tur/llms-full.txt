@@ -1,0 +1,639 @@
+# Salih A. Kılıç
+
+> SAS programlama ve veri yönetimi uzmanı Salih A. Kılıç'ın sitesi: SAS Viya geçişleri, Oracle ve Hadoop'ta SQL ve ETL, yapay zekâ otomasyonları, CV ve blog.
+
+https://salihkilic.net/tr-tur/ · https://salihkilic.net/tr-tur/cv/ · https://salihkilic.net/tr-tur/blog/ · https://salihkilic.net/tr-tur/llms.txt
+
+## Özet
+
+Veri Yönetimi, Veri Mühendisliği ve SAS Danışmanlığı Uzmanı. Veri yönetimi, veri mühendisliği ve SAS danışmanlığı uzmanıyım. Telekom, enerji, sigorta, perakende ve finansal teknoloji sektörlerindeki kurumsal müşterilerin SAS 9.4 ve SAS Viya geçişlerinde, veri ambarı dönüşümlerinde ve performans iyileştirme ile veri kalitesi işlerinde yer alıyorum. Oracle, Hadoop, Vertica, PostgreSQL ve benzeri veri platformlarında SQL ve ETL geliştiriyorum. Yapay zekâ otomasyonları ve yapay zekâ odaklı dönüşümler üzerinde de çalışıyorum. Bu alanda ajan orkestrasyonu yapıyor, mevcut ETL süreçlerine yapay zekâ ekliyor ve şirket verisini paylaşmadan, KVKK'ya uygun özelleştirilmiş LLM asistanları ve chatbot'lar kuruyorum.
+
+## İş
+
+### Veri Yönetimi Uzman Yardımcısı, Sade Yazılım ve Danışmanlık (2024-04 – Devam ediyor)
+
+Enerji, telekom, finans ve sigorta, perakende ve e-ticaret ile kamu alanlarındaki kurumlara SAS ve veri yönetimi danışmanlığı, teknik destek ve proje teslimi sağlıyorum.
+
+- SAS 9.4 ve SAS Viya 3.5'ten SAS Viya 4'e geçiş ve modernizasyon projelerinde görev alıyorum.
+- Oracle, Hadoop ve Vertica üzerinde SQL ve ETL süreçleri geliştiriyor ve iyileştiriyor, veri ambarı dönüşümlerinde çalışıyorum.
+- Bu işlerde yapay zekâ ajanlarından ve özelleştirilmiş LLM asistanlarından, şirket verisini paylaşmadan yararlanıyorum.
+
+### Veri Analisti Stajyeri, Sade Yazılım ve Danışmanlık (2024-02 – 2024-04)
+
+İşletmede Mesleki Eğitim programı kapsamında stajyer olarak başladım ve ikinci ayda tam zamanlı iş teklifi aldım.
+
+
+## Projeler
+
+### Allianz: Oracle veri ambarı dönüşümü (2026-08 – 2026-12)
+
+Legacy veritabanı şemasından Kimball star şemaya yapılan geçişte, dönüştürülmesi gereken modelleri ve raporları yeni standartlara uygun şekilde Oracle'a dönüştürüyorum.
+
+- Oracle üzerinde SQL tuning ve optimizasyon yapıyorum.
+- Dönüşümü otomasyonla yürütüyor ve iş birimlerinin yeni süreçlere uyumunu destekliyorum.
+
+### Yves Rocher France: SAS Viya 4 geçişi (2026-02 – 2026-04)
+
+Büyük bir kozmetik perakendecisinin SAS Viya 4 geçişine katkı sağladım; eski analitik varlıklar modern bir mimariye taşındı.
+
+- 5 Enterprise Guide projesini ve SAS kodlarını SAS Studio'ya dönüştürdüm, seçilen Enterprise Miner modellerini Viya Model Studio'ya taşıdım.
+- 72 Visual Data Builder akışının SAS Studio Flows'a dönüştürülmesine ve 116 Visual Analytics raporunun SAS Viya 4'e taşınmasına destek verdim.
+- Makine öğrenmesi modellerini besleyen veri hatlarını iyileştirdim.
+- İş başı eğitiminin bir bölümünü verdim.
+
+### Türk Telekom: SAS Viya 4 optimizasyon ve danışmanlık (2025-12 – 2026-12)
+
+SAS Viya 4 geçişinin ardından bakım ve destek vermeye devam ettim; iş birimlerinin talepleri doğrultusunda mevcut modellerin iyileştirilmesi, geliştirici araçlarıyla entegrasyon ve platform danışmanlığı işlerini yürüttüm.
+
+- Mevcut analitik modellerdeki performans darboğazlarını ve çalışma zamanı hatalarını giderdim; iş birimlerine doğru SAS geliştirme standartları ve yöntemleri konusunda rehberlik ettim.
+- Viya modüllerinin daha verimli kullanılabilmesi için Git/Bitbucket, VS Code, SAS SDK ve MCP entegrasyonlarını kurdum.
+- SAS Viya'yı Python, SQL, Oracle ve Hadoop ortamlarıyla birlikte çalıştırarak ekiplerin farklı platformlarda süreç geliştirebilmesini sağladım.
+
+### Türk Telekom: SAS Viya 3.5'ten SAS Viya 4'e dönüşüm (2024-12 – 2025-12)
+
+Türkiye'nin en büyük telekomünikasyon sağlayıcılarından birinin Veri Yönetimi ekibinde, analitik iş yüklerinin Kubernetes tabanlı SAS Viya 4'e taşınmasında çalıştım.
+
+- Kurumsal ve Sabit iş birimlerinin analitik modellerini ve raporlarını uçtan uca taşıdım; Mobil ve Dijital birimlerin taşınmasına katkı sağladım.
+- Oracle ve Hadoop üzerindeki 70.000'den fazla tabloyu analiz edip hangilerinin kullanıldığını ve modellerin onlara nasıl bağlı olduğunu bulan, regex tabanlı bir Python programı yazdım.
+- Yüksek performanslı veri işleme için Hadoop ve Oracle tablolarına bölümleme (partitioning) stratejileri tasarladım.
+- Analitik iş akışlarını SAS Viya 4'ün mikroservis mimarisine uyarladım.
+
+### AYDEM Enerji: bakım, destek ve SAS danışmanlığı (2024-11 – Devam ediyor)
+
+Satış fiyatlandırma otomasyonunun canlıya alınmasının ardından sistemin sürekliliği için bakım, teknik destek ve SAS danışmanlığı çalışmalarımı sürdürüyorum.
+
+- Canlıdaki fiyatlandırma otomasyonu ve SAS süreçlerine bakım ve teknik destek veriyorum.
+- İş birimlerinden ve satış ekiplerinden gelen yeni ihtiyaçlarda SAS tarafında teknik danışmanlık sağlıyorum.
+
+### HepsiPay: Vertica geçişi ve platform yükseltmesi (2024-11 – 2024-12)
+
+Açık kaynak analitik süreçlerinin Vertica'ya taşınmasında ve Spark, Jupyter ile Airflow ortamlarının yükseltilmesinde görev aldım.
+
+- Analitik süreçlerin veritabanı bağlantılarını Vertica'ya taşıdım.
+- Airflow DAG'lerini ve Python kodlarını yükseltilen ortama göre gözden geçirdim, geliştirdim ve test ettim.
+
+### salihkilic.net: kişisel site ve blog (2024-10 – Devam ediyor)
+
+Kişisel sitemi kurdum ve performans ile arama görünürlüğünü iyileştirmek için React.js'ten Jekyll'e taşıdım; site Türkçe ve İngilizce içerik sunuyor.
+
+
+### AYDEM Enerji: satış fiyatlandırma otomasyonu (2024-09 – 2024-11)
+
+Satış danışmanlarının elle yürüttüğü teklif sürecini otomatik iş akışlarına dönüştürdüm.
+
+- Teklif sürecini iş kurallarına ve fiyat formüllerine uygun şekilde SAS DATA step ve SQL ile kodladım.
+- SAS'a bağlı, mobil uyumlu veri giriş ekranları tasarladım (JavaScript, HTML, CSS); ekranları sahada 50'den fazla iş birimi ve satış danışmanı kullanıyor.
+
+### Enerjisa: SAS 9.4'ten SAS Viya'ya modernizasyon (2024-05 – 2024-09)
+
+Büyük bir Türk enerji kuruluşunun SAS 9.4'ten SAS Viya'ya modernizasyon ve geçiş projesinde yer aldım.
+
+- 100'den fazla analitik ve iş kuralı içeren bir akışın ETL, veri kalitesi, veri yönetişimi ve performans iyileştirme çalışmalarında yer aldım.
+- Oracle, Vertica, SAP S/4HANA ve AWS arasındaki veri alışverişini geliştirdim, iyileştirdim ve test ettim; iş akışlarını Apache Airflow ile zamanladım.
+
+### Versus Stock: borsa yatırımları için karar destek sistemi
+
+Mezuniyet projem olan bu web uygulaması, temettü ödeyen şirketlere odaklanarak hisselerin finansal oranlarını ve getirilerini karşılaştırıyor; FastAPI arka ucu veriyi yfinance ve web kazıma ile alıyor.
+
+
+## Yetenekler
+
+- SAS: SAS programlama, SAS Viya 4 ve SAS Viya 3.5, SAS 9.4, SAS Studio ve Enterprise Guide, DATA step, PROC SQL ve SAS Macro, CASL, SAS Visual Analytics, SAS geçişi ve modernizasyonu, SAS performans iyileştirme
+- SQL ve Veritabanları: Oracle (SQL, PL/SQL, bölümleme, SQL tuning ve optimizasyon), PostgreSQL, Hadoop ve Hive, Vertica, SingleStore, Boyutsal modelleme (Kimball, star şema)
+- Veri Mühendisliği ve Veri Yönetimi: ETL ve veri taşıma, Veri ambarı dönüşümü, Veri kalitesi, Veri soyu (data lineage), Veri yönetişimi, Apache Airflow, Apache Spark, Qlik Talend, Docker, Git ve GitHub Actions
+- Yapay Zekâ Destekli Geliştirme ve LLM: Yapay zekâ ajanı orkestrasyonu, Mevcut ETL süreçlerine yapay zekâ entegrasyonu, Özelleştirilmiş LLM asistanları ve chatbot'lar, Şirket verisini dışarı vermeyen yapay zekâ ajanı ve MCP kurulumları, LLM tuning, KVKK uyumlu yapay zekâ entegrasyonu
+- Programlama: Python (FastAPI, pandas), JavaScript ve TypeScript (React), Düzenli ifadeler (regex), Otomatik test (pytest)
+
+## Sertifikalar
+
+- Google Data Analytics Specialization Certificate (Google)
+- High-Performance Data Processing with CASL in SAS Viya (SAS)
+- SAS Programming 1: Essentials (SAS)
+- SAS Programming 2: Data Manipulation Techniques (SAS)
+- SAS Programming 3: Advanced Techniques (SAS)
+
+## Eğitim
+
+- İzmir Bakırçay Üniversitesi: Lisans, Yönetim Bilişim Sistemleri (İngilizce) (2019 – 2024)
+
+## Diller
+
+- Türkçe: Ana dil
+- İngilizce: Profesyonel Yeterlilik (C1)
+- Almanca: Temel (A2)
+
+## Yazılar
+---
+
+# MinIO'nun yerini doldurmak: açık kaynak da bir lisanstır, geleceğe dair söz vermez
+
+https://salihkilic.net/tr-tur/blog/2026/replacing-minio/ · 2026-11-18
+
+MinIO'nun topluluk sürümü adım adım geri çekildi ve Docker imajları kalktı. Ona bağımlı bir uygulamada yerine ne koyduğumu, MinIO alternatiflerini ve açık kaynak hakkında çıkardığım dersleri anlatıyorum.
+
+Ekim ayında, üzerinde çalıştığım bir uygulamanın kurulum paketini planlarken kurulumun indirdiği konteyner imajlarının, onları daha önce hiç indirmemiş bir makineden hâlâ indirilebildiğini kontrol etmek istedim. Diğer imajlar sorunsuz indi; fakat MinIO’nun iki imajı için imaj deposu “repository does not exist” cevabını verdi.
+
+Kendi bilgisayarımda her şey aylardır çalışıyordu, çünkü o iki imaj Docker’ın önbelleğinde duruyordu. Uygulama, ben farkına varmadan, yalnızca daha önce kurulduğu makinelerde çalışabilir hale gelmişti.
+
+Docker Hub’daki minio/minio ve quay.io’daki quay.io/minio/minio imajlarını indirmeye çalışanların aldığı hatalar aşağıdaki gibi:
+
+Error response from daemon: pull access denied for minio, repository does not exist or may require authorization
+unauthorized: access to the requested resource is not authorized
+
+
+İlk satırdaki Docker Hub hatası Milvus projesinin, ikinci satırdaki quay.io hatası katta-compose projesinin issue’sundan alındı.
+
+Bu hatalardan biriyle siz de karşılaştıysanız ve hemen ne yapabileceğinizi görmek istiyorsanız doğrudan MinIO imajı inmiyorsa bugün ne yapabilirsiniz bölümüne atlayabilirsiniz.
+
+
+
+  Kısaca
+
+  MinIO’nun topluluk sürümü Ekim 2025’ten itibaren yalnızca kaynak kod olarak dağıtıldı, Aralık 2025’te bakım moduna alındı ve deposu Şubat 2026’da arşivlendi. Eylül 2026’da minio/minio imajları Docker Hub’dan kalktı, quay.io’daki imajlar da anonim indirmeye kapandı. Lisans hâlâ AGPLv3, fakat topluluk sürümü artık yeni sürüm, hazır imaj ya da güvenlik yaması almıyor. Ben üzerinde çalıştığım uygulamada MinIO’yu, aynı beş fonksiyonun arkasında çalışan küçük bir disk deposuyla değiştirdim ve S3 desteğini isteğe bağlı bıraktım. Gerçekten bir S3 sunucusuna ihtiyacınız varsa, yazının ilerisinde versitygw, Garage, SeaweedFS, RustFS, Ceph ve MinIO çatallarını karşılaştırıyorum.
+
+
+
+## Uygulamam MinIO’yu ne için kullanıyordu
+
+MinIO, dosyaları klasörler yerine “bucket” adı verilen kaplarda saklayan ve bunlara HTTP istekleriyle ulaşılmasını sağlayan açık kaynak bir nesne deposudur. Amazon’un bulut depolama servisi S3 ile aynı arayüzü kullandığından, S3 için yazılmış bir uygulama, kodunu değiştirmeden dosyalarını kendi sunucunuzda çalışan MinIO’ya yazabiliyordu ve MinIO’yu asıl yaygınlaştıran da bu oldu.
+
+Uygulama, kurumların kendi sunucularına kurduğu bir analiz aracı. Kullanıcı bir log dosyası yüklediğinde uygulama dosyanın aslını olduğu gibi saklıyor, içeriğini ayrıştırıyor ve sonuçları PostgreSQL’e yazıyor. MinIO bu işin ilk yarısını üstleniyor, yani yüklenen dosyaların aslını tutuyordu.
+
+Birkaç yıl önce kimse bu tercihi sorgulamazdı. MinIO tek bir konteynerle ayağa kalkıyor, ücretsiz geliyor ve neredeyse her örnek docker-compose.yml dosyasında karşınıza çıkıyordu. Uygulama da ona yalnızca beş fonksiyon üzerinden dokunuyordu: yükle, indir, metin olarak oku, satırlara böl ve sil.
+
+## MinIO’da adım adım ne oldu
+
+Kaynak kod hâlâ GitHub’da duruyor ve lisansı hâlâ AGPLv3, fakat bakım, hazır ikili dosyalar, konteyner imajları, yönetim arayüzü ve güvenlik yamaları birkaç yıl içinde birer birer ortadan kalktı.
+
+
+  
+    
+      Tarih | 
+      Ne oldu | 
+    
+  
+  
+    
+      Mayıs 2021 | 
+      Sunucunun lisansı Apache 2.0’dan AGPLv3’e çevrildi. | 
+    
+    
+      Kasım 2024 | 
+      Şirket, ticari ürünü AIStor’u duyurdu. Duyuru ürünü yapay zeka ve veri iş yükleri için tasarlanmış bir depo olarak tanıtıyordu. | 
+    
+    
+      Mayıs 2025 | 
+      Topluluk sürümünün web arayüzünden yönetim işlevleri çıkarıldı; sürüm notları bu işlevler için ticari ürünü gösteriyordu. | 
+    
+    
+      Ekim 2025 | 
+      README, topluluk sürümünün artık yalnızca kaynak kod olarak dağıtıldığını yazdı. Ertesi gün çıkan güvenlik düzeltmesi hazır ikili dosya ve resmî imaj olmadan yayımlandı. Bu, topluluk sürümünün son sürümü oldu. | 
+    
+    
+      Aralık 2025 | 
+      README “bakım modu”nu ilan etti: Yeni özellik ve katkı kabul edilmeyecekti. | 
+    
+    
+      Şubat 2026 | 
+      README’nin başına deponun artık bakılmadığını söyleyen bir not kondu ve depo ertesi gün arşivlendi. | 
+    
+    
+      Mart–Nisan 2026 | 
+      Topluluk sürümünü etkileyen yedi güvenlik bildirimi yayımlandı; hiçbiri için topluluk sürümü çıkmadı. Depo Nisan sonunda kısa bir süre yeniden açıldı ve 25 Nisan’da tekrar arşivlendi. GitHub bugün yalnızca bu son tarihi gösteriyor. | 
+    
+    
+      Eylül 2026 | 
+      Önce Docker Hub’daki imajlar kayboldu; kaldırılmadan birkaç gün önceki son kayıtta imaj yaklaşık 1,85 milyar kez indirilmiş görünüyordu. Ardından quay.io’daki imajlar anonim indirmeye kapandı. İmajların kaldırılması için MinIO’dan bir duyuru bulamadım. | 
+    
+  
+
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    Kaynak kod yerinde kaldı, onu kullanılabilir kılan parçalar 2025 ile 2026 arasında sırayla kalktı.
+
+
+### “Paralı oldu” demek doğru mu?
+
+Olanları tek cümleyle özetlemek isteyenler “MinIO paralı oldu” diyor; fakat bu cümle olanı tam anlatmıyor. Şirketin fiyat sayfasına göre açık kaynak sürüm ömrünü tamamladı ve artık hata düzeltmesi ya da güvenlik yaması almıyor. Sayfa, bu sürümün kullanıcılarına alternatifleri değerlendirmelerini ya da ticari ürün için şirketle görüşmelerini öneriyor.
+
+O ticari ürünün, yani AIStor’un ücretsiz bir katmanı da var; ancak bu katman özgür yazılım anlamında ücretsiz sayılmaz. Lisans sözleşmesi yazılımın yalnızca tek düğümde çalıştırılmasına izin veriyor, üçüncü kişilere dağıtılmasını yasaklıyor ve yazılım bir lisans dosyası olmadan çalışmıyor. Dağıtık kurulum isteyenler için ücretli katmanlar var.
+
+Yazılımı kendi sunucunuzda tek başınıza kullanıyorsanız bu koşullar sizi rahatsız etmeyebilir. Benim durumumda uygulama MinIO’yu kurulum paketinin içinde başka kurumlara taşıyordu ve dağıtımı yasaklayan bir lisansla bunu yapamazdım.
+
+## Bizim tarafta gözden kaçanlar
+
+İşin bana düşen kısmı pek iç açıcı değil. Repo geçmişine dönüp baktığımda üç ayrı uyarıyı kaçırdığımızı görüyorum.
+
+Birincisi: MinIO uygulamaya Nisan 2026’da eklendi. O tarihte MinIO’nun deposu yaklaşık iki aydır arşivdeydi ve README’si deponun artık bakılmadığını söylüyordu. Kimse bakmadı, çünkü imaj iniyordu ve her şey çalışıyordu.
+
+İkincisi: Eylül ortasında compose dosyasındaki minio/minio:latest imajı indirilemez hâle geldi. İmajların Docker Hub’dan kalktığını görünce adresi quay.io’ya çevirdim, sürümü sabitledim ve commit mesajıma da “MinIO imaj dağıtımını quay.io’ya taşımış” diye not düştüm. Yani belirtiyi tedavi etmiş, fakat “Bu imaj neden kayboldu?” sorusunu hiç sormamıştım.
+
+Üçüncüsü: On bir gün sonra quay.io’daki imajlar da anonim indirmeye kapandı. Bunu bir ay boyunca fark etmedim, çünkü önbelleğim sayesinde hiçbir şey bozulmadı.
+
+
+
+  İPUCU
+
+  Kurulumunuzun indirdiği her imajı ve paketi, önbelleği boş bir ortamdan düzenli olarak indirmeyi deneyen küçük bir kontrol ekleyin. Böyle bir kontrol olsaydı bu sorunu haftalar önce fark ederdim.
+
+
+
+Hangi çözümü seçeceğimi bilmeden önce, önbellekteki iki imajı docker save ile tek bir arşiv dosyasına aldım. 85 MB’lık o dosya, o andan itibaren eski verilere ulaşmanın elimdeki en sağlam yoluydu, çünkü MinIO dosyaları diskte kendi biçiminde saklıyor. Onları güvenle okuyabilecek program yine MinIO’nun kendisi ve o program artık resmî adreslerinden hazır olarak indirilemiyordu.
+
+## Seçenekleri neye göre eledim
+
+Kendime koyduğum kural basitti. Önce ücretsiz ve gerçekten açık bir alternatif arayacak, uygun bir şey bulamazsam ve iş de büyük değilse kendi çözümümü geliştirecektim.
+
+Adayları lisans ve yeniden dağıtım, kimlik doğrulaması olmadan indirilebilirlik, bakım, yönetişim ve katkı sözleşmesi, güvenlik bildirimleri, ayak izi, yedekleme ve taşıma açısından değerlendirdim. Lisansta önemli olan, bileşeni kurulum paketinin içinde başka kurumlara teslim edip edemeyeceğimdi, çünkü AGPL lisanslı bir imajı dağıtmak kaynak sunma yükümlülüğü getiriyor ve birçok kurumun açık kaynak politikası AGPL’yi kısıtlıyor.
+
+On üç seçeneği tek tek kontrol ettim. Aşağıdaki tablo bunlardan öne çıkanların Ekim 2026 sonundaki durumunu ve benim ihtiyacım açısından vardığım sonucu gösteriyor. Sizin ihtiyacınız farklıysa sonuç da farklı çıkabilir.
+
+
+  
+    
+      Seçenek | 
+      Lisans | 
+      Benim gördüğüm | 
+      Sonuç | 
+    
+  
+  
+    
+      AIStor Free | 
+      Ticari (özel lisans) | 
+      Her kurulum lisans dosyası istiyor, yalnızca tek düğüm, yeniden dağıtım yasak. | 
+      Eledim. | 
+    
+    
+      MinIO çatalları (PGSTY Silo, Chainguard) | 
+      AGPLv3 | 
+      Güvenlik yamaları sürüyor; ikisi de tek bir kuruluşa bağlı. | 
+      Yalnızca geçici köprü. | 
+    
+    
+      versitygw | 
+      Apache 2.0 | 
+      Nesneleri diskte düz dosya olarak tutan küçük bir S3 ağ geçidi; katkı için lisans devri istemiyor. | 
+      En iyi ücretsiz sunucu. | 
+    
+    
+      RustFS | 
+      Apache 2.0 | 
+      MinIO’ya en yakın yeni motor; çok genç ve katkı sözleşmesi şirkete katkıları başka bir lisansla dağıtma hakkı veriyor. | 
+      Seçmedim. | 
+    
+    
+      SeaweedFS | 
+      Apache 2.0 | 
+      Çok yetenekli ve çok bileşenli; birkaç GB dosya için fazla geniş bir yüzey. | 
+      Seçmedim. | 
+    
+    
+      Garage | 
+      AGPLv3 | 
+      Küçük ve bağımsız; kendi belgeleri tek kopyalı kullanımı yalnızca test için uygun görüyor. | 
+      Seçmedim. | 
+    
+    
+      Ceph | 
+      LGPL | 
+      Gerçek ölçek için tasarlanmış bir küme; tek sunucuya fazla. | 
+      Ölçek dışı. | 
+    
+    
+      Dosyaları PostgreSQL’de saklamak | 
+      Ek bileşen yok | 
+      Tek yedek ve işlem tutarlılığı sağlıyor; ama her yedek dosyalarla birlikte büyüyor. | 
+      Varsayılan yapmadım. | 
+    
+    
+      Kendi disk depom | 
+      Kendi kodum | 
+      300 satırdan kısa bir disk deposu; ek konteyner, port ve parola yok. | 
+      Bunu seçtim. | 
+    
+  
+
+
+## Çözüm: bağımlılığı tamamen kaldırmak
+
+Alternatifleri karşılaştırırken asıl soruyu geç sorduğumu fark ettim. Benim gerçekten bir nesne deposuna ihtiyacım var mıydı?
+
+Uygulama tek sunucuda, tek süreç olarak çalışıyor; dosyalar bir kez yazılıyor, bir daha değişmiyor ve toplam boyut birkaç GB’ı geçmiyor. Bu koşullarda nesne deposu bana dosya sisteminin zaten verdiğinden fazlasını vermiyordu, buna karşılık ayrı bir konteyneri ve takip etmem gereken bir güvenlik bildirimi akışını da beraberinde getiriyordu.
+
+Sonunda bağımlılığı başka bir ürünle değiştirmek yerine tamamen kaldırdım ve bunu yapay zeka ajanlarını orkestre ederek üç adımda yaptım:
+
+
+  - Aynı beş fonksiyonun arkasına, dosyaları bir Docker biriminde düz dosyalar olarak tutan küçük bir depo ekledim. Disk deposunun kendisi 300 satırdan kısa; S3 arka ucu, önbellek ve hata yönetimiyle birlikte modülün tamamı bin satır kadar.
+  - Mevcut S3 kodunu atmak yerine elden geçirip isteğe bağlı ikinci bir arka uç haline getirdim. Kendi S3 deposu olan bir kurum, tek bir ayarla dosyaları oraya yazdırabiliyor.
+  - Dosya adlarının düzenini ve veritabanındaki işaretçi kolonunu hiç değiştirmedim. Böylece veritabanı tarafında taşınacak hiçbir şey kalmadı.
+
+
+Bu beş fonksiyonun altında, iki deponun da uyguladığı arayüz kabaca aşağıdaki gibi:
+
+class BlobStore(Protocol):
+    def put(self, key: str, data: bytes) -> None: ...
+    def get(self, key: str) -> bytes: ...
+    def read_range(self, key: str, offset: int, length: int) -> bytes: ...
+    def exists(self, key: str) -> bool: ...
+    def delete(self, key: str) -> None: ...
+
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    Uygulama, değişiklikten önce de sonra da aynı beş fonksiyonu kullanıyor.
+
+
+“Düz dosyaya yazmak” kulağa basit gelse de, nesne deposunun sizin yerinize üstlendiği bazı ayrıntılar bu kez size kalıyor:
+
+
+  - Atomik yazma: Dosyayı önce aynı klasörde geçici bir adla yazıyorum, fsync ile diske indiğinden emin oluyorum, sonra tek hamlede asıl adına taşıyorum. Elektrik yarıda kesilirse ortada yarım bir dosya kalmıyor.
+  - Yol güvenliği: Depo yalnızca kendi ürettiği biçimdeki anahtarları kabul ediyor ve sembolik bağlantıları izlemiyor. Böylece hiçbir anahtar deponun klasörünün dışına çıkamıyor.
+  - Anlaşılır hatalar: Eksik dosya 404, dolu disk 507, ulaşılamayan S3 deposu 503 dönüyor. Eskiden bunların hepsi anlamsız bir 500 hatasıydı.
+
+
+Tasarım incelenirken çıkan iki hata da bu ayrıntılar kadar öğreticiydi:
+
+
+  - Silme sırası. Eski kod önce dosyayı, sonra veritabanı satırını siliyordu ve araya bir hata girerse elinizde dosyası olmayan bir kayıt kalıyordu. Sırayı tersine çevirdim; artık önce satırın silinmesi commit ediliyor, dosya ancak ondan sonra siliniyor. Arada bir hata olursa en kötü ihtimalle diskte sahipsiz bir dosya kalıyor ve bu, dosyası olmayan bir kayıttan çok daha zararsız.
+  - Gerçek bir S3 sunucusuna karşı test. “S3 uyumlu” her sunucu aynı davranmıyor. Örneğin istemci kütüphanesinin varsayılan olarak eklediği checksum değerlerini her sunucunun kabul edeceğinin garantisi yok. Bu yüzden S3 arka ucu her değişiklikte, CI içinde gerçek bir S3 sunucusuna karşı test ediliyor ve bu davranış ayarlanabiliyor.
+
+
+## Taşıma: geri dönüş yolunu açık tutarak
+
+Yeni depo yazıldıktan sonra mevcut dosyaları taşırken tek bir ilkem vardı, o da geri dönemeyeceğim hiçbir adımı atmamaktı.
+
+
+  - Taşıma, elle çalıştırılan ayrı bir komut. Uygulama açılışta kendiliğinden hiçbir şey taşımıyor, eksik dosya görürse yalnızca uyarıyor ve çalıştırılacak komutu söylüyor.
+  - Komut önce bir dry run yapıyor ve kaç dosya olduğunu, kaç bayt kopyalanacağını ve hedefte yeterli yer olup olmadığını gösteriyor.
+  - Asıl çalıştırmada her dosya kopyalanıyor, hedeften geri okunuyor ve sha256 özeti kaynağınkiyle karşılaştırılıyor. Sonuçlar bir manifest dosyasına yazılıyor ve ayrı bir doğrulama komutu o manifesti yeniden denetliyor.
+  - Komut hiçbir şey silmiyor ve var olan bir dosyanın üzerine yazmıyor. İkinci kez çalıştırıldığında hiçbir şey kopyalamıyor.
+  - Hepsini önce atılabilir bir kopya kurulumda prova ettim, sonra kendi kurulumumda çalıştırdım.
+
+
+Eski MinIO birimi, imaj arşivi ve geri dönüş adımları hâlâ duruyor ve en az bir sürüm boyunca da duracak.
+
+## Ne kazandım, neyi üstlendim
+
+Kazandıklarım:
+
+
+  - Kurulum artık yalnızca herkesin indirebildiği imajları indiriyor.
+  - Bir servis ve bir başlatma işi eksildi; iki port ve bir parola çifti ortadan kalktı.
+  - Kurulum paketi 85 MB küçüldü ve konteynerlerin toplam bellek sınırı 512 MB düştü.
+  - Pakette AGPL lisanslı bir bileşen ve güvenlik taramalarının işaretlediği bilinen bir açık kalmadı.
+  - Yedek, bir veritabanı dökümü ile bir tar dosyasından ibaret.
+
+
+Üstlendiklerim:
+
+
+  - Atomik yazma, dolu disk ve yol güvenliği gibi dayanıklılık ayrıntıları artık benim sorumluluğumda.
+  - Aynı makinedeki başka araçlar için hazır bir S3 uç noktası yok.
+  - Mevcut kurulumlar bir kereliğine taşıma yapmak zorunda.
+
+
+Uygulama birden fazla sunucuda çalışacaksa, değiştirilemez saklama zorunluysa ya da kurumun politikası nesne deposunu şart koşuyorsa bu çözüm yanlış olur ve doğru seçenek S3 arka ucudur; S3 seçeneğini de bu yüzden açık bıraktım.
+
+## MinIO imajı inmiyorsa bugün ne yapabilirsiniz
+
+Yazının başındaki hatalardan birini yeni aldıysanız ilk iş elinizdeki kopyayı korumak olmalı. docker image prune ya da docker system prune gibi temizlik komutlarını şimdilik çalıştırmayın, çünkü önbellekteki MinIO imajı elinizdeki son kopya olabilir. Sizin makinenizde yoksa başka bir sunucuda, CI makinesinde ya da kurumunuzun imaj deposunda kalmış olabilir. Bulduğunuz kopyayı docker save ile bir dosyaya alıp docker load ile ihtiyacınız olan makineye taşıyabilirsiniz.
+
+Hiçbir yerde kopya yoksa eski sunucuyu bir süreliğine bir çatalla ayağa kaldırabilirsiniz. 14 Kasım 2026’da kontrol ettiğimde imaj depoları Pigsty’nin pgsty/silo ve Chainguard’ın cgr.dev/chainguard/minio:latest imajlarını oturum açmadan veriyordu. Silo, MinIO’nun disk biçimini koruduğunu söylüyor ve root kullanıcısıyla çalışıyor. Chainguard’ın imajı ise root olmayan bir kullanıcıyla çalıştığı için veri klasörünün sahibini değiştirmeniz gerekebilir. Son çare olarak, son topluluk sürümünün notlarındaki adımlarla imajı kaynak koddan kendiniz derleyebilirsiniz.
+
+Verilerinizi taşımadan önce birimin bir yedeğini alın ve eski sunucuyu dışarıya kapalı biçimde bu kopya üzerinde çalıştırın. Dosyaları S3 üzerinden mc mirror ya da rclone copy ile yeni yerine kopyalayabilirsiniz, ancak iki araç da varsayılan olarak nesne sürümlerini ve özel üst verileri taşımıyor. Kopyaları kaynakla karşılaştırmadan hiçbir şeyi silmeyin.
+
+Son topluluk sürümünü kalıcı bir çözüm olarak görmeyin. Nisan 2026’da yayımlanan iki güvenlik bildirimi, geçerli bir erişim anahtarını, örneğin varsayılan minioadmin anahtarını bilen birinin gizli anahtar olmadan nesne yazabildiğini gösteriyor. Topluluk sürümü için bu açıkların yaması yok. Bucket oluşturmak için minio/mc imajını kullanıyorsanız o imaj da artık inmiyor. Chainguard’ın minio-client imajı ya da AWS CLI aynı işi görebilir.
+
+## MinIO alternatifleri: gerçekten bir S3 sunucusuna ihtiyacınız varsa
+
+Birden fazla sunucunuz varsa, dosyalarınız terabaytları buluyorsa ya da kullandığınız araçlar S3 konuşan bir uç nokta bekliyorsa bir nesne deposuna ihtiyacınız var demektir. Bu durumda bence “hangisi daha hızlı” sorusundan önce “hangisi beş yıl sonra da aynı koşullarla burada olur” sorusunu sormalı, cevabını da özellik listelerinden çok projenin lisansında, yönetişiminde ve gelir modelinde aramalısınız.
+
+Ekim 2026 sonunda baktığım adayları ve onlarda gördüklerimi aşağıya yazdım:
+
+
+  - versitygw (Apache 2.0): S3 çağrılarını bir klasöre çeviren küçük bir ağ geçidi. Nesneleriniz diskte düz dosya olarak durduğu için yarın versitygw ortadan kalksa bile dosyalarınız elinizde kalır. Tek sunucuda bir S3 uç noktası gerekiyorsa ilk bakacağım yer burası, S3 arka ucumun testlerini de zaten ona karşı çalıştırıyorum.
+  - Garage (AGPLv3): Bir dernek tarafından geliştiriliyor ve kamu hibeleriyle finanse ediliyor. Birkaç düğümlü, coğrafi olarak dağıtık küçük kurulumlar için tasarlanmış. Kendi belgeleri tek düğümlü kurulumu üretim için önermiyor.
+  - SeaweedFS (Apache 2.0): Çok hızlı gelişiyor, ancak son üç ayda katkıların üçte ikisi tek bir kişiden geldi ve projenin ayrı, kapalı lisanslı bir kurumsal sürümü de var.
+  - RustFS (Apache 2.0): MinIO’ya en çok benzeyen yeni motor ve pek çok proje testlerinde MinIO’nun yerine onu koydu. Yalnız ilk kararlı sürümü Eylül 2026’da çıktı ve katkı sözleşmesi şirkete katkıları başka bir lisansla dağıtma hakkı veriyor.
+  - Ceph (LGPL): Linux Foundation çatısı altında gelişiyor ve son üç ayda iki yüzden fazla kişi katkı verdi. Gerçek ölçek için doğru cevap olsa da tek sunucu için fazla ağır. Aynı ölçekte, Apache Software Foundation çatısındaki Apache Ozone da var.
+  - MinIO çatalları (AGPLv3): PGSTY Silo yönetim arayüzünü geri getirdi ve güvenlik yamalarını sürdürüyor; Chainguard yalnızca güvenlik düzeltmesi alan bir çatalı ücretsiz bir imajla yayımlıyor.
+
+
+RustFS ve SeaweedFS için bu yıl onlarca güvenlik bildirimi yayımlandı. Hızlı büyüyen ve yakından incelenen projelerde bu şaşırtıcı sayılmaz, ama hangisini seçerseniz seçin takip etmeniz gereken bir bildirim akışı olacak.
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    Karar verirken izlediğim sıra
+
+
+Başka projelerin ne yaptığına da baktım ve tek bir cevap olmadığını gördüm. GitLab Helm paketinden gömülü MinIO’yu çıkardı ve yerine bir şey koymadı, yani kendi S3 deponuzu getirmeniz gerekiyor. NixOS nesne deposu testini Garage’a taşıdı. Apache Iceberg testlerinde RustFS’e, Grafana Loki örnek kurulumlarında Silo’ya, Zalando Spilo SeaweedFS’e geçti. Incus ise bana benzer bir yol seçti ve MinIO’ya dayanan özelliği kendi yerleşik S3 uç noktasıyla değiştirdi. GitHub’da son haftalarda birleştirilen ve başlığında MinIO’nun değiştirildiği yazan kırk değişikliğe baktığımda da aynı dağınıklığı gördüm. Bunların on ikisi RustFS’i, on biri SeaweedFS’i, dördü Garage’ı, dördü düz diski, ikisi de versitygw’yi seçmişti. Silo, LocalStack ve S3Mock ise birer kez geçiyordu.
+
+## Yapay zeka dönemi bu tabloyu nasıl değiştirdi
+
+MinIO, ticari ürünü AIStor’u yapay zeka iş yükleri için tasarlanmış bir veri deposu olarak tanıtıyor ve Şubat 2025’teki bir basın duyurusunda yıllık yinelenen gelirinin iki yılda yüzde 149 büyüdüğünü, kârlı çalıştığını ve bu büyümenin yapay zeka talebinden geldiğini söyledi.
+
+Şirketin kendi açıkladığı gerekçe ise yalnızca bir adım için var. Yönetim arayüzü budanırken kurucuları, topluluk sürümü için ikinci bir arayüzü sürdürmenin ciddi bir iş yükü olduğunu ve bakılmayan kodun güvenlik riski taşıdığını söyledi. Sonraki adımlar için, imajların kaldırılması da dahil, şirketin fiyat sayfasında mühendislik odağının artık AIStor olduğunu söylemesi dışında bir gerekçe bulamadım.
+
+Bana kalırsa para yapay zekaya aktı ve altyapı şirketleri de ürünlerini paranın aktığı yere göre yeniden konumladı. Eğitim verisini çok büyük ölçekte saklayan kurumların en değerli müşteri olduğu bir şirketin gözünde, birkaç GB dosya saklayan küçük ekiplerin kullandığı topluluk sürümü para kazandırmayan bir yük haline geliyor. Şirket kârlı olduğunu söylediğine göre bu kararı zorunluluktan çok tercihle almış görünüyor. Yapay zeka ile bu tercih arasındaki bağı ben zamanlamaya bakarak kuruyorum; MinIO böyle bir şey söylemedi ve aynı tabloyu yatırım almış bir şirketin olağan ticarileşme adımları olarak okumak da mümkün.
+
+Bunun yanında bir ihtimal daha görüyorum. Açık kaynak kodu alıp kendi ürününe gömen, bunun üzerine büyük işler kuran, ama koda emek verenlere hiçbir pay bırakmayan şirketler hep oldu ve MinIO da bundan uzun süredir şikayetçiydi. Temmuz 2022’de, Nutanix’in nesne deposu ürününde MinIO’yu yıllarca belirtmeden kullandığını söyleyerek Nutanix’in lisansını iptal ettiğini duyurdu. Nutanix 28 Temmuz’da Apache 2.0 lisansının istediği atıf ve bildirimleri eksik bıraktığı için özür diledi ve yalnızca Apache 2.0 lisanslı MinIO kodu kullandığını söyledi. Mart 2023’te MinIO benzer bir suçlamayı Weka’ya yöneltti ve onun da lisansını iptal ettiğini açıkladı. Weka ise yalnızca Apache 2.0 lisanslı kod kullandığını, suçlamaların asılsız olduğunu ve bu lisansın geri alınamayacağını söyledi. Nutanix de aynı haberdeki açıklamasında MinIO kodunu yalnızca birkaç yardımcı işlev için kullandığını ve 2 Kasım 2022’de çıkan Objects 3.6 sürümüyle tamamen kaldırdığını belirtti.
+
+Bu yüzden imajların erişime kapatılmasında, hazır imajları ve ikili dosyaları alıp ticari ürünlerinin içinde dağıtan şirketlerin de payı olabileceğini düşünüyorum. Bu yalnızca benim tahminim. MinIO böyle bir gerekçe söylemedi. Kaynak kod hâlâ herkese açık, yani isteyen kodu yine derleyip kullanabilir. Fakat hazır imaj ve ikili dosya olmadan bunu yapmak artık hem zahmetli hem de ayrı bir bakım yükü.
+
+Aynı dönem benim tarafımdaki hesabı da değiştirdi, çünkü dar bir bileşeni kendim yazmanın maliyeti artık eskisi kadar yüksek değil. Bu iş için kâğıt üzerindeki tahminim dört beş odaklı gündü, fakat yapay zeka ajanlarıyla çalışarak kararın ertesi günü kodu ana dala almış ve kendi kurulumumu taşımıştım. Yine de bunu genellemek istemem, çünkü kontrollü çalışmalar küçük ve iyi tanımlı işlerde ilk sürümün daha hızlı yazıldığını gösterse de deneyimli geliştiricilerin olgun kod tabanlarında yavaşladığını bulan bir çalışma da var.
+
+Yapay zeka asistanları da eğitildikleri dönemin bilgisini taşıyor ve araştırmalar, modellerin kütüphanelerin kullanımdan kalkmış çağrılarını önermeyi sürdürdüğünü, zaman zaman da var olmayan paketler uydurduğunu gösteriyor. Benim gözlemime göre bir asistana dosyaları nerede saklayacağınızı sorarsanız birkaç yıl önceki örnek dosyalarda en çok geçen cevabı alma ihtimaliniz yüksek ve önerilen bağımlılığın bugün hâlâ ayakta olup olmadığını kontrol etmek yine size kalıyor.
+
+## On yıl önceki benzer bir hikaye: left-pad incident
+
+Bu yazıyı yazmamda, Tech Buddy kanalının 8 Kasım’da yayımladığı “11 Satırlık işi neden başkasına bıraktık” adlı videonun etkisi oldu. Bu tarz teknoloji hikayelerini seviyorsanız, yazılım geliştirme üzerine faydalı Türkçe videolar paylaşan bu kanala göz atmanızı tavsiye ederim.
+
+
+
+    Tech Buddy, "11 Satırlık işi neden başkasına bıraktık" (YouTube, 8 Kasım 2026)
+
+
+Yazılım dünyasında “left-pad incident” olarak bilinen olayda, npm’den kaldırılan küçük bir paket, ona dayanan pek çok projenin derlenmesini kısa bir süreliğine durdurdu. Mart 2016’da Kik adlı mesajlaşma şirketi, marka hakkını gerekçe göstererek geliştirici Azer Koçulu’dan npm’deki “kik” paketinin adını istedi. Koçulu kabul etmeyince npm, paketi şirkete devretti; Koçulu da 22 Mart’ta npm’deki bütün paketlerini kaldırdı. Aralarında bir metnin soluna boşluk ekleyen 11 satırlık left-pad de vardı ve ona doğrudan ya da dolaylı olarak bağlı olan, Babel ve React’in de bulunduğu binlerce proje bir anda derlenemez hale geldi. npm left-pad’i yaklaşık iki saat sonra geri yükledi, ardından da kurallarını değiştirdi. npm’in olayla ilgili açıklamasını blogunda okuyabilirsiniz.
+
+Olayın öbür tarafını Azer Koçulu’nun kendi yazılarından okumak da mümkün. Paketleri kaldırdıktan hemen sonra yayımladığı “I’ve Just Liberated My Modules” yazısında, kendi izni olmadan paket adının devredilmesinin ona npm’i şirketlerin insanlardan daha güçlü olduğu özel bir alan gibi gösterdiğini anlatıyor. Sekiz yıl sonra yazdığı “left-pad” yazısında ise kararın bir öfke anında verilmediğini yazıyor.
+
+Bu olayla MinIO’nun hikayesi arasında on yıl var, fakat ikisinde de sorun kodu bize ulaştıran kanalda ve o kanalla ilgili verilen kararlarda başladı. Videonun başlığındaki soru da yazının sonunda kendime sorduğum ilk soruyla aynı kapıya çıkıyor.
+
+## Açık kaynak üzerine düşündüklerim
+
+Yaşananlar yalnızca MinIO’ya özgü de değil. Son yıllarda benzer kararları iki farklı biçimde gördük. İlki lisans değişikliğiydi; HashiCorp 2023’te, Redis 2024’te lisansını değiştirdi. İkincisi de dağıtımın geri çekilmesiydi. Bitnami 2025’te hazır imajlarını güncellenmeyen bir depoya taşıyıp güncel olanları aboneliğe bağladı, LocalStack da 2026’da topluluk imajını sonlandırıp deposunu arşivledi. Bu ikinci türde lisans hiç değişmiyor ve MinIO da bu türe giriyor.
+
+Asıl farkı, kararın ardından neler olduğu belirliyor. Redis’in çatalı Valkey sekiz gün içinde Linux Foundation çatısında ve büyük destekçilerle kuruldu, Terraform’un çatalı OpenTofu için bu süre yaklaşık altı hafta oldu. MinIO’nun çatallarının arkasında ise yalnızca birer kuruluş var.
+
+Bazı şirketler açık kaynağı topluluk odaklı büyüme için sahipleniyor ve kodunu açtıkları bir ürün etrafında bir topluluk oluşturup onun üzerinden kurumsal müşterilerle iş birliği fırsatı yakalıyor. Cloudflare’in Şubat 2026 tarihli blog yazısına göre şirket, Vercel’in geliştirdiği Next.js’i yapay zekayı yönlendiren tek bir mühendisle bir haftadan kısa sürede sıfırdan yeniden yazdı. Ortaya çıkan alternatif, Cloudflare’in kendi platformuna tek komutla yayına alınabiliyor. Cloudflare Next.js ekibine övgüyle yer verdi, ancak başka şirketlerin aynı yolla, tersine mühendislikle inceledikleri yazılımları kaynak göstermeden kendi adlarıyla piyasaya süreceğini bekliyorum. Böyle örnekler çoğalırsa şirketlerin açık kaynağa verdikleri desteği sorgulamaya başlamalarını olası buluyorum.
+
+Bütün bunlardan kendi adıma birkaç ders çıkardım.
+
+Lisans yalnızca bugünkü kodu kapsıyor. Açık kaynak lisansı size var olan kodu kullanma, değiştirme ve dağıtma hakkı veriyor. Fakat yarın yeni bir sürüm çıkacağına, hazır ikili dosyaların yayımlanacağına ya da imajın aynı adreste duracağına dair hiçbir söz vermiyor.
+
+Lisans size bir çıkış yolu bırakıyor. MinIO’nun lisansı sonuna kadar AGPL olarak kaldı ve bugün güvenlik yamalarını sürdüren çatallar o lisans sayesinde var. Kapalı bir üründe aynı şey olsaydı elimde okuyabileceğim bir kod bile olmazdı.
+
+Kimsenin bize bir borcu yok. MinIO yıllarca çok iyi bir yazılımı karşılıksız sundu ve bedavaya aldığım bir şeyin sonsuza kadar bedava kalmasını beklemeye hakkım yok. Bağımlılığı seçen de, onu takip etmesi gereken de bendim.
+
+Bir bağımlılığın dört parçası var. Kodun yanında, o kodu size ulaştıran dağıtım kanalı, onu ayakta tutan bakım ve bütün bunlara kimin karar verdiğini belirleyen yönetişim de bağımlılığın parçası. MinIO’da kod hiç değişmedi, ama öbür üç parça birer birer ortadan kalktı.
+
+Projeyi kimin yönettiği önemli. Projenin markası, deposu ve katkıların hakları tek bir şirketteyse, o şirketin öncelikleri değiştiği gün proje de değişir. Bir vakfın ya da derneğin çatısındaki projelerde bu karar tek bir elde toplanmıyor. NATS’in arkasındaki şirket 2025’te lisansı değiştirmek istediğinde, proje vakfın çatısında olduğu için bunu tek başına yapamadı. Mayıs 2025’teki uzlaşmayla şirket NATS markasını Linux Foundation’a devretti, proje de Apache 2.0 lisansıyla CNCF’de kaldı.
+
+Dar bir arayüz işi çok kolaylaştırıyor. Bu değişikliği bu kadar kısa sürede yapabilmemin en önemli sebeplerinden biri, uygulamanın MinIO’ya beş fonksiyon üzerinden dokunmasıydı.
+
+Standartlara yaslanmak daha güvenli. S3 bir ürün olmaktan çıkıp bir protokole dönüştüğü için bugün MinIO’nun yerine koyabileceğim yarım düzine sunucu var; dosya sistemi için de durum aynı.
+
+## Yeni bir bağımlılık eklemeden önce sorduklarım
+
+Bu olaydan sonra bir bağımlılık eklemeden önce kendime şu soruları soruyorum:
+
+
+  - Bu ihtiyacı standart kütüphaneyle ya da birkaç yüz satırla kendim karşılayabilir miyim?
+  - Projeyi kim yönetiyor: tek bir şirket mi, bir vakıf ya da dernek mi?
+  - Katkı sözleşmesi, proje sahibine lisansı tek başına değiştirme imkânı veriyor mu?
+  - Şirket parayı nereden kazanıyor ve benim kullanım biçimim o yolun üstünde mi?
+  - İmajı ya da paketi kim dağıtıyor; o adres yarın kapanırsa elimde ne kalır?
+  - Kurulumum, önbelleği boş bir makinede düzenli olarak deneniyor mu?
+  - Bu bağımlılığa kodun kaç yerinden dokunuyorum?
+  - Verimi buradan çıkarıp başka bir yere taşıyabiliyor muyum?
+
+
+Siz de benzer bir durum yaşadıysanız ya da MinIO’nun yerine başka bir yol seçtiyseniz aşağıya yorum olarak yazarsanız sevinirim. Başkalarının bu durumda hangi soruları sorduğunu merak ediyorum.
+---
+
+# Sitemi neden React.js'ten Jekyll'e taşıdım
+
+https://salihkilic.net/tr-tur/blog/2026/neden-jekyll-tasidim/ · 2026-09-20
+
+React.js ile başlayan kişisel sitemi neden Jekyll/GitHub Pages'e taşıdığımın hikayesi.
+
+Okuldan mezuniyetime yakın, kişisel bir web sitemin olmasının hem teknik hem de hobi amaçlı içeriklerimi toplamak ve kişisel markamı inşa etmek için iyi bir adım olacağını düşünmeye başladım. Kısacası, bir blog arayışındaydım.
+
+## Neden sıfırdan değil, bir klon proje ile başladım
+
+Web teknolojilerindeki tecrübem henüz kısıtlı olduğu için, hazır bir klon projeyi kendi isteklerime göre uyarlama fikri cazip geldi. Sıfırdan yapmak şüphesiz öğretici bir yöntem; fakat siteyi inşa ettiğim 2024 yılında henüz iş hayatına atılmamıştım. Frontend ve web geliştirme alanının giderek doygunlaştığını, çok fazla rekabet olduğunu görüyordum. O dönemde daha çok veri odaklı ilerlemek istediğimden, bu alanda fazla zaman harcamak istemedim ve bir klon projeyle yola çıktım. 2026’ya gelindiğinde bile web teknolojilerinin gün geçtikçe daha da daralan ve aşırı rekabetçi bir alan olmaya devam ettiğini görüyorum; dolayısıyla o zamanki öngörümün ve iddiamın hâlâ geçerli olduğunu düşünüyorum.
+
+YouTube’da uzun zamandır takip ettiğim JavaScript Mastery kanalı bu süreçte oldukça işime yaradı. AI dönemi henüz başlamamışken bile uçtan uca çalışan, tutarlı teknolojileri anlatan harika tutoriallar paylaşıyorlar (hâlâ da üretmeye devam ediyorlar). Özellikle öğrenciyseniz kesinlikle göz atmalısınız. Zaten bir konuda hiçbir şey bilmeyip uzmanlaşmak istiyorsanız, uçtan uca çalışan bir klon proje yapmak, neyi yapmak isteyip özellikle neyi yapmak istemediğimi fark etmek için en iyi yollardan biri oldu.
+
+Bu araştırmalar sırasında bulduğum “Build and Deploy an Amazing 3D Web Developer Portfolio in React JS | Beginner Three.js Tutorial” adlı videodan faydalanarak ilk projemi ayağa kaldırdım. Başlangıç için statik ve havalı bir sitenin fena olmayacağını düşünmüştüm.
+
+## İlk sürüm: domain arayışı ve React.js portföyü
+
+O dönem Google Domains üzerinden ad-soyad temalı domain arıyordum. İstediğim adreslerin çoğu alınmış olsa da sonunda salihkilic.net’i satın aldım. Videoyu takip ederek projeyi kurdum.
+
+Dilerseniz kaynak koduna buradaki repo üzerinden göz atabilirsiniz. Site hâlâ Firebase üzerinde durduğu için canlı haline de şuradan ulaşabilirsiniz.
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    Eski React.js/Three.js portföyümün ana sayfası
+
+
+## Sorun: 3D sahnelerin ve yüksek render maliyetinin bedeli
+
+Sitemi ayağa kaldırdıktan sonra fark ettim ki, yoğun 3D sahne kullanımı görsel olarak ne kadar şık dursa dursun; performans, indeksleme ve SEO açısından ciddi sıkıntılar yaratıyordu.
+
+## Yeni arayış: içerik odaklı bir teknoloji
+
+Sektörde beğendiğim birçok geliştiricinin içerik üretimi odaklı sade web siteleri olduğunu görünce, benim de bu yöne evrilmem gerektiğine karar verdim. Klasik WordPress veya benzeri araçları inceledim ancak aradığım açık kaynak kod esnekliğini bulamadım. Bir arkadaşımın tavsiyesiyle Jekyll’in bu iş için biçilmiş kaftan olduğunu öğrendim ve GitHub üzerindeki hazır temaları incelemeye başladım.
+
+Tam da aradığım gibi sade, içerik odaklı, topluluk tarafından aktif desteklenen ve GitHub Pages üzerinde ücretsiz barındırıp kendi domainime bağlayabileceğim al-folio temasına denk geldim. Kurulumu biraz vakit alsa da dokümantasyonu takip ederek sistemi canlıya aldım.
+
+Bu süreçte Google Domains’in Google tarafından kapatıldığını öğrendim (killedbygoogle.com). Hemen Squarespace üzerinden gerekli DNS yönlendirmelerini yaparak sitemi sorunsuz şekilde tekrar aktif hale getirdim.
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    killedbygoogle.com'da Google Domains'in kaydı
+
+
+## Şu an neden bu yapıda karar kıldım
+
+Mevcut yapım, çalışan bir geliştirici olarak tüm temel ihtiyaçlarımı fazlasıyla karşılıyor:
+
+
+  - Çoklu dil desteği: Türkçe ve İngilizce içeriği aynı sitede tutabiliyorum; hem yerel hem uluslararası kitleye hitap edebiliyorum.
+  - Kolay içerik üretimi: Yeni bir yazı yazmak için kod yazmama gerek kalmıyor; sade bir Markdown dosyası açmak yeterli oluyor.
+  - Sıfır maliyet ve kolay barındırma: GitHub Pages üzerinde tamamen ücretsiz host ediliyor ve kendi domainimle çalışıyor.
+  - Tek kaynaktan CV: Özgeçmişim tek bir veri dosyasından besleniyor; bilgileri bir kez güncellediğimde hem web sayfası hem de indirilebilir PDF otomatik güncelleniyor.
+  - Kolay entegrasyonlar: Google Analytics, Search Console ve Microsoft Clarity gibi araçları birkaç satırlık ayarla bağladım, ekstra bir entegrasyon derdi yok.
+  - Hız ve SEO: Statik bir yapıda olduğu için hem uçuyor hem de SEO dostu; eski sitemdeki ağır 3D sahnelerin tam zıttı bir performans sunuyor.
+  - Otomatik dağıtım: GitHub Actions sayesinde repoya ufak bir push yaptığımda site anında güncelleniyor.
+
+
+Aslında bu yazının ilk taslağı “bunu siz de nasıl adım adım kurarsınız” tarzı bir rehber olacaktı. Fakat bunun yerine “neden bu tercihi yaptım” yazısı olmasının daha doğru olduğuna karar verdim. Çünkü günümüzde yapay zeka araçları sayesinde bu tarz teknik kurulumları yapmak, benim burada anlatacağımdan çok daha kolay ve anlaşılır hale geldi. Muhtemelen bundan sonra blogumda üreteceğim içerikler de “nasıl yapılır” rehberlerinden ziyade, “neden tercih ettim” odaklı ve teknik tecrübelerimi aktardığım yazılar olacak.
+
+Şimdilik kaliteli ve ağırlıklı sayılabilecek geniş bir içeriğim henüz yok (henüz! :D), bunlara nasıl zaman ayıracağımı planlıyorum. Lakin yakın zamanda hem mesleki birikimlerimi hem de günlük hayattaki hobilerimi ve deneyimlerimi buraya taşımayı düşünüyorum.
+
+Eğer siz de bu tarz bir altyapıyı kurmak isterseniz, kullandığım çok dilli al-folio reposunun README dokümantasyonunu bir AI aracıyla birlikte incelemenizi tavsiye ederim. Az çok teknik altyapınız varsa hiç de zor değil. Dost ve müttefik çevremdeyseniz zaten doğrudan bana da ulaşabilirsiniz, seve seve yönlendiririm.
+

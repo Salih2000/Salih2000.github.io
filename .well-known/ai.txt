@@ -1,0 +1,13 @@
+# ai.txt for salihkilic.net
+#
+# This is the personal site of Salih A. Kilic. Its pages are public.
+# Search engines and AI assistants may crawl them and cite them with a link to the page they used.
+
+User-Agent: *
+Allow: /
+
+# Summaries for automated readers:
+#   https://salihkilic.net/llms.txt
+#   https://salihkilic.net/llms-full.txt
+#   https://salihkilic.net/ai/summary.json
+# Sitemap: https://salihkilic.net/sitemap.xml
