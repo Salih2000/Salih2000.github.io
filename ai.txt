@@ -1,0 +1,17 @@
+---
+permalink: /.well-known/ai.txt
+---
+{%- assign s = site.data[site.default_lang].strings -%}
+# ai.txt for {{ site.url | remove: 'https://' }}
+#
+# This is the personal site of {{ s.name.first }} {{ s.name.middle }} {{ s.name.last }}. Its pages are public.
+# Search engines and AI assistants may crawl them and cite them with a link to the page they used.
+
+User-Agent: *
+Allow: /
+
+# Summaries for automated readers:
+#   {{ site.url }}{{ site.baseurl }}/llms.txt
+#   {{ site.url }}{{ site.baseurl }}/llms-full.txt
+#   {{ site.url }}{{ site.baseurl }}/ai/summary.json
+# Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml

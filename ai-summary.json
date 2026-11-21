@@ -1,0 +1,41 @@
+---
+permalink: /ai/summary.json
+---
+{%- comment %} A short machine-readable summary of the site and its owner, built from the same data as the pages. {% endcomment -%}
+{%- assign s = site.data[site.default_lang].strings -%}
+{%- assign resume_key = site.default_lang | prepend: 'resume_' -%}
+{%- assign resume = site.data[resume_key] -%}
+{%- capture full_name %}{{ s.name.first }} {{ s.name.middle }} {{ s.name.last }}{% endcapture -%}
+{%- assign profiles = '' | split: '' -%}
+{%- for profile in resume.basics.profiles %}{% assign profiles = profiles | push: profile.url %}{% endfor -%}
+{%- assign certificates = '' | split: '' -%}
+{%- for certificate in resume.certificates -%}
+  {%- capture line %}{{ certificate.name }} ({{ certificate.issuer }}){% endcapture -%}
+  {%- assign certificates = certificates | push: line -%}
+{%- endfor -%}
+{%- capture root %}{{ site.url }}{{ site.baseurl }}{% endcapture -%}
+{
+  "name": {{ full_name | jsonify }},
+  "alternateName": {{ s.person.alternate_names | jsonify }},
+  "type": "Person",
+  "description": {{ s.site_description | jsonify }},
+  "summary": {{ resume.basics.summary | jsonify }},
+  "jobTitle": {{ s.person.job_title | jsonify }},
+  "worksFor": {{ s.person.works_for | jsonify }},
+  "location": {{ s.person.city | append: ', ' | append: s.person.country | jsonify }},
+  "expertise": {{ s.person.knows_about | jsonify }},
+  "certificates": {{ certificates | jsonify }},
+  "url": {{ root | append: '/' | jsonify }},
+  "languages": {
+    "en": {{ root | append: '/' | jsonify }},
+    "tr": {{ root | append: '/tr-tur/' | jsonify }}
+  },
+  "pages": {
+    "cv": {{ root | append: '/cv/' | jsonify }},
+    "blog": {{ root | append: '/blog/' | jsonify }},
+    "repositories": {{ root | append: '/repositories/' | jsonify }},
+    "llms": {{ root | append: '/llms.txt' | jsonify }}
+  },
+  "profiles": {{ profiles | jsonify }},
+  "lastUpdated": {{ site.time | date: '%Y-%m-%d' | jsonify }}
+}

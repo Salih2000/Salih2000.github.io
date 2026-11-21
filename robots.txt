@@ -4,4 +4,17 @@ permalink: /robots.txt
 User-agent: *
 Disallow:
 
+# The search engines and the assistants that show their sources, by name, so their access is explicit.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Applebot
+User-agent: YandexBot
+Allow: /
+
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml

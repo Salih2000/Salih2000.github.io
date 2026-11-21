@@ -1,0 +1,89 @@
+---
+permalink: /llms-full.txt
+---
+{% comment %}
+  The long companion of llms.txt: the CV and the text of every post in one plain-text file, built from the same
+  data as the pages (assets/json/resume_LANG.json and the posts), once per language.
+{% endcomment %}
+{%- assign s = site.data[site.active_lang].strings -%}
+{%- assign resume_key = site.active_lang | prepend: 'resume_' -%}
+{%- assign resume = site.data[resume_key] -%}
+{%- capture lang_root %}{{ site.url }}{{ site.baseurl }}{% unless site.active_lang == site.default_lang %}/{{ site.active_lang }}{% endunless %}{% endcapture -%}
+# {{ s.name.first }} {{ s.name.middle }} {{ s.name.last }}
+
+> {{ s.site_description }}
+
+{{ lang_root }}/ · {{ lang_root }}/cv/ · {{ lang_root }}/blog/ · {{ lang_root }}/llms.txt
+
+## {{ s.cv.summary }}
+
+{{ resume.basics.label }}. {{ resume.basics.summary }}
+
+## {{ s.cv.work }}
+{% for job in resume.work %}
+### {{ job.position }}, {{ job.name }} ({{ job.startDate | date: '%Y-%m' }} – {% if job.endDate %}{{ job.endDate | date: '%Y-%m' }}{% else %}{{ s.cv.present }}{% endif %})
+
+{{ job.summary }}
+{% for item in job.highlights %}
+- {{ item }}
+{%- endfor %}
+{% endfor %}
+## {{ s.cv.projects }}
+{% for project in resume.projects %}
+### {{ project.name }}{% if project.startDate %} ({{ project.startDate | date: '%Y-%m' }} – {% if project.endDate %}{{ project.endDate | date: '%Y-%m' }}{% else %}{{ s.cv.present }}{% endif %}){% endif %}
+
+{{ project.summary }}
+{% for item in project.highlights %}
+- {{ item }}
+{%- endfor %}
+{% endfor %}
+## {{ s.cv.skills }}
+{% for skill in resume.skills %}
+- {{ skill.name }}: {{ skill.keywords | join: ', ' }}
+{%- endfor %}
+
+## {{ s.cv.certificates }}
+{% for certificate in resume.certificates %}
+- {{ certificate.name }} ({{ certificate.issuer }})
+{%- endfor %}
+
+## {{ s.cv.education }}
+{% for school in resume.education %}
+- {{ school.institution }}: {{ school.studyType }}, {{ school.area }} ({{ school.startDate | date: '%Y' }} – {{ school.endDate | date: '%Y' }})
+{%- endfor %}
+
+## {{ s.cv.languages }}
+{% for language in resume.languages %}
+- {{ language.language }}: {{ language.fluency }}
+{%- endfor %}
+
+## {{ s.search.posts }}
+{% for post in site.posts %}
+{%- if post.sitemap == false or post.redirect %}{% continue %}{% endif %}
+{%- comment %} The post as text: headings and list items keep a mark, the rest of the HTML is dropped. {% endcomment %}
+{%- assign body = post.content
+  | replace: '<h2', '## <h2'
+  | replace: '<h3', '### <h3'
+  | replace: '<h4', '#### <h4'
+  | replace: '<li', '- <li'
+  | replace: '</td>', ' | </td>'
+  | replace: '</th>', ' | </th>'
+  | strip_html
+  | replace: '&lt;', '<'
+  | replace: '&gt;', '>'
+  | replace: '&quot;', '"'
+  | replace: '&#39;', "'"
+  | replace: '&amp;', '&'
+  | strip
+-%}
+
+---
+
+# {{ post.title }}
+
+{{ lang_root }}{{ post.url }} · {{ post.date | date: '%Y-%m-%d' }}{% if post.last_updated %} · {{ s.post.last_updated }} {{ post.last_updated | date: '%Y-%m-%d' }}{% endif %}
+
+{{ post.description }}
+
+{{ body }}
+{% endfor %}

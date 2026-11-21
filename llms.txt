@@ -22,6 +22,10 @@ permalink: /llms.txt
 
 {% for post in site.posts %}{% if post.sitemap == false or post.redirect %}{% continue %}{% endif %}- [{{ post.title }}]({{ site.url }}{{ site.baseurl }}{% unless site.active_lang == site.default_lang %}/{{ site.active_lang }}{% endunless %}{{ post.url }}) ({{ post.date | date: '%Y-%m-%d' }}): {{ post.description }}
 {% endfor %}
+## Optional
+
+- [Full text]({{ site.url }}{{ site.baseurl }}{% unless site.active_lang == site.default_lang %}/{{ site.active_lang }}{% endunless %}/llms-full.txt): the CV in full and the text of every post, in one file
+
 ## Notes for automated readers
 
 - Every page carries a canonical URL, hreflang alternates and Schema.org JSON-LD (Person, WebSite, and ProfilePage or BlogPosting).
