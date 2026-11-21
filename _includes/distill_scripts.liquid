@@ -194,11 +194,23 @@
   <!-- Removed Pseudocode -->
 {% endif %}
 
+{% include analytics_switch.liquid %}
+
 {% if site.enable_google_analytics %}
   <!-- Analytics -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script defer src="{{ '/assets/js/google-analytics-setup.js' | relative_url }}"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics, loaded only where the owner has not turned analytics off -->
+  <script>
+    if (!window.analyticsOff) {
+      ['https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}', '{{ '/assets/js/google-analytics-setup.js' | relative_url }}'].forEach(
+        function (src) {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = src;
+          document.head.appendChild(script);
+        }
+      );
+    }
+  </script>
 {% endif %}
 
 {% if site.enable_cronitor_analytics %}

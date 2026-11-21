@@ -1,0 +1,25 @@
+{% comment %}
+  Keeps the site owner's own visits out of the statistics. Opening any page of the site with #analytics-off at the end
+  of the address turns Google Analytics, Microsoft Clarity and GoatCounter off in that browser and remembers it in
+  localStorage; #analytics-on turns them back on. GoatCounter's count.js already skips a browser whose localStorage
+  "skipgc" is "t", so the switch sets that key as well. Clearing the browser's site data forgets the setting, and a
+  browser that blocks site data for this site cannot keep it.
+{% endcomment %}
+<script>
+  (function () {
+    var off = false;
+    try {
+      if (location.hash === '#analytics-off') {
+        localStorage.setItem('analytics-off', '1');
+        localStorage.setItem('skipgc', 't');
+        console.info('Analytics are off in this browser for this site.');
+      } else if (location.hash === '#analytics-on') {
+        localStorage.removeItem('analytics-off');
+        localStorage.removeItem('skipgc');
+        console.info('Analytics are on again in this browser for this site.');
+      }
+      off = localStorage.getItem('analytics-off') === '1';
+    } catch (e) {}
+    window.analyticsOff = off;
+  })();
+</script>
