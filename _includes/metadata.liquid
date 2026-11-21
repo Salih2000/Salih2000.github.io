@@ -311,7 +311,7 @@
   {% endfor %}
 
   {% assign person_strings = site.data[site.active_lang].strings.person %}
-  {% comment %} The CV data (assets/json/resume_LANG.json): its education and certificates also describe the person. {% endcomment %}
+  {% comment %} The CV data (assets/json/resume_LANG.json): its certificates also describe the person. {% endcomment %}
   {% assign resume_key = site.active_lang | prepend: 'resume_' %}
   {% assign resume = site.data[resume_key] %}
   {% capture site_root %}{{ site.url }}{{ site.baseurl }}/{% endcapture %}
@@ -360,17 +360,6 @@
           {% endif %}
           {% if person_strings.knows_language %}
             "knowsLanguage": {{ person_strings.knows_language | jsonify }},
-          {% endif %}
-          {% if resume.education and resume.education.size > 0 %}
-            "alumniOf": [
-              {% for school in resume.education %}
-                {
-                  "@type": "CollegeOrUniversity",
-                  "name": {{ school.institution | jsonify }}
-                  {% if school.url %}, "url": {{ school.url | jsonify }}{% endif %}
-                }{% unless forloop.last %},{% endunless %}
-              {% endfor %}
-            ],
           {% endif %}
           {% if resume.certificates and resume.certificates.size > 0 %}
             "hasCredential": [
