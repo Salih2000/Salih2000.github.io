@@ -175,7 +175,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include: ["_pages", "_scripts", ".nojekyll"] # .nojekyll: GitHub Pages then serves the built site as it is, dot folders such as .well-known included
 exclude:
   - bin/
   - CONTRIBUTING.md
@@ -371,7 +371,7 @@ external_links:
 
 languages: ["en-us", "tr-tur"]
 default_lang: "en-us"
-exclude_from_localization: ["assets", "sitemap.xml", "robots.txt", "ai.txt", "ai-summary.json", "6f68e265f419f7870d2cc9432879531b.txt"]
+exclude_from_localization: ["assets", "sitemap.xml", "robots.txt", "ai.txt", "ai-summary.json", "6f68e265f419f7870d2cc9432879531b.txt", ".nojekyll"]
 lang_from_path: true
 country_flag: false # set true for allowing flag symbol in language toggle
 parallel_localization: false
