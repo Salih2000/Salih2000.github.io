@@ -194,7 +194,7 @@
         "Delivered part of the on-the-job training."
       ],
       "keywords": ["SAS Viya 4", "SAS Studio", "Visual Analytics", "Enterprise Guide", "Enterprise Miner", "PROC SQL", "CAS programming"],
-      "short": "Moved 5 Enterprise Guide projects, 72 data flows and 116 Visual Analytics reports to SAS Viya 4 and delivered part of the client training.",
+      "short": "Moved Enterprise Guide projects, data flows and Visual Analytics reports to SAS Viya 4 and delivered part of the client training.",
       "startDate": "2026-02-01",
       "endDate": "2026-04-01"
     },
