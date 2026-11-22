@@ -6,7 +6,7 @@
     "email": "salihabdullahkilic@gmail.com",
     "phone": "+90 500 000 00 00",
     "url": "https://salihkilic.net",
-    "summary": "Veri yönetimi, veri mühendisliği ve SAS danışmanlığı uzmanıyım. Telekom, enerji, sigorta, perakende ve finansal teknoloji sektörlerindeki kurumsal müşterilerin SAS 9.4 ve SAS Viya geçişlerinde, veri ambarı dönüşümlerinde ve performans iyileştirme ile veri kalitesi işlerinde yer alıyorum. Oracle, Hadoop, Vertica, PostgreSQL ve benzeri veri platformlarında SQL ve ETL geliştiriyorum. Yapay zekâ otomasyonları ve yapay zekâ odaklı dönüşümler üzerinde de çalışıyorum. Bu alanda ajan orkestrasyonu yapıyor, mevcut ETL süreçlerine yapay zekâ ekliyor ve şirket verisini paylaşmadan, KVKK'ya uygun özelleştirilmiş LLM asistanları ve chatbot'lar kuruyorum.",
+    "summary": "Veri yönetimi, veri mühendisliği ve SAS danışmanlığı uzmanıyım. Telekom, enerji, sigorta, perakende ve finansal teknoloji sektörlerindeki kurumsal müşterilerin SAS 9.4 ve SAS Viya geçişlerinde, veri ambarı dönüşümlerinde ve performans iyileştirme ile veri kalitesi işlerinde yer alıyorum. Oracle, Hadoop, Vertica, PostgreSQL ve benzeri veri platformlarında SQL ve ETL geliştiriyorum. Yapay zekâ otomasyonları ve yapay zekâ odaklı dönüşümler üzerinde de çalışıyorum. Bu alanda ajan orkestrasyonu yapıyor, mevcut ETL süreçlerine yapay zekâ ekliyor ve şirket verisini paylaşmadan, KVKK ve GDPR uyumlu özelleştirilmiş LLM asistanları ve chatbot'lar kuruyorum.",
     "location": {
       "city": "İstanbul",
       "countryCode": "TR"
@@ -143,7 +143,7 @@
         "Özelleştirilmiş LLM asistanları ve chatbot'lar",
         "Şirket verisini dışarı vermeyen yapay zekâ ajanı ve MCP kurulumları",
         "LLM tuning",
-        "KVKK uyumlu yapay zekâ entegrasyonu"
+        "KVKK ve GDPR uyumlu yapay zekâ entegrasyonu"
       ]
     },
     {

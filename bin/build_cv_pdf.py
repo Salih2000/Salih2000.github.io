@@ -76,14 +76,21 @@ h1 { font-size: 1.95rem; line-height: 1.15; margin: 0 0 0.15rem; }
 .headline { font-size: 1.12rem; font-weight: bold; margin: 0 0 0.25rem; }
 .contact { font-size: 0.94rem; margin: 0; }
 h2 { font-size: 1.12rem; margin: %(h2_top)srem 0 0.35rem; padding-bottom: 0.15rem; border-bottom: 0.8pt solid #444; }
+/* English section headings in capitals: English resume parsers find a section by a bold, all-capitals line of its
+   own. Not in Turkish: there the capitals bring dotted İ (DENEYİM, EĞİTİM), which many programs lower-case wrongly
+   (to i plus a combining dot), so the heading would no longer match. */
+html[lang="en"] h2 { text-transform: uppercase; letter-spacing: 0.02em; }
 h3 { font-size: 1.02rem; margin: 0.6rem 0 0.05rem; }
 /* Page breaks: a heading stays with what follows it, and a bullet or paragraph is never split. */
 h2, h3, .meta { break-after: avoid; page-break-after: avoid; }
 li, p { break-inside: avoid; page-break-inside: avoid; }
 p { margin: 0 0 0.3rem; }
 .meta { margin: 0 0 0.2rem; }
-ul { margin: 0.15rem 0 0.35rem; padding-left: 1.35rem; }
-li { margin: 0 0 0.12rem; }
+/* The bullet is a real character, not a drawn list marker: parsers read only text, and use the bullets to tell
+   a title line from its description. The bullet hangs, so wrapped lines line up with the text. */
+ul { margin: 0.15rem 0 0.35rem; padding-left: 0.45rem; list-style: none; }
+li { margin: 0 0 0.12rem; padding-left: 0.9rem; text-indent: -0.9rem; }
+.dot { display: inline-block; width: 0.9rem; text-indent: 0; }
 a { color: inherit; text-decoration: none; }
 """
 
@@ -115,10 +122,14 @@ def period(entry: dict, labels: dict) -> str:
     return f"{start} – {end}"
 
 
+def item(content_html: str) -> str:
+    return f'<li><span class="dot">•</span>{content_html}</li>'
+
+
 def bullets(items: list[str]) -> str:
     if not items:
         return ""
-    return "<ul>" + "".join(f"<li>{esc(item)}</li>" for item in items) + "</ul>"
+    return "<ul>" + "".join(item(esc(x)) for x in items) + "</ul>"
 
 
 def bare(url: str) -> str:
@@ -153,12 +164,18 @@ def skills_block(cv: dict, labels: dict) -> str:
 
 
 def work_entry(job: dict, labels: dict, with_details: bool) -> str:
+    # Title, company and dates on lines of their own: resume parsers split fields by line, and a company and a date
+    # range on one line ("Company | 04/2024 - Present") are read as one company name with no dates.
     place = ", ".join(x for x in (job.get("name"), job.get("location")) if x)
-    out = [f'<div class="entry"><h3>{esc(job.get("position", ""))}</h3>', f'<p class="meta">{esc(place)} | {esc(period(job, labels))}</p>']
+    out = [f'<div class="entry"><h3>{esc(job.get("position", ""))}</h3>']
+    if place:
+        out.append(f'<p class="meta">{esc(place)}</p>')
+    dates = period(job, labels)
+    if dates:
+        out.append(f'<p class="meta">{esc(dates)}</p>')
     if with_details:
-        if job.get("summary"):
-            out.append(f"<p>{esc(job['summary'])}</p>")
-        out.append(bullets(job.get("highlights") or []))
+        # The summary is the first bullet: parsers take the description to start at the first bullet.
+        out.append(bullets(([job["summary"]] if job.get("summary") else []) + (job.get("highlights") or [])))
     out.append("</div>")
     return "".join(out)
 
@@ -171,8 +188,12 @@ def tail_sections(cv: dict, labels: dict, compact: bool) -> str:
         for school in education:
             degree = ", ".join(x for x in (school.get("studyType"), school.get("area")) if x)
             extra = "; ".join(school.get("courses") or [])
-            line = f"{esc(school.get('institution', ''))} | {esc(period(school, labels))}"
-            out.append(f'<div class="entry"><h3>{esc(degree)}</h3><p class="meta">{line}{" | " + esc(extra) if extra else ""}</p></div>')
+            # The school on its own line, then the dates: parsers look for the school on a line of its own.
+            dates = " | ".join(x for x in (period(school, labels), extra) if x)
+            out.append(
+                f'<div class="entry"><h3>{esc(degree)}</h3><p class="meta">{esc(school.get("institution", ""))}</p>'
+                f'<p class="meta">{esc(dates)}</p></div>'
+            )
     certificates = cv.get("certificates") or []
     if certificates:
         out.append(f"<h2>{esc(labels['certificates'])}</h2>")
@@ -197,11 +218,10 @@ def body_long(cv: dict, labels: dict, phone: str | None) -> str:
         dates = period(project, labels)
         if dates:
             block.append(f'<p class="meta">{esc(dates)}</p>')
-        if project.get("summary"):
-            block.append(f"<p>{esc(project['summary'])}</p>")
-        block.append(bullets(project.get("highlights") or []))
+        block.append(bullets(([project["summary"]] if project.get("summary") else []) + (project.get("highlights") or [])))
         if project.get("keywords"):
-            block.append(f"<p><b>{esc(labels['technologies'])}:</b> {esc(', '.join(project['keywords']))}</p>")
+            # Plain, not bold: parsers take a bold line inside a project for the title of the next one.
+            block.append(f"<p>{esc(labels['technologies'])}: {esc(', '.join(project['keywords']))}</p>")
         block.append("</div>")
         out.append("".join(block))
     out.append(tail_sections(cv, labels, compact=False))
@@ -221,7 +241,7 @@ def body_short(cv: dict, labels: dict, phone: str | None) -> str:
     for project in chosen:
         dates = period(project, labels)
         title = f"{project['name']} ({dates})" if dates else project["name"]
-        out.append(f"<li><b>{esc(title)}.</b> {esc(project.get('short') or project.get('summary', ''))}</li>")
+        out.append(item(f"<b>{esc(title)}.</b> {esc(project.get('short') or project.get('summary', ''))}"))
     out.append("</ul>")
     out.append(tail_sections(cv, labels, compact=True))
     return "".join(out)

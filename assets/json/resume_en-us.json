@@ -6,7 +6,7 @@
     "email": "salihabdullahkilic@gmail.com",
     "phone": "+90 500 000 00 00",
     "url": "https://salihkilic.net",
-    "summary": "I am a data management, data engineering and SAS consulting specialist. For enterprise clients in telecom, energy, insurance, retail and fintech, I take part in SAS 9.4 and SAS Viya migrations, data warehouse transformations, and performance tuning and data quality work. I develop SQL and ETL on Oracle, Hadoop, Vertica, PostgreSQL and similar data platforms. I also work on AI automations and AI-driven transformations, where I orchestrate agents, add AI to existing ETL processes and build KVKK-compliant custom LLM assistants and chatbots without sharing company data.",
+    "summary": "I am a data management, data engineering and SAS consulting specialist. For enterprise clients in telecom, energy, insurance, retail and fintech, I take part in SAS 9.4 and SAS Viya migrations, data warehouse transformations, and performance tuning and data quality work. I develop SQL and ETL on Oracle, Hadoop, Vertica, PostgreSQL and similar data platforms. I also work on AI automations and AI-driven transformations, where I orchestrate agents, add AI to existing ETL processes and build KVKK- and GDPR-compliant custom LLM assistants and chatbots without sharing company data.",
     "location": {
       "city": "Istanbul",
       "countryCode": "TR"
@@ -51,7 +51,7 @@
   "volunteer": [],
   "education": [
     {
-      "institution": "İzmir Bakırçay Üniversitesi",
+      "institution": "İzmir Bakırçay University",
       "url": "https://www.bakircay.edu.tr/",
       "area": "Management Information Systems",
       "studyType": "Bachelor of Business Administration",
@@ -143,7 +143,7 @@
         "Custom LLM assistants and chatbots",
         "AI agent and MCP setups that keep company data private",
         "LLM tuning",
-        "KVKK-compliant AI integration"
+        "KVKK- and GDPR-compliant AI integration"
       ]
     },
     {
