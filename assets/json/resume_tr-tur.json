@@ -181,8 +181,7 @@
       ],
       "keywords": ["Oracle", "SQL tuning", "Kimball", "Star şema", "Veri ambarı"],
       "short": "Legacy veritabanı şemasından Kimball star şemaya yapılan geçişte modelleri ve raporları yeni standartlara uygun şekilde Oracle'a dönüştürüyor, SQL tuning ve optimizasyon yapıyorum.",
-      "startDate": "2026-08-01",
-      "endDate": "2026-12-01"
+      "startDate": "2026-08-01"
     },
     {
       "name": "Yves Rocher France: SAS Viya 4 geçişi",

@@ -181,8 +181,7 @@
       ],
       "keywords": ["Oracle", "SQL tuning", "Kimball", "Star schema", "Data warehouse"],
       "short": "In the migration from a legacy database schema to a Kimball star schema, I transform models and reports to Oracle in line with the new standards and tune and optimize SQL.",
-      "startDate": "2026-08-01",
-      "endDate": "2026-12-01"
+      "startDate": "2026-08-01"
     },
     {
       "name": "Yves Rocher France: SAS Viya 4 migration",
