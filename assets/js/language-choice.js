@@ -8,6 +8,9 @@
 //   "No, thanks" shrinks the note to a small round "EN" or "TR" button, which later pages and later visits show too,
 //   so the visitor is not asked again; clicking that button brings the note back. On an English page "Hayır,
 //   teşekkürler" also counts as choosing English, so that the next English page does not switch to Turkish.
+// - A browser whose first language is not Turkish but which lists Turkish further down, or whose region is Turkey
+//   (such as "en-TR"), is not sent anywhere; it gets the Turkish note on English pages, so the visitor learns that a
+//   Turkish version exists. Safari on the iPhone usually reports a single language, so it is not always caught.
 //
 // Turkish pages live under /tr-tur/ and every page has a twin at the mapped path. The version of the current page
 // is read from the path: GitHub Pages serves the English 404 page for every missing address, Turkish ones included.
@@ -49,8 +52,17 @@
   var path = window.location.pathname;
   var rest = window.location.search + window.location.hash;
   var onTurkishPage = path === TR_PREFIX || path.indexOf(TR_PREFIX + "/") === 0;
-  var browserLanguage = String((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase();
-  var browserTurkish = browserLanguage === "tr" || browserLanguage.indexOf("tr-") === 0;
+  var browserLanguages = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""]).map(function (l) {
+    return String(l || "").toLowerCase();
+  });
+  function isTurkish(l) {
+    return l === "tr" || l.indexOf("tr-") === 0;
+  }
+  var browserTurkish = isTurkish(browserLanguages[0]);
+  // Turkish further down the list, or a Turkish region on any language: the visitor can read the Turkish version too.
+  var browserKnowsTurkish = browserLanguages.some(function (l) {
+    return isTurkish(l) || /-tr$/.test(l);
+  });
   var choseEnglish = local ? local.getItem(CHOICE_KEY) === "en-us" : false;
 
   // An address that points at a part of this page keeps the visitor here: the twin's headings have other ids, and a
@@ -77,7 +89,9 @@
     }
   }
 
-  if (onTurkishPage === browserTurkish) return;
+  // Turkish pages offer English to every browser whose first language is not Turkish; English pages offer Turkish to
+  // every browser that knows Turkish.
+  if (onTurkishPage ? browserTurkish : !browserKnowsTurkish) return;
 
   var note = onTurkishPage
     ? {
