@@ -16,6 +16,7 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
+    {% include post_author.liquid place="top" %}
     <p class="post-meta">
       {{ site.data[site.active_lang].strings.post.created_in }}
       <time datetime="{{ page.date | date_to_xmlschema }}">{% include date_format.liquid format='long' date=page.date %}</time>
@@ -113,8 +114,11 @@ layout: default
     {% endif %}
   {% endif %}
 
-  {% comment %} Author social links sit at the very end of the post, matching the home page. {% endcomment %}
+  {% comment %} The author card and his social links sit at the very end of the post, matching the home page. {% endcomment %}
   {% unless page.social == false %}
-    {% include social_contact.liquid post_footer=true %}
+    <div class="post-social-wrap">
+      {% include post_author.liquid place="bottom" %}
+      {% include social_contact.liquid post_footer=true %}
+    </div>
   {% endunless %}
 </div>

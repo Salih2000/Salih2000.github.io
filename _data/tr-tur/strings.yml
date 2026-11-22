@@ -143,7 +143,9 @@ no_news: Henüz haber yok...
 no_posts: "Henüz yazı yok..."
 pagination:
   page: sayfa
+menu_label: Menü
 post:
+  author_about: Hakkımda
   created_in: "Yayın tarihi:"
   created_by: yazan
   last_updated: "son güncelleme:"

@@ -133,7 +133,9 @@ no_news: No news so far...
 no_posts: "No posts so far..."
 pagination:
   page: page
+menu_label: Menu
 post:
+  author_about: About me
   created_in: Published on
   created_by: by
   last_updated: last updated on

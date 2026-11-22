@@ -392,6 +392,22 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// The word under the menu button on phones, so the three bars read as a menu.
+.navbar-toggler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .navbar-toggler-label {
+    display: block;
+    margin-top: 1px;
+    font-size: 0.65rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: var(--global-text-color);
+  }
+}
+
 .navbar-toggler.collapsed {
   .top-bar {
     transform: rotate(0);
@@ -469,6 +485,81 @@ ul.task-list input[type="checkbox"] {
   margin-bottom: 4rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--global-divider-color);
+}
+
+// The author of a blog post: a short line under the title and a card at the end.
+.post-author {
+  img {
+    object-fit: cover;
+  }
+
+  .post-author-name {
+    color: var(--global-text-color);
+    font-weight: 600;
+  }
+}
+
+.post-author-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.25rem 0 0.75rem;
+
+  img {
+    width: 36px;
+    height: 36px;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    .post-author-name {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.post-social-wrap {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--global-divider-color);
+
+  .post-social {
+    margin-top: 1.5rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+
+.post-author-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: left;
+
+  img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .post-author-name {
+    font-size: 1.1rem;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+
+  .post-author-tagline {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+
+  .post-author-about {
+    font-size: 0.85rem;
+  }
 }
 
 .wechat-modal {

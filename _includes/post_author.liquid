@@ -1,0 +1,35 @@
+{% comment %}
+  The author of a blog post, with his photo and a link to the about page (the home page of the active language;
+  Polyglot adds the language prefix to the link). include.place is "top" for the short line under the title, or
+  "bottom" for the card at the end of the post.
+{% endcomment %}
+{% assign s = site.data[site.active_lang].strings %}
+{% capture author_name %}{{ s.name.first }}{% if s.name.middle %} {{ s.name.middle }}{% endif %} {{ s.name.last }}{% endcapture %}
+{% capture author_photo %}
+  <picture>
+    <source srcset="{{ '/assets/img/prof_pic-480.webp' | relative_url }}" type="image/webp">
+    <img
+      src="{{ '/assets/img/prof_pic.jpg' | relative_url }}"
+      alt="{{ author_name }}"
+      width="{% if include.place == 'top' %}36{% else %}72{% endif %}"
+      height="{% if include.place == 'top' %}36{% else %}72{% endif %}"
+      loading="{% if include.place == 'top' %}eager{% else %}lazy{% endif %}"
+      class="rounded-circle"
+    >
+  </picture>
+{% endcapture %}
+{% if include.place == 'top' %}
+  <a class="post-author post-author-top" href="{{ site.baseurl }}/" title="{{ s.post.author_about }}">
+    {{ author_photo }}
+    <span class="post-author-name">{{ author_name }}</span>
+  </a>
+{% else %}
+  <div class="post-author post-author-bottom">
+    <a href="{{ site.baseurl }}/" class="post-author-photo" tabindex="-1" aria-hidden="true">{{ author_photo }}</a>
+    <div>
+      <a href="{{ site.baseurl }}/" class="post-author-name">{{ author_name }}</a>
+      <div class="post-author-tagline">{{ s.site_tagline }}</div>
+      <a href="{{ site.baseurl }}/" class="post-author-about">{{ s.post.author_about }} &rarr;</a>
+    </div>
+  </div>
+{% endif %}
