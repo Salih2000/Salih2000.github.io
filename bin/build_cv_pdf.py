@@ -92,6 +92,10 @@ ul { margin: 0.15rem 0 0.35rem; padding-left: 0.45rem; list-style: none; }
 li { margin: 0 0 0.12rem; padding-left: 0.9rem; text-indent: -0.9rem; }
 .dot { display: inline-block; width: 0.9rem; text-indent: 0; }
 a { color: inherit; text-decoration: none; }
+/* Short CV: the dates sit at the right end of the job title line. */
+.title-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; break-after: avoid; page-break-after: avoid; }
+.title-row h3 { margin-bottom: 0.05rem; }
+.title-row .dates { white-space: nowrap; }
 """
 
 # "base" is the starting type size in points. When the result has more pages than "max_pages",
@@ -167,10 +171,19 @@ def work_entry(job: dict, labels: dict, with_details: bool) -> str:
     # Title, company and dates on lines of their own: resume parsers split fields by line, and a company and a date
     # range on one line ("Company | 04/2024 - Present") are read as one company name with no dates.
     place = ", ".join(x for x in (job.get("name"), job.get("location")) if x)
+    dates = period(job, labels)
+    if not with_details:
+        # Short CV, no bullets under the job: parsers then read only the first two lines as the job's details,
+        # so title and dates share the first line (as separate pieces of text) and the company is the second.
+        dates_html = f'<span class="dates">{esc(dates)}</span>' if dates else ""
+        out = [f'<div class="entry"><div class="title-row"><h3>{esc(job.get("position", ""))}</h3>{dates_html}</div>']
+        if place:
+            out.append(f'<p class="meta">{esc(place)}</p>')
+        out.append("</div>")
+        return "".join(out)
     out = [f'<div class="entry"><h3>{esc(job.get("position", ""))}</h3>']
     if place:
         out.append(f'<p class="meta">{esc(place)}</p>')
-    dates = period(job, labels)
     if dates:
         out.append(f'<p class="meta">{esc(dates)}</p>')
     if with_details:
