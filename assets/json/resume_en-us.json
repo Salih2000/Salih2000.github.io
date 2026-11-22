@@ -186,14 +186,14 @@
     },
     {
       "name": "Yves Rocher France: SAS Viya 4 migration",
-      "summary": "Contributed to the SAS Viya 4 migration of a large cosmetics retailer, moving legacy analytical assets to a modern architecture.",
+      "summary": "Contributed to the SAS Viya 4 migration of a large cosmetics retailer and took an active part in moving legacy analytical assets to a modern architecture.",
       "highlights": [
-        "Converted 5 Enterprise Guide projects and their SAS code to SAS Studio, and moved selected Enterprise Miner models to Viya Model Studio.",
-        "Supported the conversion of 72 Visual Data Builder flows to SAS Studio Flows and the migration of 116 Visual Analytics reports to SAS Viya 4.",
+        "Converted SAS Enterprise Guide projects and their SAS code to SAS Studio on the modern Viya 4 platform, and converted and moved selected Enterprise Miner models to the corresponding modern processes in Viya 4 Model Studio.",
+        "Supported the conversion of Visual Data Builder flows to SAS Studio Flows and the migration of Visual Analytics reports to SAS Viya 4.",
         "Optimized the data pipelines that feed the machine-learning models.",
         "Delivered part of the on-the-job training."
       ],
-      "keywords": ["SAS Viya 4", "SAS Studio", "Visual Analytics", "Enterprise Guide", "Enterprise Miner"],
+      "keywords": ["SAS Viya 4", "SAS Studio", "Visual Analytics", "Enterprise Guide", "Enterprise Miner", "PROC SQL", "CAS programming"],
       "short": "Moved 5 Enterprise Guide projects, 72 data flows and 116 Visual Analytics reports to SAS Viya 4 and delivered part of the client training.",
       "startDate": "2026-02-01",
       "endDate": "2026-04-01"
@@ -202,7 +202,7 @@
       "name": "Türk Telekom: SAS Viya 4 optimization and consulting",
       "summary": "Following the SAS Viya 4 migration, continued to provide maintenance and support, and worked on model performance tuning, developer-tool integrations and platform consulting in line with business-unit requests.",
       "highlights": [
-        "Resolved performance bottlenecks and runtime issues in existing analytical models, and guided teams on sound SAS development standards and practices.",
+        "Resolved performance bottlenecks and runtime issues in existing analytical models, and guided teams on sound SAS and Oracle SQL development standards and practices.",
         "Set up Git/Bitbucket, VS Code, SAS SDK and MCP integrations so that the Viya modules could be used more effectively.",
         "Connected SAS Viya with Python, SQL, Oracle and Hadoop so teams could build and run processes across platforms."
       ],

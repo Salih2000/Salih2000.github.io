@@ -186,14 +186,14 @@
     },
     {
       "name": "Yves Rocher France: SAS Viya 4 geçişi",
-      "summary": "Büyük bir kozmetik perakendecisinin SAS Viya 4 geçişine katkı sağladım; eski analitik varlıklar modern bir mimariye taşındı.",
+      "summary": "Büyük bir kozmetik perakendecisinin SAS Viya 4 geçişine katkı sağladım; eski analitik varlıkların modern bir mimariye taşınması sürecinde aktif rol aldım.",
       "highlights": [
-        "5 Enterprise Guide projesini ve SAS kodlarını SAS Studio'ya dönüştürdüm, seçilen Enterprise Miner modellerini Viya Model Studio'ya taşıdım.",
-        "72 Visual Data Builder akışının SAS Studio Flows'a dönüştürülmesine ve 116 Visual Analytics raporunun SAS Viya 4'e taşınmasına destek verdim.",
+        "SAS Enterprise Guide projelerini ve SAS kodlarını modern Viya 4 platformunda bulunan SAS Studio'ya dönüştürdüm; seçilen Enterprise Miner modellerini Viya 4 Model Studio'daki ilgili modern süreçlere dönüştürüp taşıdım.",
+        "Visual Data Builder akışlarının SAS Studio Flows'a dönüştürülmesine ve Visual Analytics raporlarının SAS Viya 4'e taşınmasına destek verdim.",
         "Makine öğrenmesi modellerini besleyen veri hatlarını iyileştirdim.",
         "İş başı eğitiminin bir bölümünü verdim."
       ],
-      "keywords": ["SAS Viya 4", "SAS Studio", "Visual Analytics", "Enterprise Guide", "Enterprise Miner"],
+      "keywords": ["SAS Viya 4", "SAS Studio", "Visual Analytics", "Enterprise Guide", "Enterprise Miner", "PROC SQL", "CAS programlama"],
       "short": "SAS Viya 4 geçişinde 5 Enterprise Guide projesinin, 72 veri akışının ve 116 Visual Analytics raporunun taşınmasında çalıştım ve müşteri eğitiminin bir bölümünü verdim.",
       "startDate": "2026-02-01",
       "endDate": "2026-04-01"
@@ -202,7 +202,7 @@
       "name": "Türk Telekom: SAS Viya 4 optimizasyon ve danışmanlık",
       "summary": "SAS Viya 4 geçişinin ardından bakım ve destek vermeye devam ettim; iş birimlerinin talepleri doğrultusunda mevcut modellerin iyileştirilmesi, geliştirici araçlarıyla entegrasyon ve platform danışmanlığı işlerini yürüttüm.",
       "highlights": [
-        "Mevcut analitik modellerdeki performans darboğazlarını ve çalışma zamanı hatalarını giderdim; iş birimlerine doğru SAS geliştirme standartları ve yöntemleri konusunda rehberlik ettim.",
+        "Mevcut analitik modellerdeki performans darboğazlarını ve çalışma zamanı hatalarını giderdim; iş birimlerine doğru SAS ve Oracle SQL geliştirme standartları ve yöntemleri konusunda rehberlik ettim.",
         "Viya modüllerinin daha verimli kullanılabilmesi için Git/Bitbucket, VS Code, SAS SDK ve MCP entegrasyonlarını kurdum.",
         "SAS Viya'yı Python, SQL, Oracle ve Hadoop ortamlarıyla birlikte çalıştırarak ekiplerin farklı platformlarda süreç geliştirebilmesini sağladım."
       ],
