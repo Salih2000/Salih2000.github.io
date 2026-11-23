@@ -1,9 +1,23 @@
 ---
 permalink: /robots.txt
 ---
-User-agent: *
-Content-Signal: search=yes, ai-input=yes, ai-train=no
-Disallow:
+# Training AI models on this site's text needs a license; text and data mining rights are reserved.
+# This group comes first so that simple parsers, which take the first group whose name they find inside
+# their own, do not match Applebot-Extended to the Applebot group below.
+User-agent: __usage_ai-training
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Applebot-Extended
+User-agent: Meta-ExternalAgent
+User-agent: Bytespider
+Disallow: /
+
+# Google Search and Gemini stay open. Google-Extended is named on purpose: without it, Google reads the
+# __usage_ai-training rule above as a Google-Extended opt-out, which would also end Gemini's citations.
+User-agent: Googlebot
+User-agent: Google-Extended
+Allow: /
 
 # The search engines and the assistants that show their sources, by name, so their access is explicit.
 User-agent: Bingbot
@@ -18,20 +32,8 @@ User-agent: YandexBot
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
-# Google Search and Gemini stay open. Google-Extended is named on purpose: without it, Google reads the
-# __usage_ai-training rule below as a Google-Extended opt-out, which would also end Gemini's citations.
-User-agent: Googlebot
-User-agent: Google-Extended
-Allow: /
-
-# Training AI models on this site's text needs a license; text and data mining rights are reserved.
-User-agent: __usage_ai-training
-User-agent: GPTBot
-User-agent: ClaudeBot
-User-agent: CCBot
-User-agent: Applebot-Extended
-User-agent: Meta-ExternalAgent
-User-agent: Bytespider
-Disallow: /
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Disallow:
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
