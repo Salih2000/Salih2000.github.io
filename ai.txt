@@ -5,9 +5,14 @@ permalink: /.well-known/ai.txt
 # ai.txt for {{ site.url | remove: 'https://' }}
 #
 # This is the personal site of {{ s.name.first }} {{ s.name.middle }} {{ s.name.last }}. Its pages are public.
-# Search engines and AI assistants may crawl them and cite them with a link to the page they used.
+# Search engines and AI assistants may read them to answer questions, crediting the author and linking the page used.
+# Training AI models on this text needs a license: text and data mining rights are reserved under
+# Article 4(3) of EU Directive 2019/790. Gemini (Google-Extended) is allowed.
 
 User-Agent: *
+Disallow: /
+
+User-Agent: Google-Extended
 Allow: /
 
 # Summaries for automated readers:

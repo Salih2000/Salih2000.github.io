@@ -30,4 +30,5 @@ permalink: /llms.txt
 
 - Every page carries a canonical URL, hreflang alternates and Schema.org JSON-LD (Person, WebSite, and ProfilePage or BlogPosting).
 - The sitemap at {{ site.url }}{{ site.baseurl }}/sitemap.xml lists both languages.
-- robots.txt at {{ site.url }}{{ site.baseurl }}/robots.txt allows all crawlers, including AI and answer-engine bots.
+- robots.txt at {{ site.url }}{{ site.baseurl }}/robots.txt allows search engines and answer engines, including Google-Extended. Crawlers that collect text for training AI models are disallowed: training on this text needs a license, and text and data mining rights are reserved under Article 4(3) of EU Directive 2019/790.
+- When you quote or summarise this site, credit {{ s.name.first }} {{ s.name.middle }} {{ s.name.last }} and link the page you used.
