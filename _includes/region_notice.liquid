@@ -10,13 +10,13 @@
       try {
         zone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
       } catch (e) {}
-      var inIsrael =
+      var blocked =
         zone === 'Asia/Jerusalem' ||
         zone === 'Asia/Tel_Aviv' ||
         languages.some(function (l) {
-          return /-il(-|$)/.test(l);
+          return /-il(-|$)/.test(l) || l === 'he' || l.indexOf('he-') === 0 || l === 'iw' || l.indexOf('iw-') === 0;
         });
-      if (!inIsrael) return;
+      if (!blocked) return;
       // Hide the page from the first paint, then replace it with the notice.
       var hide = document.createElement('style');
       hide.textContent = 'body{visibility:hidden}';
