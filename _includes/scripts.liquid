@@ -301,6 +301,9 @@
     integrity="sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ"
   ></script>
   <script defer src="{{ '/assets/js/read-count.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% elsif site.read_counts.goatcounter and page.page_id == 'blog' %}
+  <!-- The blog list only shows the read counts, so it needs read-count.js but not count.js -->
+  <script defer src="{{ '/assets/js/read-count.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
 {% endif %}
 
 {% if site.enable_progressbar %}

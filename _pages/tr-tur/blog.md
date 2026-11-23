@@ -147,6 +147,7 @@ pagination:
       <p class="post-meta">
         {{ read_time }} dk okuma &nbsp; &middot; &nbsp;
         {% include date_format.liquid format="long" date=post.date %}
+        {% include read_count.liquid post=post separator="&nbsp; &middot; &nbsp;" %}
         {% if post.external_source %}
         &nbsp; &middot; &nbsp; {{ post.external_source }}
         {% endif %}

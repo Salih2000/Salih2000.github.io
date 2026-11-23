@@ -1,9 +1,10 @@
-// Read count of a blog post, shown in the post header (markup in _includes/read_count.liquid).
+// Read counts of blog posts, shown in the post header and in the blog list (markup in _includes/read_count.liquid).
 //
 // GoatCounter keeps the numbers. A browser adds one read to a post the first time it stays on the post for 10 seconds
 // with the tab in view, and remembers that in localStorage, so reloads and later visits add nothing. GoatCounter itself
 // also drops a second hit on the same post from the same IP address and browser within 8 hours, and its count.js skips
 // bots, pre-rendered pages, frames, local addresses and browsers that once opened a page with #toggle-goatcounter.
+// Only the post's own page adds a read (the box marked data-read-count-own); the blog list only shows the numbers.
 // Only the site's own address adds reads; a local preview or a copy of the site just shows the number.
 //
 // GoatCounter caches the number it hands out for up to four hours, so a new read shows up later. When the number
@@ -11,13 +12,17 @@
 (function () {
   "use strict";
 
-  var box = document.querySelector("[data-read-count]");
-  if (!box) return;
+  var boxes = document.querySelectorAll("[data-read-count]");
+  if (!boxes.length) return;
 
   var DWELL_MS = 10000;
-  var site = box.getAttribute("data-goatcounter").replace(/\/+$/, "");
-  var path = box.getAttribute("data-path");
+  var own = document.querySelector("[data-read-count-own]");
+  var path = own && own.getAttribute("data-path");
   var storageKey = "read-count:" + path;
+
+  function siteOf(box) {
+    return box.getAttribute("data-goatcounter").replace(/\/+$/, "");
+  }
 
   function alreadyCounted() {
     try {
@@ -42,9 +47,9 @@
     }
   }
 
-  function showCount() {
+  function showCount(box) {
     if (!window.fetch) return;
-    fetch(site + "/counter/" + encodeURIComponent(path) + ".json", { credentials: "omit" })
+    fetch(siteOf(box) + "/counter/" + encodeURIComponent(box.getAttribute("data-path")) + ".json", { credentials: "omit" })
       .then(function (response) {
         // 404 means no one has read the post yet.
         if (!response.ok) throw new Error("HTTP " + response.status);
@@ -107,6 +112,6 @@
     start();
   }
 
-  showCount();
-  if (location.hostname === box.getAttribute("data-host") && !alreadyCounted()) countAfterDwell();
+  Array.prototype.forEach.call(boxes, showCount);
+  if (own && location.hostname === own.getAttribute("data-host") && !alreadyCounted()) countAfterDwell();
 })();
