@@ -30,7 +30,11 @@ Bu hatalardan biriyle siz de karşılaştıysanız ve hemen ne yapabileceğinizi
 <!-- prettier-ignore-start -->
 > ##### Kısaca
 >
-> MinIO'nun topluluk sürümü Ekim 2025'ten itibaren yalnızca kaynak kod olarak dağıtıldı, Aralık 2025'te bakım moduna alındı ve deposu Şubat 2026'da arşivlendi. Eylül 2026'da `minio/minio` imajları Docker Hub'dan kalktı, quay.io'daki imajlar da anonim indirmeye kapandı. Lisans hâlâ AGPLv3, fakat topluluk sürümü artık yeni sürüm, hazır imaj ya da güvenlik yaması almıyor. Ben üzerinde çalıştığım uygulamada MinIO'yu, aynı beş fonksiyonun arkasında çalışan küçük bir disk deposuyla değiştirdim ve S3 desteğini isteğe bağlı bıraktım. Gerçekten bir S3 sunucusuna ihtiyacınız varsa, yazının ilerisinde versitygw, Garage, SeaweedFS, RustFS, Ceph ve MinIO çatallarını karşılaştırıyorum.
+> - MinIO'nun topluluk sürümü Ekim 2025'ten itibaren yalnızca kaynak kod olarak dağıtıldı, Aralık 2025'te bakım moduna alındı ve deposu Şubat 2026'da arşivlendi.
+> - Eylül 2026'da `minio/minio` imajları Docker Hub'dan kalktı, quay.io'daki imajlar da anonim indirmeye kapandı.
+> - Lisans hâlâ AGPLv3, fakat topluluk sürümü artık yeni sürüm, hazır imaj ya da güvenlik yaması almıyor.
+> - Ben üzerinde çalıştığım uygulamada MinIO'yu, aynı beş fonksiyonun arkasında çalışan küçük bir disk deposuyla değiştirdim ve S3 desteğini isteğe bağlı bıraktım.
+> - Gerçekten bir S3 sunucusuna ihtiyacınız varsa, yazının ilerisinde versitygw, Garage, SeaweedFS, RustFS, Ceph ve MinIO çatallarını karşılaştırıyorum.
 {: .block-tip }
 <!-- prettier-ignore-end -->
 

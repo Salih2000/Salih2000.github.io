@@ -30,7 +30,11 @@ If you have run into one of these errors too and want to see right away what you
 <!-- prettier-ignore-start -->
 > ##### In short
 >
-> MinIO's community edition has been distributed as source code only since October 2025; it went into maintenance mode in December 2025, and its repository was archived in February 2026. In September 2026 the `minio/minio` images disappeared from Docker Hub, and the images on quay.io stopped serving anonymous pulls. The license is still AGPLv3, but the community edition no longer gets new releases, prebuilt images or security fixes. In the product I work on, I replaced MinIO with a small disk store behind the same five functions and kept S3 as an option. If you really do need an S3 server, further down I compare versitygw, Garage, SeaweedFS, RustFS, Ceph and the MinIO forks.
+> - MinIO's community edition has been distributed as source code only since October 2025; it went into maintenance mode in December 2025, and its repository was archived in February 2026.
+> - In September 2026 the `minio/minio` images disappeared from Docker Hub, and the images on quay.io stopped serving anonymous pulls.
+> - The license is still AGPLv3, but the community edition no longer gets new releases, prebuilt images or security fixes.
+> - In the product I work on, I replaced MinIO with a small disk store behind the same five functions and kept S3 as an option.
+> - If you really do need an S3 server, further down I compare versitygw, Garage, SeaweedFS, RustFS, Ceph and the MinIO forks.
 {: .block-tip }
 <!-- prettier-ignore-end -->
 
