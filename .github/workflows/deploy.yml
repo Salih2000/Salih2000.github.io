@@ -77,6 +77,8 @@ jobs:
     # available images: https://github.com/actions/runner-images#available-images
     # Pinned to 24.04: on ubuntu-26.04 (ubuntu-latest since November 2026) setup-ruby has no build of the Ruby version pinned below.
     runs-on: ubuntu-24.04
+    # A normal deploy takes 3–5 minutes; on 2026-11-23 one hung in the build step for over an hour.
+    timeout-minutes: 20
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
