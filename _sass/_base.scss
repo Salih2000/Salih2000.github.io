@@ -653,6 +653,19 @@ footer.fixed-bottom {
   }
 }
 
+// Phones: the footer scrolls with the page instead of staying fixed over the text, which leaves more of the
+// small screen for reading.
+@media (max-width: 575.98px) {
+  body:not(.sticky-bottom-footer) {
+    padding-bottom: 0;
+  }
+
+  footer.fixed-bottom {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
   padding-top: 40px;
@@ -1367,6 +1380,80 @@ nav[data-toggle="toc"] {
 
 #toc-sidebar {
   z-index: 1;
+}
+
+// Contents list for phones, where the sidebar contents are hidden (filled by mobile-toc.js)
+.mobile-toc {
+  margin: 0 0 1.5rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.5rem;
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--global-theme-color);
+  }
+
+  ol {
+    margin: 0.6rem 0 0.2rem;
+    padding-left: 1.3rem;
+  }
+
+  li {
+    margin: 0.45rem 0;
+    line-height: 1.35;
+  }
+
+  a {
+    color: var(--global-text-color);
+  }
+}
+
+// Phones: wide post tables become one block per row, each cell under its column name (phone-tables.js adds
+// the class and the labels).
+@media (max-width: 575.98px) {
+  table.stack-on-phone {
+    display: block;
+    overflow-x: visible;
+
+    thead {
+      display: none;
+    }
+
+    tbody,
+    tr,
+    td {
+      display: block;
+      width: 100%;
+    }
+
+    tr {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--global-divider-color);
+    }
+
+    td {
+      padding: 0.15rem 0;
+      border: 0;
+      text-align: left !important;
+    }
+
+    td::before {
+      content: attr(data-label) ": ";
+      font-weight: 600;
+      color: var(--global-text-color-light);
+    }
+
+    td:first-child {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    td:first-child::before {
+      content: none;
+    }
+  }
 }
 
 .echarts {

@@ -146,6 +146,7 @@ pagination:
 menu_label: Menü
 post:
   author_about: Hakkımda
+  contents: İçindekiler
   created_in: "Yayın tarihi:"
   created_by: yazan
   last_updated: "son güncelleme:"

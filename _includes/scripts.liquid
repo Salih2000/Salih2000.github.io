@@ -171,6 +171,13 @@
 {% if page.toc and page.toc.sidebar %}
   <!-- Sidebar Table of Contents -->
   <script defer src="{{ '/assets/js/bootstrap-toc.min.js' | relative_url | bust_file_cache }}"></script>
+  <!-- The same contents as a collapsed list for phones, where the sidebar is hidden -->
+  <script defer src="{{ '/assets/js/mobile-toc.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}
+
+{% if page.layout == 'post' %}
+  <!-- Wide tables become one block per row on phones -->
+  <script defer src="{{ '/assets/js/phone-tables.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
 {% if page.pretty_table %}

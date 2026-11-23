@@ -78,6 +78,13 @@ layout: default
       </div>
       <hr>
     {% endif %}
+    {% if page.toc and page.toc.sidebar %}
+      <!-- Phones don't show the sidebar contents, so they get this collapsed list instead; mobile-toc.js fills it. -->
+      <details class="mobile-toc d-sm-none" hidden>
+        <summary>{{ site.data[site.active_lang].strings.post.contents }}</summary>
+        <ol></ol>
+      </details>
+    {% endif %}
     <div id="markdown-content">
       {{ content }}
     </div>
