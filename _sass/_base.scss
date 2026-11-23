@@ -510,6 +510,17 @@ ul.task-list input[type="checkbox"] {
     height: 36px;
   }
 
+  .post-author-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  .post-author-tagline {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+  }
+
   &:hover {
     text-decoration: none;
 

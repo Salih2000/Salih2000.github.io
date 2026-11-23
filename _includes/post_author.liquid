@@ -21,7 +21,10 @@
 {% if include.place == 'top' %}
   <a class="post-author post-author-top" href="{{ site.baseurl }}/" title="{{ s.post.author_about }}">
     {{ author_photo }}
-    <span class="post-author-name">{{ author_name }}</span>
+    <span class="post-author-text">
+      <span class="post-author-name">{{ author_name }}</span>
+      <span class="post-author-tagline">{{ s.site_tagline }}</span>
+    </span>
   </a>
 {% else %}
   <div class="post-author post-author-bottom">
