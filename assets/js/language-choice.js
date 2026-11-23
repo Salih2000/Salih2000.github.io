@@ -11,6 +11,8 @@
 // - A browser whose first language is not Turkish but which lists Turkish further down, or whose region is Turkey
 //   (such as "en-TR"), is not sent anywhere; it gets the Turkish note on English pages, so the visitor learns that a
 //   Turkish version exists. Safari on the iPhone usually reports a single language, so it is not always caught.
+// - Azerbaijani (az, az-AZ, az-Latn-AZ, anywhere in the list) counts the same way: Azerbaijani speakers read Turkish
+//   easily, so they get the Turkish note on English pages too, but are never sent to Turkish automatically.
 //
 // Turkish pages live under /tr-tur/ and every page has a twin at the mapped path. The version of the current page
 // is read from the path: GitHub Pages serves the English 404 page for every missing address, Turkish ones included.
@@ -58,12 +60,17 @@
   function isTurkish(l) {
     return l === "tr" || l.indexOf("tr-") === 0;
   }
+  function isAzerbaijani(l) {
+    return l === "az" || l.indexOf("az-") === 0;
+  }
   var browserTurkish = isTurkish(browserLanguages[0]);
-  // Turkish further down the list, or a Turkish region on any language: the visitor can read the Turkish version too.
+  // Turkish further down the list, a Turkish region on any language, or Azerbaijani: the visitor can read the
+  // Turkish version too.
   var browserKnowsTurkish = browserLanguages.some(function (l) {
-    return isTurkish(l) || /-tr$/.test(l);
+    return isTurkish(l) || /-tr$/.test(l) || isAzerbaijani(l);
   });
   var choseEnglish = local ? local.getItem(CHOICE_KEY) === "en-us" : false;
+  var choseTurkish = local ? local.getItem(CHOICE_KEY) === "tr-tur" : false;
 
   // An address that points at a part of this page keeps the visitor here: the twin's headings have other ids, and a
   // passage link's text (#id:~:text=...) only matches this language. Browsers hide the ":~:text=" part from scripts but
@@ -89,9 +96,10 @@
     }
   }
 
-  // Turkish pages offer English to every browser whose first language is not Turkish; English pages offer Turkish to
-  // every browser that knows Turkish.
-  if (onTurkishPage ? browserTurkish : !browserKnowsTurkish) return;
+  // Turkish pages offer English to every browser whose first language is not Turkish, unless the visitor chose Turkish
+  // (with the toggle or with the note on an English page, so they are not offered English right after choosing
+  // Turkish); English pages offer Turkish to every browser that knows Turkish.
+  if (onTurkishPage ? browserTurkish || choseTurkish : !browserKnowsTurkish) return;
 
   var note = onTurkishPage
     ? {
