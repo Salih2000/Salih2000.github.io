@@ -1,0 +1,2 @@
+Commit that first published the reservation: 3d7698e981ed228137fabc12def547767a536d24
+Commit with the final robots.txt order: 61de8f9d317a0ef822d70243d4923bbb5bac5dfe

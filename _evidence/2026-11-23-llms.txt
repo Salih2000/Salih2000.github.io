@@ -1,0 +1,51 @@
+# Salih A. Kilic
+
+> Salih A. Kilic is a SAS programming and data management specialist in Istanbul: SAS Viya migrations, SQL and ETL on Oracle and Hadoop, AI automations.
+
+Salih Kilic is a Data Management, Data Engineering and SAS Consulting Specialist at Sade Yazılım ve Danışmanlık. This personal site (https://salihkilic.net) is available in English and Turkish; the Turkish pages live under `/tr-tur/`.
+
+## Expertise
+
+- SAS
+- SAS programming
+- SAS Viya
+- SAS 9.4
+- SAS migration and modernization
+- SQL
+- Oracle Database
+- Data management
+- Data engineering
+- ETL
+- Data warehouse transformation
+- Data quality
+- Data governance
+- Data lineage
+- Data migration
+- Hadoop
+- Vertica
+- Python
+- AI-driven development
+- Large language models
+
+## Key pages
+
+- [About](https://salihkilic.net/): background, current focus and contact links
+- [CV](https://salihkilic.net/cv/): experience, client projects, skills and certificates
+- [Blog](https://salihkilic.net/blog/): posts on data engineering, open-source dependencies and tooling
+- [Repositories](https://salihkilic.net/repositories/): public code repositories
+
+## Posts
+
+- [Replacing MinIO: open source is a license, not a promise](https://salihkilic.net/blog/2026/replacing-minio/) (2026-11-18): MinIO's community edition was wound down step by step and its Docker images are gone. How I replaced it in a product that shipped with it, the MinIO alternatives I looked at, and what it taught me about open source.
+- [Why I moved my site from React.js to Jekyll](https://salihkilic.net/blog/2026/neden-jekyll-tasidim/) (2026-09-20): The story of why I moved my personal site, which started as a React.js project, to Jekyll/GitHub Pages.
+
+## Optional
+
+- [Full text](https://salihkilic.net/llms-full.txt): the CV in full and the text of every post, in one file
+
+## Notes for automated readers
+
+- Every page carries a canonical URL, hreflang alternates and Schema.org JSON-LD (Person, WebSite, and ProfilePage or BlogPosting).
+- The sitemap at https://salihkilic.net/sitemap.xml lists both languages.
+- robots.txt at https://salihkilic.net/robots.txt allows search engines and answer engines, including Google-Extended. Crawlers that collect text for training AI models are disallowed: training on this text needs a license, and text and data mining rights are reserved under Article 4(3) of EU Directive 2019/790.
+- When you quote or summarise this site, credit Salih A. Kilic and link the page you used.

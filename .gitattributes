@@ -1,2 +1,5 @@
 # Force LF line endings, needed for Docker to work on Windows
 *.sh text eol=lf
+
+# Evidence files must stay byte-for-byte identical, or their timestamps no longer verify
+_evidence/** -text
