@@ -37,3 +37,4 @@ Content-Signal: search=yes, ai-input=yes, ai-train=no
 Disallow:
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
+License: {{ site.baseurl | prepend: site.url }}/rsl.xml

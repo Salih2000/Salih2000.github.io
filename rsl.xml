@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsl xmlns="https://rslstandard.org/rsl">
+  <content url="/">
+    <license>
+      <permits type="usage">ai-all</permits>
+      <payment>
+        <standard>https://internetcollective.org/license</standard>
+      </payment>
+    </license>
+  </content>
+  <!-- Theme code, fonts and some images under /assets/ belong to others, so they are not offered for licensing. -->
+  <content url="/assets/">
+    <license>
+      <prohibits type="usage">ai-all</prohibits>
+    </license>
+  </content>
+</rsl>
