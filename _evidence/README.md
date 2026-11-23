@@ -37,7 +37,7 @@ The plain addresses had just been captured, so the Wayback Machine returned the 
 
 ### Copies as served, with OpenTimestamps proofs
 
-Each file was fetched from the live site at 08:16 UTC and its SHA-256 sent to the alice and bob OpenTimestamps calendars at 08:17–08:18 UTC. The proofs are pending until the calendars anchor them in a Bitcoin block (a few hours); after that, run `ots upgrade` on the `.ots` files and commit the result, then anyone can check them with `ots verify`.
+Each file was fetched from the live site at 08:16 UTC and its SHA-256 sent to the alice and bob OpenTimestamps calendars at 08:17–08:18 UTC. The calendars anchored all four proofs in Bitcoin block 977177 the same day, and the `.ots` files here already include that anchor, so anyone can check them with `ots verify`.
 
 | File                     | SHA-256                                                            |
 | ------------------------ | ------------------------------------------------------------------ |
