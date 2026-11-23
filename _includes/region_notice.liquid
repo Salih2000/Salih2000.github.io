@@ -1,0 +1,37 @@
+{% comment %}Regional availability notice, shown before the page renders. Crawlers are not affected.{% endcomment %}
+<script>
+  (function () {
+    try {
+      if (/bot|crawl|spider|slurp|preview|facebookexternalhit|whatsapp|telegram|lighthouse/i.test(navigator.userAgent || '')) return;
+      var languages = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).map(function (l) {
+        return String(l || '').toLowerCase();
+      });
+      var zone = '';
+      try {
+        zone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      } catch (e) {}
+      var inIsrael =
+        zone === 'Asia/Jerusalem' ||
+        zone === 'Asia/Tel_Aviv' ||
+        languages.some(function (l) {
+          return /-il(-|$)/.test(l);
+        });
+      if (!inIsrael) return;
+      // Hide the page from the first paint, then replace it with the notice.
+      var hide = document.createElement('style');
+      hide.textContent = 'body{visibility:hidden}';
+      document.head.appendChild(hide);
+      var show = function () {
+        document.title = 'Not available in your country';
+        document.body.innerHTML =
+          '<main style="max-width:36rem;margin:20vh auto 0;padding:0 1.25rem;text-align:center;font-family:system-ui,sans-serif;line-height:1.5">' +
+          '<p lang="en" style="font-size:1.35rem;font-weight:600;margin:0 0 .75rem">Sorry, this content is not available in your country.</p>' +
+          '<p lang="tr" style="font-size:1.05rem;margin:0;opacity:.75">Üzgünüz, bu içerik ülkenizde kullanılamıyor.</p>' +
+          '</main>';
+        hide.parentNode && hide.parentNode.removeChild(hide);
+      };
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', show);
+      else show();
+    } catch (e) {}
+  })();
+</script>

@@ -5,6 +5,8 @@
   }
 </script>
 
+{% include region_notice.liquid %}
+
 <!-- Language version: Turkish browsers get the Turkish pages, everyone else gets a note on Turkish pages that links to English -->
 {% if page.url == '/404.html' %}
   <meta name="x-not-found" content="true">
