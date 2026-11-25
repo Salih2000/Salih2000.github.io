@@ -17,12 +17,9 @@ layout: default
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
-            {% unless page.cv_pdf contains '://' %}
-              data-cv-download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}"
-              data-cv-lang="{{ site.data[site.active_lang].strings.cv.download_file_lang }}"
-              download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}_{{ site.data[site.active_lang].strings.cv.download_file_lang }}.pdf"
-            {% endunless %}
             class="float-right"
+            title="{{ site.data[site.active_lang].strings.cv.open_long }}"
+            aria-label="{{ site.data[site.active_lang].strings.cv.open_long }}"
           >
             <i class="fa-solid fa-file-pdf"></i>
           </a>
@@ -74,12 +71,9 @@ layout: default
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
-            {% unless page.cv_pdf contains '://' %}
-              data-cv-download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}"
-              data-cv-lang="{{ site.data[site.active_lang].strings.cv.download_file_lang }}"
-              download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}_{{ site.data[site.active_lang].strings.cv.download_file_lang }}.pdf"
-            {% endunless %}
             class="float-right"
+            title="{{ site.data[site.active_lang].strings.cv.open_long }}"
+            aria-label="{{ site.data[site.active_lang].strings.cv.open_long }}"
           >
             <i class="fa-solid fa-file-pdf"></i>
           </a>
@@ -89,27 +83,41 @@ layout: default
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
       {% if page.cv_pdf_short %}
+        {% comment %}
+          Each CV has two links: its name opens the PDF in a new tab, and the arrow after it downloads the file under a
+          proper name (assets/js/cv-download.js adds the date).
+        {% endcomment %}
+        {% assign cv_strings = site.data[site.active_lang].strings.cv %}
+        {% assign cv_pdf_dir = site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl | append: '/' %}
         <p class="post-description">
+          <a href="{{ cv_pdf_dir }}{{ page.cv_pdf }}" target="_blank" rel="noopener noreferrer">
+            {{- cv_strings.open_long -}}
+          </a>
           <a
-            href="{{ page.cv_pdf | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cv-download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}"
-            data-cv-lang="{{ site.data[site.active_lang].strings.cv.download_file_lang }}"
-            download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}_{{ site.data[site.active_lang].strings.cv.download_file_lang }}.pdf"
+            href="{{ cv_pdf_dir }}{{ page.cv_pdf }}"
+            class="px-1 py-2"
+            title="{{ cv_strings.download_long }}"
+            aria-label="{{ cv_strings.download_long }}"
+            data-cv-download="{{ cv_strings.download_file }}_{{ cv_strings.download_file_long }}"
+            data-cv-lang="{{ cv_strings.download_file_lang }}"
+            download="{{ cv_strings.download_file }}_{{ cv_strings.download_file_long }}_{{ cv_strings.download_file_lang }}.pdf"
           >
-            {{- site.data[site.active_lang].strings.cv.download_long -}}
+            <i class="fa-solid fa-download"></i>
           </a>
           &middot;
+          <a href="{{ cv_pdf_dir }}{{ page.cv_pdf_short }}" target="_blank" rel="noopener noreferrer">
+            {{- cv_strings.open_short -}}
+          </a>
           <a
-            href="{{ page.cv_pdf_short | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cv-download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_short }}"
-            data-cv-lang="{{ site.data[site.active_lang].strings.cv.download_file_lang }}"
-            download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_short }}_{{ site.data[site.active_lang].strings.cv.download_file_lang }}.pdf"
+            href="{{ cv_pdf_dir }}{{ page.cv_pdf_short }}"
+            class="px-1 py-2"
+            title="{{ cv_strings.download_short }}"
+            aria-label="{{ cv_strings.download_short }}"
+            data-cv-download="{{ cv_strings.download_file }}_{{ cv_strings.download_file_short }}"
+            data-cv-lang="{{ cv_strings.download_file_lang }}"
+            download="{{ cv_strings.download_file }}_{{ cv_strings.download_file_short }}_{{ cv_strings.download_file_lang }}.pdf"
           >
-            {{- site.data[site.active_lang].strings.cv.download_short -}}
+            <i class="fa-solid fa-download"></i>
           </a>
         </p>
       {% endif %}

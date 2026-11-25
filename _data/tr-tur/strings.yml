@@ -80,6 +80,9 @@ cv:
   location: Konum
   name: Ad
   network: Ağ
+  # The CV's name opens the PDF in a new tab; download_long and download_short label the download arrows after them.
+  open_long: "Uzun CV (PDF)"
+  open_short: "Tek sayfalık CV (PDF)"
   organization: Organizasyon
   phone: Telefon
   position: Pozisyon

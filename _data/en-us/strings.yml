@@ -70,6 +70,9 @@ cv:
   location: Location
   name: Name
   network: Network
+  # The CV's name opens the PDF in a new tab; download_long and download_short label the download arrows after them.
+  open_long: "Full CV (PDF)"
+  open_short: "One-page CV (PDF)"
   organization: Organization
   phone: Phone
   position: Position
