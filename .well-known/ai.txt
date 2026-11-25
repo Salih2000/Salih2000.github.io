@@ -1,0 +1,18 @@
+# ai.txt for salihkilic.net
+#
+# This is the personal site of Salih A. Kilic. Its pages are public.
+# Search engines and AI assistants may read them to answer questions, crediting the author and linking the page used.
+# Training AI models on this text needs a license: text and data mining rights are reserved under
+# Article 4(3) of EU Directive 2019/790. Gemini (Google-Extended) is allowed.
+
+User-Agent: *
+Disallow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+# Summaries for automated readers:
+#   https://salihkilic.net/llms.txt
+#   https://salihkilic.net/llms-full.txt
+#   https://salihkilic.net/ai/summary.json
+# Sitemap: https://salihkilic.net/sitemap.xml

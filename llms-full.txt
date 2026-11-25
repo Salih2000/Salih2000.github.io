@@ -1,0 +1,652 @@
+# Salih A. Kilic
+
+> Salih A. Kilic is a SAS programming and data management specialist in Istanbul: SAS Viya migrations, SQL and ETL on Oracle and Hadoop, AI automations.
+
+https://salihkilic.net/ · https://salihkilic.net/cv/ · https://salihkilic.net/blog/ · https://salihkilic.net/llms.txt
+
+## Summary
+
+Data Management, Data Engineering and SAS Programming Consultant. I am a data management, data engineering and SAS consulting specialist. For enterprise clients in telecom, energy, insurance, retail and fintech, I take part in SAS 9.4 and SAS Viya migrations, data warehouse transformations, and performance tuning and data quality work. I develop SQL and ETL on Oracle, Hadoop, Vertica, PostgreSQL and similar data platforms. I also work on AI automations and AI-driven transformations, where I orchestrate agents, add AI to existing ETL processes and build KVKK- and GDPR-compliant custom LLM assistants and chatbots without sharing company data.
+
+## Work
+
+### Data Management Assistant Specialist, Sade Yazılım ve Danışmanlık (2024-04 – Present)
+
+SAS and data management consulting, technical support and project delivery for enterprise clients in energy, telecom, finance and insurance, retail and e-commerce, and the public sector.
+
+- Take part in SAS migration and modernization projects from SAS 9.4 and SAS Viya 3.5 to SAS Viya 4.
+- Develop and tune SQL and ETL processes on Oracle, Hadoop and Vertica, and work on data warehouse transformations.
+- Use AI agents and custom LLM assistants in this work, without sharing company data.
+
+### Data Analyst Intern, Sade Yazılım ve Danışmanlık (2024-02 – 2024-04)
+
+Started as an intern in a Vocational Training in Business program and received a full-time offer in the second month.
+
+
+## Projects
+
+### Allianz: Oracle data warehouse transformation (2026-08 – Present)
+
+In the migration from a legacy database schema to a Kimball star schema, I transform the models and reports that need converting to Oracle, in line with the new standards.
+
+- Tune and optimize SQL on Oracle.
+- Carry out the transformation with automation and support business units in adopting the new processes.
+
+### Yves Rocher France: SAS Viya 4 migration (2026-02 – 2026-04)
+
+Contributed to the SAS Viya 4 migration of a large cosmetics retailer and took an active part in moving legacy analytical assets to a modern architecture.
+
+- Converted SAS Enterprise Guide projects and their SAS code to SAS Studio on the modern Viya 4 platform, and converted and moved selected Enterprise Miner models to the corresponding modern processes in Viya 4 Model Studio.
+- Supported the conversion of Visual Data Builder flows to SAS Studio Flows and the migration of Visual Analytics reports to SAS Viya 4.
+- Optimized the data pipelines that feed the machine-learning models.
+- Delivered part of the on-the-job training.
+
+### Türk Telekom: SAS Viya 4 optimization and consulting (2025-12 – 2026-12)
+
+Following the SAS Viya 4 migration, continued to provide maintenance and support, and worked on model performance tuning, developer-tool integrations and platform consulting in line with business-unit requests.
+
+- Resolved performance bottlenecks and runtime issues in existing analytical models, and guided teams on sound SAS and Oracle SQL development standards and practices.
+- Set up Git/Bitbucket, VS Code, SAS SDK and MCP integrations so that the Viya modules could be used more effectively.
+- Connected SAS Viya with Python, SQL, Oracle and Hadoop so teams could build and run processes across platforms.
+
+### Türk Telekom: SAS Viya 3.5 to SAS Viya 4 transformation (2024-12 – 2025-12)
+
+Worked in the Data Management team of one of the largest telecommunications providers in Türkiye, moving analytical workloads to the Kubernetes-based SAS Viya 4.
+
+- Managed the end-to-end migration of analytical models and reports for the Corporate and Fixed business units, and contributed to the Mobile and Digital units.
+- Wrote a regex-based Python program that analyzed more than 70,000 Oracle and Hadoop tables to find which were in use and how models depended on them.
+- Designed partitioning strategies for Hadoop and Oracle tables for high-performance data processing.
+- Adapted analytical workflows to the microservices architecture of SAS Viya 4.
+
+### AYDEM Enerji: maintenance, support and SAS consulting (2024-11 – Present)
+
+Since the sales pricing automation went live, have continued providing maintenance, technical support and SAS consulting to keep the system running smoothly.
+
+- Provide maintenance and technical support for the live pricing automation and its underlying SAS workflows.
+- Advise business units and sales teams on SAS technical needs and evolving requirements.
+
+### HepsiPay: Vertica migration and platform upgrade (2024-11 – 2024-12)
+
+Helped move open-source analytics processes to Vertica and upgrade the Spark, Jupyter and Airflow environments.
+
+- Moved the database connections of the analytics processes to Vertica.
+- Revised, developed and tested the Airflow DAGs and their Python code for the upgraded environment.
+
+### salihkilic.net: personal website and blog (2024-10 – Present)
+
+Built my personal site and moved it from React.js to Jekyll to improve performance and search visibility; it serves English and Turkish content.
+
+
+### AYDEM Enerji: sales pricing automation (2024-09 – 2024-11)
+
+Turned the manual proposal process of sales consultants into automated workflows.
+
+- Coded the proposal process in SAS DATA step and SQL in line with the business rules and pricing formulas.
+- Designed mobile-friendly input screens integrated with SAS (JavaScript, HTML, CSS), used in the field by more than 50 business units and sales consultants.
+
+### Enerjisa: SAS 9.4 to SAS Viya modernization (2024-05 – 2024-09)
+
+Took part in the modernization and migration from SAS 9.4 to SAS Viya for a leading Turkish energy company.
+
+- Worked on ETL, data quality, data governance and performance optimization for a flow with more than 100 analytics and business rules.
+- Developed, optimized and tested data exchange between Oracle, Vertica, SAP S/4HANA and AWS, scheduled with Apache Airflow.
+
+### Versus Stock: a decision support system for stock investing
+
+Graduation project. A web application that compares financial ratios and returns of stocks with a focus on dividend-paying companies, with a FastAPI back end fed by yfinance and web scraping.
+
+
+## Skills
+
+- SAS: SAS programming, SAS Viya 4 and SAS Viya 3.5, SAS 9.4, SAS Studio and Enterprise Guide, DATA step, PROC SQL and SAS Macro, CASL, SAS Visual Analytics, SAS migration and modernization, SAS performance tuning
+- SQL and Databases: Oracle (SQL, PL/SQL, partitioning, SQL tuning and optimization), PostgreSQL, Hadoop and Hive, Vertica, SingleStore, Dimensional modeling (Kimball, star schema)
+- Data Engineering and Data Management: ETL and data migration, Data warehouse transformation, Data quality, Data lineage, Data governance, Apache Airflow, Apache Spark, Qlik Talend, Docker, Git and GitHub Actions
+- AI-driven Development and LLMs: AI agent orchestration, AI integration into existing ETL processes, Custom LLM assistants and chatbots, AI agent and MCP setups that keep company data private, LLM tuning, KVKK- and GDPR-compliant AI integration
+- Programming: Python (FastAPI, pandas), JavaScript and TypeScript (React), Regular expressions, Automated testing (pytest)
+
+## Certificates
+
+- Google Data Analytics Specialization Certificate (Google)
+- High-Performance Data Processing with CASL in SAS Viya (SAS)
+- SAS Programming 1: Essentials (SAS)
+- SAS Programming 2: Data Manipulation Techniques (SAS)
+- SAS Programming 3: Advanced Techniques (SAS)
+
+## Education
+
+- İzmir Bakırçay University: Bachelor of Business Administration, Management Information Systems (2019 – 2024)
+
+## Languages
+
+- Turkish: Native/Bilingual
+- English: Professional Proficiency (C1)
+- German: Elementary (A2)
+
+## Posts
+---
+
+# Replacing MinIO: open source is a license, not a promise
+
+https://salihkilic.net/blog/2026/replacing-minio/ · 2026-11-18 · last updated on 2026-11-23
+
+MinIO's community edition was wound down step by step and its Docker images are gone. How I replaced it in a product that shipped with it, the MinIO alternatives I looked at, and what it taught me about open source.
+
+In October, while planning the installation package of a product I work on, I wanted to check whether the container images the installer pulls could still be pulled from a machine that had never pulled them before. The other images came down fine, but for MinIO’s two images the registry answered that no such image existed.
+
+On my own computer everything had been working for months, because those two images were sitting in Docker’s cache. Without my noticing, the product had become one that only ran on machines where it had already been installed.
+
+These are the errors you get when you try to pull minio/minio from Docker Hub and quay.io/minio/minio from quay.io:
+
+Error response from daemon: pull access denied for minio, repository does not exist or may require authorization
+unauthorized: access to the requested resource is not authorized
+
+
+The first line is Docker Hub’s error, taken from an issue in the Milvus project, and the second is quay.io’s, taken from an issue in the katta-compose project.
+
+If you have run into one of these errors too and want to see right away what you can do, you can jump straight to What to do today if the MinIO image won’t pull.
+
+
+
+  In short
+
+  
+    - MinIO’s community edition has been distributed as source code only since October 2025; it went into maintenance mode in December 2025, and its repository was archived in February 2026.
+    - In September 2026 the minio/minio images disappeared from Docker Hub, and the images on quay.io stopped serving anonymous pulls.
+    - The license is still AGPLv3, but the community edition no longer gets new releases, prebuilt images or security fixes.
+    - In the product I work on, I replaced MinIO with a small disk store behind the same five functions and kept S3 as an option.
+    - If you really do need an S3 server, further down I compare versitygw, Garage, SeaweedFS, RustFS, Ceph and the MinIO forks.
+  
+
+
+
+## What the product used MinIO for
+
+MinIO is an open-source object store that keeps files in containers called buckets instead of a folder tree and serves them over HTTP. Because it speaks the same interface as Amazon’s cloud storage service S3, an application written for S3 could store its files in MinIO running on your own server without changing its code, and that is what made MinIO so widespread.
+
+The product is an analytics application that organizations install on their own servers. When a user uploads a log file, the application keeps the original as it is, parses its content and writes the results to PostgreSQL. MinIO handled the first half of that job and held the original uploaded files.
+
+A few years ago nobody would have questioned that choice. MinIO came up as a single container, it was free, and it appeared in almost every sample docker-compose.yml you could find. The application touched it through just five functions: upload, download, read as text, split into lines, and delete.
+
+## What happened to MinIO, step by step
+
+The source code is still on GitHub and its license is still AGPLv3, but maintenance, prebuilt binaries, container images, the admin console and security fixes disappeared one after another over a few years.
+
+
+  
+    
+      Date | 
+      What happened | 
+    
+  
+  
+    
+      May 2021 | 
+      The server’s license changed from Apache 2.0 to AGPLv3. | 
+    
+    
+      November 2024 | 
+      The company announced AIStor, its commercial product. The announcement presented it as a store built for AI and data workloads. | 
+    
+    
+      May 2025 | 
+      The administration functions were removed from the community edition’s web console; the release notes pointed to the commercial product for them. | 
+    
+    
+      October 2025 | 
+      The README said the community edition was now distributed as source code only. The security fix released the next day shipped without prebuilt binaries or an official image. It became the last community release. | 
+    
+    
+      December 2025 | 
+      The README declared “maintenance mode”: no new features or contributions would be accepted. | 
+    
+    
+      February 2026 | 
+      A notice that the repository was no longer maintained was put at the top of the README, and the repository was archived the next day. | 
+    
+    
+      March–April 2026 | 
+      Seven security advisories affecting the community edition were published; none of them got a community release. The repository was briefly reopened in late April and archived again on 25 April, and GitHub now shows only that last date. | 
+    
+    
+      September 2026 | 
+      First the images disappeared from Docker Hub; the last capture of the page, a few days before the removal, showed about 1.85 billion pulls. Then the images on quay.io stopped serving anonymous pulls. I could not find an announcement from MinIO about the removal of the images. | 
+    
+  
+
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    The source code stayed, while the parts that made it usable were withdrawn one after another between 2025 and 2026.
+
+
+### Is “it went paid” accurate?
+
+People who want to sum it up in one sentence say “MinIO went paid,” but that sentence doesn’t quite describe what happened. According to the company’s pricing page, the open-source edition has reached end of life and gets no more bug fixes or security patches. The page advises that edition’s users to evaluate alternatives or to talk to the company about the commercial product.
+
+That commercial product, AIStor, also has a free tier, although that tier is not free in the free-software sense. Its license agreement allows the software to run on a single node only, forbids distributing it to third parties, and the software does not run without a license file. There are paid tiers for those who want a distributed setup.
+
+If you run the software by yourself on your own server, those terms may not bother you. In my case, however, the product carried MinIO to other organizations inside its installation package, and with a license that forbids redistribution I couldn’t do that.
+
+## What we missed on our side
+
+My own part of the story is less flattering. Looking back through the repository history, I can see three separate warnings that we missed.
+
+The first: MinIO was added to the product in April 2026. By then MinIO’s repository had been archived for about two months, and its README said the repository was no longer maintained. Nobody looked, because the image pulled and everything worked.
+
+The second: In mid-September, the minio/minio:latest image in the compose file could no longer be pulled. When I saw that the images were gone from Docker Hub, I pointed the reference to quay.io, pinned the version and even noted in the commit message that MinIO had moved its image distribution to quay.io. In other words, I had treated the symptom without ever asking why the image had disappeared.
+
+The third: Eleven days later, the images on quay.io stopped serving anonymous pulls too. I didn’t notice for a month, because thanks to my cache nothing broke.
+
+
+
+  TIP
+
+  Add a small check that regularly tries to pull every image and package your installation needs from an environment with an empty cache. With such a check, I would have noticed this problem weeks earlier.
+
+
+
+Before I knew which solution I would choose, I exported the two cached images into a single archive file with docker save. From that moment, that 85 MB file was the most reliable way I had to reach the old data, because MinIO keeps files on disk in its own format. The program that can safely read them is MinIO itself, and that program could no longer be downloaded ready-made from its official locations.
+
+## How I narrowed down the options
+
+The rule I set for myself was simple. I would first look for an alternative that is free and genuinely open, and if nothing fit and the job wasn’t large, I would build my own solution.
+
+I judged the candidates on license and redistribution, on whether the image can be pulled without authentication, on maintenance, governance and the contributor agreement, on security advisories, on footprint, and on backup and migration. On the license, what mattered was whether I could hand the component to other organizations inside an installation package, because distributing an AGPL-licensed image brings an obligation to offer the source, and many organizations’ open-source policies restrict AGPL.
+
+I checked thirteen options one by one. The table below shows the main ones as they stood at the end of October 2026, and the conclusion I reached for my own need. If your need is different, your conclusion may be too.
+
+
+  
+    
+      Option | 
+      License | 
+      What I saw | 
+      Outcome | 
+    
+  
+  
+    
+      AIStor Free | 
+      Commercial (proprietary) | 
+      Every installation needs a license file, single node only, redistribution forbidden. | 
+      Ruled out. | 
+    
+    
+      MinIO forks (PGSTY Silo, Chainguard) | 
+      AGPLv3 | 
+      Security fixes continue; each depends on a single organization. | 
+      A temporary bridge only. | 
+    
+    
+      versitygw | 
+      Apache 2.0 | 
+      A small S3 gateway that keeps objects as plain files on disk; it asks for no license assignment. | 
+      The best free server. | 
+    
+    
+      RustFS | 
+      Apache 2.0 | 
+      The new engine closest to MinIO; very young, and its contributor agreement lets the company relicense contributions. | 
+      Not chosen. | 
+    
+    
+      SeaweedFS | 
+      Apache 2.0 | 
+      Very capable and made of many components; too wide a surface for a few GB of files. | 
+      Not chosen. | 
+    
+    
+      Garage | 
+      AGPLv3 | 
+      Small and independent; its own documentation considers single-copy use fit for testing only. | 
+      Not chosen. | 
+    
+    
+      Ceph | 
+      LGPL | 
+      A cluster designed for real scale; too much for one server. | 
+      Out of scale. | 
+    
+    
+      Keeping the files in PostgreSQL | 
+      No new component | 
+      One backup and transactional consistency; but every backup grows with the files. | 
+      Not made the default. | 
+    
+    
+      My own disk store | 
+      My own code | 
+      A disk store of under 300 lines; no extra container, port or password. | 
+      This is what I chose. | 
+    
+  
+
+
+## The solution: removing the dependency altogether
+
+While comparing alternatives, I realized I had asked the real question late. Did I actually need an object store?
+
+The product runs on a single server, as a single process; files are written once and never change, and the total size doesn’t go beyond a few GB. Under those conditions the object store gave me nothing the file system doesn’t already give, while it brought a separate container and a stream of security advisories to follow.
+
+In the end, instead of replacing the dependency with another product, I removed it altogether. I did it in three steps by orchestrating AI agents:
+
+
+  - Behind the same five functions, I added a small store that keeps the files as plain files on a Docker volume. The disk store itself is under 300 lines, while the whole module, with the S3 backend, the cache and the error handling, is about a thousand.
+  - Instead of throwing away the existing S3 code, I reworked it into an optional second backend. An organization that has its own S3 store can have the files written there with a single setting.
+  - I didn’t touch the layout of the file names or the pointer column in the database. That left nothing to migrate on the database side.
+
+
+Underneath those five functions, the interface both stores implement looks roughly like this:
+
+class BlobStore(Protocol):
+    def put(self, key: str, data: bytes) -> None: ...
+    def get(self, key: str) -> bytes: ...
+    def read_range(self, key: str, offset: int, length: int) -> bytes: ...
+    def exists(self, key: str) -> bool: ...
+    def delete(self, key: str) -> None: ...
+
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    The application uses the same five functions before and after the change.
+
+
+“Writing to a plain file” sounds simple, but a few details the object store used to handle for you are now left to you:
+
+
+  - Atomic writes: I first write the file under a temporary name in the same folder, make sure it has reached the disk (fsync), then move it to its real name in one step. If the power goes out halfway, no half-written file is left behind.
+  - Path safety: The store accepts only keys in the form it generates itself, and it doesn’t follow symbolic links. So no key can escape the store’s folder.
+  - Clear errors: A missing file returns 404, a full disk 507, an unreachable S3 store 503. All of these used to be a meaningless 500.
+
+
+The two defects that came up when the design was reviewed were just as instructive as those details:
+
+
+  - The delete order. The old code deleted the file first and the database row afterwards, so if an error got in between, you were left with a record that had no file. I reversed the order, so the row’s deletion is committed first and only then is the file removed. If an error gets in between now, the worst that can happen is an orphaned file on disk, which is far less harmful than a record without its file.
+  - Testing against a real S3 server. Not every “S3-compatible” server behaves the same. For example, there is no guarantee that every server accepts the checksums the client library adds by default. So the S3 backend is tested against a real S3 server in CI on every change, and that behavior is configurable.
+
+
+## The migration: keeping the way back open
+
+With the new store written, I had one principle for moving the existing files, which was to take no step I couldn’t come back from.
+
+
+  - The migration is a separate command that you run by hand. The application migrates nothing on its own at startup, and if it sees missing files, it only warns and names the command to run.
+  - The command starts with a dry run that shows how many files there are, how many bytes will be copied and whether there is enough room on the target.
+  - In the real run, every file is copied, read back from the target, and its sha256 digest is compared with the source’s. The results go into a manifest file, and a separate verify command checks that manifest again.
+  - The command deletes nothing and never overwrites an existing file. Run a second time, it copies nothing.
+  - I rehearsed all of it on a throwaway copy of the installation first, and then ran it on my own.
+
+
+The old MinIO volume, the image archive and the rollback steps are all still there, and they will stay for at least one release.
+
+## What I gained, and what I took on
+
+What I gained:
+
+
+  - The installation now pulls only images that anyone can pull.
+  - One service and one init job are gone; two ports and a pair of credentials went with them.
+  - The installation package shrank by 85 MB, and the containers’ total memory limit dropped by 512 MB.
+  - The package no longer contains an AGPL-licensed component or a known vulnerability that security scans flag.
+  - A backup is one database dump plus one tar file.
+
+
+What I took on:
+
+
+  - Durability details such as atomic writes, a full disk and path safety are my responsibility now.
+  - There is no ready-made S3 endpoint for other tools on the same machine.
+  - Existing installations have to run a one-time migration.
+
+
+If the application has to run on more than one server, if immutable retention (WORM) is required, or if the organization’s policy demands object storage, this solution is wrong and the S3 backend is the one to use, which is why I kept the S3 option.
+
+## What to do today if the MinIO image won’t pull
+
+If you have just hit one of the errors at the top of this post, start by protecting the copy you have. Don’t run cleanup commands such as docker image prune or docker system prune for now, because the MinIO image in your cache may be the last copy you have. If it isn’t on your machine, it may still be on another server, a CI runner or your organization’s registry. You can export the copy you find with docker save and bring it to the machine that needs it with docker load.
+
+If there is no copy anywhere, you can bring the old server up for a while with a fork. When I checked on 14 November 2026, the registries served Pigsty’s pgsty/silo image and Chainguard’s cgr.dev/chainguard/minio:latest image without a login. Silo says it keeps MinIO’s on-disk format, and it runs as root. Chainguard’s image runs as a non-root user, so you may need to change the owner of the data directory. As a last resort, you can build the image from source yourself with the steps in the notes of the last community release.
+
+Before you move your data, back up the volume and run the old server on that copy, cut off from the outside. You can copy the files to their new place over S3 with mc mirror or rclone copy, although by default neither tool carries object versions or custom metadata. Don’t delete anything until you have compared the copies with the source.
+
+Don’t treat the last community release as a lasting solution. Two security advisories published in April 2026 show that anyone who knows a valid access key, such as the default minioadmin, can write objects without the secret key. The community edition has no fix for them. If you use the minio/mc image to create buckets, that image no longer pulls either. Chainguard’s minio-client image or the AWS CLI can do the same job.
+
+## MinIO alternatives: if you really do need an S3 server
+
+If you have more than one server, if your files run into terabytes, or if the tools you use expect an endpoint that speaks S3, then you do need an object store. In that case I think you should ask “which one will still be here on the same terms in five years” before you ask “which one is faster,” and look for the answer less in feature lists than in the project’s license, governance and revenue model.
+
+Here are the candidates I looked at in late October 2026, and what I saw in them:
+
+
+  - versitygw (Apache 2.0): a small gateway that maps S3 calls onto a folder. Because your objects sit on disk as plain files, your files would still be in your hands even if versitygw went away tomorrow. If I needed an S3 endpoint on a single server, this is the first place I would look, and I already run my S3 backend’s tests against it.
+  - Garage (AGPLv3): developed by an association and funded by public grants. It is designed for small, geographically distributed setups of a few nodes. Its own documentation does not recommend a single-node setup for production.
+  - SeaweedFS (Apache 2.0): moving very fast, but in the last three months two thirds of the contributions came from one person, and the project also has a separate, proprietary enterprise edition. Update (23 November 2026): after the post, SeaweedFS’s official account pointed out on X that it has a mode that runs with a single command (weed mini -dir=your_directory). I looked into it after that feedback, and if you need S3 it is worth a try. In my project, though, plain disk is enough for now, and rather than add another dependency I wanted to write my own first.
+  - RustFS (Apache 2.0): the new engine that resembles MinIO most, and many projects put it in place of MinIO in their tests. But its first stable release came out in September 2026, and its contributor agreement gives the company the right to distribute contributions under a different license.
+  - Ceph (LGPL): developed under the Linux Foundation, with more than two hundred people contributing in the last three months. It is the right answer for real scale, although too heavy for a single server. At the same scale there is also Apache Ozone, under the Apache Software Foundation.
+  - MinIO forks (AGPLv3): PGSTY Silo brought the admin console back and keeps the security fixes coming; Chainguard publishes a fork that receives security fixes only, with a free image.
+
+
+Dozens of security advisories were published this year for both RustFS and SeaweedFS. That is no surprise for projects that grow fast and are examined closely, but whichever you choose, you will have a stream of advisories to follow.
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    The order I follow when I decide
+
+
+I also looked at what other projects did, and saw that there is no single answer. GitLab removed the bundled MinIO from its Helm chart and put nothing in its place, so you bring your own S3 store. NixOS moved its object-storage test to Garage. Apache Iceberg switched to RustFS in its tests, Grafana Loki to Silo in its sample setups, and Zalando Spilo to SeaweedFS. Incus took a path similar to mine and replaced the feature that relied on MinIO with its own built-in S3 endpoint. I saw the same spread when I looked at forty recently merged changes on GitHub whose titles say they replace MinIO. Twelve of them chose RustFS, eleven SeaweedFS, four Garage, four the plain disk and two versitygw, while Silo, LocalStack and S3Mock came up once each.
+
+## How the AI era changed this picture
+
+MinIO presents its commercial product, AIStor, as a data store built for AI workloads, and in a press release of February 2025 it said that its annual recurring revenue had grown 149 percent in two years, that it was profitable, and that the growth came from demand for AI.
+
+The company gave a reason of its own for only one step. When the admin console was reduced, its founders said that keeping up a second console for the community edition was substantial work and that unmaintained code is a security risk. For the later steps, the removal of the images included, I could find no reason beyond the company saying on its pricing page that its engineering focus is now on AIStor.
+
+As I see it, the money flowed to AI, and infrastructure companies repositioned their products toward where the money flows. In the eyes of a company whose most valuable customers store training data at very large scale, a community edition used by small teams keeping a few GB of files becomes a burden that earns nothing. Since the company says it is profitable, it seems to have made this decision by choice rather than out of necessity. The link between AI and that choice is my reading of the timing; MinIO never said so, and the same picture can also be read as the ordinary commercialization steps of a venture-backed company.
+
+I also see another possibility. There have always been companies that take open-source code, embed it in their own products and build large businesses on it without leaving anything to the people who wrote it, and MinIO had complained about this for a long time. In July 2022 it announced that it was revoking Nutanix’s license, saying that Nutanix had used MinIO in its object storage product for years without disclosing it. On 28 July Nutanix apologized for leaving out the attribution and notices that the Apache 2.0 license requires, and said it had used only Apache 2.0-licensed MinIO code. In March 2023 MinIO made a similar accusation against Weka and said it was revoking its license too. Weka said it used only Apache 2.0-licensed code, that the accusations were baseless and that this license cannot be revoked. In a statement in the same article, Nutanix added that it had used MinIO code only for a few ancillary functions and that Objects 3.6, released on 2 November 2022, removed it completely.
+
+So I think the companies that took the prebuilt images and binaries and shipped them inside their commercial products may also have played a part in the images being closed off. This is only my guess. MinIO never gave this as a reason. The source code is still public, so anyone can still build and use it. Without prebuilt images and binaries, though, doing so now takes effort and brings its own maintenance burden.
+
+The same era changed the math on my side too, because writing a narrow component yourself no longer costs what it used to. My paper estimate for this job was four to five focused days, but working with AI agents, I had the code merged into the main branch and my own installation migrated the day after the decision. Still, I don’t want to generalize, because while controlled studies show that the first version of a small, well-defined piece of work gets written faster, one study found experienced developers slowing down in mature codebases.
+
+AI assistants also carry the knowledge of the period they were trained in, and research shows that models keep suggesting deprecated calls of libraries and now and then invent packages that do not exist. From what I have seen, if you ask an assistant where to keep your files, you are likely to get the answer that appeared most often in the sample files of a few years ago, and checking whether the suggested dependency is still standing today is still up to you.
+
+## A similar story from ten years ago: the left-pad incident
+
+A video on the Tech Buddy channel, published on 8 November with the title “11 Satırlık işi neden başkasına bıraktık” (roughly, “Why did we leave an 11-line job to someone else?”), influenced my writing this post. Tech Buddy shares useful Turkish videos on software development, and if you like stories like this one and understand Turkish, I recommend watching the video and having a look at the channel.
+
+
+
+    Tech Buddy, "11 Satırlık işi neden başkasına bıraktık" (YouTube, in Turkish, 8 November 2026)
+
+
+If you don’t speak Turkish, the same story is told in English in the Half as Interesting channel’s video “The Man Who Broke The Internet By Deleting 11 Lines of Code”.
+
+
+
+    Half as Interesting, "The Man Who Broke The Internet By Deleting 11 Lines of Code" (YouTube, in English, 12 April 2022)
+
+
+The left-pad incident, as the software world calls it, was the episode in which a small package pulled from npm briefly broke the builds of many projects that relied on it. In March 2016 the messaging company Kik asked the developer Azer Koçulu for the name of his “kik” package on npm, citing its trademark. When Koçulu refused, npm transferred the package to the company, and on 22 March Koçulu removed all of his packages from npm. Among them was left-pad, an 11-line function that pads a string on the left. Thousands of projects that depended on it directly or indirectly, Babel and React among them, suddenly could not be built. About two hours later npm restored left-pad and afterwards changed its rules. You can read npm’s own account of the incident on its blog.
+
+Koçulu’s side of the story can be read in his own posts. In “I’ve Just Liberated My Modules”, published right after he removed the packages, he explains that seeing the package name handed over without his permission made npm look to him like private land where corporations are more powerful than people. Eight years later, in “left-pad”, he writes that the decision was not made in anger.
+
+Ten years separate that incident from MinIO’s story, but in both the trouble started in the channel that delivers the code and in the decisions made about that channel. The question in the video’s title, why we left an 11-line job to someone else, is close to the first question I ask myself at the end of this post.
+
+## What I think about open source now
+
+What happened isn’t unique to MinIO either. In recent years we have seen similar decisions take two forms. The first was a license change; HashiCorp changed its license in 2023, and Redis in 2024. The second was withdrawing the distribution. In 2025 Bitnami moved its prebuilt images to a repository that gets no updates and put the current ones behind a subscription, and in 2026 LocalStack ended its community image and archived its repository. In this second form the license never changes, and MinIO falls into it.
+
+What happens after the decision is what really makes the difference. Valkey, the fork of Redis, was set up within eight days under the Linux Foundation with large backers, and for OpenTofu, the fork of Terraform, it took about six weeks. Behind each of MinIO’s forks there is only a single organization.
+
+Some companies embrace open source for community-led growth, building a community around a product whose code they have opened and, through it, finding chances to work with enterprise customers. According to a Cloudflare blog post from February 2026, a single engineer directing AI rebuilt Vercel’s Next.js from scratch in under a week. The resulting alternative deploys to Cloudflare’s own platform with a single command. Cloudflare praised the Next.js team, but I suspect other companies will take the same path, reverse-engineer software and release it under their own names without crediting where it came from. Should such examples multiply, I would not be surprised to see companies question the support they give to open source.
+
+I took a few lessons from all of this for myself.
+
+A license covers only today’s code. An open-source license gives you the right to use, modify and distribute the code that exists. It makes no promise that a new release will come out tomorrow, that prebuilt binaries will be published, or that the image will stay at the same address.
+
+A license leaves you a way out. MinIO’s license stayed AGPL to the end, and the forks that keep the security fixes coming today exist because of that license. Had the same thing happened to a closed product, I wouldn’t even have code to read.
+
+Nobody owes us anything. For years MinIO gave away very good software for nothing, and I have no right to expect that something I got for free stays free forever. I was the one who chose the dependency, and I was the one who should have kept an eye on it.
+
+A dependency has four parts. Besides the code, the distribution channel that gets that code to you, the maintenance that keeps it alive and the governance that decides who gets to decide all of that are part of the dependency too. In MinIO’s case the code never changed, but the other three parts went away one by one.
+
+Who governs the project matters. If a project’s trademark, its repository and the rights to its contributions all sit with one company, the project changes the day that company’s priorities change. In projects under a foundation or an association, that decision doesn’t rest in a single hand. When the company behind NATS wanted to change the license in 2025, it could not do so on its own, because the project sat under the foundation. Under a May 2025 agreement, the company assigned the NATS trademarks to the Linux Foundation and the project stayed in the CNCF under Apache 2.0.
+
+A narrow interface makes the job much easier. One of the main reasons I could make this change so quickly is that the application touched MinIO through five functions.
+
+Leaning on standards is safer. Because S3 stopped being a product and became a protocol, there are half a dozen servers I could put in MinIO’s place today, and the same goes for the file system.
+
+## What I ask before adding a new dependency
+
+Since this happened, I ask myself these questions before adding a dependency:
+
+
+  - Can I cover this need myself with the standard library, or with a few hundred lines?
+  - Who governs the project: a single company, or a foundation or an association?
+  - Does the contributor agreement let the project’s owner change the license on its own?
+  - Where does the company make its money, and does the way I use the project stand in the way of that?
+  - Who distributes the image or the package; if that address closes tomorrow, what am I left with?
+  - Is my installation tried regularly on a machine with an empty cache?
+  - From how many places in the code do I touch this dependency?
+  - Can I take my data out of it and move it somewhere else?
+
+
+If you have been through something similar, or chose a different path away from MinIO, I’d be glad if you wrote about it in the comments below. I’m curious which questions other people asked in this situation.
+---
+
+# Why I moved my site from React.js to Jekyll
+
+https://salihkilic.net/blog/2026/neden-jekyll-tasidim/ · 2026-09-20
+
+The story of why I moved my personal site, which started as a React.js project, to Jekyll/GitHub Pages.
+
+Around the time I was about to graduate from university, having a personal website started to seem like a good step for bringing together both my technical and hobby content and for building my personal brand. In short, I was looking for a blog.
+
+## Why I started with a clone project instead of building from scratch
+
+Since my experience with web technologies was still limited, the idea of adapting a ready-made clone project to my own needs seemed appealing. Building from scratch is undoubtedly a great way to learn; but back in 2024, when I built the site, I hadn’t yet entered the workforce. I could see that frontend and web development was becoming increasingly saturated, with a lot of competition. Since I wanted to move forward in a more data-focused direction at the time, I didn’t want to spend too much time in this area, and went with a clone project instead. Looking at where things stand even now in 2026, web technologies keep being a field that gets narrower and more brutally competitive by the day, so I think that prediction of mine has held up.
+
+The JavaScript Mastery channel, which I’ve followed on YouTube for a long time, was a big help during this process. Even before the AI era began, they were sharing great tutorials on consistent, end-to-end working technologies (and they still are). If you’re a student, you should definitely check them out. If you know nothing about a topic and want to specialize in it, building an end-to-end working clone project was one of the best ways for me to realize what I wanted to do and, especially, what I didn’t want to do.
+
+Using the “Build and Deploy an Amazing 3D Web Developer Portfolio in React JS | Beginner Three.js Tutorial” video I found during this research, I got my first project off the ground. I figured a static, flashy site wouldn’t be a bad starting point.
+
+## First version: the domain search and the React.js portfolio
+
+Back then I was searching Google Domains for domains matching my name. Most of the addresses I wanted were already taken, but I eventually bought salihkilic.net. I built the project by following the video.
+
+If you’d like, you can check out the source code in this repo. The site is still hosted on Firebase, so you can also reach the live version here.
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    The homepage of my old React.js/Three.js portfolio
+
+
+## The problem: 3D scenes and the inevitable cost of heavy rendering
+
+After getting my site up and running, I realized that heavy use of 3D scenes, no matter how stylish it looked visually, was causing serious problems with performance, indexing, and SEO.
+
+## The new search: a content-focused technology
+
+Once I noticed that many developers I admired in the industry had clean, content-focused websites, I decided I needed to move in that direction too. I looked into classic WordPress and similar tools, but couldn’t find the open-source flexibility I was after. A friend recommended Jekyll as tailor-made for this kind of work, so I started looking through ready-made themes on GitHub.
+
+That’s when I came across al-folio — exactly the clean, content-focused theme I was looking for, actively maintained by its community, and something I could host for free on GitHub Pages while connecting it to my own domain. The setup took a bit of time, but I got the system live by following the documentation.
+
+Around this time I learned Google Domains had been shut down by Google (killedbygoogle.com). I quickly set up the necessary DNS redirects through Squarespace and got my site back up and running without issue.
+
+
+  
+    
+    
+    
+      
+        
+      
+    
+    
+  
+
+  
+
+
+
+    Google Domains' entry on killedbygoogle.com
+
+
+## Why I’ve settled on this setup for now
+
+As a working developer, my current setup more than covers all of my basic needs:
+
+
+  - Multi-language support: I can keep Turkish and English content on the same site, speaking to both a local and an international audience.
+  - Easy content creation: I don’t need to write any code for a new post; opening a plain markdown file is enough.
+  - Zero cost, easy hosting: it’s hosted completely free on GitHub Pages and works with my own domain.
+  - CV from a single source: my resume is driven from a single data file; when I update the information once, both the web page and the downloadable PDF update automatically.
+  - Easy integrations: I wired up tools like Google Analytics, Search Console, and Microsoft Clarity with just a few lines of config, no extra integration hassle.
+  - Speed and SEO: being a static setup, it’s both blazing fast and SEO-friendly — the exact opposite of the performance under the heavy 3D scenes on my old site.
+  - Automatic deployment: thanks to GitHub Actions, the site updates instantly the moment I push even a small change to the repo.
+
+
+Honestly, the first draft of this post was going to be a “here’s how you can set this up step by step” style guide. But I decided a “why I made this choice” post made more sense instead. Because these days, thanks to AI tools, doing this kind of technical setup has become much easier and more understandable than anything I could explain here. The content I’ll probably produce on my blog from now on will likely be less “how-to” guides and more posts focused on “why I chose this,” sharing my technical experience along the way.
+
+For now I don’t yet have a large body of content I’d call high-quality or substantial (not yet! :D), and I’m planning how I’ll make time for that. But I’m thinking of bringing both my professional background and my everyday hobbies and experiences here soon.
+
+If you’d like to set up this kind of stack yourself, I’d recommend going through the README documentation of the multi-language al-folio repo I used, with the help of an AI tool. If you have even a bit of a technical background, it’s not hard at all. And if you’re one of my friends and allies, you can just reach out to me directly — I’m happy to point you in the right direction.
+

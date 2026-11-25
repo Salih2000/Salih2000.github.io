@@ -1,0 +1,1 @@
+document.querySelectorAll("#markdown-content table").forEach(function(t){var e=Array.prototype.map.call(t.querySelectorAll("thead th"),function(t){return t.textContent.trim()});e.length<3||(t.classList.add("stack-on-phone"),t.querySelectorAll("tbody tr").forEach(function(t){Array.prototype.forEach.call(t.children,function(t,r){e[r]&&t.setAttribute("data-label",e[r])})}))});

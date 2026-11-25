@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){particlesJS.load("particles-js","/assets/json/particles.json",function(){"function"==typeof setParticlesTheme&&setParticlesTheme(determineComputedTheme())})});
