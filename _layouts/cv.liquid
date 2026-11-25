@@ -17,6 +17,11 @@ layout: default
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
+            {% unless page.cv_pdf contains '://' %}
+              data-cv-download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}"
+              data-cv-lang="{{ site.data[site.active_lang].strings.cv.download_file_lang }}"
+              download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}_{{ site.data[site.active_lang].strings.cv.download_file_lang }}.pdf"
+            {% endunless %}
             class="float-right"
           >
             <i class="fa-solid fa-file-pdf"></i>
@@ -69,6 +74,11 @@ layout: default
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
+            {% unless page.cv_pdf contains '://' %}
+              data-cv-download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}"
+              data-cv-lang="{{ site.data[site.active_lang].strings.cv.download_file_lang }}"
+              download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}_{{ site.data[site.active_lang].strings.cv.download_file_lang }}.pdf"
+            {% endunless %}
             class="float-right"
           >
             <i class="fa-solid fa-file-pdf"></i>
@@ -84,6 +94,9 @@ layout: default
             href="{{ page.cv_pdf | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
             target="_blank"
             rel="noopener noreferrer"
+            data-cv-download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}"
+            data-cv-lang="{{ site.data[site.active_lang].strings.cv.download_file_lang }}"
+            download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_long }}_{{ site.data[site.active_lang].strings.cv.download_file_lang }}.pdf"
           >
             {{- site.data[site.active_lang].strings.cv.download_long -}}
           </a>
@@ -92,6 +105,9 @@ layout: default
             href="{{ page.cv_pdf_short | prepend: '/' | prepend: site.active_lang | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
             target="_blank"
             rel="noopener noreferrer"
+            data-cv-download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_short }}"
+            data-cv-lang="{{ site.data[site.active_lang].strings.cv.download_file_lang }}"
+            download="{{ site.data[site.active_lang].strings.cv.download_file }}_{{ site.data[site.active_lang].strings.cv.download_file_short }}_{{ site.data[site.active_lang].strings.cv.download_file_lang }}.pdf"
           >
             {{- site.data[site.active_lang].strings.cv.download_short -}}
           </a>

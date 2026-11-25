@@ -290,6 +290,11 @@
   </script>
 {% endif %}
 
+{% if page.layout == 'cv' %}
+  <!-- Names the downloaded CV PDFs with the owner's name, the date and the language -->
+  <script defer src="{{ '/assets/js/cv-download.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% endif %}
+
 {% if site.read_counts.goatcounter and page.layout == 'post' %}
   <!-- Read count of a blog post (GoatCounter); count.js counts nothing by itself here, read-count.js calls it -->
   <script

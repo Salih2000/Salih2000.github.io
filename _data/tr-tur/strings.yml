@@ -57,6 +57,12 @@ cv:
   date: Tarih
   download_long: "Uzun CV'yi indir (PDF)"
   download_short: "Tek sayfalık CV'yi indir (PDF)"
+  # Name of a downloaded CV: <download_file>_<download_file_long or _short>_<date>_<download_file_lang>.pdf (assets/js/cv-download.js).
+  # Plain Latin letters, since applicant tracking systems and some upload forms mangle ı and ç in file names.
+  download_file: Salih_Abdullah_Kilic_Resume
+  download_file_lang: TR
+  download_file_long: Long
+  download_file_short: Short
   education: Eğitim
   email: E-posta
   endDate: Bitiş tarihi

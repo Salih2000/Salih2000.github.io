@@ -47,6 +47,12 @@ cv:
   date: Date
   download_long: "Download the full CV (PDF)"
   download_short: "Download the one-page CV (PDF)"
+  # Name of a downloaded CV: <download_file>_<download_file_long or _short>_<date>_<download_file_lang>.pdf (assets/js/cv-download.js).
+  # Plain Latin letters, since applicant tracking systems and some upload forms mangle ı and ç in file names.
+  download_file: Salih_Abdullah_Kilic_Resume
+  download_file_lang: ENG
+  download_file_long: Long
+  download_file_short: Short
   education: Education
   email: Email
   endDate: End date
