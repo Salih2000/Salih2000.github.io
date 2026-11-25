@@ -5,7 +5,7 @@
 title: blank # the website title (if blank, full name will be used instead)
 # first_name / middle_name / last_name are set per-language in _data/<lang>/strings.yml (name.first/middle/last)
 keywords: Salih A. Kılıç, Salih Abdullah Kılıç, Salih Kilic, SAS programlama, SAS programming, SAS Consultant, SAS Danışmanı, SAS Viya, Data Management Consultant, Veri Yönetimi Danışmanı, Data Engineer, Veri Mühendisi, SQL, Oracle, Python, AI-driven development # add your own keywords or leave empty
-icon: ⚙️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: ⚙️ # not used: the site icon is the gear files at the root (favicon.*, apple-touch-icon.png), linked in _includes/head.liquid
 
 url: https://salihkilic.net # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -373,7 +373,20 @@ external_links:
 languages: ["en-us", "tr-tur"]
 default_lang: "en-us"
 exclude_from_localization:
-  ["assets", "sitemap.xml", "robots.txt", "rsl.xml", "ai.txt", "ai-summary.json", "6f68e265f419f7870d2cc9432879531b.txt", ".nojekyll"]
+  [
+    "assets",
+    "sitemap.xml",
+    "robots.txt",
+    "rsl.xml",
+    "ai.txt",
+    "ai-summary.json",
+    "6f68e265f419f7870d2cc9432879531b.txt",
+    ".nojekyll",
+    "favicon.ico",
+    "favicon.svg",
+    "favicon-96x96.png",
+    "apple-touch-icon.png",
+  ]
 lang_from_path: true
 country_flag: false # set true for allowing flag symbol in language toggle
 parallel_localization: false
