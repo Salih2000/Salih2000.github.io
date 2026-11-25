@@ -269,7 +269,7 @@
     },
     {
       "name": "Enerjisa: SAS 9.4 to SAS Viya modernization",
-      "summary": "Took part in the modernization and migration from SAS 9.4 to SAS Viya for a large Turkish utilities organization.",
+      "summary": "Took part in the modernization and migration from SAS 9.4 to SAS Viya for a leading Turkish energy company.",
       "highlights": [
         "Worked on ETL, data quality, data governance and performance optimization for a flow with more than 100 analytics and business rules.",
         "Developed, optimized and tested data exchange between Oracle, Vertica, SAP S/4HANA and AWS, scheduled with Apache Airflow."
